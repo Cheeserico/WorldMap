@@ -607,9 +607,23 @@ public class SoundManager : MonoBehaviour
             return;
         }
 
-        float targetVolume = GetAppliedBgmVolume();
+        float normalVolume = GetAppliedBgmVolume();
+
+        /*
+         * ポーズ中に設定を変更した場合は、
+         * 新しい通常音量を保存する。
+         */
+        if (isBgmPaused)
+        {
+            bgmVolumeBeforePause = normalVolume;
+        }
+
+        float targetVolume = isBgmPaused
+            ? normalVolume * pauseBGMVolumeRate
+            : normalVolume;
 
         bgmFadeTween?.Kill();
+        bgmSource.DOKill();
 
         bgmSource.volume = targetVolume;
     }
@@ -759,7 +773,6 @@ public class SoundManager : MonoBehaviour
             return;
         }
 
-        // ポーズ用フェードを実行していなければ何もしない
         if (!isBgmPaused)
         {
             return;
@@ -769,14 +782,19 @@ public class SoundManager : MonoBehaviour
 
         bgmSource.DOKill();
 
+        /*
+         * SettingsPopupで変更された最新の音量と、
+         * 最新のON/OFF状態を使って復帰する。
+         */
+        float targetVolume = GetAppliedBgmVolume();
+
         bgmSource
             .DOFade(
-                bgmVolumeBeforePause,
+                targetVolume,
                 pauseBGMFadeDuration
             )
             .SetUpdate(true);
     }
-
 }
 /*
 SE
