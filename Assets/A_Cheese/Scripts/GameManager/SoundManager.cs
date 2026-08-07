@@ -16,7 +16,8 @@ public enum SEType
     Wrong,
     Button,
     Clear,
-    Coin
+    Coin,
+    Star
 }
 
 /// <summary>
