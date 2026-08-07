@@ -48,15 +48,6 @@ public class SoundManager : MonoBehaviour
     public static SoundManager Instance { get; private set; }
 
     // ==================================================
-    // 保存キー
-    // ==================================================
-
-    private const string BgmVolumeKey = "Sound_BGMVolume";
-    private const string SeVolumeKey = "Sound_SEVolume";
-    private const string BgmMuteKey = "Sound_BGMMute";
-    private const string SeMuteKey = "Sound_SEMute";
-
-    // ==================================================
     // Inspector設定
     // ==================================================
 
@@ -662,22 +653,22 @@ public class SoundManager : MonoBehaviour
     private void LoadSoundSettings()
     {
         bgmVolume = PlayerPrefs.GetFloat(
-            BgmVolumeKey,
+            SaveKeys.BgmVolume,
             defaultBgmVolume
         );
 
         seVolume = PlayerPrefs.GetFloat(
-            SeVolumeKey,
+            SaveKeys.SeVolume,
             defaultSeVolume
         );
 
         isBgmMuted = PlayerPrefs.GetInt(
-            BgmMuteKey,
+            SaveKeys.BgmMute,
             0
         ) == 1;
 
         isSeMuted = PlayerPrefs.GetInt(
-            SeMuteKey,
+            SaveKeys.SeMute,
             0
         ) == 1;
 
@@ -691,22 +682,22 @@ public class SoundManager : MonoBehaviour
     private void SaveSoundSettings()
     {
         PlayerPrefs.SetFloat(
-            BgmVolumeKey,
+            SaveKeys.BgmVolume,
             bgmVolume
         );
 
         PlayerPrefs.SetFloat(
-            SeVolumeKey,
+            SaveKeys.SeVolume,
             seVolume
         );
 
         PlayerPrefs.SetInt(
-            BgmMuteKey,
+            SaveKeys.BgmMute,
             isBgmMuted ? 1 : 0
         );
 
         PlayerPrefs.SetInt(
-            SeMuteKey,
+            SaveKeys.SeMute,
             isSeMuted ? 1 : 0
         );
 

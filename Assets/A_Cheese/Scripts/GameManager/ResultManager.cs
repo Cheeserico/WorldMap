@@ -5,6 +5,7 @@ public class ResultManager : MonoBehaviour
 {
     public static ResultManager Instance { get; private set; }
 
+
     [Header("タイマー")]
     [SerializeField]
     private TimerManager timerManager;
@@ -27,17 +28,39 @@ public class ResultManager : MonoBehaviour
     {
         float clearTime = 0f;
 
-        // タイマー停止
+        // ------------------------------
+        // タイマー停止・クリアタイム取得
+        // ------------------------------
         if (timerManager != null)
         {
             timerManager.StopTimer();
-
             clearTime = timerManager.ElapsedTime;
 
             Debug.Log($"クリアタイム：{clearTime}");
         }
+        else
+        {
+            Debug.LogWarning(
+                "ResultManager：TimerManagerが設定されていません。",
+                this
+            );
+        }
 
+        // ------------------------------
+        // ベストタイム保存・新記録判定
+        // ------------------------------
+        bool isNewRecord =
+            SaveBestTime(clearTime);
+
+        float bestTime =
+            PlayerPrefs.GetFloat(
+                SaveKeys.BestTime,
+                clearTime
+            );
+
+        // ------------------------------
         // ResultPopupを取得
+        // ------------------------------
         ResultPopup resultPopup = null;
 
         if (PopupManager.Instance != null)
@@ -48,23 +71,96 @@ public class ResultManager : MonoBehaviour
                 );
         }
 
-        // クリアタイムを表示
+        // ------------------------------
+        // リザルト内容を設定
+        // ------------------------------
         if (resultPopup != null)
         {
-            resultPopup.SetClearTime(clearTime);
+            resultPopup.SetResult(
+                clearTime,
+                bestTime,
+                isNewRecord
+            );
         }
 
-        // ResultPopupを開く
+        // ------------------------------
+        // ResultPopupを表示
+        // ------------------------------
         if (PopupManager.Instance != null)
         {
-            PopupManager.Instance.Open(PopupType.Result);
+            PopupManager.Instance.Open(
+                PopupType.Result
+            );
         }
 
+        // ------------------------------
         // クリアSE
+        // ------------------------------
         if (SoundManager.Instance != null)
         {
-            SoundManager.Instance.PlaySE(SEType.Clear);
+            SoundManager.Instance.PlaySE(
+                SEType.Clear
+            );
+
+            // ResultBGMへ切り替え
+            SoundManager.Instance.PlayBGM(
+                BGMType.Result
+            );
         }
+    }
+
+    /// <summary>
+    /// ベストタイムを保存する。
+    /// 新記録ならtrueを返す。
+    /// </summary>
+    private bool SaveBestTime(float clearTime)
+    {
+        // 初回プレイ
+        if (!PlayerPrefs.HasKey(SaveKeys.BestTime))
+        {
+            PlayerPrefs.SetFloat(
+                SaveKeys.BestTime,
+                clearTime
+            );
+
+            PlayerPrefs.Save();
+
+            Debug.Log(
+                $"初ベストタイム保存：{clearTime}"
+            );
+
+            return true;
+        }
+
+        float previousBestTime =
+            PlayerPrefs.GetFloat(
+                SaveKeys.BestTime
+            );
+
+        // 今回の方が速い場合
+        if (clearTime < previousBestTime)
+        {
+            PlayerPrefs.SetFloat(
+                SaveKeys.BestTime,
+                clearTime
+            );
+
+            PlayerPrefs.Save();
+
+            Debug.Log(
+                $"ベストタイム更新！ " +
+                $"{previousBestTime} → {clearTime}"
+            );
+
+            return true;
+        }
+
+        Debug.Log(
+            $"ベストタイム更新なし：今回 {clearTime} " +
+            $"/ BEST {previousBestTime}"
+        );
+
+        return false;
     }
 
     /// <summary>
