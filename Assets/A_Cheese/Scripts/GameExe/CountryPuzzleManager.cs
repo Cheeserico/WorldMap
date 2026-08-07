@@ -12,7 +12,12 @@ public class CountryPuzzleManager : MonoBehaviour
 
     [Header("今回配置する国の総数")]
     [SerializeField]
-    private int totalCountryCount = 1;
+    private int totalCountryCount = 3;
+
+    [Header("タイマー")]
+    [SerializeField]
+    private TimerManager timerManager;
+
 
     // 現在正解している国の数
     private int placedCountryCount;
@@ -31,24 +36,32 @@ public class CountryPuzzleManager : MonoBehaviour
         placedCountryCount++;
 
         // 念のため総数を超えないようにする
-        placedCountryCount =
-            Mathf.Clamp(
-                placedCountryCount,
-                0,
-                totalCountryCount
-            );
+        placedCountryCount = Mathf.Clamp(
+            placedCountryCount,
+            0,
+            totalCountryCount
+        );
+
+        Debug.Log($"配置済み：{placedCountryCount} / {totalCountryCount}");
 
         UpdateProgressText();
 
         if (placedCountryCount >= totalCountryCount)
         {
-            Debug.Log("すべての国を配置しました！");
+            OnGameClear();
+        }
+    }
 
-            // 全問クリアSE
-            if (SoundManager.Instance != null)
-            {
-                SoundManager.Instance.PlaySE(SEType.Clear);
-            }
+    /// <summary>
+    /// 全ての国を配置したときの処理。
+    /// </summary>
+    private void OnGameClear()
+    {
+        Debug.Log("ゲームクリア！");
+
+        if (ResultManager.Instance != null)
+        {
+            ResultManager.Instance.ShowResult();
         }
     }
 
@@ -65,4 +78,7 @@ public class CountryPuzzleManager : MonoBehaviour
         progressText.text =
             $"{placedCountryCount} / {totalCountryCount}";
     }
+
+
+
 }
