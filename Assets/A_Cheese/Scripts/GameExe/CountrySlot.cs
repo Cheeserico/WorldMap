@@ -111,4 +111,24 @@ public class CountrySlot : MonoBehaviour, IDropHandler
 
         }
     }
+
+    // StageDataに入っている国だけ白、それ以外を黄緑にする処理
+    public void SetStageActive(bool isStageCountry)
+    {
+        if (slotImage == null)
+        {
+            return;
+        }
+
+        if (isStageCountry)
+        {
+            // 出題される国 → 白
+            slotImage.color = Color.white;
+        }
+        else
+        {
+            // 出題されない国 → 黄緑 RGB(170,205,70)
+            slotImage.color = new Color32(170, 205, 70, 255);
+        }
+    }
 }

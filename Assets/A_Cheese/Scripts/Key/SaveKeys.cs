@@ -27,6 +27,8 @@ public static class SaveKeys
     // Result
     // ==================================================
 
-    public const string BestTime =
-        "BestTime";
+    public static string GetBestTimeKey(string stageId)
+    {
+        return $"BestTime_{stageId}";
+    }
 }

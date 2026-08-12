@@ -15,16 +15,41 @@ public class DebugManager : MonoBehaviour
     // ==================================================
 
     [ContextMenu("Save / Reset Best Time")]
+    [ContextMenu("Save / Reset Best Time")]
     public void ResetBestTime()
     {
-        PlayerPrefs.DeleteKey(
-            SaveKeys.BestTime
-        );
+        CountryPuzzleManager puzzleManager =
+            FindFirstObjectByType<CountryPuzzleManager>();
 
+        if (puzzleManager == null)
+        {
+            Debug.LogError(
+                "CountryPuzzleManager が見つかりません。"
+            );
+
+            return;
+        }
+
+        string stageId =
+            puzzleManager.CurrentStageId;
+
+        if (string.IsNullOrEmpty(stageId))
+        {
+            Debug.LogError(
+                "StageId が設定されていません。"
+            );
+
+            return;
+        }
+
+        string bestTimeKey =
+            SaveKeys.GetBestTimeKey(stageId);
+
+        PlayerPrefs.DeleteKey(bestTimeKey);
         PlayerPrefs.Save();
 
         Debug.Log(
-            "DebugManager：BestTimeを削除しました。"
+            $"DebugManager：{bestTimeKey} を削除しました。"
         );
     }
 
@@ -103,9 +128,21 @@ public class DebugManager : MonoBehaviour
             SaveKeys.SeMute
         );
 
-        PrintFloat(
-            SaveKeys.BestTime
-        );
+        CountryPuzzleManager puzzleManager =
+            FindFirstObjectByType<CountryPuzzleManager>();
+
+        if (puzzleManager != null)
+        {
+            string stageId =
+                puzzleManager.CurrentStageId;
+
+            if (!string.IsNullOrEmpty(stageId))
+            {
+                PrintFloat(
+                    SaveKeys.GetBestTimeKey(stageId)
+                );
+            }
+        }
 
         Debug.Log(
             "==============================="

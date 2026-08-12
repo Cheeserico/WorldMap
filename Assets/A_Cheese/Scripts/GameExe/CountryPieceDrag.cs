@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 /// <summary>
 /// 国ピースのドラッグ、
@@ -21,6 +22,13 @@ public class CountryPieceDrag : MonoBehaviour,
     [SerializeField]
     private string countryId;
 
+
+    /// <summary>
+    /// CountrySlot側から国IDを確認するために使用する。
+    /// </summary>
+
+    public string CountryId => countryId;
+
     [Header("ドラッグ中のピースを置く場所")]
     [SerializeField]
     private RectTransform dragLayer;
@@ -34,6 +42,22 @@ public class CountryPieceDrag : MonoBehaviour,
 
     [SerializeField]
     private TMP_Text countryNameText;
+
+    [Header("カード表示用シルエット設定")]
+
+    [SerializeField]
+    private Image countryImage;
+
+    [Tooltip("カード内で国画像を表示する最大サイズ")]
+    [SerializeField]
+
+    private float cardCountryMaxSize = 115f;
+    // 地図用の元Sprite
+    private Sprite originalCountrySprite;
+
+    // カード表示専用の、透明余白を除いたSprite
+    private Sprite cardCountrySprite;
+
 
     [Header("地図へ配置した後の設定")]
     [SerializeField]
@@ -110,15 +134,16 @@ public class CountryPieceDrag : MonoBehaviour,
     private Sequence snapSequence;
     private Sequence returnSequence;
 
-    /// <summary>
-    /// CountrySlot側から国IDを確認するために使用する。
-    /// </summary>
-    public string CountryId => countryId;
-
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
+    }
+
+    private void Start()
+    {
+        CreateCardCountrySprite();
+        ApplyCardCountryVisual();
     }
 
     /// <summary>
@@ -212,6 +237,11 @@ public class CountryPieceDrag : MonoBehaviour,
             countryNameText.gameObject.SetActive(false);
         }
 
+        if (countryImage != null && originalCountrySprite != null)
+        {
+            countryImage.sprite = originalCountrySprite;
+        }
+
         // =========================
         // 地図上の実寸サイズへ変更
         // =========================
@@ -220,6 +250,48 @@ public class CountryPieceDrag : MonoBehaviour,
 
         // 指・マウス位置へ移動
         SetPositionFromPointer(eventData);
+    }
+
+    private void ApplyCardCountryVisual()
+    {
+        if (countryImage == null)
+        {
+            return;
+        }
+
+        if (cardCountrySprite == null)
+        {
+            return;
+        }
+
+        // カード表示用Spriteへ切り替え
+        countryImage.sprite = cardCountrySprite;
+
+        // 縦横比を維持
+        countryImage.preserveAspect = true;
+
+        float spriteWidth = cardCountrySprite.rect.width;
+        float spriteHeight = cardCountrySprite.rect.height;
+
+        if (spriteWidth <= 0f || spriteHeight <= 0f)
+        {
+            return;
+        }
+
+        float scale = Mathf.Min(
+            cardCountryMaxSize / spriteWidth,
+            cardCountryMaxSize / spriteHeight
+        );
+
+        float targetWidth = spriteWidth * scale;
+        float targetHeight = spriteHeight * scale;
+
+        countryImageRect.sizeDelta = new Vector2(
+            targetWidth,
+            targetHeight
+        );
+
+        countryImageRect.anchoredPosition = Vector2.zero;
     }
 
     /// <summary>
@@ -772,10 +844,230 @@ public class CountryPieceDrag : MonoBehaviour,
 
             RestoreCardVisual();
 
+            // カード用の見やすいシルエットへ戻す
+            ApplyCardCountryVisual();
+
             canvasGroup.blocksRaycasts = true;
             canvasGroup.interactable = true;
             canvasGroup.ignoreParentGroups = false;
         });
+    }
+
+    // 透明余白を無視してカード用Spriteを自動生成する処理
+    private void CreateCardCountrySprite()
+    {
+        if (countryImage == null)
+        {
+            return;
+        }
+
+        if (countryImage.sprite == null)
+        {
+            return;
+        }
+
+        originalCountrySprite = countryImage.sprite;
+
+        Texture2D sourceTexture = originalCountrySprite.texture;
+
+        if (sourceTexture == null)
+        {
+            return;
+        }
+
+        Rect spriteRect = originalCountrySprite.textureRect;
+
+        int width = Mathf.RoundToInt(spriteRect.width);
+        int height = Mathf.RoundToInt(spriteRect.height);
+
+        Color[] pixels = sourceTexture.GetPixels(
+            Mathf.RoundToInt(spriteRect.x),
+            Mathf.RoundToInt(spriteRect.y),
+            width,
+            height
+        );
+
+        bool[] visited = new bool[width * height];
+
+        List<List<Vector2Int>> groups =
+            new List<List<Vector2Int>>();
+
+        for (int y = 0; y < height; y++)
+        {
+            for (int x = 0; x < width; x++)
+            {
+                int index = y * width + x;
+
+                if (visited[index])
+                {
+                    continue;
+                }
+
+                Color pixel = pixels[index];
+
+                if (pixel.a <= 0.5f)
+                {
+                    visited[index] = true;
+                    continue;
+                }
+
+                List<Vector2Int> group =
+                    FindConnectedPixels(
+                        x,
+                        y,
+                        width,
+                        height,
+                        pixels,
+                        visited
+                    );
+
+                groups.Add(group);
+            }
+        }
+
+        if (groups.Count == 0)
+        {
+            return;
+        }
+
+        // 一番大きい陸地を探す
+        int largestGroupSize = 0;
+
+        foreach (List<Vector2Int> group in groups)
+        {
+            if (group.Count > largestGroupSize)
+            {
+                largestGroupSize = group.Count;
+            }
+        }
+
+        // 最大陸地の何％以上ならカード表示範囲に含めるか
+        float includeRatio = 0.2f;
+
+        int minX = width;
+        int minY = height;
+        int maxX = 0;
+        int maxY = 0;
+
+        bool foundIncludedGroup = false;
+
+        foreach (List<Vector2Int> group in groups)
+        {
+            float ratio =
+                (float)group.Count / largestGroupSize;
+
+            // 小さすぎる離島はサイズ計算から除外
+            if (ratio < includeRatio)
+            {
+                continue;
+            }
+
+            foundIncludedGroup = true;
+
+            foreach (Vector2Int pixel in group)
+            {
+                if (pixel.x < minX) minX = pixel.x;
+                if (pixel.x > maxX) maxX = pixel.x;
+
+                if (pixel.y < minY) minY = pixel.y;
+                if (pixel.y > maxY) maxY = pixel.y;
+            }
+        }
+
+        if (!foundIncludedGroup)
+        {
+            return;
+        }
+
+        int croppedWidth = maxX - minX + 1;
+        int croppedHeight = maxY - minY + 1;
+
+        Rect croppedRect = new Rect(
+            spriteRect.x + minX,
+            spriteRect.y + minY,
+            croppedWidth,
+            croppedHeight
+        );
+
+        cardCountrySprite = Sprite.Create(
+            sourceTexture,
+            croppedRect,
+            new Vector2(0.5f, 0.5f),
+            originalCountrySprite.pixelsPerUnit
+        );
+    }
+
+    private List<Vector2Int> FindConnectedPixels(
+    int startX,
+    int startY,
+    int width,
+    int height,
+    Color[] pixels,
+    bool[] visited
+)
+    {
+        List<Vector2Int> result =
+            new List<Vector2Int>();
+
+        Queue<Vector2Int> queue =
+            new Queue<Vector2Int>();
+
+        queue.Enqueue(
+            new Vector2Int(startX, startY)
+        );
+
+        while (queue.Count > 0)
+        {
+            Vector2Int current =
+                queue.Dequeue();
+
+            int x = current.x;
+            int y = current.y;
+
+            if (
+                x < 0 ||
+                x >= width ||
+                y < 0 ||
+                y >= height
+            )
+            {
+                continue;
+            }
+
+            int index = y * width + x;
+
+            if (visited[index])
+            {
+                continue;
+            }
+
+            visited[index] = true;
+
+            if (pixels[index].a <= 0.5f)
+            {
+                continue;
+            }
+
+            result.Add(current);
+
+            queue.Enqueue(
+                new Vector2Int(x + 1, y)
+            );
+
+            queue.Enqueue(
+                new Vector2Int(x - 1, y)
+            );
+
+            queue.Enqueue(
+                new Vector2Int(x, y + 1)
+            );
+
+            queue.Enqueue(
+                new Vector2Int(x, y - 1)
+            );
+        }
+
+        return result;
     }
 
     private void OnDestroy()

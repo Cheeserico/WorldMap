@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ResultPopup : PopupBase
 {
+    private StageData stageData;
+
     [Header("クリアタイム表示")]
     [SerializeField]
     private TextMeshProUGUI clearTimeText;
@@ -20,13 +22,6 @@ public class ResultPopup : PopupBase
     [SerializeField]
     private GameObject[] yellowStars;
 
-    [Header("星評価の時間設定")]
-    [SerializeField]
-    private float threeStarTime = 30f;
-
-    [SerializeField]
-    private float twoStarTime = 60f;
-
     private int currentStarCount;
 
     [Header("ボタン演出")]
@@ -38,11 +33,18 @@ public class ResultPopup : PopupBase
 
     private bool currentIsNewRecord;
 
+    private void Start()
+    {
+        LoadStageData();
+    }
+
     public void SetResult(
         float clearTime,
         float bestTime,
         bool isNewRecord)
     {
+        LoadStageData();
+
         currentIsNewRecord = isNewRecord;
 
         if (clearTimeText != null)
@@ -163,19 +165,28 @@ public class ResultPopup : PopupBase
 
     private int CalculateStarCount(float clearTime)
     {
-        if (clearTime <= threeStarTime)
+        if (stageData == null)
+        {
+            Debug.LogError(
+                "ResultPopupにStageDataが設定されていません。"
+            );
+
+            return 1;
+        }
+
+        if (clearTime <= stageData.threeStarTime)
         {
             return 3;
         }
-
-        if (clearTime <= twoStarTime)
+        else if (clearTime <= stageData.twoStarTime)
         {
             return 2;
         }
-
-        return 1;
+        else
+        {
+            return 1;
+        }
     }
-
 
     private void UpdateStars(int starCount)
     {
@@ -361,5 +372,22 @@ public class ResultPopup : PopupBase
         }
 
         return delay;
+    }
+
+    private void LoadStageData()
+    {
+        CountryPuzzleManager puzzleManager =
+            FindFirstObjectByType<CountryPuzzleManager>();
+
+        if (puzzleManager == null)
+        {
+            Debug.LogError(
+                "CountryPuzzleManager が見つかりません。"
+            );
+
+            return;
+        }
+
+        stageData = puzzleManager.CurrentStageData;
     }
 }

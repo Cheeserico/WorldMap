@@ -52,11 +52,14 @@ public class ResultManager : MonoBehaviour
         bool isNewRecord =
             SaveBestTime(clearTime);
 
+        string bestTimeKey = GetCurrentBestTimeKey();
+
         float bestTime =
             PlayerPrefs.GetFloat(
-                SaveKeys.BestTime,
+                bestTimeKey,
                 clearTime
             );
+
 
         // ------------------------------
         // ResultPopupを取得
@@ -115,11 +118,13 @@ public class ResultManager : MonoBehaviour
     /// </summary>
     private bool SaveBestTime(float clearTime)
     {
+        string bestTimeKey = GetCurrentBestTimeKey();
+
         // 初回プレイ
-        if (!PlayerPrefs.HasKey(SaveKeys.BestTime))
+        if (!PlayerPrefs.HasKey(bestTimeKey))
         {
             PlayerPrefs.SetFloat(
-                SaveKeys.BestTime,
+                bestTimeKey,
                 clearTime
             );
 
@@ -134,14 +139,14 @@ public class ResultManager : MonoBehaviour
 
         float previousBestTime =
             PlayerPrefs.GetFloat(
-                SaveKeys.BestTime
+                bestTimeKey
             );
 
         // 今回の方が速い場合
         if (clearTime < previousBestTime)
         {
             PlayerPrefs.SetFloat(
-                SaveKeys.BestTime,
+                bestTimeKey,
                 clearTime
             );
 
@@ -161,6 +166,35 @@ public class ResultManager : MonoBehaviour
         );
 
         return false;
+    }
+
+    private string GetCurrentBestTimeKey()
+    {
+        CountryPuzzleManager puzzleManager =
+            FindFirstObjectByType<CountryPuzzleManager>();
+
+        if (puzzleManager == null)
+        {
+            Debug.LogError(
+                "CountryPuzzleManager が見つかりません。"
+            );
+
+            return SaveKeys.GetBestTimeKey("unknown");
+        }
+
+        string stageId =
+            puzzleManager.CurrentStageId;
+
+        if (string.IsNullOrEmpty(stageId))
+        {
+            Debug.LogError(
+                "StageId が設定されていません。"
+            );
+
+            return SaveKeys.GetBestTimeKey("unknown");
+        }
+
+        return SaveKeys.GetBestTimeKey(stageId);
     }
 
     /// <summary>
