@@ -30,6 +30,23 @@ public class CountryPuzzleManager : MonoBehaviour
 
     private void Start()
     {
+        // StageSelectSceneで選ばれたStageDataを受け取る
+        if (StageManager.Instance != null &&
+            StageManager.Instance.SelectedStageData != null)
+        {
+            stageData = StageManager.Instance.SelectedStageData;
+
+            Debug.Log(
+                $"CountryPuzzleManager：{stageData.name} を読み込みました。"
+            );
+        }
+        else
+        {
+            Debug.LogWarning(
+                "CountryPuzzleManager：StageManagerにStageDataが設定されていません。InspectorのStageDataを使用します。"
+            );
+        }
+
         ApplyStageCountryCount();
 
         ApplyStageToSlots();
@@ -38,7 +55,6 @@ public class CountryPuzzleManager : MonoBehaviour
         placedCountryCount = 0;
         UpdateProgressText();
     }
-
 
     /// <summary>
     /// 国ピースが正しく配置されたときに呼ぶ。

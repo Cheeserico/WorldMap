@@ -7,7 +7,7 @@ public class DebugManager : MonoBehaviour
 {
     private void Start()
     {
-        // ResetAllPlayerPrefs();
+        //  ResetAllPlayerPrefs();
     }
 
     // ==================================================
