@@ -126,6 +126,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CountryPieceDrag
   countryId: 
   dragLayer: {fileID: 0}
+  countryImageRect: {fileID: 8153143947419659152}
+  cardBackgroundImage: {fileID: 7687799780866742325}
+  countryNameText: {fileID: 7681044618663317234}
   placedLocalScale: {x: 1, y: 1, z: 1}
   placedRotationZ: 0
   snapDuration: 0.25

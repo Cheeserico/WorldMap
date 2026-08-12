@@ -1,9 +1,13 @@
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 /// <summary>
-/// 国ピースのドラッグ、元の位置への復帰、
+/// 国ピースのドラッグ、
+/// ドラッグ中の地図実寸表示、
+/// 不正解時の復帰、
 /// 正解時のDOTween吸着配置を管理する。
 /// </summary>
 [RequireComponent(typeof(RectTransform))]
@@ -20,6 +24,16 @@ public class CountryPieceDrag : MonoBehaviour,
     [Header("ドラッグ中のピースを置く場所")]
     [SerializeField]
     private RectTransform dragLayer;
+
+    [Header("ピース表示")]
+    [SerializeField]
+    private RectTransform countryImageRect;
+
+    [SerializeField]
+    private Image cardBackgroundImage;
+
+    [SerializeField]
+    private TMP_Text countryNameText;
 
     [Header("地図へ配置した後の設定")]
     [SerializeField]
@@ -41,36 +55,6 @@ public class CountryPieceDrag : MonoBehaviour,
     [SerializeField]
     private float punchDuration = 0.2f;
 
-    private RectTransform rectTransform;
-    private CanvasGroup canvasGroup;
-
-    // ドラッグ開始前の親
-    private Transform originalParent;
-
-    // ドラッグ開始前のHierarchy上の並び順
-    private int originalSiblingIndex;
-
-    // ドラッグ開始前の位置
-    private Vector2 originalAnchoredPosition;
-
-    // ドラッグ開始前の大きさ
-    private Vector3 originalLocalScale;
-
-    // ドラッグ開始前の角度
-    private Quaternion originalLocalRotation;
-
-    // 今回のドラッグで正解したか
-    private bool wasPlacedSuccessfully;
-
-    // すでに地図へ配置済みか
-    private bool isPlaced;
-
-    // DOTweenで吸着中か
-    private bool isSnapping;
-
-    // 実行中のDOTween
-    private Sequence snapSequence;
-
     [Header("不正解時のDOTween演出")]
     [SerializeField]
     private float returnDuration = 0.25f;
@@ -84,8 +68,46 @@ public class CountryPieceDrag : MonoBehaviour,
     [SerializeField]
     private float wrongShakeDuration = 0.18f;
 
+    private RectTransform rectTransform;
+    private CanvasGroup canvasGroup;
 
+    // ドラッグ開始前の親
+    private Transform originalParent;
 
+    // ドラッグ開始前のHierarchy上の並び順
+    private int originalSiblingIndex;
+
+    // ドラッグ開始前の位置
+    private Vector2 originalAnchoredPosition;
+
+    // ドラッグ開始前の大きさ
+    private Vector2 originalSizeDelta;
+
+    // Country_Imageの元サイズ
+    private Vector2 originalCountryImageSize;
+
+    // ドラッグ開始前のScale
+    private Vector3 originalLocalScale;
+
+    // ドラッグ開始前の角度
+    private Quaternion originalLocalRotation;
+
+    // カード背景の元状態
+    private bool originalCardBackgroundEnabled;
+
+    // 国名の元状態
+    private bool originalCountryNameActive;
+
+    // 今回のドラッグで正解したか
+    private bool wasPlacedSuccessfully;
+
+    // すでに地図へ配置済みか
+    private bool isPlaced;
+
+    // DOTweenで吸着中か
+    private bool isSnapping;
+
+    private Sequence snapSequence;
     private Sequence returnSequence;
 
     /// <summary>
@@ -100,11 +122,10 @@ public class CountryPieceDrag : MonoBehaviour,
     }
 
     /// <summary>
-    /// ドラッグ開始時。
+    /// ドラッグ開始。
     /// </summary>
     public void OnBeginDrag(PointerEventData eventData)
     {
-        // 配置済み、または吸着演出中ならドラッグさせない
         if (isPlaced || isSnapping)
         {
             return;
@@ -120,26 +141,84 @@ public class CountryPieceDrag : MonoBehaviour,
             return;
         }
 
-        // 今回のドラッグ結果を初期化
         wasPlacedSuccessfully = false;
 
-        // 元の状態を記録
-        originalParent = transform.parent;
-        originalSiblingIndex = transform.GetSiblingIndex();
-        originalAnchoredPosition = rectTransform.anchoredPosition;
-        originalLocalScale = rectTransform.localScale;
-        originalLocalRotation = rectTransform.localRotation;
+        // =========================
+        // 元の状態を保存
+        // =========================
 
-        // ドラッグ中はピース自身がドロップ判定を邪魔しないようにする
+        originalParent = transform.parent;
+
+        originalSiblingIndex =
+            transform.GetSiblingIndex();
+
+        originalAnchoredPosition =
+            rectTransform.anchoredPosition;
+
+        originalSizeDelta =
+            rectTransform.sizeDelta;
+
+        originalLocalScale =
+            rectTransform.localScale;
+
+        originalLocalRotation =
+            rectTransform.localRotation;
+
+        if (countryImageRect != null)
+        {
+            originalCountryImageSize =
+                countryImageRect.sizeDelta;
+        }
+
+        if (cardBackgroundImage != null)
+        {
+            originalCardBackgroundEnabled =
+                cardBackgroundImage.enabled;
+        }
+
+        if (countryNameText != null)
+        {
+            originalCountryNameActive =
+                countryNameText.gameObject.activeSelf;
+        }
+
+        // ドロップ判定を邪魔しない
         canvasGroup.blocksRaycasts = false;
         canvasGroup.interactable = true;
         canvasGroup.ignoreParentGroups = true;
 
-        // DragLayerの子へ移動
-        rectTransform.SetParent(dragLayer, true);
+        // =========================
+        // DragLayerへ移動
+        // =========================
+
+        rectTransform.SetParent(
+            dragLayer,
+            true
+        );
+
         rectTransform.SetAsLastSibling();
 
-        // マウス・指の位置へ移動
+        // =========================
+        // カード表示を消す
+        // =========================
+
+        if (cardBackgroundImage != null)
+        {
+            cardBackgroundImage.enabled = false;
+        }
+
+        if (countryNameText != null)
+        {
+            countryNameText.gameObject.SetActive(false);
+        }
+
+        // =========================
+        // 地図上の実寸サイズへ変更
+        // =========================
+
+        ResizeToMapSizeWhileDragging();
+
+        // 指・マウス位置へ移動
         SetPositionFromPointer(eventData);
     }
 
@@ -162,46 +241,176 @@ public class CountryPieceDrag : MonoBehaviour,
     }
 
     /// <summary>
-    /// マウスボタン・指を離したとき。
+    /// ドラッグ終了。
     /// </summary>
     public void OnEndDrag(PointerEventData eventData)
     {
-        // 正解ならDOTween吸着処理に任せる
+        // CountryDropTarget側ですでに正解済みなら終了
         if (wasPlacedSuccessfully)
         {
             return;
         }
 
-        // 不正解、またはスロット外ならDOTweenで戻す
+        // =========================
+        // 自分自身の正解Slotを直接確認
+        // =========================
+
+        GameObject correctSlotObject =
+            GameObject.Find(countryId + "_Slot");
+
+        if (correctSlotObject != null)
+        {
+            CountrySlot correctSlot =
+                correctSlotObject.GetComponent<CountrySlot>();
+
+            RectTransform dropTargetRect = null;
+
+            Transform dropTarget =
+                correctSlotObject.transform.Find("DropTarget");
+
+            if (dropTarget != null)
+            {
+                dropTargetRect =
+                    dropTarget as RectTransform;
+            }
+
+            if (
+                correctSlot != null &&
+                dropTargetRect != null
+            )
+            {
+                bool inside =
+                    RectTransformUtility.RectangleContainsScreenPoint(
+                        dropTargetRect,
+                        eventData.position,
+                        eventData.pressEventCamera
+                    );
+
+                if (inside)
+                {
+                    // 自分の正解DropTarget内なら
+                    // 他国のDropTargetが重なっていても正解にする
+                    correctSlot.OnDrop(eventData);
+                }
+            }
+        }
+
+        // 正解処理が実行されたか再確認
+        if (wasPlacedSuccessfully)
+        {
+            return;
+        }
+
+        // 本当に不正解なら元へ戻す
         ReturnToOriginalPositionWithTween();
     }
+
+
     /// <summary>
-    /// マウス・指の位置へピースを移動する。
+    /// 同じ国IDのSlotを探し、
+    /// DragLayer上で見たときに
+    /// Slotと同じ見た目サイズへ変更する。
+    /// </summary>
+    private void ResizeToMapSizeWhileDragging()
+    {
+        GameObject slotObject =
+            GameObject.Find(
+                countryId + "_Slot"
+            );
+
+        if (slotObject == null)
+        {
+            Debug.LogWarning(
+                $"{gameObject.name}: " +
+                $"{countryId}_Slot が見つかりません。"
+            );
+
+            return;
+        }
+
+        RectTransform slotRect =
+            slotObject.GetComponent<RectTransform>();
+
+        if (slotRect == null)
+        {
+            return;
+        }
+
+        /*
+         * MapContentはズームされる可能性があるため、
+         * slotRect.rect.sizeをそのまま使わず、
+         * Slotのワールド上の大きさを
+         * DragLayer座標へ変換する。
+         */
+
+        Vector3[] corners =
+            new Vector3[4];
+
+        slotRect.GetWorldCorners(corners);
+
+        Vector3 bottomLeft =
+            dragLayer.InverseTransformPoint(
+                corners[0]
+            );
+
+        Vector3 topRight =
+            dragLayer.InverseTransformPoint(
+                corners[2]
+            );
+
+        Vector2 targetSize =
+            new Vector2(
+                Mathf.Abs(
+                    topRight.x - bottomLeft.x
+                ),
+                Mathf.Abs(
+                    topRight.y - bottomLeft.y
+                )
+            );
+
+        rectTransform.sizeDelta =
+            targetSize;
+
+        if (countryImageRect != null)
+        {
+            countryImageRect.sizeDelta =
+                targetSize;
+
+            countryImageRect.anchoredPosition =
+                Vector2.zero;
+        }
+    }
+
+    /// <summary>
+    /// マウス・指の位置へ移動する。
     /// </summary>
     private void SetPositionFromPointer(
         PointerEventData eventData
     )
     {
-        Camera eventCamera = eventData.pressEventCamera;
+        Camera eventCamera =
+            eventData.pressEventCamera;
 
         bool success =
-            RectTransformUtility.ScreenPointToWorldPointInRectangle(
-                dragLayer,
-                eventData.position,
-                eventCamera,
-                out Vector3 worldPoint
-            );
+            RectTransformUtility
+                .ScreenPointToWorldPointInRectangle(
+                    dragLayer,
+                    eventData.position,
+                    eventCamera,
+                    out Vector3 worldPoint
+                );
 
         if (!success)
         {
             return;
         }
 
-        rectTransform.position = worldPoint;
+        rectTransform.position =
+            worldPoint;
     }
 
     /// <summary>
-    /// 正解したピースをDOTweenでスロットへ吸着させる。
+    /// 正解したピースをSlotへ吸着。
     /// CountrySlot側から呼ばれる。
     /// </summary>
     public void PlaceOnSlot(
@@ -222,7 +431,8 @@ public class CountryPieceDrag : MonoBehaviour,
         if (placedCountryRoot == null)
         {
             Debug.LogError(
-                $"{gameObject.name}: PlacedCountryRootが設定されていません。",
+                $"{gameObject.name}: " +
+                "PlacedCountryRootが設定されていません。",
                 gameObject
             );
 
@@ -234,33 +444,39 @@ public class CountryPieceDrag : MonoBehaviour,
             return;
         }
 
-        /*
-         * OnEndDragで元へ戻らないように、
-         * DOTween開始前に成功状態へする。
-         */
         wasPlacedSuccessfully = true;
         isSnapping = true;
 
-        // 吸着中・配置後は操作不可
         canvasGroup.blocksRaycasts = false;
         canvasGroup.interactable = false;
         canvasGroup.ignoreParentGroups = false;
 
-        // 同じピースに古いTweenが残っていたら停止
         snapSequence?.Kill();
 
-        /*
-         * スロットの位置をワールド座標で記録する。
-         * 以前、位置が正しく合った方法を使用する。
-         */
-        Vector3 slotWorldPosition = slotRect.position;
+        Vector3 slotWorldPosition =
+            slotRect.position;
 
-        /*
-         * PlacedCountryRootへ移動。
-         * trueにすることで、親変更直後の見た目を維持する。
-         */
-        rectTransform.SetParent(placedCountryRoot, true);
+        // 正解時の本来サイズ
+        Vector2 targetSize =
+            slotRect.rect.size;
+
+        rectTransform.SetParent(
+            placedCountryRoot,
+            true
+        );
+
         rectTransform.SetAsLastSibling();
+
+        // カード背景・国名は表示しない
+        if (cardBackgroundImage != null)
+        {
+            cardBackgroundImage.enabled = false;
+        }
+
+        if (countryNameText != null)
+        {
+            countryNameText.gameObject.SetActive(false);
+        }
 
         Quaternion targetRotation =
             Quaternion.Euler(
@@ -269,11 +485,13 @@ public class CountryPieceDrag : MonoBehaviour,
                 placedRotationZ
             );
 
-        snapSequence = DOTween.Sequence();
+        snapSequence =
+            DOTween.Sequence();
 
-        /*
-         * スロット位置への移動。
-         */
+        // =========================
+        // Slot位置へ移動
+        // =========================
+
         snapSequence.Append(
             rectTransform
                 .DOMove(
@@ -283,9 +501,32 @@ public class CountryPieceDrag : MonoBehaviour,
                 .SetEase(snapEase)
         );
 
-        /*
-         * 移動と同時に配置後サイズへ変える。
-         */
+        // =========================
+        // Slotと同じサイズへ
+        // =========================
+
+        snapSequence.Join(
+            rectTransform
+                .DOSizeDelta(
+                    targetSize,
+                    snapDuration
+                )
+                .SetEase(snapEase)
+        );
+
+        if (countryImageRect != null)
+        {
+            snapSequence.Join(
+                countryImageRect
+                    .DOSizeDelta(
+                        targetSize,
+                        snapDuration
+                    )
+                    .SetEase(snapEase)
+            );
+        }
+
+        // Scaleも正常化
         snapSequence.Join(
             rectTransform
                 .DOScale(
@@ -295,9 +536,7 @@ public class CountryPieceDrag : MonoBehaviour,
                 .SetEase(snapEase)
         );
 
-        /*
-         * 移動と同時に配置後角度へ回転する。
-         */
+        // 回転
         snapSequence.Join(
             rectTransform
                 .DOLocalRotate(
@@ -312,16 +551,15 @@ public class CountryPieceDrag : MonoBehaviour,
                 .SetEase(snapEase)
         );
 
-        /*
-         * 配置後に少しだけポンッと弾ませる。
-         */
+        // ポンッと演出
         if (
             punchScaleAmount > 0f &&
             punchDuration > 0f
         )
         {
             Vector3 punchAmount =
-                placedLocalScale * punchScaleAmount;
+                placedLocalScale
+                * punchScaleAmount;
 
             snapSequence.Append(
                 rectTransform.DOPunchScale(
@@ -335,9 +573,6 @@ public class CountryPieceDrag : MonoBehaviour,
 
         snapSequence.OnComplete(() =>
         {
-            /*
-             * AnchorとPivotを中央へ統一する。
-             */
             rectTransform.anchorMin =
                 new Vector2(0.5f, 0.5f);
 
@@ -347,26 +582,33 @@ public class CountryPieceDrag : MonoBehaviour,
             rectTransform.pivot =
                 new Vector2(0.5f, 0.5f);
 
-            /*
-             * PlacedCountryRoot内の座標へ変換する。
-             * 以前、右へずれる問題を直せた方式。
-             */
             Vector3 localSlotPosition =
-                placedCountryRoot.InverseTransformPoint(
-                    slotRect.position
-                );
+                placedCountryRoot
+                    .InverseTransformPoint(
+                        slotRect.position
+                    );
 
             rectTransform.localPosition =
                 localSlotPosition;
 
-            // DOTween後の細かな誤差を修正
+            rectTransform.sizeDelta =
+                targetSize;
+
             rectTransform.localScale =
                 placedLocalScale;
 
             rectTransform.localRotation =
                 targetRotation;
 
-            // 正式に配置済みにする
+            if (countryImageRect != null)
+            {
+                countryImageRect.sizeDelta =
+                    targetSize;
+
+                countryImageRect.anchoredPosition =
+                    Vector2.zero;
+            }
+
             isPlaced = true;
             isSnapping = false;
 
@@ -377,40 +619,26 @@ public class CountryPieceDrag : MonoBehaviour,
     }
 
     /// <summary>
-    /// 不正解時に元のPieceContentへ戻す。
+    /// カード表示を元へ戻す。
     /// </summary>
-    private void ReturnToOriginalPosition()
+    private void RestoreCardVisual()
     {
-        if (originalParent == null)
+        if (cardBackgroundImage != null)
         {
-            return;
+            cardBackgroundImage.enabled =
+                originalCardBackgroundEnabled;
         }
 
-        rectTransform.SetParent(
-            originalParent,
-            false
-        );
-
-        transform.SetSiblingIndex(
-            originalSiblingIndex
-        );
-
-        rectTransform.anchoredPosition =
-            originalAnchoredPosition;
-
-        rectTransform.localScale =
-            originalLocalScale;
-
-        rectTransform.localRotation =
-            originalLocalRotation;
-
-        canvasGroup.blocksRaycasts = true;
-        canvasGroup.interactable = true;
-        canvasGroup.ignoreParentGroups = false;
+        if (countryNameText != null)
+        {
+            countryNameText.gameObject.SetActive(
+                originalCountryNameActive
+            );
+        }
     }
 
     /// <summary>
-    /// 不正解時に少し揺れてから元の位置へ戻す。
+    /// 不正解時に揺れてから元の位置へ戻す。
     /// </summary>
     private void ReturnToOriginalPositionWithTween()
     {
@@ -425,10 +653,9 @@ public class CountryPieceDrag : MonoBehaviour,
 
         returnSequence?.Kill();
 
-        /*
-         * 元の親オブジェクト内での位置を
-         * ワールド座標として取得する。
-         */
+        // カード背景と国名を復活
+        RestoreCardVisual();
+
         Vector3 targetWorldPosition =
             originalParent.TransformPoint(
                 new Vector3(
@@ -438,11 +665,10 @@ public class CountryPieceDrag : MonoBehaviour,
                 )
             );
 
-        returnSequence = DOTween.Sequence();
+        returnSequence =
+            DOTween.Sequence();
 
-        /*
-         * 最初に少し横へ揺らす。
-         */
+        // 少し横へ揺らす
         if (
             wrongShakeStrength > 0f &&
             wrongShakeDuration > 0f
@@ -464,9 +690,7 @@ public class CountryPieceDrag : MonoBehaviour,
             );
         }
 
-        /*
-         * 元の場所へ移動。
-         */
+        // 元の場所へ戻す
         returnSequence.Append(
             rectTransform
                 .DOMove(
@@ -476,9 +700,29 @@ public class CountryPieceDrag : MonoBehaviour,
                 .SetEase(returnEase)
         );
 
-        /*
-         * 元のサイズと角度へ戻す。
-         */
+        // Rootサイズを130x130等へ戻す
+        returnSequence.Join(
+            rectTransform
+                .DOSizeDelta(
+                    originalSizeDelta,
+                    returnDuration
+                )
+                .SetEase(returnEase)
+        );
+
+        // Country_Imageも元サイズへ戻す
+        if (countryImageRect != null)
+        {
+            returnSequence.Join(
+                countryImageRect
+                    .DOSizeDelta(
+                        originalCountryImageSize,
+                        returnDuration
+                    )
+                    .SetEase(returnEase)
+            );
+        }
+
         returnSequence.Join(
             rectTransform
                 .DOScale(
@@ -499,9 +743,6 @@ public class CountryPieceDrag : MonoBehaviour,
 
         returnSequence.OnComplete(() =>
         {
-            /*
-             * アニメーション終了後にPieceContentへ戻す。
-             */
             rectTransform.SetParent(
                 originalParent,
                 false
@@ -514,11 +755,22 @@ public class CountryPieceDrag : MonoBehaviour,
             rectTransform.anchoredPosition =
                 originalAnchoredPosition;
 
+            rectTransform.sizeDelta =
+                originalSizeDelta;
+
             rectTransform.localScale =
                 originalLocalScale;
 
             rectTransform.localRotation =
                 originalLocalRotation;
+
+            if (countryImageRect != null)
+            {
+                countryImageRect.sizeDelta =
+                    originalCountryImageSize;
+            }
+
+            RestoreCardVisual();
 
             canvasGroup.blocksRaycasts = true;
             canvasGroup.interactable = true;
@@ -526,9 +778,6 @@ public class CountryPieceDrag : MonoBehaviour,
         });
     }
 
-    /// <summary>
-    /// オブジェクト削除時にTweenを停止する。
-    /// </summary>
     private void OnDestroy()
     {
         snapSequence?.Kill();

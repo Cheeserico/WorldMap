@@ -12,6 +12,8 @@ public class CountrySlot : MonoBehaviour, IDropHandler
     [SerializeField]
     private string countryId;
 
+    public string CountryId => countryId;
+
     [Header("配置済みピースをまとめる親")]
     [SerializeField]
     private RectTransform placedCountryRoot;
@@ -23,6 +25,8 @@ public class CountrySlot : MonoBehaviour, IDropHandler
     [Header("ゲーム進行管理")]
     [SerializeField]
     private CountryPuzzleManager puzzleManager;
+
+
 
     // このスロットがすでに正解済みか
     private bool isOccupied;
