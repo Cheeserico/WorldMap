@@ -14,9 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StageData
   stageId: stage_002
   stageName: TestStage2
+  stageImage: {fileID: 21300000, guid: 4ddd0cc9e3f770842aef9df7de4a7cbd, type: 3}
   countryIds:
   - JPN
   - FRA
   - AUS
   threeStarTime: 10
   twoStarTime: 20
+  mapStartPosition: {x: -220, y: -580}
+  mapStartScale: 1

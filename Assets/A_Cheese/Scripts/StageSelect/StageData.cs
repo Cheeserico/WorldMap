@@ -15,6 +15,10 @@ public class StageData : ScriptableObject
     [Tooltip("画面に表示するステージ名")]
     public string stageName;
 
+    [Header("ステージ画像")]
+
+    [Tooltip("ステージ選択画面に表示する画像")]
+    public Sprite stageImage;
 
     [Header("出題する国")]
 
@@ -29,4 +33,12 @@ public class StageData : ScriptableObject
 
     [Tooltip("この秒数以内なら星2")]
     public float twoStarTime = 60f;
+
+    [Header("開始時の地図表示")]
+
+    [Tooltip("ステージ開始時のMapContentの位置")]
+    public Vector2 mapStartPosition = Vector2.zero;
+
+    [Tooltip("ステージ開始時の地図拡大率")]
+    public float mapStartScale = 1f;
 }

@@ -77,9 +77,76 @@ public class MapPanZoomController : MonoBehaviour
 
     private void Start()
     {
-        // 起動時に拡大率と位置を正しい範囲に収めます。
-        SetScale(Mathf.Clamp(mapContent.localScale.x, minScale, maxScale));
+        ApplyStageStartView();
+    }
+
+    /// <summary>
+    /// StageDataに設定された開始位置・開始倍率を地図へ反映します。
+    /// </summary>
+    private void ApplyStageStartView()
+    {
+        StageData stageData = null;
+
+        // StageSelectSceneから来た場合
+        if (StageManager.Instance != null)
+        {
+            stageData =
+                StageManager.Instance.SelectedStageData;
+        }
+
+        // StageDataが取得できなかった場合は、
+        // 今まで通りの初期状態を使用
+        if (stageData == null)
+        {
+            SetScale(
+                Mathf.Clamp(
+                    mapContent.localScale.x,
+                    minScale,
+                    maxScale
+                )
+            );
+
+            ClampMapPosition();
+
+            Debug.Log(
+                "MapPanZoomController：StageDataがないため通常の初期位置を使用します。"
+            );
+
+            return;
+        }
+
+        // ------------------------------
+        // 開始倍率
+        // ------------------------------
+
+        float startScale =
+            Mathf.Clamp(
+                stageData.mapStartScale,
+                minScale,
+                maxScale
+            );
+
+        SetScale(startScale);
+
+
+        // ------------------------------
+        // 開始位置
+        // ------------------------------
+
+        mapContent.anchoredPosition =
+            stageData.mapStartPosition;
+
+
+        // 移動可能範囲の中へ収める
         ClampMapPosition();
+
+
+        Debug.Log(
+            $"MapPanZoomController：" +
+            $"{stageData.stageName} の開始表示を設定しました。 " +
+            $"Position={mapContent.anchoredPosition}, " +
+            $"Scale={startScale}"
+        );
     }
 
     private void Update()

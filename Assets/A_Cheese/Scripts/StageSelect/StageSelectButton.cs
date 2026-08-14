@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 /// <summary>
 /// ステージ選択画面の各ボタンにつける。
@@ -21,13 +22,19 @@ public class StageSelectButton : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI bestTimeText;
 
+    [SerializeField]
+    private Image stageImage;
+
     [Header("獲得した星")]
     [SerializeField]
     private GameObject[] yellowStars;
 
+
     [Header("ゲームScene名")]
     [SerializeField]
     private string gameSceneName = "GameScene";
+
+
 
 
     // ==================================================
@@ -65,6 +72,11 @@ public class StageSelectButton : MonoBehaviour
                 stageData.stageName;
         }
 
+        // イメージ
+        if (stageImage != null)
+        {
+            stageImage.sprite = stageData.stageImage;
+        }
 
         // ------------------------------
         // ベストタイム
