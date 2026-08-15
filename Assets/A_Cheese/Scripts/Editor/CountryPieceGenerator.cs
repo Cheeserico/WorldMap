@@ -310,26 +310,27 @@ public class CountryPieceGenerator : EditorWindow
             }
 
             // =========================
-            // Country_Textを探す
+            // CountryNameText設定
             // =========================
 
-            Transform textTransform =
-                FindChildRecursive(
-                    pieceObject.transform,
-                    "Country_Text"
-                );
+            CountryNameText countryNameText =
+                pieceObject.GetComponent<CountryNameText>();
 
-            if (textTransform != null)
+            if (countryNameText != null)
             {
-                TMP_Text countryText =
-                    textTransform.GetComponent<TMP_Text>();
-
-                if (countryText != null)
-                {
-                    countryText.text =
-                        adminName;
-                }
+                countryNameText.Setup(
+                    id,
+                    adminName
+                );
             }
+            else
+            {
+                Debug.LogWarning(
+                    "CountryNameTextがありません: "
+                    + id
+                );
+            }
+
 
             // =========================
             // 見た目サイズ調整

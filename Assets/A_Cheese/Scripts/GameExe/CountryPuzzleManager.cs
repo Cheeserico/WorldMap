@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -21,6 +22,14 @@ public class CountryPuzzleManager : MonoBehaviour
     [Header("タイマー")]
     [SerializeField]
     private TimerManager timerManager;
+
+    // ==================================================
+    // 今回実際に出題する国
+    // ==================================================
+
+    private List<string> activeCountryIds =
+        new List<string>();
+
 
     // StageDataから自動設定される出題国数
     private int totalCountryCount;
@@ -46,6 +55,9 @@ public class CountryPuzzleManager : MonoBehaviour
                 "CountryPuzzleManager：StageManagerにStageDataが設定されていません。InspectorのStageDataを使用します。"
             );
         }
+
+        // 今回実際に出題する国を準備
+        PrepareActiveCountryIds();
 
         ApplyStageCountryCount();
 
@@ -125,7 +137,7 @@ public class CountryPuzzleManager : MonoBehaviour
         foreach (CountryPieceDrag piece in pieces)
         {
             bool isStageCountry =
-                stageData.countryIds.Contains(piece.CountryId);
+                activeCountryIds.Contains(piece.CountryId);
 
             piece.gameObject.SetActive(isStageCountry);
         }
@@ -148,7 +160,7 @@ public class CountryPuzzleManager : MonoBehaviour
         foreach (CountrySlot slot in slots)
         {
             bool isStageCountry =
-                stageData.countryIds.Contains(slot.CountryId);
+                activeCountryIds.Contains(slot.CountryId);
 
             slot.SetStageActive(isStageCountry);
         }
@@ -164,7 +176,8 @@ public class CountryPuzzleManager : MonoBehaviour
             return;
         }
 
-        totalCountryCount = stageData.countryIds.Count;
+        totalCountryCount =
+            activeCountryIds.Count;
 
         Debug.Log(
             $"ステージ出題数：{totalCountryCount}"
@@ -196,5 +209,111 @@ public class CountryPuzzleManager : MonoBehaviour
 
             return stageData.stageName;
         }
+    }
+
+    // ==================================================
+    // 今回出題する国を準備
+    // ==================================================
+
+    private void PrepareActiveCountryIds()
+    {
+        activeCountryIds.Clear();
+
+        if (stageData == null)
+        {
+            Debug.LogError(
+                "StageData が設定されていません。"
+            );
+
+            return;
+        }
+
+        // ==================================================
+        // 通常ステージ
+        // ==================================================
+
+        if (!stageData.useRandomCountries)
+        {
+            activeCountryIds.AddRange(
+                stageData.countryIds
+            );
+
+            Debug.Log(
+                $"通常ステージ：{activeCountryIds.Count}か国を使用します。"
+            );
+
+            return;
+        }
+
+        // ==================================================
+        // ランダムステージ
+        // ==================================================
+
+        CountrySlot[] slots =
+            FindObjectsByType<CountrySlot>(
+                FindObjectsInactive.Include,
+                FindObjectsSortMode.None
+            );
+
+        List<string> allCountryIds =
+            new List<string>();
+
+        foreach (CountrySlot slot in slots)
+        {
+            if (string.IsNullOrEmpty(slot.CountryId))
+            {
+                continue;
+            }
+
+            if (!allCountryIds.Contains(slot.CountryId))
+            {
+                allCountryIds.Add(
+                    slot.CountryId
+                );
+            }
+        }
+
+        if (allCountryIds.Count == 0)
+        {
+            Debug.LogError(
+                "ランダム抽選用のCountrySlotが見つかりません。"
+            );
+
+            return;
+        }
+
+        int randomCount =
+            Mathf.Clamp(
+                stageData.randomCountryCount,
+                1,
+                allCountryIds.Count
+            );
+
+        // 重複なしでランダム抽選
+        for (int i = 0; i < randomCount; i++)
+        {
+            int randomIndex =
+                Random.Range(
+                    0,
+                    allCountryIds.Count
+                );
+
+            activeCountryIds.Add(
+                allCountryIds[randomIndex]
+            );
+
+            allCountryIds.RemoveAt(
+                randomIndex
+            );
+        }
+
+        Debug.Log(
+            $"ランダムステージ：{activeCountryIds.Count}か国を抽選しました。"
+        );
+
+        Debug.Log(
+            "抽選国：" +
+            string.Join(", ", activeCountryIds)
+        );
     }
 }

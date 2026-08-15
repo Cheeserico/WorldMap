@@ -25,6 +25,14 @@ public class StageData : ScriptableObject
     [Tooltip("このステージで出題するCountryId")]
     public List<string> countryIds = new List<string>();
 
+    [Header("ランダム出題")]
+
+    [Tooltip("ONの場合、countryIdsではなく全195か国からランダム抽選する")]
+    public bool useRandomCountries = false;
+
+    [Tooltip("ランダム出題する国数")]
+    public int randomCountryCount = 20;
+
 
     [Header("星評価タイム")]
 
@@ -41,4 +49,6 @@ public class StageData : ScriptableObject
 
     [Tooltip("ステージ開始時の地図拡大率")]
     public float mapStartScale = 1f;
+
+
 }

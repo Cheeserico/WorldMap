@@ -645,6 +645,117 @@ public class StageDataCreatorWindow : EditorWindow
         }
 
         EditorGUILayout.EndHorizontal();
+
+        GUILayout.Space(15f);
+
+        // ==================================================
+        // 世界テーマ
+        // ==================================================
+
+        EditorGUILayout.LabelField(
+            "世界テーマ",
+            EditorStyles.miniBoldLabel
+        );
+
+        EditorGUILayout.BeginHorizontal();
+
+        if (GUILayout.Button("17 世界の主要国"))
+        {
+            SelectPreset(
+                new string[]
+                {
+            "USA",
+            "CHN",
+            "JPN",
+            "DEU",
+            "GBR",
+            "FRA",
+            "ITA",
+            "CAN",
+            "IND",
+            "BRA",
+            "AUS",
+            "KOR",
+            "ESP",
+            "MEX",
+            "RUS",
+            "TUR",
+            "SAU",
+            "IDN",
+            "ARG",
+            "ZAF"
+                }
+            );
+        }
+
+        if (GUILayout.Button("18 世界の大型国"))
+        {
+            SelectPreset(
+                new string[]
+                {
+            "RUS",
+            "CAN",
+            "CHN",
+            "USA",
+            "BRA",
+            "AUS",
+            "IND",
+            "ARG",
+            "KAZ",
+            "DZA",
+            "COD",
+            "SAU",
+            "MEX",
+            "IDN",
+            "SDN"
+                }
+            );
+        }
+
+        if (GUILayout.Button("19 世界の島国"))
+        {
+            SelectPreset(
+                new string[]
+                {
+            "JPN",
+            "GBR",
+            "ISL",
+            "IRL",
+            "MDG",
+            "LKA",
+            "IDN",
+            "PHL",
+            "NZL",
+            "PNG",
+            "CUB",
+            "JAM",
+            "FJI",
+            "VUT",
+            "MUS"
+                }
+            );
+        }
+
+        EditorGUILayout.EndHorizontal();
+
+        GUILayout.Space(10f);
+
+        // ==================================================
+        // 最終チャレンジ
+        // ==================================================
+
+        EditorGUILayout.LabelField(
+            "最終チャレンジ",
+            EditorStyles.miniBoldLabel
+        );
+
+        if (GUILayout.Button(
+                "20 世界195か国",
+                GUILayout.Height(35f)))
+        {
+            SelectAllCountries();
+        }
+
         // ==================================================
         // 国一覧
         // ==================================================
@@ -1262,6 +1373,33 @@ public class StageDataCreatorWindow : EditorWindow
                 MessageType.Error
             );
         }
+    }
+
+    // ==================================================
+    // CSVの全ての国を選択
+    // ==================================================
+
+    private void SelectAllCountries()
+    {
+        if (countries.Count == 0)
+        {
+            Debug.LogWarning(
+                "CountryData.csvが読み込まれていません。"
+            );
+
+            return;
+        }
+
+        foreach (CountryEntry country in countries)
+        {
+            country.selected = true;
+        }
+
+        Debug.Log(
+            $"全{countries.Count}か国を選択しました。"
+        );
+
+        Repaint();
     }
 
 }

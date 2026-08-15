@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4513467668327760712}
   - component: {fileID: 4455192300371230901}
   - component: {fileID: 5159708868124813927}
+  - component: {fileID: 4252671445086257618}
   m_Layer: 5
   m_Name: CountryPiecePrefab
   m_TagString: Untagged
@@ -141,6 +142,20 @@ MonoBehaviour:
   returnEase: 9
   wrongShakeStrength: 12
   wrongShakeDuration: 0.18
+--- !u!114 &4252671445086257618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3482187050094473847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56ddfbd694d138b43b6359283b2d2eb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CountryNameText
+  countryId: 
+  countryNameText: {fileID: 7681044618663317234}
 --- !u!1 &4417471436976791626
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,7 +168,7 @@ GameObject:
   - component: {fileID: 1588751002790723557}
   - component: {fileID: 7681044618663317234}
   m_Layer: 5
-  m_Name: Country_Text (TMP)
+  m_Name: Country_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

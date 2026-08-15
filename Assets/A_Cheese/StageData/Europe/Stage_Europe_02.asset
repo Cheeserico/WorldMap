@@ -10,18 +10,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bacd80ee43a8db440ad3383e7e6bc422, type: 3}
-  m_Name: Stage_001
+  m_Name: Stage_Europe_02
   m_EditorClassIdentifier: Assembly-CSharp::StageData
-  stageId: stage_001
-  stageName: TestStage
-  stageImage: {fileID: 21300000, guid: 63455e26ad054ca4896542a3875b0835, type: 3}
+  stageId: Europe_02
+  stageName: Europe 2
+  stageImage: {fileID: 0}
   countryIds:
-  - JPN
-  - USA
-  - FRA
+  - LUX
+  - MLT
+  - MDA
+  - MCO
+  - MNE
+  - NLD
+  - MKD
+  - NOR
+  - POL
+  - PRT
+  - ROU
+  - RUS
+  - SMR
+  - SRB
+  - SVK
+  - SVN
+  - ESP
+  - SWE
+  - CHE
+  - UKR
   - GBR
-  - ITA
+  - VAT
   threeStarTime: 30
   twoStarTime: 60
-  mapStartPosition: {x: -210, y: -710}
-  mapStartScale: 3
+  mapStartPosition: {x: 0, y: 0}
+  mapStartScale: 1
