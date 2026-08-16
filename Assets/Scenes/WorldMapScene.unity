@@ -352,6 +352,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 19263668}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &19263668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -754,6 +756,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 32873555}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &32873555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1082,6 +1086,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 43222891}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &43222891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1175,6 +1181,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 46507668}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &46507668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1268,6 +1276,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 46773353}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &46773353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1361,6 +1371,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 47058372}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &47058372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1670,6 +1682,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 56306646}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &56306646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1763,6 +1777,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 56917811}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &56917811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2064,6 +2080,143 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746b35e8e4277b34d9a771e89bee16d1, type: 3}
+--- !u!1 &70901883
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 70901884}
+  - component: {fileID: 70901886}
+  - component: {fileID: 70901885}
+  m_Layer: 5
+  m_Name: Title_Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &70901884
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70901883}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1371498991}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 395}
+  m_SizeDelta: {x: 500, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &70901885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70901883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: flag-icons
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 72
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &70901886
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70901883}
+  m_CullTransparentMesh: 1
 --- !u!1 &72231161
 GameObject:
   m_ObjectHideFlags: 0
@@ -2288,6 +2441,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 72722966}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &72722966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2522,6 +2677,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 80135041}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &80135041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3258,6 +3415,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 94008405}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &94008405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4590,6 +4749,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 144371824}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &144371824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4820,6 +4981,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 146040149}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &146040149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4863,6 +5026,145 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6736474715900410859, guid: 746b35e8e4277b34d9a771e89bee16d1, type: 3}
   m_PrefabInstance: {fileID: 276990767}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &149958087
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 149958088}
+  - component: {fileID: 149958090}
+  - component: {fileID: 149958089}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &149958088
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149958087}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2141409536}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &149958089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149958087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Back
+
+'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &149958090
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149958087}
+  m_CullTransparentMesh: 1
 --- !u!1 &151121864
 GameObject:
   m_ObjectHideFlags: 0
@@ -5425,6 +5727,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 179188774}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &179188774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5609,6 +5913,139 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746b35e8e4277b34d9a771e89bee16d1, type: 3}
+--- !u!1 &184931006
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 184931007}
+  - component: {fileID: 184931010}
+  - component: {fileID: 184931009}
+  - component: {fileID: 184931008}
+  m_Layer: 5
+  m_Name: Licenses_Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &184931007
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184931006}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 801678647}
+  m_Father: {fileID: 370351080}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 100}
+  m_SizeDelta: {x: 300, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &184931008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184931006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 184931009}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1826537317}
+        m_TargetAssemblyTypeName: PopupManager, Assembly-CSharp
+        m_MethodName: OpenSourceLicenses
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &184931009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184931006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &184931010
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184931006}
+  m_CullTransparentMesh: 1
 --- !u!1 &187552408
 GameObject:
   m_ObjectHideFlags: 0
@@ -6073,6 +6510,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 203097509}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &203097509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6303,6 +6742,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 205027306}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &205027306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6396,6 +6837,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 206829210}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &206829210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6787,6 +7230,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 211547051}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &211547051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7472,6 +7917,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 230649134}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &230649134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7997,6 +8444,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 251442982}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &251442982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8552,6 +9001,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 266083645}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &266083645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8962,6 +9413,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 288006704}
   m_CullTransparentMesh: 1
+--- !u!1 &288258815
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 288258816}
+  m_Layer: 5
+  m_Name: Sliding Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &288258816
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288258815}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2143097831}
+  m_Father: {fileID: 1520739351}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: -20}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &289627131 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6736474715900410859, guid: 746b35e8e4277b34d9a771e89bee16d1, type: 3}
@@ -9241,6 +9728,81 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746b35e8e4277b34d9a771e89bee16d1, type: 3}
+--- !u!1 &297065796
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 297065797}
+  - component: {fileID: 297065799}
+  - component: {fileID: 297065798}
+  m_Layer: 5
+  m_Name: BackGround
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &297065797
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297065796}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1039361085}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &297065798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297065796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.33962262, g: 0.3364186, b: 0.3364186, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &297065799
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297065796}
+  m_CullTransparentMesh: 1
 --- !u!224 &297388378 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6736474715900410859, guid: 746b35e8e4277b34d9a771e89bee16d1, type: 3}
@@ -9717,6 +10279,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 306948041}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &306948041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10780,6 +11344,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334040346}
   m_CullTransparentMesh: 1
+--- !u!1 &334173521
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 334173522}
+  m_Layer: 5
+  m_Name: Sliding Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &334173522
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334173521}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1600533366}
+  m_Father: {fileID: 444370175}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: -20}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &336259236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10976,6 +11576,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 338304493}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &338304493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11212,6 +11814,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 342169951}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &342169951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11442,6 +12046,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 342801324}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &342801324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11540,6 +12146,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 345204333}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &345204333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11638,6 +12246,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 349503967}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &349503967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11909,6 +12519,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 360852354}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &360852354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12460,6 +13072,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 373117571}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &373117571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12647,6 +13261,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 385310588}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 804884353}
+  countryFlagDatabase: {fileID: 1818651791}
 --- !u!114 &385310588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12700,7 +13316,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &387042757
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12716,6 +13332,8 @@ RectTransform:
   - {fileID: 1429182481}
   - {fileID: 1957724168}
   - {fileID: 3816877771437484510}
+  - {fileID: 1220901225}
+  - {fileID: 1039361085}
   m_Father: {fileID: 643684378}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -12778,6 +13396,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 387204953}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &387204953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12912,6 +13532,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 397891038}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &397891038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13010,6 +13632,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 403085338}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &403085338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13598,6 +14222,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 422425780}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &422425780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13843,6 +14469,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 432187928}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &432187928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14115,6 +14743,132 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 441917584}
+  m_CullTransparentMesh: 1
+--- !u!1 &444370174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 444370175}
+  - component: {fileID: 444370178}
+  - component: {fileID: 444370177}
+  - component: {fileID: 444370176}
+  m_Layer: 5
+  m_Name: Scrollbar Vertical
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &444370175
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444370174}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 334173522}
+  m_Father: {fileID: 781462194}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 0}
+  m_Pivot: {x: 1, y: 1}
+--- !u!114 &444370176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444370174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Scrollbar
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1600533367}
+  m_HandleRect: {fileID: 1600533366}
+  m_Direction: 2
+  m_Value: 1
+  m_Size: 0.34379426
+  m_NumberOfSteps: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &444370177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444370174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &444370178
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444370174}
   m_CullTransparentMesh: 1
 --- !u!1 &444619835
 GameObject:
@@ -14571,7 +15325,7 @@ RectTransform:
   m_Father: {fileID: 1875406863}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -14673,6 +15427,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 459944949}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &459944949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14766,6 +15522,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 464837390}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &464837390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15445,6 +16203,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 488218448}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &488218448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16516,8 +17276,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 109903745}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -16837,6 +17597,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 527141767}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &527141767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16930,6 +17692,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 528400269}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &528400269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17023,6 +17787,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 528552356}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &528552356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17233,10 +17999,10 @@ RectTransform:
   - {fileID: 857723029}
   m_Father: {fileID: 1060852035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 350, y: -515}
-  m_SizeDelta: {x: 600, y: 30}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &530979238
 MonoBehaviour:
@@ -17550,6 +18316,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 536321907}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &536321907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17780,6 +18548,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 556587220}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &556587220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18107,6 +18877,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 567003256}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &567003256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18205,6 +18977,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 575323863}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &575323863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18298,6 +19072,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 577852407}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &577852407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18391,6 +19167,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 577894630}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &577894630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18484,6 +19262,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 592402969}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &592402969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18577,6 +19357,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 593318695}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &593318695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18764,6 +19546,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 597312951}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &597312951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18857,6 +19641,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 598967170}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &598967170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19181,6 +19967,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 607477267}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &607477267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19218,6 +20006,197 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 607477264}
+  m_CullTransparentMesh: 1
+--- !u!1 &616683712
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 616683713}
+  - component: {fileID: 616683716}
+  - component: {fileID: 616683715}
+  m_Layer: 5
+  m_Name: License_Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &616683713
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616683712}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 863292830}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &616683715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616683712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'The MIT License (MIT)
+
+    
+
+    Copyright (c) 2013 Panayiotis Lipiridis
+
+    
+
+    Permission
+    is hereby granted, free of charge, to any person obtaining a copy of
+
+    this
+    software and associated documentation files (the "Software"), to deal in
+
+    the
+    Software without restriction, including without limitation the rights to
+
+    use,
+    copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+
+    of
+    the Software, and to permit persons to whom the Software is furnished to do
+
+    so,
+    subject to the following conditions:
+
+    
+
+    The above copyright notice
+    and this permission notice shall be included in all
+
+    copies or substantial
+    portions of the Software.
+
+    
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT
+    WARRANTY OF ANY KIND, EXPRESS OR
+
+    IMPLIED, INCLUDING BUT NOT LIMITED TO
+    THE WARRANTIES OF MERCHANTABILITY,
+
+    FITNESS FOR A PARTICULAR PURPOSE AND
+    NONINFRINGEMENT. IN NO EVENT SHALL THE
+
+    AUTHORS OR COPYRIGHT HOLDERS BE
+    LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+
+    LIABILITY, WHETHER IN AN ACTION
+    OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+
+    OUT OF OR IN CONNECTION WITH
+    THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+
+    SOFTWARE.'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &616683716
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616683712}
   m_CullTransparentMesh: 1
 --- !u!1001 &617825928
 PrefabInstance:
@@ -20198,6 +21177,7 @@ RectTransform:
   - {fileID: 1161234969}
   - {fileID: 387042757}
   - {fileID: 873657221}
+  - {fileID: 1965989346}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -21210,6 +22190,143 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746b35e8e4277b34d9a771e89bee16d1, type: 3}
+--- !u!1 &677268072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 677268073}
+  - component: {fileID: 677268075}
+  - component: {fileID: 677268074}
+  m_Layer: 5
+  m_Name: Result_Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &677268073
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677268072}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 804884349}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 60, y: -30}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &677268074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677268072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Correct !
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 34
+  m_fontSizeBase: 34
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &677268075
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677268072}
+  m_CullTransparentMesh: 1
 --- !u!1 &679255344
 GameObject:
   m_ObjectHideFlags: 0
@@ -21354,6 +22471,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 680247340}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &680247340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21956,6 +23075,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 689786871}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &689786871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22049,6 +23170,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 696314484}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &696314484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22652,6 +23775,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 709343528}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &709343528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22745,6 +23870,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 709905882}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &709905882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23304,6 +24431,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 724643225}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &724643225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23341,6 +24470,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 724643222}
+  m_CullTransparentMesh: 1
+--- !u!1 &725850389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 725850390}
+  - component: {fileID: 725850392}
+  - component: {fileID: 725850391}
+  m_Layer: 5
+  m_Name: BackGround
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &725850390
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725850389}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1220901225}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &725850391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725850389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.38993704, g: 0.38993704, b: 0.38993704, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &725850392
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725850389}
   m_CullTransparentMesh: 1
 --- !u!1 &728523581
 GameObject:
@@ -23397,6 +24601,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 728523584}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &728523584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23490,6 +24696,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 729651767}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &729651767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23945,6 +25153,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 739759858}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &739759858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24212,6 +25422,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 752314025}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &752314025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24383,6 +25595,14 @@ PrefabInstance:
       propertyPath: dragLayer
       value: 
       objectReference: {fileID: 1161234969}
+    - target: {fileID: 5159708868124813927, guid: 746b35e8e4277b34d9a771e89bee16d1, type: 3}
+      propertyPath: answerFeedbackUI
+      value: 
+      objectReference: {fileID: 804884353}
+    - target: {fileID: 5159708868124813927, guid: 746b35e8e4277b34d9a771e89bee16d1, type: 3}
+      propertyPath: countryFlagDatabase
+      value: 
+      objectReference: {fileID: 1818651791}
     - target: {fileID: 6736474715900410859, guid: 746b35e8e4277b34d9a771e89bee16d1, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -24676,6 +25896,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 765196795}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &765196795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24774,6 +25996,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 770244562}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &770244562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24956,6 +26180,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 774449808}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &774449808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25143,6 +26369,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 779945847}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &779945847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25180,6 +26408,115 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 779945844}
+  m_CullTransparentMesh: 1
+--- !u!1 &781462193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 781462194}
+  - component: {fileID: 781462197}
+  - component: {fileID: 781462196}
+  - component: {fileID: 781462195}
+  m_Layer: 5
+  m_Name: Scroll View
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &781462194
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781462193}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1374662799}
+  - {fileID: 1520739351}
+  - {fileID: 444370175}
+  m_Father: {fileID: 1371498991}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 980, y: 500}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &781462195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781462193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ScrollRect
+  m_Content: {fileID: 863292830}
+  m_Horizontal: 0
+  m_Vertical: 1
+  m_MovementType: 2
+  m_Elasticity: 0.1
+  m_Inertia: 1
+  m_DecelerationRate: 0.135
+  m_ScrollSensitivity: 1
+  m_Viewport: {fileID: 1374662799}
+  m_HorizontalScrollbar: {fileID: 1520739352}
+  m_VerticalScrollbar: {fileID: 444370176}
+  m_HorizontalScrollbarVisibility: 2
+  m_VerticalScrollbarVisibility: 2
+  m_HorizontalScrollbarSpacing: -3
+  m_VerticalScrollbarSpacing: -3
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &781462196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781462193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &781462197
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781462193}
   m_CullTransparentMesh: 1
 --- !u!1 &781920357
 GameObject:
@@ -25325,6 +26662,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 782720323}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &782720323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26078,6 +27417,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 800867055}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &800867055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26115,6 +27456,143 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800867052}
+  m_CullTransparentMesh: 1
+--- !u!1 &801678646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 801678647}
+  - component: {fileID: 801678649}
+  - component: {fileID: 801678648}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &801678647
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801678646}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 184931007}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &801678648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801678646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Open Licenses
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 44.85
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &801678649
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801678646}
   m_CullTransparentMesh: 1
 --- !u!1 &803457348
 GameObject:
@@ -26210,6 +27688,122 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6736474715900410859, guid: 746b35e8e4277b34d9a771e89bee16d1, type: 3}
   m_PrefabInstance: {fileID: 895249719}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &804884348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 804884349}
+  - component: {fileID: 804884352}
+  - component: {fileID: 804884351}
+  - component: {fileID: 804884350}
+  - component: {fileID: 804884353}
+  m_Layer: 5
+  m_Name: AnswerFeedback
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &804884349
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804884348}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1759561621}
+  - {fileID: 1609381277}
+  - {fileID: 677268073}
+  m_Father: {fileID: 1965989346}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 360, y: 170}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &804884350
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804884348}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
+--- !u!114 &804884351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804884348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.7058824}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &804884352
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804884348}
+  m_CullTransparentMesh: 1
+--- !u!114 &804884353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804884348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f57ef346aedf91141a6bf8eafe288fee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnswerFeedbackUI
+  canvasGroup: {fileID: 804884350}
+  feedbackRect: {fileID: 804884349}
+  flagImage: {fileID: 1759561622}
+  countryNameText: {fileID: 1609381278}
+  resultText: {fileID: 677268074}
+  countryFlagDatabase: {fileID: 1818651791}
+  displayDuration: 0.8
+  fadeDuration: 0.2
+  correctStartScale: 0.7
+  correctPunchScale: 0.15
+  wrongShakeDuration: 0.35
+  wrongShakeStrength: 18
 --- !u!1001 &816576562
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26410,6 +28004,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 819347624}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &819347624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26503,6 +28099,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 819495040}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &819495040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26754,6 +28352,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 822891968}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &822891968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26936,6 +28536,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 826186202}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &826186202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27118,6 +28720,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 827784218}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &827784218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27211,6 +28815,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 828218434}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &828218434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27309,6 +28915,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 831352228}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &831352228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27540,6 +29148,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 837812907}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &837812907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27770,6 +29380,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 839263834}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &839263834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27945,6 +29557,145 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746b35e8e4277b34d9a771e89bee16d1, type: 3}
+--- !u!1 &842862737
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 842862738}
+  - component: {fileID: 842862740}
+  - component: {fileID: 842862739}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &842862738
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842862737}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2043413654}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &842862739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842862737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Back
+
+'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &842862740
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842862737}
+  m_CullTransparentMesh: 1
 --- !u!224 &842892221 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6736474715900410859, guid: 746b35e8e4277b34d9a771e89bee16d1, type: 3}
@@ -28094,6 +29845,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 849045614}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &849045614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28131,6 +29884,143 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 849045611}
+  m_CullTransparentMesh: 1
+--- !u!1 &850582394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 850582395}
+  - component: {fileID: 850582397}
+  - component: {fileID: 850582396}
+  m_Layer: 5
+  m_Name: TitleText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &850582395
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850582394}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1175344871}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 334}
+  m_SizeDelta: {x: 500, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &850582396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850582394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Open Source Licenses
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 49.3
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &850582397
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850582394}
   m_CullTransparentMesh: 1
 --- !u!1 &852865178
 GameObject:
@@ -28281,6 +30171,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 855942354}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &855942354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28607,6 +30499,84 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746b35e8e4277b34d9a771e89bee16d1, type: 3}
+--- !u!1 &863292829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 863292830}
+  - component: {fileID: 863292831}
+  - component: {fileID: 863292832}
+  m_Layer: 5
+  m_Name: Content
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &863292830
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863292829}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 616683713}
+  m_Father: {fileID: 1374662799}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &863292831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863292829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ContentSizeFitter
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
+--- !u!114 &863292832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863292829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.VerticalLayoutGroup
+  m_Padding:
+    m_Left: 20
+    m_Right: 20
+    m_Top: 20
+    m_Bottom: 20
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1001 &864695708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28945,6 +30915,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 873424726}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &873424726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29086,6 +31058,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 875865234}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &875865234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29424,6 +31398,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 894856961}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &894856961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29810,6 +31786,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 916884530}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &916884530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29888,10 +31866,10 @@ RectTransform:
   - {fileID: 427712539}
   m_Father: {fileID: 1060852035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 350, y: -405}
-  m_SizeDelta: {x: 600, y: 30}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &918167978
 MonoBehaviour:
@@ -30062,6 +32040,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 920557872}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &920557872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30805,6 +32785,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 939048743}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &939048743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31203,6 +33185,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 946226752}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &946226752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31296,6 +33280,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 951412203}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &951412203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31662,6 +33648,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 974098405}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &974098405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31765,6 +33753,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 980460382}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &980460382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32000,6 +33990,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1002653790}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1002653790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32276,6 +34268,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1011552766}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1011552766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33496,6 +35490,76 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1032339094}
   m_CullTransparentMesh: 1
+--- !u!1 &1039361084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1039361085}
+  - component: {fileID: 1039361087}
+  - component: {fileID: 1039361086}
+  m_Layer: 5
+  m_Name: LicenseDetail_Popup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1039361085
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039361084}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 297065797}
+  - {fileID: 1371498991}
+  m_Father: {fileID: 387042757}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1039361086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039361084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73a4e789767a15f41ab23b6350f79bab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PopupBase
+  canvasGroup: {fileID: 1039361087}
+  popupWindow: {fileID: 1371498991}
+  openDuration: 0.2
+  closeDuration: 0.15
+  hiddenScale: 0.85
+  openEase: 27
+  closeEase: 26
+--- !u!225 &1039361087
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039361084}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1039379894
 GameObject:
   m_ObjectHideFlags: 0
@@ -33743,6 +35807,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1045702559}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1045702559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34014,6 +36080,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1050888091}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1050888091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34843,6 +36911,7 @@ Transform:
   - {fileID: 371188943}
   - {fileID: 1177537079}
   - {fileID: 1617814487}
+  - {fileID: 1818651790}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1063432286
@@ -35360,6 +37429,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1076004276}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1076004276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35768,6 +37839,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1083647891}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1083647891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35861,6 +37934,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1088146105}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1088146105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36505,6 +38580,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1106049202}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1106049202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37013,6 +39090,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1118929028}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1118929028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37106,6 +39185,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1119705514}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1119705514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37467,6 +39548,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1126250622}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1126250622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37929,6 +40012,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1142438579}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1142438579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38022,6 +40107,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1143364537}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1143364537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39199,6 +41286,44 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746b35e8e4277b34d9a771e89bee16d1, type: 3}
+--- !u!1 &1175344870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1175344871}
+  m_Layer: 5
+  m_Name: PopupWindow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1175344871
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175344870}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 850582395}
+  - {fileID: 1750202234}
+  - {fileID: 2043413654}
+  m_Father: {fileID: 1220901225}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1176772789
 GameObject:
   m_ObjectHideFlags: 0
@@ -39254,6 +41379,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1176772792}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1176772792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39758,6 +41885,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1184077888}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1184077888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39892,6 +42021,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1193145654}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1193145654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40248,6 +42379,76 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1218388200}
   m_CullTransparentMesh: 1
+--- !u!1 &1220901224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1220901225}
+  - component: {fileID: 1220901227}
+  - component: {fileID: 1220901226}
+  m_Layer: 5
+  m_Name: OpenSourceLicenses_Popup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1220901225
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220901224}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 725850390}
+  - {fileID: 1175344871}
+  m_Father: {fileID: 387042757}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1220901226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220901224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73a4e789767a15f41ab23b6350f79bab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PopupBase
+  canvasGroup: {fileID: 1220901227}
+  popupWindow: {fileID: 1175344871}
+  openDuration: 0.2
+  closeDuration: 0.15
+  hiddenScale: 0.85
+  openEase: 27
+  closeEase: 26
+--- !u!225 &1220901227
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220901224}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1221204464
 GameObject:
   m_ObjectHideFlags: 0
@@ -40378,6 +42579,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1223739930}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1223739930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40936,6 +43139,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1241927322}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1241927322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41072,6 +43277,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1247274556}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1247274556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41506,6 +43713,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1268687244}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1268687244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41599,6 +43808,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1270473305}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1270473305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42293,6 +44504,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1300273227}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1300273227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42943,6 +45156,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1310146959}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1310146959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43125,6 +45340,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1316453643}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1316453643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43162,6 +45379,143 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316453640}
+  m_CullTransparentMesh: 1
+--- !u!1 &1319479317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1319479318}
+  - component: {fileID: 1319479320}
+  - component: {fileID: 1319479319}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1319479318
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319479317}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1750202234}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1319479319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319479317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: FlagIconButton
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1319479320
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319479317}
   m_CullTransparentMesh: 1
 --- !u!224 &1324985735 stripped
 RectTransform:
@@ -43223,6 +45577,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1326362417}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1326362417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43321,6 +45677,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1330727657}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1330727657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44122,6 +46480,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1354208247}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1354208247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44352,6 +46712,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1354707446}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1354707446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44450,6 +46812,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1359119550}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1359119550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44680,6 +47044,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1360906838}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1360906838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44924,6 +47290,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1367173454}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1367173454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45261,6 +47629,44 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746b35e8e4277b34d9a771e89bee16d1, type: 3}
+--- !u!1 &1371498990
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1371498991}
+  m_Layer: 5
+  m_Name: PopupWindow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1371498991
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371498990}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 70901884}
+  - {fileID: 781462194}
+  - {fileID: 2141409536}
+  m_Father: {fileID: 1039361085}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1372067411
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45539,6 +47945,96 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746b35e8e4277b34d9a771e89bee16d1, type: 3}
+--- !u!1 &1374662798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1374662799}
+  - component: {fileID: 1374662802}
+  - component: {fileID: 1374662801}
+  - component: {fileID: 1374662800}
+  m_Layer: 5
+  m_Name: Viewport
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1374662799
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374662798}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 863292830}
+  m_Father: {fileID: 781462194}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &1374662800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374662798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Mask
+  m_ShowMaskGraphic: 0
+--- !u!114 &1374662801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374662798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1374662802
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374662798}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1378870278
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46614,10 +49110,10 @@ RectTransform:
   - {fileID: 1404650077}
   m_Father: {fileID: 1060852035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 350, y: -460}
-  m_SizeDelta: {x: 600, y: 30}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1411940733
 MonoBehaviour:
@@ -46918,6 +49414,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1430726528}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1430726528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47011,6 +49509,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1430989677}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1430989677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47635,6 +50135,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1451552261}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1451552261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47708,10 +50210,10 @@ RectTransform:
   - {fileID: 290169624}
   m_Father: {fileID: 1060852035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 350, y: -570}
-  m_SizeDelta: {x: 600, y: 30}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1453995937
 MonoBehaviour:
@@ -48339,6 +50841,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1464933371}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1464933371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48908,7 +51412,7 @@ RectTransform:
   m_Father: {fileID: 1251637501}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -49005,6 +51509,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1480314539}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1480314539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49892,6 +52398,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1498871575}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1498871575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49990,6 +52498,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1499289236}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1499289236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50083,6 +52593,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1500202542}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1500202542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50716,6 +53228,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1515913188}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1515913188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50917,6 +53431,132 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1516038057}
+  m_CullTransparentMesh: 1
+--- !u!1 &1520739350
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1520739351}
+  - component: {fileID: 1520739354}
+  - component: {fileID: 1520739353}
+  - component: {fileID: 1520739352}
+  m_Layer: 5
+  m_Name: Scrollbar Horizontal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1520739351
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520739350}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 288258816}
+  m_Father: {fileID: 781462194}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 20}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1520739352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520739350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Scrollbar
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2143097832}
+  m_HandleRect: {fileID: 2143097831}
+  m_Direction: 0
+  m_Value: 0
+  m_Size: 1
+  m_NumberOfSteps: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1520739353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520739350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1520739354
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520739350}
   m_CullTransparentMesh: 1
 --- !u!1 &1521851852
 GameObject:
@@ -51130,6 +53770,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1523657238}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1523657238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51228,6 +53870,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1530553577}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1530553577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51410,6 +54054,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1534026415}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1534026415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52008,6 +54654,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1545937603}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1545937603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52195,6 +54843,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1547041066}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1547041066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52435,6 +55085,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1560380085}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1560380085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53162,6 +55814,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1597527655}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1597527655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53205,6 +55859,81 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6736474715900410859, guid: 746b35e8e4277b34d9a771e89bee16d1, type: 3}
   m_PrefabInstance: {fileID: 292276790}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1600533365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1600533366}
+  - component: {fileID: 1600533368}
+  - component: {fileID: 1600533367}
+  m_Layer: 5
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1600533366
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600533365}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 334173522}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1600533367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600533365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1600533368
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600533365}
+  m_CullTransparentMesh: 1
 --- !u!1 &1601030417
 GameObject:
   m_ObjectHideFlags: 0
@@ -53374,6 +56103,143 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6736474715900410859, guid: 746b35e8e4277b34d9a771e89bee16d1, type: 3}
   m_PrefabInstance: {fileID: 182570221}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1609381276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1609381277}
+  - component: {fileID: 1609381279}
+  - component: {fileID: 1609381278}
+  m_Layer: 5
+  m_Name: CountryName_Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1609381277
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609381276}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 804884349}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 60, y: 25}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1609381278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609381276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Japan
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 28
+  m_fontSizeBase: 28
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1609381279
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609381276}
+  m_CullTransparentMesh: 1
 --- !u!1 &1614914293
 GameObject:
   m_ObjectHideFlags: 0
@@ -53429,6 +56295,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1614914296}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1614914296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53796,6 +56664,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1623664704}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1623664704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53889,6 +56759,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1624394443}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1624394443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54169,6 +57041,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 332999251034569866, guid: 7276ec5407ca0594fa45de178e29c160, type: 3}
       insertIndex: 2
       addedObject: {fileID: 665202410}
+    - targetCorrespondingSourceObject: {fileID: 332999251034569866, guid: 7276ec5407ca0594fa45de178e29c160, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 184931007}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2311800030933562997, guid: 7276ec5407ca0594fa45de178e29c160, type: 3}
       insertIndex: -1
@@ -54544,6 +57419,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1633629317}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1633629317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54637,6 +57514,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1636334225}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1636334225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54876,6 +57755,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1640116434}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1640116434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55425,6 +58306,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1665401737}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1665401737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56177,6 +59060,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1688604727}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1688604727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56270,6 +59155,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1691857416}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1691857416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56363,6 +59250,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1691907078}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1691907078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56687,6 +59576,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1700797246}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1700797246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56958,6 +59849,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1708779836}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1708779836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57051,6 +59944,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1711858554}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1711858554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57289,6 +60184,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1714567253}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1714567253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57838,6 +60735,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1720706975}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1720706975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58020,6 +60919,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1724741172}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1724741172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58635,6 +61536,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1749523460}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1749523460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58672,6 +61575,139 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1749523457}
+  m_CullTransparentMesh: 1
+--- !u!1 &1750202233
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1750202234}
+  - component: {fileID: 1750202237}
+  - component: {fileID: 1750202236}
+  - component: {fileID: 1750202235}
+  m_Layer: 5
+  m_Name: FlagIcon_Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1750202234
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750202233}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1319479318}
+  m_Father: {fileID: 1175344871}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 78}
+  m_SizeDelta: {x: 300, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1750202235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750202233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1750202236}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1826537317}
+        m_TargetAssemblyTypeName: PopupManager, Assembly-CSharp
+        m_MethodName: OpenLicenseDetail
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1750202236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750202233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1750202237
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750202233}
   m_CullTransparentMesh: 1
 --- !u!1 &1751364175
 GameObject:
@@ -58817,6 +61853,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1751732334}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1751732334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58910,6 +61948,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1753153179}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1753153179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59003,6 +62043,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1757360485}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1757360485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59182,6 +62224,81 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746b35e8e4277b34d9a771e89bee16d1, type: 3}
+--- !u!1 &1759561620
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1759561621}
+  - component: {fileID: 1759561623}
+  - component: {fileID: 1759561622}
+  m_Layer: 5
+  m_Name: FlagImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1759561621
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759561620}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 804884349}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -110, y: 0}
+  m_SizeDelta: {x: 96, y: 64}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1759561622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759561620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1759561623
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759561620}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1761016700
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59504,6 +62621,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1763289936}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1763289936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59738,6 +62857,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1764642762}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1764642762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60683,6 +63804,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1790440723}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1790440723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61091,6 +64214,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1806302352}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1806302352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61326,6 +64451,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1807766315}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1807766315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61419,6 +64546,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1808030693}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1808030693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61976,6 +65105,50 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746b35e8e4277b34d9a771e89bee16d1, type: 3}
+--- !u!1 &1818651789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1818651790}
+  - component: {fileID: 1818651791}
+  m_Layer: 0
+  m_Name: CountryFlagDatabase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1818651790
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818651789}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1062621453}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1818651791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818651789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a82a90f8aadba3f43ac93ed1a3a69c13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CountryFlagDatabase
 --- !u!1001 &1822691027
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62431,6 +65604,10 @@ MonoBehaviour:
     popup: {fileID: 1768747411}
   - popupType: 3
     popup: {fileID: 1957724167}
+  - popupType: 4
+    popup: {fileID: 1220901226}
+  - popupType: 5
+    popup: {fileID: 1039361086}
 --- !u!1 &1827571777
 GameObject:
   m_ObjectHideFlags: 0
@@ -62486,6 +65663,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1827571780}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1827571780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62589,6 +65768,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1832189464}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1832189464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62692,6 +65873,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1837586967}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1837586967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63016,6 +66199,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1846966897}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1846966897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63203,6 +66388,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1848592959}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1848592959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63541,6 +66728,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1860655684}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1860655684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63639,6 +66828,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1862055981}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1862055981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63962,6 +67153,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1870440656}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1870440656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64233,6 +67426,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1873963663}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1873963663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64362,6 +67557,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1880267513}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1880267513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64643,6 +67840,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1889541628}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1889541628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64877,6 +68076,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1892389761}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1892389761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64970,6 +68171,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1900193280}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1900193280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65152,6 +68355,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1904486510}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1904486510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65608,6 +68813,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1915177288}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1915177288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66832,6 +70039,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1954604587}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1954604587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66925,6 +70134,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1957081671}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1957081671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67230,6 +70441,42 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746b35e8e4277b34d9a771e89bee16d1, type: 3}
+--- !u!1 &1965989345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1965989346}
+  m_Layer: 5
+  m_Name: FeedbackLayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1965989346
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965989345}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 804884349}
+  m_Father: {fileID: 643684378}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1981704816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67563,6 +70810,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1987484480}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1987484480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67793,6 +71042,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1991638666}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1991638666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67886,6 +71137,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1993440328}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1993440328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68068,6 +71321,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 1998649107}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &1998649107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68470,6 +71725,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 2008547431}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &2008547431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68563,6 +71820,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 2008680909}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &2008680909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68793,6 +72052,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 2016011450}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &2016011450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68891,6 +72152,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 2026580188}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &2026580188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69303,6 +72566,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 2034403885}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &2034403885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69462,8 +72727,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1157324944}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -69504,6 +72769,139 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036715279}
+  m_CullTransparentMesh: 1
+--- !u!1 &2043413653
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2043413654}
+  - component: {fileID: 2043413657}
+  - component: {fileID: 2043413656}
+  - component: {fileID: 2043413655}
+  m_Layer: 5
+  m_Name: Back_Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2043413654
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043413653}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 842862738}
+  m_Father: {fileID: 1175344871}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -120}
+  m_SizeDelta: {x: 300, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2043413655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043413653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2043413656}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1826537317}
+        m_TargetAssemblyTypeName: PopupManager, Assembly-CSharp
+        m_MethodName: CloseTop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2043413656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043413653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2043413657
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043413653}
   m_CullTransparentMesh: 1
 --- !u!1001 &2044759805
 PrefabInstance:
@@ -70163,6 +73561,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 2060294037}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &2060294037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71378,6 +74778,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 2107942390}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &2107942390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71471,6 +74873,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 2108579328}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &2108579328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71569,6 +74973,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 2117123753}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &2117123753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71662,6 +75068,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 2118352758}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &2118352758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72060,6 +75468,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 2130055599}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &2130055599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72370,6 +75780,139 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139146152}
   m_CullTransparentMesh: 1
+--- !u!1 &2141409535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2141409536}
+  - component: {fileID: 2141409539}
+  - component: {fileID: 2141409538}
+  - component: {fileID: 2141409537}
+  m_Layer: 5
+  m_Name: Back_Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2141409536
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141409535}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 149958088}
+  m_Father: {fileID: 1371498991}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 100}
+  m_SizeDelta: {x: 300, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2141409537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141409535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2141409538}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1826537317}
+        m_TargetAssemblyTypeName: PopupManager, Assembly-CSharp
+        m_MethodName: CloseTop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2141409538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141409535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2141409539
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141409535}
+  m_CullTransparentMesh: 1
 --- !u!1001 &2141626366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72567,6 +76110,8 @@ MonoBehaviour:
   placedCountryRoot: {fileID: 1137508101}
   slotImage: {fileID: 2143054582}
   puzzleManager: {fileID: 1523005097}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
 --- !u!114 &2143054582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72604,6 +76149,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143054579}
+  m_CullTransparentMesh: 1
+--- !u!1 &2143097830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2143097831}
+  - component: {fileID: 2143097833}
+  - component: {fileID: 2143097832}
+  m_Layer: 5
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2143097831
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143097830}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 288258816}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2143097832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143097830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2143097833
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143097830}
   m_CullTransparentMesh: 1
 --- !u!224 &2143140692 stripped
 RectTransform:

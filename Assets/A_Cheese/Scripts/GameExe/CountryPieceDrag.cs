@@ -43,6 +43,15 @@ public class CountryPieceDrag : MonoBehaviour,
     [SerializeField]
     private TMP_Text countryNameText;
 
+    [Header("正解・不正解表示")]
+    [SerializeField]
+    private AnswerFeedbackUI answerFeedbackUI;
+
+    [Header("国旗データ")]
+    [SerializeField]
+    private CountryFlagDatabase countryFlagDatabase;
+
+
     [Header("カード表示用シルエット設定")]
 
     [SerializeField]
@@ -136,8 +145,23 @@ public class CountryPieceDrag : MonoBehaviour,
 
     private void Awake()
     {
-        rectTransform = GetComponent<RectTransform>();
-        canvasGroup = GetComponent<CanvasGroup>();
+        rectTransform =
+            GetComponent<RectTransform>();
+
+        canvasGroup =
+            GetComponent<CanvasGroup>();
+
+        if (answerFeedbackUI == null)
+        {
+            answerFeedbackUI =
+                FindFirstObjectByType<AnswerFeedbackUI>();
+        }
+
+        if (countryFlagDatabase == null)
+        {
+            countryFlagDatabase =
+                FindFirstObjectByType<CountryFlagDatabase>();
+        }
     }
 
     private void Start()
@@ -373,8 +397,53 @@ public class CountryPieceDrag : MonoBehaviour,
             return;
         }
 
-        // 本当に不正解なら元へ戻す
+        // ==================================================
+        // ここまで正解にならなかった = 不正解
+        // ==================================================
+
+        Debug.Log(
+            $"{gameObject.name} は不正解です。ID：{countryId}"
+        );
+
+        // 不正解SE
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.PlaySE(SEType.Wrong);
+        }
+
+        // 不正解表示
+        if (answerFeedbackUI != null &&
+            countryFlagDatabase != null)
+        {
+            Debug.Log("★ AnswerFeedbackUIを呼びます");
+
+            Sprite flag =
+                countryFlagDatabase.GetFlag(
+                    countryId
+                );
+
+            string displayName =
+                countryNameText != null
+                    ? countryNameText.text
+                    : countryId;
+
+            answerFeedbackUI.ShowWrong(
+                displayName,
+                flag
+            );
+        }
+        else
+        {
+            Debug.LogWarning(
+                $"★ Feedback参照なし " +
+                $"AnswerFeedbackUI={answerFeedbackUI} " +
+                $"CountryFlagDatabase={countryFlagDatabase}"
+            );
+        }
+
+        // 元へ戻す
         ReturnToOriginalPositionWithTween();
+
     }
 
 

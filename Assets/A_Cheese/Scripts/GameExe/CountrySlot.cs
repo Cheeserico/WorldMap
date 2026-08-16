@@ -26,21 +26,51 @@ public class CountrySlot : MonoBehaviour, IDropHandler
     [SerializeField]
     private CountryPuzzleManager puzzleManager;
 
+    [Header("正解・不正解表示")]
+    [SerializeField]
+    private AnswerFeedbackUI answerFeedbackUI;
+
+    [Header("国旗データ")]
+    [SerializeField]
+    private CountryFlagDatabase countryFlagDatabase;
+
 
 
     // このスロットがすでに正解済みか
     private bool isOccupied;
 
+    private void Awake()
+    {
+        if (answerFeedbackUI == null)
+        {
+            answerFeedbackUI =
+                FindFirstObjectByType<AnswerFeedbackUI>();
+        }
+
+        if (countryFlagDatabase == null)
+        {
+            countryFlagDatabase =
+                FindFirstObjectByType<CountryFlagDatabase>();
+        }
+    }
+
     public void OnDrop(PointerEventData eventData)
     {
+        Debug.Log(
+            $"★ OnDropが呼ばれました：{gameObject.name}"
+        );
+
         // すでに正解済みなら何もしない
         if (isOccupied)
         {
-            Debug.Log($"{gameObject.name} はすでに使用済みです。");
+            Debug.Log(
+                $"{gameObject.name} はすでに使用済みです。"
+            );
             return;
         }
 
-        GameObject droppedObject = eventData.pointerDrag;
+        GameObject droppedObject =
+            eventData.pointerDrag;
 
         if (droppedObject == null)
         {
@@ -55,7 +85,9 @@ public class CountrySlot : MonoBehaviour, IDropHandler
             return;
         }
 
-        // ピースとスロットの国IDを比較
+        // ==================================================
+        // 正解
+        // ==================================================
         if (countryPiece.CountryId == countryId)
         {
             Debug.Log(
@@ -65,11 +97,40 @@ public class CountrySlot : MonoBehaviour, IDropHandler
             // 正解SE
             if (SoundManager.Instance != null)
             {
-                SoundManager.Instance.PlaySE(SEType.Correct);
+                SoundManager.Instance.PlaySE(
+                    SEType.Correct
+                );
             }
 
+            // 正解表示
+            if (answerFeedbackUI != null &&
+                countryFlagDatabase != null)
+            {
+                Debug.Log(
+                    "★ CorrectのFeedbackを呼びます"
+                );
 
-            RectTransform slotRect = transform as RectTransform;
+                Sprite flag =
+                    countryFlagDatabase.GetFlag(
+                        countryPiece.CountryId
+                    );
+
+                answerFeedbackUI.ShowCorrect(
+                    countryPiece.CountryId,
+                    flag
+                );
+            }
+            else
+            {
+                Debug.LogWarning(
+                    $"★ Correct Feedback参照なし " +
+                    $"AnswerFeedbackUI={answerFeedbackUI} " +
+                    $"CountryFlagDatabase={countryFlagDatabase}"
+                );
+            }
+
+            RectTransform slotRect =
+                transform as RectTransform;
 
             countryPiece.PlaceOnSlot(
                 slotRect,
@@ -82,11 +143,6 @@ public class CountrySlot : MonoBehaviour, IDropHandler
             if (slotImage != null)
             {
                 slotImage.enabled = false;
-            }
-
-            if (slotImage != null)
-            {
-                slotImage.enabled = false;
                 slotImage.raycastTarget = false;
             }
 
@@ -95,6 +151,10 @@ public class CountrySlot : MonoBehaviour, IDropHandler
                 puzzleManager.AddPlacedCountry();
             }
         }
+
+        // ==================================================
+        // 不正解
+        // ==================================================
         else
         {
             Debug.Log(
@@ -103,12 +163,9 @@ public class CountrySlot : MonoBehaviour, IDropHandler
                 $" / スロットID：{countryId}"
             );
 
-            // 不正解SE
-            if (SoundManager.Instance != null)
-            {
-                SoundManager.Instance.PlaySE(SEType.Wrong);
-            }
-
+            // ここではWrong演出を出さない
+            // CountryPieceDrag.OnEndDrag側で
+            // 「最終的に正解しなかった」ときに出す
         }
     }
 

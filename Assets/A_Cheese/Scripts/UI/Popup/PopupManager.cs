@@ -141,6 +141,23 @@ public class PopupManager : MonoBehaviour
     }
 
     /// <summary>
+    /// Open Source Licenses画面を開く。
+    /// Settings画面のボタンから呼び出す。
+    /// </summary>
+    public void OpenSourceLicenses()
+    {
+        Open(PopupType.OpenSourceLicenses);
+    }
+
+    /// <summary>
+    /// flag-iconsのライセンス詳細画面を開く。
+    /// </summary>
+    public void OpenLicenseDetail()
+    {
+        Open(PopupType.LicenseDetail);
+    }
+
+    /// <summary>
     /// InspectorのResumeButtonから呼び出すためのメソッド。
     /// 後でPauseManagerへ置き換える。
     /// </summary>

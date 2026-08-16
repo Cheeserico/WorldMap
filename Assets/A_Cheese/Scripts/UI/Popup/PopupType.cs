@@ -8,5 +8,7 @@ public enum PopupType
     Pause,
     Result,
     Home,
-    Settings
+    Settings,
+    OpenSourceLicenses,
+    LicenseDetail
 }
