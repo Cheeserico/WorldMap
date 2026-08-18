@@ -26,6 +26,15 @@ public class ResultManager : MonoBehaviour
     /// </summary>
     public void ShowResult()
     {
+        // ヒント選択・演出・自動移動をすべて終了
+        HintManager hintManager =
+            FindFirstObjectByType<HintManager>();
+
+        if (hintManager != null)
+        {
+            hintManager.StopAllHints();
+        }
+
         float clearTime = 0f;
 
         // ------------------------------

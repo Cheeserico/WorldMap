@@ -13,10 +13,14 @@ using System.Collections.Generic;
 /// </summary>
 [RequireComponent(typeof(RectTransform))]
 [RequireComponent(typeof(CanvasGroup))]
+
 public class CountryPieceDrag : MonoBehaviour,
     IBeginDragHandler,
     IDragHandler,
-    IEndDragHandler
+    IEndDragHandler,
+    IPointerDownHandler,
+    IPointerUpHandler
+
 {
     [Header("このピースの国ID")]
     [SerializeField]
@@ -28,6 +32,10 @@ public class CountryPieceDrag : MonoBehaviour,
     /// </summary>
 
     public string CountryId => countryId;
+
+    public bool IsPlaced => isPlaced;
+    public bool IsSnapping => isSnapping;
+
     public string CountryName
     {
         get
@@ -157,8 +165,13 @@ public class CountryPieceDrag : MonoBehaviour,
     // DOTweenで吸着中か
     private bool isSnapping;
 
+    // ヒント選択のタップ中はドラッグさせない
+    private bool isHintPointerInteraction;
+
     private Sequence snapSequence;
     private Sequence returnSequence;
+
+    private Tween hintHighlightTween;
 
     private void Awake()
     {
@@ -188,14 +201,58 @@ public class CountryPieceDrag : MonoBehaviour,
     }
 
     /// <summary>
-    /// ドラッグ開始。
+    /// ヒント選択中にカードを押したときの処理。
     /// </summary>
-    public void OnBeginDrag(PointerEventData eventData)
+    public void OnPointerDown(
+        PointerEventData eventData
+    )
     {
         if (isPlaced || isSnapping)
         {
             return;
         }
+
+        HintManager hintManager =
+            FindFirstObjectByType<HintManager>();
+
+        if (hintManager == null ||
+            !hintManager.IsSelectingCountry)
+        {
+            return;
+        }
+
+        // この指では通常ドラッグを開始させない
+        isHintPointerInteraction = true;
+
+        hintManager.SelectCountryForHint(
+            this
+        );
+    }
+
+    public void OnPointerUp(
+        PointerEventData eventData
+    )
+    {
+        isHintPointerInteraction = false;
+    }
+
+    /// <summary>
+    /// ドラッグ開始。
+    /// </summary>
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+
+        if (isHintPointerInteraction)
+        {
+            return;
+        }
+
+        if (isPlaced || isSnapping)
+        {
+            return;
+        }
+
+        // StopHintHighlight();
 
         if (dragLayer == null)
         {
@@ -340,6 +397,11 @@ public class CountryPieceDrag : MonoBehaviour,
     /// </summary>
     public void OnDrag(PointerEventData eventData)
     {
+        if (isHintPointerInteraction)
+        {
+            return;
+        }
+
         if (isPlaced || isSnapping)
         {
             return;
@@ -358,6 +420,11 @@ public class CountryPieceDrag : MonoBehaviour,
     /// </summary>
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (isHintPointerInteraction)
+        {
+            return;
+        }
+
         // CountryDropTarget側ですでに正解済みなら終了
         if (wasPlacedSuccessfully)
         {
@@ -602,6 +669,9 @@ public class CountryPieceDrag : MonoBehaviour,
             return;
         }
 
+        StopHintHighlight();
+
+
         wasPlacedSuccessfully = true;
         isSnapping = true;
 
@@ -719,9 +789,9 @@ public class CountryPieceDrag : MonoBehaviour,
                 placedLocalScale
                 * punchScaleAmount;
 
+
             snapSequence.Append(
-                rectTransform.DOPunchScale(
-                    punchAmount,
+                rectTransform.DOPunchScale(punchAmount,
                     punchDuration,
                     5,
                     0.5f
@@ -1210,9 +1280,54 @@ public class CountryPieceDrag : MonoBehaviour,
         return result;
     }
 
+    /// <summary>
+    /// ヒント対象カードの点滅を開始する。
+    /// </summary>
+    public void PlayHintHighlight()
+    {
+        if (isPlaced || isSnapping)
+        {
+            return;
+        }
+
+        StopHintHighlight();
+
+        canvasGroup.alpha = 1f;
+
+        hintHighlightTween =
+            canvasGroup
+                .DOFade(
+                    0.4f,
+                    0.35f
+                )
+                .SetLoops(
+                    -1,
+                    LoopType.Yoyo
+                )
+                .SetEase(
+                    Ease.InOutSine
+                );
+    }
+
+    /// <summary>
+    /// ヒント対象カードの点滅を終了する。
+    /// </summary>
+    public void StopHintHighlight()
+    {
+        hintHighlightTween?.Kill();
+        hintHighlightTween = null;
+
+        if (canvasGroup != null)
+        {
+            canvasGroup.alpha = 1f;
+        }
+    }
+
+
     private void OnDestroy()
     {
         snapSequence?.Kill();
         returnSequence?.Kill();
+        hintHighlightTween?.Kill();
     }
 }

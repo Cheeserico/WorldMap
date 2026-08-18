@@ -55,6 +55,14 @@ public class PauseManager : MonoBehaviour
             return;
         }
 
+        HintManager hintManager =
+    FindFirstObjectByType<HintManager>();
+
+        if (hintManager != null)
+        {
+            hintManager.StopAllHints();
+        }
+
         /*
          * ポーズ前のTimeScaleを保存する。
          * 通常は1だが、スロー演出などにも対応できる。

@@ -153,6 +153,16 @@ public class CountrySlot : MonoBehaviour, IDropHandler
             }
         }
 
+        HintManager hintManager =
+    FindFirstObjectByType<HintManager>();
+
+        if (hintManager != null)
+        {
+            hintManager.NotifyCountryPlaced(
+                countryId
+            );
+        }
+
         // ==================================================
         // 不正解
         // ==================================================

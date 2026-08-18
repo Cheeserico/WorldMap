@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
@@ -22,6 +23,13 @@ public class CountryPuzzleManager : MonoBehaviour
     [Header("タイマー")]
     [SerializeField]
     private TimerManager timerManager;
+
+    [Header("ゲームクリア演出")]
+    [SerializeField]
+    private float resultDelay = 1.4f;
+
+    private Tween resultDelayTween;
+    private bool isGameClearScheduled;
 
     // ==================================================
     // 今回実際に出題する国
@@ -86,9 +94,26 @@ public class CountryPuzzleManager : MonoBehaviour
 
         UpdateProgressText();
 
-        if (placedCountryCount >= totalCountryCount)
+        if (
+            placedCountryCount >= totalCountryCount &&
+            !isGameClearScheduled
+        )
         {
-            OnGameClear();
+            isGameClearScheduled = true;
+
+            // Resultの待機中もクリアタイムが増えないよう即停止
+            if (timerManager != null)
+            {
+                timerManager.StopTimer();
+            }
+
+            resultDelayTween?.Kill();
+
+            resultDelayTween =
+                DOVirtual.DelayedCall(
+                    resultDelay,
+                    OnGameClear
+                );
         }
     }
 
@@ -316,4 +341,10 @@ public class CountryPuzzleManager : MonoBehaviour
             string.Join(", ", activeCountryIds)
         );
     }
+
+    private void OnDestroy()
+    {
+        resultDelayTween?.Kill();
+    }
+
 }

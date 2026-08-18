@@ -1,4 +1,6 @@
+using DG.Tweening;
 using UnityEngine;
+
 
 /// <summary>
 /// 世界地図の移動と拡大縮小を管理します。
@@ -39,6 +41,20 @@ public class MapPanZoomController : MonoBehaviour
     // タッチ操作用
     private bool isTouchDragging;
     private Vector2 previousTouchLocalPosition;
+
+    [Header("ヒントによる自動移動")]
+    [SerializeField]
+    private float hintFocusDuration = 0.6f;
+
+    [SerializeField]
+    private Ease hintFocusEase = Ease.InOutCubic;
+
+    // 自動移動中は手動操作を停止する
+    private bool isInputLocked;
+
+    private Sequence hintFocusSequence;
+
+
 
     private void Awake()
     {
@@ -151,6 +167,11 @@ public class MapPanZoomController : MonoBehaviour
 
     private void Update()
     {
+        if (isInputLocked)
+        {
+            return;
+        }
+
 #if UNITY_EDITOR || UNITY_STANDALONE
         HandleMouseInput();
 #endif
@@ -477,6 +498,128 @@ public class MapPanZoomController : MonoBehaviour
     }
 
     /// <summary>
+    /// 指定した場所がMapViewportの中央に来るように、
+    /// 地図を自動で移動・拡大します。
+    /// </summary>
+    public void FocusOnTarget(
+        RectTransform target,
+        float targetScale,
+        System.Action onComplete = null
+    )
+    {
+        if (target == null)
+        {
+            Debug.LogWarning(
+                "ヒント対象のRectTransformが設定されていません。"
+            );
+
+            return;
+        }
+
+        hintFocusSequence?.Kill();
+
+        isInputLocked = true;
+        isMouseDragging = false;
+        isTouchDragging = false;
+
+        float clampedScale =
+            Mathf.Clamp(
+                targetScale,
+                minScale,
+                maxScale
+            );
+
+        // 対象地点のMapContent内座標
+        Vector2 targetLocalPosition =
+            mapContent.InverseTransformPoint(
+                target.position
+            );
+
+        // 対象地点をViewport中央へ移動する位置
+        Vector2 desiredMapPosition =
+            -targetLocalPosition * clampedScale;
+
+        // 最終位置を移動可能範囲内へ制限する
+        Vector2 previousPosition =
+            mapContent.anchoredPosition;
+
+        Vector3 previousScale =
+            mapContent.localScale;
+
+        SetScale(clampedScale);
+        mapContent.anchoredPosition =
+            desiredMapPosition;
+
+        ClampMapPosition();
+
+        Vector2 clampedMapPosition =
+            mapContent.anchoredPosition;
+
+        // Tween開始前の状態へ戻す
+        mapContent.anchoredPosition =
+            previousPosition;
+
+        mapContent.localScale =
+            previousScale;
+
+        hintFocusSequence =
+            DOTween.Sequence();
+
+        hintFocusSequence.Append(
+            mapContent
+                .DOScale(
+                    new Vector3(
+                        clampedScale,
+                        clampedScale,
+                        1f
+                    ),
+                    hintFocusDuration
+                )
+                .SetEase(hintFocusEase)
+        );
+
+        hintFocusSequence.Join(
+            mapContent
+                .DOAnchorPos(
+                    clampedMapPosition,
+                    hintFocusDuration
+                )
+                .SetEase(hintFocusEase)
+        );
+
+        hintFocusSequence.OnComplete(() =>
+        {
+            ClampMapPosition();
+
+            isInputLocked = false;
+
+            onComplete?.Invoke();
+        });
+
+        hintFocusSequence.OnKill(() =>
+        {
+            isInputLocked = false;
+        });
+
+    }
+
+
+    /// <summary>
+    /// ヒントによる自動移動を途中終了する。
+    /// </summary>
+    public void CancelHintFocus()
+    {
+        hintFocusSequence?.Kill();
+        hintFocusSequence = null;
+
+        isInputLocked = false;
+        isMouseDragging = false;
+        isTouchDragging = false;
+
+        ClampMapPosition();
+    }
+
+    /// <summary>
     /// 地図を初期位置・初期倍率に戻します。
     /// 将来的にリセットボタンから呼び出せます。
     /// </summary>
@@ -486,4 +629,10 @@ public class MapPanZoomController : MonoBehaviour
         SetScale(minScale);
         ClampMapPosition();
     }
+
+    private void OnDestroy()
+    {
+        hintFocusSequence?.Kill();
+    }
+
 }
