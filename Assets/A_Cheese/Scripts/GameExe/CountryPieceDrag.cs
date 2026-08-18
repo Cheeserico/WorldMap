@@ -28,6 +28,18 @@ public class CountryPieceDrag : MonoBehaviour,
     /// </summary>
 
     public string CountryId => countryId;
+    public string CountryName
+    {
+        get
+        {
+            if (countryNameText != null)
+            {
+                return countryNameText.text;
+            }
+
+            return countryId;
+        }
+    }
 
     [Header("ドラッグ中のピースを置く場所")]
     [SerializeField]
@@ -61,6 +73,11 @@ public class CountryPieceDrag : MonoBehaviour,
     [SerializeField]
 
     private float cardCountryMaxSize = 115f;
+
+    [Tooltip("このサイズ未満の国を低解像度の小国として扱う")]
+    [SerializeField]
+    private int smallCountryPixelThreshold = 32;
+
     // 地図用の元Sprite
     private Sprite originalCountrySprite;
 
@@ -1050,6 +1067,60 @@ public class CountryPieceDrag : MonoBehaviour,
 
         int croppedWidth = maxX - minX + 1;
         int croppedHeight = maxY - minY + 1;
+
+        bool isLowResolutionCountry =
+            Mathf.Max(croppedWidth, croppedHeight)
+            < smallCountryPixelThreshold;
+
+        if (isLowResolutionCountry)
+        {
+            Debug.LogWarning(
+                $"【低解像度の小国】{countryId}: " +
+                $"切り抜き後={croppedWidth}x{croppedHeight}px",
+                gameObject
+            );
+
+            // Resources/CardCountryPiecesから
+            // カード専用の高解像度Spriteを読み込む
+            Sprite highResolutionCardSprite =
+                Resources.Load<Sprite>(
+                    $"CardCountryPieces/{countryId}"
+                );
+
+            if (highResolutionCardSprite != null)
+            {
+                cardCountrySprite =
+                    highResolutionCardSprite;
+
+                Debug.Log(
+                    $"【高解像度カード使用】{countryId}: " +
+                    $"{highResolutionCardSprite.rect.width}x" +
+                    $"{highResolutionCardSprite.rect.height}px",
+                    gameObject
+                );
+
+                return;
+            }
+
+            Debug.LogWarning(
+                $"【カード画像なし】" +
+                $"Resources/CardCountryPieces/{countryId} " +
+                $"が見つからないため、元Spriteを使用します。",
+                gameObject
+            );
+        }
+
+
+        Debug.Log(
+    $"【カード画像確認】国ID={countryId}, " +
+    $"元Sprite={width}x{height}px, " +
+    $"切り抜き後={croppedWidth}x{croppedHeight}px, " +
+    $"カード表示最大辺={cardCountryMaxSize}px, " +
+    $"Texture={sourceTexture.width}x{sourceTexture.height}px, " +
+    $"FilterMode={sourceTexture.filterMode}",
+    gameObject
+);
+
 
         Rect croppedRect = new Rect(
             spriteRect.x + minX,

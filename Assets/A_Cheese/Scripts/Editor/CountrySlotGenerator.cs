@@ -12,6 +12,9 @@ public class CountrySlotGenerator : EditorWindow
     private RectTransform placedCountryRoot;
     private CountryPuzzleManager puzzleManager;
 
+    private AnswerFeedbackUI answerFeedbackUI;
+    private CountryFlagDatabase countryFlagDatabase;
+
     private const float SourceMapWidth = 4096f;
     private const float SourceMapHeight = 2048f;
 
@@ -64,6 +67,23 @@ public class CountrySlotGenerator : EditorWindow
                 typeof(CountryPuzzleManager),
                 true
             );
+
+        answerFeedbackUI =
+    (AnswerFeedbackUI)EditorGUILayout.ObjectField(
+        "Answer Feedback UI",
+        answerFeedbackUI,
+        typeof(AnswerFeedbackUI),
+        true
+    );
+
+        countryFlagDatabase =
+            (CountryFlagDatabase)EditorGUILayout.ObjectField(
+                "Country Flag Database",
+                countryFlagDatabase,
+                typeof(CountryFlagDatabase),
+                true
+            );
+
 
         EditorGUILayout.Space();
 
@@ -359,6 +379,16 @@ public class CountrySlotGenerator : EditorWindow
                 .FindProperty("puzzleManager")
                 .objectReferenceValue =
                 puzzleManager;
+
+            serializedSlot
+                .FindProperty("answerFeedbackUI")
+                .objectReferenceValue =
+                answerFeedbackUI;
+
+            serializedSlot
+                .FindProperty("countryFlagDatabase")
+                .objectReferenceValue =
+                countryFlagDatabase;
 
             serializedSlot.ApplyModifiedProperties();
 

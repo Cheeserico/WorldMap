@@ -14,6 +14,9 @@ public class CountryPieceGenerator : EditorWindow
 
     private GameObject countryPiecePrefab;
 
+    private AnswerFeedbackUI answerFeedbackUI;
+    private CountryFlagDatabase countryFlagDatabase;
+
     [MenuItem("Tools/World Map/Generate Country Pieces")]
     public static void ShowWindow()
     {
@@ -60,6 +63,22 @@ public class CountryPieceGenerator : EditorWindow
                 typeof(GameObject),
                 false
             );
+        answerFeedbackUI =
+    (AnswerFeedbackUI)EditorGUILayout.ObjectField(
+        "Answer Feedback UI",
+        answerFeedbackUI,
+        typeof(AnswerFeedbackUI),
+        true
+    );
+
+countryFlagDatabase =
+    (CountryFlagDatabase)EditorGUILayout.ObjectField(
+        "Country Flag Database",
+        countryFlagDatabase,
+        typeof(CountryFlagDatabase),
+        true
+    );
+
 
         EditorGUILayout.Space();
 
@@ -255,6 +274,16 @@ public class CountryPieceGenerator : EditorWindow
                     "dragLayer"
                 );
 
+            SerializedProperty answerFeedbackUIProperty =
+    
+                serializedDrag.FindProperty("answerFeedbackUI");
+
+            SerializedProperty countryFlagDatabaseProperty =
+                serializedDrag.FindProperty(
+                    "countryFlagDatabase"
+                );
+
+
             if (countryIdProperty != null)
             {
                 countryIdProperty.stringValue =
@@ -266,6 +295,19 @@ public class CountryPieceGenerator : EditorWindow
                 dragLayerProperty.objectReferenceValue =
                     dragLayer;
             }
+
+            if (answerFeedbackUIProperty != null)
+            {
+                answerFeedbackUIProperty.objectReferenceValue =
+                    answerFeedbackUI;
+            }
+
+            if (countryFlagDatabaseProperty != null)
+            {
+                countryFlagDatabaseProperty.objectReferenceValue =
+                    countryFlagDatabase;
+            }
+
 
             serializedDrag.ApplyModifiedProperties();
 

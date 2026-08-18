@@ -740,6 +740,39 @@ public class StageDataCreatorWindow : EditorWindow
 
         GUILayout.Space(10f);
 
+
+        GUILayout.Space(10f);
+
+        // ==================================================
+        // 開発テスト
+        // ==================================================
+
+        EditorGUILayout.LabelField(
+            "開発テスト",
+            EditorStyles.miniBoldLabel
+        );
+
+        if (GUILayout.Button(
+                "小国カード表示テスト",
+                GUILayout.Height(30f)))
+        {
+            SelectPreset(
+                new string[]
+                {
+                    "AND", // アンドラ
+                    "VAT", // バチカン
+                    "MCO", // モナコ
+                    "SMR", // サンマリノ
+                    "LIE", // リヒテンシュタイン
+                    "LUX", // ルクセンブルク
+                    "MLT", // マルタ
+                    "SGP", // シンガポール
+                    "BHR", // バーレーン
+                    "NRU"  // ナウル
+                }
+            );
+        }
+
         // ==================================================
         // 最終チャレンジ
         // ==================================================
