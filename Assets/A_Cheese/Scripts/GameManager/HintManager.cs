@@ -27,6 +27,25 @@ public class HintManager : MonoBehaviour
     private TMP_Text hintGuideText;
 
     [SerializeField]
+    private GameObject hintCancelButton;
+
+    [Header("カード選択の手アニメーション")]
+    [SerializeField]
+    private RectTransform hintHandImage;
+
+    [SerializeField]
+    private float handMoveDistance = 120f;
+
+    [SerializeField]
+    private float handMoveDuration = 0.45f;
+
+    [SerializeField]
+    private float handTapDistance = 30f;
+
+    [SerializeField]
+    private float handTapDuration = 0.15f;
+
+    [SerializeField]
     private float guideFadeDuration = 0.2f;
 
     [Header("1回目のヒント")]
@@ -65,6 +84,11 @@ public class HintManager : MonoBehaviour
 
     private Tween hintGuideTween;
 
+    private Sequence hintHandSequence;
+
+    private Vector2 hintHandStartPosition;
+    private Vector3 hintHandStartScale;
+
     // 国IDごとのヒント使用回数
     private readonly Dictionary<string, int>
         hintUseCounts =
@@ -88,6 +112,25 @@ public class HintManager : MonoBehaviour
             hintGuideText.alpha = 0f;
             hintGuideText.gameObject.SetActive(false);
         }
+
+        if (hintCancelButton != null)
+        {
+            hintCancelButton.SetActive(false);
+        }
+
+        if (hintHandImage != null)
+        {
+            hintHandStartPosition =
+                hintHandImage.anchoredPosition;
+
+            hintHandStartScale =
+                hintHandImage.localScale;
+
+            hintHandImage
+                .gameObject
+                .SetActive(false);
+        }
+
     }
 
     private void LateUpdate()
@@ -104,8 +147,140 @@ public class HintManager : MonoBehaviour
             currentTarget.position;
     }
 
+    private void ShowHintHand()
+    {
+        if (hintHandImage == null)
+        {
+            return;
+        }
+
+        hintHandSequence?.Kill();
+
+        hintHandImage.anchoredPosition =
+            hintHandStartPosition;
+
+        hintHandImage.localScale =
+            hintHandStartScale;
+
+        hintHandImage
+            .gameObject
+            .SetActive(true);
+
+        float startX =
+            hintHandStartPosition.x;
+
+        float startY =
+            hintHandStartPosition.y;
+
+        hintHandSequence =
+            DOTween.Sequence();
+
+        // 左へ移動
+        hintHandSequence.Append(
+            hintHandImage
+                .DOAnchorPosX(
+                    startX - handMoveDistance,
+                    handMoveDuration
+                )
+                .SetEase(Ease.InOutSine)
+        );
+
+        // 左から右へ移動
+        hintHandSequence.Append(
+            hintHandImage
+                .DOAnchorPosX(
+                    startX + handMoveDistance,
+                    handMoveDuration * 2f
+                )
+                .SetEase(Ease.InOutSine)
+        );
+
+        // 中央へ戻る
+        hintHandSequence.Append(
+            hintHandImage
+                .DOAnchorPosX(
+                    startX,
+                    handMoveDuration
+                )
+                .SetEase(Ease.InOutSine)
+        );
+
+        // カードへ指を下げてタップ
+        hintHandSequence.Append(
+            hintHandImage
+                .DOAnchorPosY(
+                    startY - handTapDistance,
+                    handTapDuration
+                )
+                .SetEase(Ease.InQuad)
+        );
+
+        hintHandSequence.Join(
+            hintHandImage
+                .DOScale(
+                    hintHandStartScale * 0.85f,
+                    handTapDuration
+                )
+        );
+
+        // 元の位置と大きさへ戻す
+        hintHandSequence.Append(
+            hintHandImage
+                .DOAnchorPosY(
+                    startY,
+                    handTapDuration
+                )
+                .SetEase(Ease.OutQuad)
+        );
+
+        hintHandSequence.Join(
+            hintHandImage
+                .DOScale(
+                    hintHandStartScale,
+                    handTapDuration
+                )
+        );
+
+        hintHandSequence.AppendInterval(
+            0.4f
+        );
+
+        hintHandSequence.SetLoops(
+            -1,
+            LoopType.Restart
+        );
+    }
+
+    private void HideHintHand()
+    {
+        hintHandSequence?.Kill();
+        hintHandSequence = null;
+
+        if (hintHandImage == null)
+        {
+            return;
+        }
+
+        hintHandImage.anchoredPosition =
+            hintHandStartPosition;
+
+        hintHandImage.localScale =
+            hintHandStartScale;
+
+        hintHandImage
+            .gameObject
+            .SetActive(false);
+    }
+
     private void ShowHintGuide()
     {
+        ShowHintHand();
+
+        if (hintCancelButton != null)
+        {
+            hintCancelButton.SetActive(true);
+        }
+
         if (hintGuideText == null)
         {
             return;
@@ -126,6 +301,13 @@ public class HintManager : MonoBehaviour
 
     private void HideHintGuide()
     {
+        HideHintHand();
+
+        if (hintCancelButton != null)
+        {
+            hintCancelButton.SetActive(false);
+        }
+
         if (hintGuideText == null)
         {
             return;
@@ -393,6 +575,13 @@ public class HintManager : MonoBehaviour
     /// </summary>
     public void StopAllHints()
     {
+        HideHintHand();
+
+        if (hintCancelButton != null)
+        {
+            hintCancelButton.SetActive(false);
+        }
+
         isSelectingCountry = false;
 
         if (mapPanZoomController != null)
@@ -452,6 +641,7 @@ public class HintManager : MonoBehaviour
     {
         hideTween?.Kill();
         hintGuideTween?.Kill();
+        hintHandSequence?.Kill();
     }
 
 }

@@ -26,6 +26,31 @@ public class ResultManager : MonoBehaviour
     /// </summary>
     public void ShowResult()
     {
+        // ------------------------------
+        // クリアしたステージの途中データを削除
+        // ------------------------------
+
+        CountryPuzzleManager puzzleManager =
+            FindFirstObjectByType<CountryPuzzleManager>();
+
+        if (puzzleManager != null)
+        {
+            string stageId =
+                puzzleManager.CurrentStageId;
+
+            ContinueSaveManager.Delete(
+                stageId
+            );
+        }
+        else
+        {
+            Debug.LogWarning(
+                "ResultManager：" +
+                "途中データ削除用の" +
+                "CountryPuzzleManagerが見つかりません。"
+            );
+        }
+
         // ヒント選択・演出・自動移動をすべて終了
         HintManager hintManager =
             FindFirstObjectByType<HintManager>();
@@ -209,13 +234,22 @@ public class ResultManager : MonoBehaviour
     /// <summary>
     /// もう一度遊ぶ
     /// </summary>
+    /// <summary>
+    /// もう一度、最初から遊ぶ。
+    /// </summary>
     public void Retry()
     {
+        if (StageManager.Instance != null)
+        {
+            StageManager.Instance.SetStartMode(
+                StageStartMode.NewGame
+            );
+        }
+
         SceneManager.LoadScene(
             SceneManager.GetActiveScene().buildIndex
         );
     }
-
     /// <summary>
     /// タイトルへ戻る
     /// </summary>

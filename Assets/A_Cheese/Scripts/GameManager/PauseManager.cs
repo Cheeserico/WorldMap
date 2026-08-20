@@ -187,11 +187,29 @@ public class PauseManager : MonoBehaviour
 
         isSceneTransitioning = true;
 
+        // 現在のステージの途中データを削除
+        CountryPuzzleManager puzzleManager =
+            FindFirstObjectByType<CountryPuzzleManager>();
+
+        if (puzzleManager != null)
+        {
+            ContinueSaveManager.Delete(
+                puzzleManager.CurrentStageId
+            );
+        }
+
+        // 必ず最初から開始する
+        if (StageManager.Instance != null)
+        {
+            StageManager.Instance.SetStartMode(
+                StageStartMode.NewGame
+            );
+        }
+
         PrepareForSceneChange();
 
         Scene currentScene =
             SceneManager.GetActiveScene();
-
         SceneManager.LoadScene(
             currentScene.name
         );
@@ -256,9 +274,29 @@ public class PauseManager : MonoBehaviour
 
         isSceneTransitioning = true;
 
+        // タイトルへ移動する直前の状態を途中保存
+        ContinueSaveController continueSaveController =
+            FindFirstObjectByType<ContinueSaveController>();
+
+        if (continueSaveController != null)
+        {
+            continueSaveController.SaveCurrentStage();
+        }
+        else
+        {
+            Debug.LogWarning(
+                "PauseManager：" +
+                "ContinueSaveControllerが見つからないため、" +
+                "途中保存できません。",
+                this
+            );
+        }
+
         PrepareForSceneChange();
 
-        SceneManager.LoadScene(titleSceneName);
+        SceneManager.LoadScene(
+            titleSceneName
+        );
     }
 
     /// <summary>

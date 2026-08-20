@@ -200,7 +200,8 @@ public class StageSelectButton : MonoBehaviour
         if (stageData == null)
         {
             Debug.LogWarning(
-                "StageSelectButton：StageDataが設定されていません。"
+                "StageSelectButton：" +
+                "StageDataが設定されていません。"
             );
 
             return;
@@ -209,24 +210,103 @@ public class StageSelectButton : MonoBehaviour
         if (StageManager.Instance == null)
         {
             Debug.LogError(
-                "StageSelectButton：StageManagerが見つかりません。"
+                "StageSelectButton：" +
+                "StageManagerが見つかりません。"
             );
 
             return;
         }
 
-        // 選択したStageDataを保存
+        bool supportsContinueSave =
+            ContinueSaveManager.SupportsContinueSave(
+                stageData
+            );
+
+        // Randomステージに古い途中データが残っていたら削除
+        if (!supportsContinueSave &&
+            ContinueSaveManager.HasSaveData(
+                stageData.stageId))
+        {
+            ContinueSaveManager.Delete(
+                stageData.stageId
+            );
+        }
+
+        bool hasContinueSave =
+            supportsContinueSave &&
+            ContinueSaveManager.HasSaveData(
+                stageData.stageId
+            );
+        
+        // ==================================================
+        // 途中データがある場合
+        // ==================================================
+
+        if (hasContinueSave)
+        {
+            if (PopupManager.Instance == null)
+            {
+                Debug.LogError(
+                    "StageSelectButton：" +
+                    "PopupManagerが見つかりません。"
+                );
+
+                return;
+            }
+
+            ContinueStagePopup continuePopup =
+                PopupManager.Instance
+                    .GetPopup<ContinueStagePopup>(
+                        PopupType.ContinueStage
+                    );
+
+            if (continuePopup == null)
+            {
+                Debug.LogError(
+                    "StageSelectButton：" +
+                    "ContinueStagePopupが取得できません。"
+                );
+
+                return;
+            }
+
+            continuePopup.Setup(
+                stageData,
+                gameSceneName
+            );
+
+            PopupManager.Instance.Open(
+                PopupType.ContinueStage
+            );
+
+            Debug.Log(
+                $"途中データがあります：" +
+                $"{stageData.stageId}"
+            );
+
+            return;
+        }
+
+        // ==================================================
+        // 途中データがない場合
+        // ==================================================
+
         StageManager.Instance.SetStageData(
             stageData
         );
 
-        Debug.Log(
-            $"StageSelectButton：{stageData.name} を選択しました。"
+        StageManager.Instance.SetStartMode(
+            StageStartMode.NewGame
         );
 
-        // GameSceneへ移動
+        Debug.Log(
+            $"StageSelectButton：" +
+            $"{stageData.name}を最初から開始します。"
+        );
+
         SceneManager.LoadScene(
             gameSceneName
         );
     }
+
 }

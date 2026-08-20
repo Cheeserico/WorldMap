@@ -72,6 +72,23 @@ public class TimerManager : MonoBehaviour
     }
 
     /// <summary>
+    /// 保存されていた経過時間を設定する。
+    /// 設定しただけではタイマーは開始しない。
+    /// </summary>
+    public void SetElapsedTime(float time)
+    {
+        elapsedTime =
+            Mathf.Max(0f, time);
+
+        UpdateTimerText();
+
+        Debug.Log(
+            $"TimerManager：経過時間を" +
+            $"{elapsedTime:F1}秒に設定しました。"
+        );
+    }
+
+    /// <summary>
     /// タイマーを0に戻して開始する
     /// </summary>
     public void RestartTimer()

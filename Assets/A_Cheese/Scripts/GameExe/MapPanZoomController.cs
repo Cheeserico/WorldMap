@@ -54,6 +54,41 @@ public class MapPanZoomController : MonoBehaviour
 
     private Sequence hintFocusSequence;
 
+    // ==================================================
+    // 途中保存用
+    // ==================================================
+
+    /// <summary>
+    /// 現在のMapContent位置。
+    /// </summary>
+    public Vector2 CurrentMapPosition
+    {
+        get
+        {
+            if (mapContent == null)
+            {
+                return Vector2.zero;
+            }
+
+            return mapContent.anchoredPosition;
+        }
+    }
+
+    /// <summary>
+    /// 現在のMapContent拡大率。
+    /// </summary>
+    public float CurrentMapScale
+    {
+        get
+        {
+            if (mapContent == null)
+            {
+                return 1f;
+            }
+
+            return mapContent.localScale.x;
+        }
+    }
 
 
     private void Awake()
@@ -617,6 +652,51 @@ public class MapPanZoomController : MonoBehaviour
         isTouchDragging = false;
 
         ClampMapPosition();
+    }
+
+    /// <summary>
+    /// 途中保存されていた地図の位置と倍率を復元する。
+    /// </summary>
+    public void RestoreMapView(
+        Vector2 savedPosition,
+        float savedScale
+    )
+    {
+        if (mapContent == null)
+        {
+            Debug.LogWarning(
+                "MapPanZoomController：" +
+                "MapContentがないため復元できません。"
+            );
+
+            return;
+        }
+
+        // ヒントによる自動移動があれば終了
+        CancelHintFocus();
+
+        float clampedScale =
+            Mathf.Clamp(
+                savedScale,
+                minScale,
+                maxScale
+            );
+
+        SetScale(
+            clampedScale
+        );
+
+        mapContent.anchoredPosition =
+            savedPosition;
+
+        // 保存位置が現在の画面範囲外なら内側へ収める
+        ClampMapPosition();
+
+        Debug.Log(
+            $"地図表示を復元しました。 " +
+            $"Position={mapContent.anchoredPosition}, " +
+            $"Scale={clampedScale}"
+        );
     }
 
     /// <summary>

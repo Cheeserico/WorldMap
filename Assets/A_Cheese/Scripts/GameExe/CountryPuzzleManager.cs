@@ -31,6 +31,12 @@ public class CountryPuzzleManager : MonoBehaviour
     private Tween resultDelayTween;
     private bool isGameClearScheduled;
 
+    /// <summary>
+    /// 全問正解して、クリア処理が確定しているか。
+    /// </summary>
+    public bool IsGameClearScheduled =>
+        isGameClearScheduled;
+
     // ==================================================
     // 今回実際に出題する国
     // ==================================================
@@ -38,6 +44,23 @@ public class CountryPuzzleManager : MonoBehaviour
     private List<string> activeCountryIds =
         new List<string>();
 
+
+    // ==================================================
+    // 配置済みの国ID
+    // ==================================================
+
+    private List<string> placedCountryIds =
+        new List<string>();
+
+    /// <summary>
+    /// 現在配置済みになっている国ID一覧のコピーを取得する。
+    /// </summary>
+    public List<string> GetPlacedCountryIds()
+    {
+        return new List<string>(
+            placedCountryIds
+        );
+    }
 
     // StageDataから自動設定される出題国数
     private int totalCountryCount;
@@ -72,6 +95,8 @@ public class CountryPuzzleManager : MonoBehaviour
         ApplyStageToSlots();
         ApplyStageToPieces();
 
+        placedCountryIds.Clear();
+
         placedCountryCount = 0;
         UpdateProgressText();
     }
@@ -79,9 +104,50 @@ public class CountryPuzzleManager : MonoBehaviour
     /// <summary>
     /// 国ピースが正しく配置されたときに呼ぶ。
     /// </summary>
-    public void AddPlacedCountry()
+    /// <summary>
+    /// 国ピースが正しく配置されたときに呼ぶ。
+    /// </summary>
+    public void AddPlacedCountry(
+        string countryId
+    )
     {
-        placedCountryCount++;
+        if (string.IsNullOrEmpty(countryId))
+        {
+            Debug.LogWarning(
+                "CountryPuzzleManager：" +
+                "配置したCountryIdが空です。"
+            );
+
+            return;
+        }
+
+        if (!activeCountryIds.Contains(countryId))
+        {
+            Debug.LogWarning(
+                $"CountryPuzzleManager：" +
+                $"{countryId}は今回の出題国ではありません。"
+            );
+
+            return;
+        }
+
+        // 同じ国を二重加算しない
+        if (placedCountryIds.Contains(countryId))
+        {
+            Debug.LogWarning(
+                $"CountryPuzzleManager：" +
+                $"{countryId}はすでに配置済みです。"
+            );
+
+            return;
+        }
+
+        placedCountryIds.Add(
+            countryId
+        );
+
+        placedCountryCount =
+            placedCountryIds.Count;
 
         // 念のため総数を超えないようにする
         placedCountryCount = Mathf.Clamp(
@@ -90,7 +156,11 @@ public class CountryPuzzleManager : MonoBehaviour
             totalCountryCount
         );
 
-        Debug.Log($"配置済み：{placedCountryCount} / {totalCountryCount}");
+        Debug.Log(
+            $"配置済み：{placedCountryCount} " +
+            $"/ {totalCountryCount} " +
+            $"追加国={countryId}"
+        );
 
         UpdateProgressText();
 
@@ -128,6 +198,157 @@ public class CountryPuzzleManager : MonoBehaviour
         {
             ResultManager.Instance.ShowResult();
         }
+    }
+
+    /// <summary>
+    /// 保存されていた国ID一覧から、
+    /// 配置済みピースと進捗を復元する。
+    /// </summary>
+    public int RestorePlacedCountries(
+        List<string> savedCountryIds
+    )
+    {
+        placedCountryIds.Clear();
+        placedCountryCount = 0;
+
+        isGameClearScheduled = false;
+
+        if (savedCountryIds == null ||
+            savedCountryIds.Count == 0)
+        {
+            UpdateProgressText();
+            return 0;
+        }
+
+        CountrySlot[] slots =
+            FindObjectsByType<CountrySlot>(
+                FindObjectsInactive.Include,
+                FindObjectsSortMode.None
+            );
+
+        CountryPieceDrag[] pieces =
+            FindObjectsByType<CountryPieceDrag>(
+                FindObjectsInactive.Include,
+                FindObjectsSortMode.None
+            );
+
+        Dictionary<string, CountrySlot> slotById =
+            new Dictionary<string, CountrySlot>();
+
+        Dictionary<string, CountryPieceDrag> pieceById =
+            new Dictionary<string, CountryPieceDrag>();
+
+        // 国IDからSlotを取得できるようにする
+        foreach (CountrySlot slot in slots)
+        {
+            if (slot == null ||
+                string.IsNullOrEmpty(slot.CountryId))
+            {
+                continue;
+            }
+
+            if (!slotById.ContainsKey(slot.CountryId))
+            {
+                slotById.Add(
+                    slot.CountryId,
+                    slot
+                );
+            }
+        }
+
+        // 国IDからPieceを取得できるようにする
+        foreach (CountryPieceDrag piece in pieces)
+        {
+            if (piece == null ||
+                string.IsNullOrEmpty(piece.CountryId))
+            {
+                continue;
+            }
+
+            if (!pieceById.ContainsKey(piece.CountryId))
+            {
+                pieceById.Add(
+                    piece.CountryId,
+                    piece
+                );
+            }
+        }
+
+        foreach (string countryId in savedCountryIds)
+        {
+            if (string.IsNullOrEmpty(countryId))
+            {
+                continue;
+            }
+
+            // 同じIDが保存されていても二重復元しない
+            if (placedCountryIds.Contains(countryId))
+            {
+                continue;
+            }
+
+            // 今回のステージに含まれない国は復元しない
+            if (!activeCountryIds.Contains(countryId))
+            {
+                Debug.LogWarning(
+                    $"復元対象外の国です：{countryId}"
+                );
+
+                continue;
+            }
+
+            if (!slotById.TryGetValue(
+                    countryId,
+                    out CountrySlot slot))
+            {
+                Debug.LogWarning(
+                    $"復元用Slotが見つかりません：{countryId}"
+                );
+
+                continue;
+            }
+
+            if (!pieceById.TryGetValue(
+                    countryId,
+                    out CountryPieceDrag piece))
+            {
+                Debug.LogWarning(
+                    $"復元用Pieceが見つかりません：{countryId}"
+                );
+
+                continue;
+            }
+
+            bool restored =
+                slot.RestorePlacedCountry(
+                    piece
+                );
+
+            if (!restored)
+            {
+                continue;
+            }
+
+            placedCountryIds.Add(
+                countryId
+            );
+        }
+
+        placedCountryCount =
+            Mathf.Clamp(
+                placedCountryIds.Count,
+                0,
+                totalCountryCount
+            );
+
+        UpdateProgressText();
+
+        Debug.Log(
+            $"途中進捗を復元しました。 " +
+            $"{placedCountryCount} / {totalCountryCount}"
+        );
+
+        return placedCountryCount;
     }
 
     /// <summary>

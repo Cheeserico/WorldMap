@@ -27,8 +27,25 @@ public static class SaveKeys
     // Result
     // ==================================================
 
-    public static string GetBestTimeKey(string stageId)
+    public static string GetBestTimeKey(
+        string stageId
+    )
     {
         return $"BestTime_{stageId}";
+    }
+
+
+    // ==================================================
+    // 途中保存
+    // ==================================================
+
+    /// <summary>
+    /// ステージごとの途中保存キーを取得する。
+    /// </summary>
+    public static string GetContinueSaveKey(
+        string stageId
+    )
+    {
+        return $"ContinueSave_{stageId}";
     }
 }

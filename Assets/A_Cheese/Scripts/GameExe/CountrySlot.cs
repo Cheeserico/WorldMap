@@ -149,20 +149,22 @@ public class CountrySlot : MonoBehaviour, IDropHandler
 
             if (puzzleManager != null)
             {
-                puzzleManager.AddPlacedCountry();
+                puzzleManager.AddPlacedCountry(
+                    countryId
+                );
+            }
+
+            // 正解した国をHintManagerへ通知
+            HintManager hintManager =
+                FindFirstObjectByType<HintManager>();
+
+            if (hintManager != null)
+            {
+                hintManager.NotifyCountryPlaced(
+                    countryId
+                );
             }
         }
-
-        HintManager hintManager =
-    FindFirstObjectByType<HintManager>();
-
-        if (hintManager != null)
-        {
-            hintManager.NotifyCountryPlaced(
-                countryId
-            );
-        }
-
         // ==================================================
         // 不正解
         // ==================================================
@@ -178,6 +180,82 @@ public class CountrySlot : MonoBehaviour, IDropHandler
             // CountryPieceDrag.OnEndDrag側で
             // 「最終的に正解しなかった」ときに出す
         }
+    }
+
+    /// <summary>
+    /// 途中保存されていた配置済み国を復元する。
+    /// 通常の正解演出やSE、進捗加算は行わない。
+    /// </summary>
+    public bool RestorePlacedCountry(
+        CountryPieceDrag countryPiece
+    )
+    {
+        if (countryPiece == null)
+        {
+            Debug.LogWarning(
+                $"{gameObject.name}：" +
+                "復元するCountryPieceがありません。"
+            );
+
+            return false;
+        }
+
+        if (countryPiece.CountryId != countryId)
+        {
+            Debug.LogWarning(
+                $"{gameObject.name}：" +
+                $"国IDが一致しません。 " +
+                $"Slot={countryId}, " +
+                $"Piece={countryPiece.CountryId}"
+            );
+
+            return false;
+        }
+
+        if (placedCountryRoot == null)
+        {
+            Debug.LogWarning(
+                $"{gameObject.name}：" +
+                "PlacedCountryRootが設定されていません。"
+            );
+
+            return false;
+        }
+
+        // すでに復元済みなら二重処理しない
+        if (isOccupied)
+        {
+            return false;
+        }
+
+        RectTransform slotRect =
+            transform as RectTransform;
+
+        if (slotRect == null)
+        {
+            return false;
+        }
+
+        // ピースを演出なしで正しい位置へ配置
+        countryPiece.RestoreOnSlot(
+            slotRect,
+            placedCountryRoot
+        );
+
+        // スロットを使用済みにする
+        isOccupied = true;
+
+        if (slotImage != null)
+        {
+            slotImage.enabled = false;
+            slotImage.raycastTarget = false;
+        }
+
+        Debug.Log(
+            $"{countryId}のSlotを途中データから復元しました。"
+        );
+
+        return true;
     }
 
     // StageDataに入っている国だけ白、それ以外を黄緑にする処理

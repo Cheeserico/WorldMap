@@ -10,5 +10,9 @@ public enum PopupType
     Home,
     Settings,
     OpenSourceLicenses,
-    LicenseDetail
+    LicenseDetail,
+
+    // ステージ途中データがある場合の
+    // 「続きから／最初から」選択
+    ContinueStage
 }

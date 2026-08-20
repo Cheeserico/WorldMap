@@ -847,6 +847,134 @@ public class CountryPieceDrag : MonoBehaviour,
     }
 
     /// <summary>
+    /// 途中保存されていた配置済みピースを、
+    /// DOTween演出なしで正しいスロット位置へ復元する。
+    /// </summary>
+    public void RestoreOnSlot(
+        RectTransform slotRect,
+        RectTransform placedCountryRoot
+    )
+    {
+        if (slotRect == null)
+        {
+            Debug.LogWarning(
+                $"{gameObject.name}：" +
+                "復元先のSlotがありません。"
+            );
+
+            return;
+        }
+
+        if (placedCountryRoot == null)
+        {
+            Debug.LogWarning(
+                $"{gameObject.name}：" +
+                "PlacedCountryRootがありません。"
+            );
+
+            return;
+        }
+
+        // 実行中の演出を停止
+        snapSequence?.Kill();
+        returnSequence?.Kill();
+
+        StopHintHighlight();
+
+        wasPlacedSuccessfully = true;
+        isSnapping = false;
+        isPlaced = true;
+        isHintPointerInteraction = false;
+
+        // 配置済みピースの親へ移動
+        rectTransform.SetParent(
+            placedCountryRoot,
+            false
+        );
+
+        rectTransform.SetAsLastSibling();
+
+        rectTransform.anchorMin =
+            new Vector2(0.5f, 0.5f);
+
+        rectTransform.anchorMax =
+            new Vector2(0.5f, 0.5f);
+
+        rectTransform.pivot =
+            new Vector2(0.5f, 0.5f);
+
+        // Slotのワールド位置を
+        // PlacedCountryRoot内の位置へ変換
+        Vector3 localSlotPosition =
+            placedCountryRoot.InverseTransformPoint(
+                slotRect.position
+            );
+
+        rectTransform.localPosition =
+            localSlotPosition;
+
+        Vector2 targetSize =
+            slotRect.rect.size;
+
+        rectTransform.sizeDelta =
+            targetSize;
+
+        rectTransform.localScale =
+            placedLocalScale;
+
+        rectTransform.localRotation =
+            Quaternion.Euler(
+                0f,
+                0f,
+                placedRotationZ
+            );
+
+        // カード背景と国名は表示しない
+        if (cardBackgroundImage != null)
+        {
+            cardBackgroundImage.enabled = false;
+        }
+
+        if (countryNameText != null)
+        {
+            countryNameText.gameObject.SetActive(
+                false
+            );
+        }
+
+        // カード専用画像ではなく地図用画像へ戻す
+        if (countryImage != null &&
+            originalCountrySprite != null)
+        {
+            countryImage.sprite =
+                originalCountrySprite;
+        }
+
+        if (countryImageRect != null)
+        {
+            countryImageRect.sizeDelta =
+                targetSize;
+
+            countryImageRect.anchoredPosition =
+                Vector2.zero;
+        }
+
+        // 配置済みなので操作不可
+        if (canvasGroup != null)
+        {
+            canvasGroup.alpha = 1f;
+            canvasGroup.blocksRaycasts = false;
+            canvasGroup.interactable = false;
+            canvasGroup.ignoreParentGroups = false;
+        }
+
+        Debug.Log(
+            $"{gameObject.name}を途中データから復元しました。"
+        );
+    }
+
+
+    /// <summary>
     /// カード表示を元へ戻す。
     /// </summary>
     private void RestoreCardVisual()
@@ -864,6 +992,8 @@ public class CountryPieceDrag : MonoBehaviour,
             );
         }
     }
+
+
 
     /// <summary>
     /// 不正解時に揺れてから元の位置へ戻す。
@@ -1144,11 +1274,13 @@ public class CountryPieceDrag : MonoBehaviour,
 
         if (isLowResolutionCountry)
         {
+            /*
             Debug.LogWarning(
                 $"【低解像度の小国】{countryId}: " +
                 $"切り抜き後={croppedWidth}x{croppedHeight}px",
                 gameObject
             );
+            */
 
             // Resources/CardCountryPiecesから
             // カード専用の高解像度Spriteを読み込む
@@ -1162,25 +1294,28 @@ public class CountryPieceDrag : MonoBehaviour,
                 cardCountrySprite =
                     highResolutionCardSprite;
 
+                /*
                 Debug.Log(
                     $"【高解像度カード使用】{countryId}: " +
                     $"{highResolutionCardSprite.rect.width}x" +
                     $"{highResolutionCardSprite.rect.height}px",
                     gameObject
                 );
-
+                */
                 return;
             }
-
+            /*
             Debug.LogWarning(
                 $"【カード画像なし】" +
                 $"Resources/CardCountryPieces/{countryId} " +
                 $"が見つからないため、元Spriteを使用します。",
                 gameObject
+            
             );
+            */
         }
 
-
+/*
         Debug.Log(
     $"【カード画像確認】国ID={countryId}, " +
     $"元Sprite={width}x{height}px, " +
@@ -1190,7 +1325,7 @@ public class CountryPieceDrag : MonoBehaviour,
     $"FilterMode={sourceTexture.filterMode}",
     gameObject
 );
-
+*/
 
         Rect croppedRect = new Rect(
             spriteRect.x + minX,
