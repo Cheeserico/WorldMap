@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1053979650}
     m_Modifications:
+    - target: {fileID: 2419206221983839328, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
+      propertyPath: stageData
+      value: 
+      objectReference: {fileID: 11400000, guid: 9a0e774ef96effa4ab62bb4b0cb42f7a, type: 2}
     - target: {fileID: 3152520821766027620, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
       propertyPath: m_Name
       value: SE_Asia
@@ -361,6 +365,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1053979650}
     m_Modifications:
+    - target: {fileID: 2419206221983839328, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
+      propertyPath: stageData
+      value: 
+      objectReference: {fileID: 11400000, guid: bc541a8a22ea3ca4d930faf7d4446df1, type: 2}
     - target: {fileID: 3152520821766027620, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
       propertyPath: m_Name
       value: Africa_02
@@ -572,7 +580,7 @@ PrefabInstance:
     - target: {fileID: 2419206221983839328, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
       propertyPath: stageData
       value: 
-      objectReference: {fileID: 11400000, guid: a0372966b7454b9448dd66419dd38002, type: 2}
+      objectReference: {fileID: 11400000, guid: be593a4c2944d74458456a00d3e66ef7, type: 2}
     - target: {fileID: 3152520821766027620, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
       propertyPath: m_Name
       value: S_America
@@ -670,6 +678,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1053979650}
     m_Modifications:
+    - target: {fileID: 2419206221983839328, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
+      propertyPath: stageData
+      value: 
+      objectReference: {fileID: 11400000, guid: b977b401f742a96408279a5788a0ecc3, type: 2}
     - target: {fileID: 3152520821766027620, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
       propertyPath: m_Name
       value: E_Asia
@@ -1049,7 +1061,7 @@ PrefabInstance:
     - target: {fileID: 2419206221983839328, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
       propertyPath: stageData
       value: 
-      objectReference: {fileID: 11400000, guid: a0372966b7454b9448dd66419dd38002, type: 2}
+      objectReference: {fileID: 11400000, guid: 91c78314667e0ed469483a50f2574dd8, type: 2}
     - target: {fileID: 3152520821766027620, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
       propertyPath: m_Name
       value: Europe_02
@@ -1258,7 +1270,7 @@ PrefabInstance:
     - target: {fileID: 2419206221983839328, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
       propertyPath: stageData
       value: 
-      objectReference: {fileID: 11400000, guid: a0372966b7454b9448dd66419dd38002, type: 2}
+      objectReference: {fileID: 11400000, guid: 98afcc9f6d49e29408553f2e6b688e9e, type: 2}
     - target: {fileID: 3152520821766027620, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
       propertyPath: m_Name
       value: C_Asia
@@ -1462,7 +1474,7 @@ PrefabInstance:
     - target: {fileID: 2419206221983839328, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
       propertyPath: stageData
       value: 
-      objectReference: {fileID: 11400000, guid: a0372966b7454b9448dd66419dd38002, type: 2}
+      objectReference: {fileID: 11400000, guid: 01ca1669ae2ea5b42abdbc0331192bc8, type: 2}
     - target: {fileID: 3152520821766027620, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
       propertyPath: m_Name
       value: Europe_01
@@ -1671,6 +1683,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1053979650}
     m_Modifications:
+    - target: {fileID: 2419206221983839328, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
+      propertyPath: stageData
+      value: 
+      objectReference: {fileID: 11400000, guid: 0c4d58405847e914abd90044c448876f, type: 2}
     - target: {fileID: 3152520821766027620, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
       propertyPath: m_Name
       value: M_Asia
@@ -1998,7 +2014,7 @@ PrefabInstance:
     - target: {fileID: 2419206221983839328, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
       propertyPath: stageData
       value: 
-      objectReference: {fileID: 11400000, guid: a0372966b7454b9448dd66419dd38002, type: 2}
+      objectReference: {fileID: 11400000, guid: 0b0d5ea25bdbda947a33a33c9aba9db8, type: 2}
     - target: {fileID: 3152520821766027620, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
       propertyPath: m_Name
       value: Caribbean_01
@@ -2432,6 +2448,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 941471011}
   m_CullTransparentMesh: 1
+--- !u!1 &944253499
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 944253500}
+  - component: {fileID: 944253501}
+  m_Layer: 0
+  m_Name: LocalizationManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &944253500
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944253499}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1618904415}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &944253501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944253499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21399a8f6e4a0f94488949f335fb1a72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizationManager
 --- !u!1 &982121540
 GameObject:
   m_ObjectHideFlags: 0
@@ -2784,6 +2844,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1053979650}
     m_Modifications:
+    - target: {fileID: 2419206221983839328, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
+      propertyPath: stageData
+      value: 
+      objectReference: {fileID: 11400000, guid: 08c4ebac9cf048e46b6f2a4e69dbedb7, type: 2}
     - target: {fileID: 3152520821766027620, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
       propertyPath: m_Name
       value: Africa_01
@@ -3007,12 +3071,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1204021197}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 762.074, y: 974.7447, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -18.002686, y: 541.8297, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1618904415}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1290149016
 GameObject:
@@ -3307,12 +3371,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1444066194}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 780.07666, y: 432.915, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1618904415}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1471544518 stripped
 RectTransform:
@@ -3327,6 +3391,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1053979650}
     m_Modifications:
+    - target: {fileID: 2419206221983839328, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
+      propertyPath: stageData
+      value: 
+      objectReference: {fileID: 11400000, guid: d92370aba4e71574d9279cb883531b0f, type: 2}
     - target: {fileID: 3152520821766027620, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
       propertyPath: m_Name
       value: Africa_03
@@ -3437,7 +3505,7 @@ PrefabInstance:
     - target: {fileID: 2419206221983839328, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
       propertyPath: stageData
       value: 
-      objectReference: {fileID: 11400000, guid: a0372966b7454b9448dd66419dd38002, type: 2}
+      objectReference: {fileID: 11400000, guid: 8ea96eaf9b307cb4e97cf770d9794b46, type: 2}
     - target: {fileID: 3152520821766027620, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
       propertyPath: m_Name
       value: Oceania_01
@@ -3614,6 +3682,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1053979650}
     m_Modifications:
+    - target: {fileID: 2419206221983839328, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
+      propertyPath: stageData
+      value: 
+      objectReference: {fileID: 11400000, guid: 297d98978f67fa24c9c42ad8aa7cb21e, type: 2}
     - target: {fileID: 3152520821766027620, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
       propertyPath: m_Name
       value: Caribbean_02
@@ -3703,6 +3775,40 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
+--- !u!1 &1618904414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1618904415}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1618904415
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618904414}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 780.07666, y: 432.915, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1204021199}
+  - {fileID: 1444066196}
+  - {fileID: 944253500}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1636565469 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4840734783737640293, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
@@ -4218,7 +4324,7 @@ PrefabInstance:
     - target: {fileID: 2419206221983839328, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
       propertyPath: stageData
       value: 
-      objectReference: {fileID: 11400000, guid: a0372966b7454b9448dd66419dd38002, type: 2}
+      objectReference: {fileID: 11400000, guid: d20dc429c5488964ca08a7944c9cbe76, type: 2}
     - target: {fileID: 3152520821766027620, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
       propertyPath: m_Name
       value: Oceania_02
@@ -4321,6 +4427,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1053979650}
     m_Modifications:
+    - target: {fileID: 2419206221983839328, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
+      propertyPath: stageData
+      value: 
+      objectReference: {fileID: 11400000, guid: ab35027d33ffb5940968e4963fb4638d, type: 2}
     - target: {fileID: 3152520821766027620, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
       propertyPath: m_Name
       value: S_Asia
@@ -4423,6 +4533,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1053979650}
     m_Modifications:
+    - target: {fileID: 2419206221983839328, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
+      propertyPath: stageData
+      value: 
+      objectReference: {fileID: 11400000, guid: 867fa68f503931a4aa12074c48f21a71, type: 2}
     - target: {fileID: 3152520821766027620, guid: 3268f057fa7217f4a84910238db3098a, type: 3}
       propertyPath: m_Name
       value: America
@@ -4520,5 +4634,4 @@ SceneRoots:
   - {fileID: 871151199}
   - {fileID: 493624397}
   - {fileID: 1736795035}
-  - {fileID: 1204021199}
-  - {fileID: 1444066196}
+  - {fileID: 1618904415}

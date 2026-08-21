@@ -116,7 +116,7 @@ public class CountrySlot : MonoBehaviour, IDropHandler
                     );
 
                 answerFeedbackUI.ShowCorrect(
-                    countryPiece.CountryName,
+                    countryPiece.CountryId,
                     flag
                 );
 

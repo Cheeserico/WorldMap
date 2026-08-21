@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UITexts_en
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 2c97190482485c44e9dfba818b518d2a, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 850208317440
+    m_Localized: Correct!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 928398532608
+    m_Localized: Wrong!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13772775055360
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13824834756608
+    m_Localized: Close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13864592564224
+    m_Localized: Open Licenses
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13959224451072
+    m_Localized: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14032465387520
+    m_Localized: BGM ON
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14106943643648
+    m_Localized: SE ON
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17809884930048
+    m_Localized: Pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17902763597824
+    m_Localized: Resume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17962381434880
+    m_Localized: Restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18035949527040
+    m_Localized: Home
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19410511028224
+    m_Localized: Result
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19467222212608
+    m_Localized: Clear!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19537082540032
+    m_Localized: Clear Time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19603214131200
+    m_Localized: Best Time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19664513884160
+    m_Localized: New Record!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19732943953920
+    m_Localized: Retry
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

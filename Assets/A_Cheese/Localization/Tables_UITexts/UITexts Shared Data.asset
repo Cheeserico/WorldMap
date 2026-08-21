@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: UITexts Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: UITexts
+  m_TableCollectionNameGuidString: 2c97190482485c44e9dfba818b518d2a
+  m_Entries:
+  - m_Id: 850208317440
+    m_Key: answer_correct
+    m_Metadata:
+      m_Items: []
+  - m_Id: 928398532608
+    m_Key: answer_wrong
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13772775055360
+    m_Key: settings_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13824834756608
+    m_Key: common_close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13864592564224
+    m_Key: settings_open_licenses
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13959224451072
+    m_Key: settings_language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14032465387520
+    m_Key: settings_bgm_on
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14106943643648
+    m_Key: settings_se_on
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17809884930048
+    m_Key: pause_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17902763597824
+    m_Key: pause_resume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17962381434880
+    m_Key: pause_restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18035949527040
+    m_Key: common_home
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19410511028224
+    m_Key: result_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19467222212608
+    m_Key: result_clear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19537082540032
+    m_Key: result_clear_time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19603214131200
+    m_Key: result_best_time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19664513884160
+    m_Key: result_new_record
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19732943953920
+    m_Key: common_retry
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 8559066270014636267
+  references:
+    version: 2
+    RefIds:
+    - rid: 8559066270014636267
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1787268791851

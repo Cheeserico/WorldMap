@@ -22,6 +22,12 @@ public static class SaveKeys
     public const string SeMute =
         "Sound_SEMute";
 
+    // ==================================================
+    // Localization
+    // ==================================================
+
+    public const string SelectedLocale =
+        "Localization_SelectedLocale";
 
     // ==================================================
     // Result

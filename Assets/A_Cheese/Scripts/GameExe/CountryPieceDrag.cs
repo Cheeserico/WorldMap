@@ -506,13 +506,8 @@ public class CountryPieceDrag : MonoBehaviour,
                     countryId
                 );
 
-            string displayName =
-                countryNameText != null
-                    ? countryNameText.text
-                    : countryId;
-
             answerFeedbackUI.ShowWrong(
-                displayName,
+                countryId,
                 flag
             );
         }

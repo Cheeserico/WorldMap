@@ -1,5 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 
 /// <summary>
 /// 設定PopupのUIを管理する。
@@ -28,6 +32,13 @@ public class SettingsPopup : MonoBehaviour
 
     [SerializeField]
     private Toggle seOnOffToggle;
+
+    [Header("言語設定")]
+    [SerializeField]
+    private TMP_Dropdown languageDropdown;
+
+    private readonly List<Locale> availableLocales =
+        new List<Locale>();
 
     /// <summary>
     /// PausePopupのSettingsボタンから呼び出す。
@@ -103,6 +114,9 @@ public class SettingsPopup : MonoBehaviour
                 !SoundManager.Instance.IsSeMuted
             );
         }
+
+        RefreshLanguageDropdown();
+
     }
     /// <summary>
     /// BGM音量スライダーが動いたとき。
@@ -157,6 +171,100 @@ public class SettingsPopup : MonoBehaviour
         }
 
         SoundManager.Instance.SetSeMute(!isOn);
+    }
+
+    // ==================================================
+    // 言語設定
+    // ==================================================
+
+    private void RefreshLanguageDropdown()
+    {
+        if (languageDropdown == null)
+        {
+            return;
+        }
+
+        availableLocales.Clear();
+        languageDropdown.ClearOptions();
+
+        List<TMP_Dropdown.OptionData> options =
+            new List<TMP_Dropdown.OptionData>();
+
+        foreach (
+            Locale locale in
+            LocalizationSettings
+                .AvailableLocales
+                .Locales)
+        {
+            availableLocales.Add(locale);
+
+            string displayName =
+                locale.LocaleName;
+
+            if (locale.Identifier.CultureInfo != null)
+            {
+                displayName =
+                    locale.Identifier
+                        .CultureInfo
+                        .NativeName;
+            }
+
+            options.Add(
+                new TMP_Dropdown.OptionData(
+                    displayName
+                )
+            );
+        }
+
+        languageDropdown.AddOptions(options);
+
+        Locale selectedLocale =
+            LocalizationSettings.SelectedLocale;
+
+        int selectedIndex =
+            availableLocales.IndexOf(
+                selectedLocale
+            );
+
+        if (selectedIndex < 0)
+        {
+            selectedIndex = 0;
+        }
+
+        languageDropdown.SetValueWithoutNotify(
+            selectedIndex
+        );
+
+        languageDropdown.RefreshShownValue();
+    }
+
+    public void OnLanguageDropdownChanged(
+        int selectedIndex
+    )
+    {
+        if (selectedIndex < 0 ||
+            selectedIndex >= availableLocales.Count)
+        {
+            return;
+        }
+
+        if (LocalizationManager.Instance == null)
+        {
+            Debug.LogError(
+                "SettingsPopup：" +
+                "LocalizationManagerが見つかりません。",
+                this
+            );
+
+            return;
+        }
+
+        Locale selectedLocale =
+            availableLocales[selectedIndex];
+
+        LocalizationManager.Instance.SetLocale(
+            selectedLocale.Identifier.Code
+        );
     }
 
     /// <summary>

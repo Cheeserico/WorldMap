@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Localization;
 
 /// <summary>
 /// ステージ選択画面の各ボタンにつける。
@@ -29,13 +30,26 @@ public class StageSelectButton : MonoBehaviour
     [SerializeField]
     private GameObject[] yellowStars;
 
+    [Header("ステージ名ローカライズ")]
+    private LocalizedString localizedStageName;
+
+    private bool isStageNameSubscribed;
 
     [Header("ゲームScene名")]
     [SerializeField]
     private string gameSceneName = "GameScene";
 
 
+    private void OnEnable()
+    {
+        InitializeStageNameLocalization();
+        SubscribeToStageName();
+    }
 
+    private void OnDisable()
+    {
+        UnsubscribeFromStageName();
+    }
 
     // ==================================================
     // 初期表示
@@ -66,11 +80,9 @@ public class StageSelectButton : MonoBehaviour
         // ステージ名
         // ------------------------------
 
-        if (stageNameText != null)
-        {
-            stageNameText.text =
-                stageData.stageName;
-        }
+        InitializeStageNameLocalization();
+        SubscribeToStageName();
+
 
         // イメージ
         if (stageImage != null)
@@ -85,6 +97,68 @@ public class StageSelectButton : MonoBehaviour
         UpdateBestTimeDisplay();
     }
 
+
+    // ==================================================
+    // ステージ名ローカライズ
+    // ==================================================
+
+    private void InitializeStageNameLocalization()
+    {
+        if (localizedStageName != null)
+        {
+            return;
+        }
+
+        if (stageData == null ||
+            string.IsNullOrEmpty(stageData.stageId))
+        {
+            return;
+        }
+
+        localizedStageName = new LocalizedString(
+            "StageNames",
+            stageData.stageId
+        );
+    }
+
+    private void SubscribeToStageName()
+    {
+        if (localizedStageName == null ||
+            isStageNameSubscribed)
+        {
+            return;
+        }
+
+        localizedStageName.StringChanged +=
+            UpdateLocalizedStageName;
+
+        isStageNameSubscribed = true;
+    }
+
+    private void UnsubscribeFromStageName()
+    {
+        if (localizedStageName == null ||
+            !isStageNameSubscribed)
+        {
+            return;
+        }
+
+        localizedStageName.StringChanged -=
+            UpdateLocalizedStageName;
+
+        isStageNameSubscribed = false;
+    }
+
+    private void UpdateLocalizedStageName(
+        string localizedName
+    )
+    {
+        if (stageNameText != null)
+        {
+            stageNameText.text =
+                localizedName;
+        }
+    }
 
     // ==================================================
     // ベストタイム表示

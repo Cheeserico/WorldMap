@@ -15,8 +15,18 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Shared
   m_GUID: 448e6c49d8a5bd146b9f8cfc9bf3643a
   m_SerializeEntries:
+  - m_GUID: 2c97190482485c44e9dfba818b518d2a
+    m_Address: Assets/A_Cheese/Localization/Tables_UITexts/UITexts Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 57c7fce601e1dfa498da492098eb6b04
     m_Address: Assets/A_Cheese/Localization/CountryNames Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 99a7cc45a622ba240907fd8240c8bab4
+    m_Address: Assets/A_Cheese/Localization/StageNames Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

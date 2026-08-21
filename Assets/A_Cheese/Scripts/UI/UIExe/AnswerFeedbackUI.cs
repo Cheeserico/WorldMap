@@ -2,6 +2,7 @@ using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Localization;
 
 /// <summary>
 /// 正解・不正解時に表示するフィードバックUIを管理する。
@@ -72,9 +73,9 @@ public class AnswerFeedbackUI : MonoBehaviour
         PrepareFeedback(
             countryName,
             flagSprite,
-            "Correct!"
+            "answer_correct"
         );
-
+        
         feedbackRect.localScale =
             Vector3.one * correctStartScale;
 
@@ -122,7 +123,7 @@ public class AnswerFeedbackUI : MonoBehaviour
         PrepareFeedback(
             countryName,
             flagSprite,
-            "Wrong!"
+            "answer_wrong"
         );
 
         feedbackRect.localScale =
@@ -181,11 +182,23 @@ public class AnswerFeedbackUI : MonoBehaviour
         feedbackRect.anchoredPosition =
             Vector2.zero;
 
+        LocalizedString localizedCountryName =
+            new LocalizedString(
+                "CountryNames",
+                countryName
+            );
+
         countryNameText.text =
-            countryName;
+            localizedCountryName.GetLocalizedString();
+
+        LocalizedString localizedResult =
+            new LocalizedString(
+                "UITexts",
+                result
+            );
 
         resultText.text =
-            result;
+            localizedResult.GetLocalizedString();
 
         flagImage.sprite =
             flagSprite;

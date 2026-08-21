@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Stage_S_Asia
   m_EditorClassIdentifier: Assembly-CSharp::StageData
   stageId: S_Asia
-  stageName: Southeast Asia
+  stageName: South Asia
   stageImage: {fileID: 0}
   countryIds:
   - AFG
@@ -24,6 +24,8 @@ MonoBehaviour:
   - NPL
   - PAK
   - LKA
+  useRandomCountries: 0
+  randomCountryCount: 20
   threeStarTime: 30
   twoStarTime: 60
   mapStartPosition: {x: 0, y: 0}
