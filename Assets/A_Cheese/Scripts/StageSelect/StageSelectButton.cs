@@ -158,8 +158,10 @@ public class StageSelectButton : MonoBehaviour
             stageNameText.text =
                 localizedName;
         }
-    }
 
+        UpdateBestTimeDisplay();
+    }
+    
     // ==================================================
     // ベストタイム表示
     // ==================================================
@@ -183,7 +185,9 @@ public class StageSelectButton : MonoBehaviour
         if (!PlayerPrefs.HasKey(bestTimeKey))
         {
             bestTimeText.text =
-                "BEST --:--.--";
+                GetLocalizedBestTimeText(
+                    "--:--.--"
+                );
 
             UpdateStars(0);
 
@@ -200,12 +204,39 @@ public class StageSelectButton : MonoBehaviour
             );
 
         bestTimeText.text =
-            $"BEST {FormatTime(bestTime)}";
+            GetLocalizedBestTimeText(
+                FormatTime(bestTime)
+            );
 
         int starCount =
             CalculateStarCount(bestTime);
 
         UpdateStars(starCount);
+    }
+
+
+    // ==================================================
+    // ベストタイムのローカライズ
+    // ==================================================
+
+    private string GetLocalizedBestTimeText(
+        string timeText
+    )
+    {
+        LocalizedString localizedBestTime =
+            new LocalizedString(
+                "UITexts",
+                "stage_best_time"
+            );
+
+        localizedBestTime.Arguments =
+            new object[]
+            {
+                timeText
+            };
+
+        return
+            localizedBestTime.GetLocalizedString();
     }
 
     // ==================================================

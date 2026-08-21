@@ -87,6 +87,46 @@ MonoBehaviour:
     m_Key: common_retry
     m_Metadata:
       m_Items: []
+  - m_Id: 30294725713920
+    m_Key: continue_message
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30411415445504
+    m_Key: continue_resume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30506236076032
+    m_Key: continue_start_over
+    m_Metadata:
+      m_Items: []
+  - m_Id: 66641024868352
+    m_Key: common_hint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 66684888899584
+    m_Key: hint_select_country
+    m_Metadata:
+      m_Items: []
+  - m_Id: 66763142029312
+    m_Key: hint_cancel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69648940621824
+    m_Key: licenses_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69723561484288
+    m_Key: licenses_flag_icons
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69782952828928
+    m_Key: common_back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72527642451968
+    m_Key: stage_best_time
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

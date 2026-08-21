@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Localization;
 
 /// <summary>
 /// 途中データが存在するステージを選択したときに、
@@ -18,6 +19,7 @@ public class ContinueStagePopup : PopupBase
     // 移動先のGameScene名
     private string selectedGameSceneName;
 
+    private LocalizedString localizedStageName;
 
     /// <summary>
     /// Popupを表示する前に、
@@ -34,14 +36,65 @@ public class ContinueStagePopup : PopupBase
         selectedGameSceneName =
             gameSceneName;
 
-        if (stageNameText != null &&
-            selectedStageData != null)
+        UpdateStageNameLocalization();
+    }
+
+
+        // ==================================================
+    // ステージ名ローカライズ
+    // ==================================================
+
+    private void UpdateStageNameLocalization()
+    {
+        ReleaseStageNameLocalization();
+
+        if (selectedStageData == null ||
+            string.IsNullOrEmpty(
+                selectedStageData.stageId))
+        {
+            return;
+        }
+
+        localizedStageName =
+            new LocalizedString(
+                "StageNames",
+                selectedStageData.stageId
+            );
+
+        localizedStageName.StringChanged +=
+            UpdateStageNameText;
+    }
+
+    private void UpdateStageNameText(
+        string localizedName
+    )
+    {
+        if (stageNameText != null)
         {
             stageNameText.text =
-                selectedStageData.stageName;
+                localizedName;
         }
     }
 
+    private void ReleaseStageNameLocalization()
+    {
+        if (localizedStageName == null)
+        {
+            return;
+        }
+
+        localizedStageName.StringChanged -=
+            UpdateStageNameText;
+
+        localizedStageName = null;
+    }
+
+    protected override void OnDestroy()
+    {
+        ReleaseStageNameLocalization();
+
+        base.OnDestroy();
+    }
 
     /// <summary>
     /// 「続きから」ボタン。

@@ -1,0 +1,803 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: CountryNames_pt
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: pt
+  m_SharedData: {fileID: 11400000, guid: 57c7fce601e1dfa498da492098eb6b04, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 9682342993920
+    m_Localized: "Afeganist\xE3o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682368159744
+    m_Localized: "Alb\xE2nia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682368159745
+    m_Localized: "Arg\xE9lia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682368159746
+    m_Localized: Andorra
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682368159747
+    m_Localized: Angola
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682368159748
+    m_Localized: "Ant\xEDgua e Barbuda"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682368159749
+    m_Localized: Argentina
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682368159750
+    m_Localized: "Arm\xEAnia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682368159751
+    m_Localized: "Austr\xE1lia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682368159752
+    m_Localized: "\xC1ustria"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682368159753
+    m_Localized: "Azerbaij\xE3o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682368159754
+    m_Localized: Bahamas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682368159755
+    m_Localized: Barein
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682368159756
+    m_Localized: Bangladesh
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354048
+    m_Localized: Barbados
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354049
+    m_Localized: "Bielorr\xFAssia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354050
+    m_Localized: "B\xE9lgica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354051
+    m_Localized: Belize
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354052
+    m_Localized: Benin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354053
+    m_Localized: "But\xE3o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354054
+    m_Localized: "Bol\xEDvia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354055
+    m_Localized: "B\xF3snia e Herzegovina"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354056
+    m_Localized: Botsuana
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354057
+    m_Localized: Brasil
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354058
+    m_Localized: Brunei
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354059
+    m_Localized: "Bulg\xE1ria"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354060
+    m_Localized: Burquina Faso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354061
+    m_Localized: Burundi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354062
+    m_Localized: Cabo Verde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354063
+    m_Localized: Camboja
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354064
+    m_Localized: "Camar\xF5es"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354065
+    m_Localized: "Canad\xE1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354066
+    m_Localized: "Rep\xFAblica Centro-Africana"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354067
+    m_Localized: Chade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354068
+    m_Localized: Chile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354069
+    m_Localized: China
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354070
+    m_Localized: "Col\xF4mbia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354071
+    m_Localized: Comores
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354072
+    m_Localized: "Rep\xFAblica do Congo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354073
+    m_Localized: Congo - Kinshasa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354074
+    m_Localized: Costa Rica
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354075
+    m_Localized: Costa do Marfim
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354076
+    m_Localized: "Cro\xE1cia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354077
+    m_Localized: Cuba
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354078
+    m_Localized: Chipre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354079
+    m_Localized: "Tch\xE9quia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354080
+    m_Localized: Dinamarca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354081
+    m_Localized: Djibuti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354082
+    m_Localized: Dominica
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354083
+    m_Localized: "Rep\xFAblica Dominicana"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354084
+    m_Localized: Equador
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354085
+    m_Localized: Egito
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354086
+    m_Localized: El Salvador
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354087
+    m_Localized: "Guin\xE9 Equatorial"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354088
+    m_Localized: Eritreia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354089
+    m_Localized: "Est\xF4nia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354090
+    m_Localized: "Essuat\xEDni"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354091
+    m_Localized: "Eti\xF3pia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354092
+    m_Localized: Fiji
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354093
+    m_Localized: "Finl\xE2ndia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354094
+    m_Localized: "Fran\xE7a"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354095
+    m_Localized: "Gab\xE3o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354096
+    m_Localized: "G\xE2mbia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354097
+    m_Localized: "Ge\xF3rgia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354098
+    m_Localized: Alemanha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354099
+    m_Localized: Gana
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354100
+    m_Localized: "Gr\xE9cia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354101
+    m_Localized: Granada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354102
+    m_Localized: Guatemala
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354103
+    m_Localized: "Guin\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354104
+    m_Localized: "Guin\xE9-Bissau"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354105
+    m_Localized: Guiana
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354106
+    m_Localized: Haiti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354107
+    m_Localized: Honduras
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354108
+    m_Localized: Hungria
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354109
+    m_Localized: "Isl\xE2ndia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354110
+    m_Localized: "\xCDndia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354111
+    m_Localized: "Indon\xE9sia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354112
+    m_Localized: "Ir\xE3"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354113
+    m_Localized: Iraque
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354114
+    m_Localized: Irlanda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354115
+    m_Localized: Israel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354116
+    m_Localized: "It\xE1lia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354117
+    m_Localized: Jamaica
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371990552576
+    m_Localized: "Jap\xE3o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354118
+    m_Localized: "Jord\xE2nia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354119
+    m_Localized: "Cazaquist\xE3o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354120
+    m_Localized: "Qu\xEAnia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354121
+    m_Localized: Quiribati
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354122
+    m_Localized: Coreia do Norte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354123
+    m_Localized: Coreia do Sul
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354124
+    m_Localized: Kuwait
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354125
+    m_Localized: "Quirguist\xE3o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354126
+    m_Localized: Laos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354127
+    m_Localized: "Let\xF4nia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354128
+    m_Localized: "L\xEDbano"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354129
+    m_Localized: Lesoto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354130
+    m_Localized: "Lib\xE9ria"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354131
+    m_Localized: "L\xEDbia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354132
+    m_Localized: Liechtenstein
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354133
+    m_Localized: "Litu\xE2nia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354134
+    m_Localized: Luxemburgo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354135
+    m_Localized: Madagascar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354136
+    m_Localized: Malaui
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354137
+    m_Localized: "Mal\xE1sia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354138
+    m_Localized: Maldivas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354139
+    m_Localized: Mali
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354140
+    m_Localized: Malta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354141
+    m_Localized: Ilhas Marshall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354142
+    m_Localized: "Maurit\xE2nia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354143
+    m_Localized: "Maur\xEDcio"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354144
+    m_Localized: "M\xE9xico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354145
+    m_Localized: "Micron\xE9sia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354146
+    m_Localized: "Mold\xE1via"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354147
+    m_Localized: "M\xF4naco"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354148
+    m_Localized: "Mong\xF3lia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354149
+    m_Localized: Montenegro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354150
+    m_Localized: Marrocos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354151
+    m_Localized: "Mo\xE7ambique"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354152
+    m_Localized: "Mianmar (Birm\xE2nia)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354153
+    m_Localized: "Nam\xEDbia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354154
+    m_Localized: Nauru
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354155
+    m_Localized: Nepal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354156
+    m_Localized: "Pa\xEDses Baixos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354157
+    m_Localized: "Nova Zel\xE2ndia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354158
+    m_Localized: "Nicar\xE1gua"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354159
+    m_Localized: "N\xEDger"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354160
+    m_Localized: "Nig\xE9ria"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354161
+    m_Localized: "Maced\xF4nia do Norte"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354162
+    m_Localized: Noruega
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354163
+    m_Localized: "Om\xE3"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354164
+    m_Localized: "Paquist\xE3o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354165
+    m_Localized: Palau
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354166
+    m_Localized: "Panam\xE1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354167
+    m_Localized: "Papua-Nova Guin\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354168
+    m_Localized: Paraguai
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354169
+    m_Localized: Peru
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354170
+    m_Localized: Filipinas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354171
+    m_Localized: "Pol\xF4nia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354172
+    m_Localized: Portugal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354173
+    m_Localized: Catar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354174
+    m_Localized: "Rom\xEAnia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354175
+    m_Localized: "R\xFAssia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354176
+    m_Localized: Ruanda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354177
+    m_Localized: "S\xE3o Crist\xF3v\xE3o e N\xE9vis"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354178
+    m_Localized: "Santa L\xFAcia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354179
+    m_Localized: "S\xE3o Vicente e Granadinas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354180
+    m_Localized: Samoa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354181
+    m_Localized: San Marino
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354182
+    m_Localized: "S\xE3o Tom\xE9 e Pr\xEDncipe"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354183
+    m_Localized: "Ar\xE1bia Saudita"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354184
+    m_Localized: Senegal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354185
+    m_Localized: "S\xE9rvia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354186
+    m_Localized: Seicheles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354187
+    m_Localized: Serra Leoa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354188
+    m_Localized: Singapura
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354189
+    m_Localized: "Eslov\xE1quia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354190
+    m_Localized: "Eslov\xEAnia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354191
+    m_Localized: "Ilhas Salom\xE3o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354192
+    m_Localized: "Som\xE1lia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354193
+    m_Localized: "\xC1frica do Sul"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354194
+    m_Localized: "Sud\xE3o do Sul"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354195
+    m_Localized: Espanha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354196
+    m_Localized: Sri Lanka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354197
+    m_Localized: "Sud\xE3o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354198
+    m_Localized: Suriname
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354199
+    m_Localized: "Su\xE9cia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354200
+    m_Localized: "Su\xED\xE7a"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354201
+    m_Localized: "S\xEDria"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354202
+    m_Localized: "Tadjiquist\xE3o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354203
+    m_Localized: "Tanz\xE2nia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354204
+    m_Localized: "Tail\xE2ndia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354205
+    m_Localized: Timor-Leste
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354206
+    m_Localized: Togo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354207
+    m_Localized: Tonga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354208
+    m_Localized: Trinidad e Tobago
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354209
+    m_Localized: "Tun\xEDsia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354210
+    m_Localized: Turquia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354211
+    m_Localized: "Turcomenist\xE3o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354212
+    m_Localized: Tuvalu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354213
+    m_Localized: Uganda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354214
+    m_Localized: "Ucr\xE2nia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354215
+    m_Localized: "Emirados \xC1rabes Unidos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354216
+    m_Localized: Reino Unido
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354217
+    m_Localized: Estados Unidos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354218
+    m_Localized: Uruguai
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354219
+    m_Localized: "Uzbequist\xE3o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354220
+    m_Localized: Vanuatu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354221
+    m_Localized: Venezuela
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354222
+    m_Localized: "Vietn\xE3"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354223
+    m_Localized: "I\xEAmen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354224
+    m_Localized: "Z\xE2mbia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354225
+    m_Localized: "Zimb\xE1bue"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354226
+    m_Localized: Cidade do Vaticano
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9682372354227
+    m_Localized: Palestina
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

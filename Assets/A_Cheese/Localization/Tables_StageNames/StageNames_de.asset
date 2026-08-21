@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: StageNames_de
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: de
+  m_SharedData: {fileID: 11400000, guid: 99a7cc45a622ba240907fd8240c8bab4, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 9182969159680
+    m_Localized: Ostasien
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9182998519808
+    m_Localized: "S\xFCdostasien"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9182998519809
+    m_Localized: "S\xFCdasien"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9182998519810
+    m_Localized: Zentralasien
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9183002714112
+    m_Localized: Naher Osten
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9183002714113
+    m_Localized: Europa 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9183002714114
+    m_Localized: Europa 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9183002714115
+    m_Localized: Afrika 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9183002714116
+    m_Localized: Afrika 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9183002714117
+    m_Localized: Afrika 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9183002714118
+    m_Localized: Nord- und Mittelamerika
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9183002714119
+    m_Localized: Karibik 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9183002714120
+    m_Localized: Karibik 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9183002714121
+    m_Localized: "S\xFCdamerika"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9183002714122
+    m_Localized: Ozeanien 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9183002714123
+    m_Localized: Ozeanien 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9183002714124
+    m_Localized: "Wichtige L\xE4nder"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9183002714125
+    m_Localized: "Gr\xF6\xDFte L\xE4nder"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9183002714126
+    m_Localized: Inselstaaten
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9183002714127
+    m_Localized: "20 zuf\xE4llige L\xE4nder"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9183002714128
+    m_Localized: "Alle 195 L\xE4nder"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

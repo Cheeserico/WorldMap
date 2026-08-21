@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UITexts_tr
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: tr
+  m_SharedData: {fileID: 11400000, guid: 2c97190482485c44e9dfba818b518d2a, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 8559066270014636350
+  m_TableData:
+  - m_Id: 72527642451968
+    m_Localized: "EN \u0130Y\u0130 {0}"
+    m_Metadata:
+      m_Items:
+      - rid: 8559066270014636350
+  - m_Id: 850208317440
+    m_Localized: "Do\u011Fru!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 928398532608
+    m_Localized: "Yanl\u0131\u015F!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13772775055360
+    m_Localized: Ayarlar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13824834756608
+    m_Localized: Kapat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13864592564224
+    m_Localized: "Lisanslar\u0131 G\xF6r\xFCnt\xFCle"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13959224451072
+    m_Localized: Dil
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14032465387520
+    m_Localized: "M\xFCzik A\xC7IK"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14106943643648
+    m_Localized: "Ses Efektleri A\xC7IK"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17809884930048
+    m_Localized: Duraklat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17902763597824
+    m_Localized: Devam Et
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17962381434880
+    m_Localized: "Yeniden Ba\u015Flat"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18035949527040
+    m_Localized: Ana Sayfa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19410511028224
+    m_Localized: "Sonu\xE7"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19467222212608
+    m_Localized: "Tamamland\u0131!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19537082540032
+    m_Localized: "S\xFCre"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19603214131200
+    m_Localized: "En \u0130yi S\xFCre"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19664513884160
+    m_Localized: Yeni Rekor!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19732943953920
+    m_Localized: Tekrar Dene
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30294725713920
+    m_Localized: "Kay\u0131t Verisi Bulundu"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30411415445504
+    m_Localized: Devam Et
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30506236076032
+    m_Localized: "Ba\u015Ftan Ba\u015Fla"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 66641024868352
+    m_Localized: "\u0130pucu"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 66684888899584
+    m_Localized: "\u0130pucu g\xF6rmek i\xE7in bir \xFClke se\xE7in."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 66763142029312
+    m_Localized: "\u0130pucunu \u0130ptal Et"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69648940621824
+    m_Localized: "A\xE7\u0131k Kaynak Lisanslar\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69723561484288
+    m_Localized: "Bayrak Simgeleri Lisans\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69782952828928
+    m_Localized: Geri
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 8559066270014636350
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 72527642451968

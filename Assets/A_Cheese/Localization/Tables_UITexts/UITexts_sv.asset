@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UITexts_sv
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: sv
+  m_SharedData: {fileID: 11400000, guid: 2c97190482485c44e9dfba818b518d2a, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 8559066270014636344
+  m_TableData:
+  - m_Id: 72527642451968
+    m_Localized: "B\xC4STA {0}"
+    m_Metadata:
+      m_Items:
+      - rid: 8559066270014636344
+  - m_Id: 850208317440
+    m_Localized: "R\xE4tt!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 928398532608
+    m_Localized: Fel!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13772775055360
+    m_Localized: "Inst\xE4llningar"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13824834756608
+    m_Localized: "St\xE4ng"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13864592564224
+    m_Localized: Visa licenser
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13959224451072
+    m_Localized: "Spr\xE5k"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14032465387520
+    m_Localized: "Musik P\xC5"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14106943643648
+    m_Localized: "Ljudeffekter P\xC5"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17809884930048
+    m_Localized: Paus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17902763597824
+    m_Localized: "Forts\xE4tt"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17962381434880
+    m_Localized: Starta om
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18035949527040
+    m_Localized: Hem
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19410511028224
+    m_Localized: Resultat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19467222212608
+    m_Localized: Klart!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19537082540032
+    m_Localized: Tid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19603214131200
+    m_Localized: "B\xE4sta tid"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19664513884160
+    m_Localized: Nytt rekord!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19732943953920
+    m_Localized: "F\xF6rs\xF6k igen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30294725713920
+    m_Localized: Sparad data hittades
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30411415445504
+    m_Localized: "Forts\xE4tt"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30506236076032
+    m_Localized: "B\xF6rja om"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 66641024868352
+    m_Localized: "Ledtr\xE5d"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 66684888899584
+    m_Localized: "V\xE4lj ett land f\xF6r att visa en ledtr\xE5d."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 66763142029312
+    m_Localized: "Avbryt ledtr\xE5d"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69648940621824
+    m_Localized: "Licenser f\xF6r \xF6ppen k\xE4llkod"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69723561484288
+    m_Localized: "Licens f\xF6r flaggikoner"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69782952828928
+    m_Localized: Tillbaka
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 8559066270014636344
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 72527642451968

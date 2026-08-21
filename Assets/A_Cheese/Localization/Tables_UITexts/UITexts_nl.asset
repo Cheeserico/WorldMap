@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UITexts_nl
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: nl
+  m_SharedData: {fileID: 11400000, guid: 2c97190482485c44e9dfba818b518d2a, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 8559066270014636339
+  m_TableData:
+  - m_Id: 72527642451968
+    m_Localized: BESTE {0}
+    m_Metadata:
+      m_Items:
+      - rid: 8559066270014636339
+  - m_Id: 850208317440
+    m_Localized: Juist!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 928398532608
+    m_Localized: Fout!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13772775055360
+    m_Localized: Instellingen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13824834756608
+    m_Localized: Sluiten
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13864592564224
+    m_Localized: Licenties bekijken
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13959224451072
+    m_Localized: Taal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14032465387520
+    m_Localized: Muziek AAN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14106943643648
+    m_Localized: Geluidseffecten AAN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17809884930048
+    m_Localized: Pauze
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17902763597824
+    m_Localized: Doorgaan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17962381434880
+    m_Localized: Opnieuw starten
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18035949527040
+    m_Localized: Home
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19410511028224
+    m_Localized: Resultaat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19467222212608
+    m_Localized: Voltooid!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19537082540032
+    m_Localized: Tijd
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19603214131200
+    m_Localized: Beste tijd
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19664513884160
+    m_Localized: Nieuw record!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19732943953920
+    m_Localized: Opnieuw proberen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30294725713920
+    m_Localized: Opgeslagen spel gevonden
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30411415445504
+    m_Localized: Doorgaan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30506236076032
+    m_Localized: Opnieuw beginnen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 66641024868352
+    m_Localized: Hint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 66684888899584
+    m_Localized: Selecteer een land om een hint te bekijken.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 66763142029312
+    m_Localized: Hint annuleren
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69648940621824
+    m_Localized: Open-sourcelicenties
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69723561484288
+    m_Localized: Licentie voor vlagpictogrammen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69782952828928
+    m_Localized: Terug
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 8559066270014636339
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 72527642451968

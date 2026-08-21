@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: 2c97190482485c44e9dfba818b518d2a, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 8559066270014636316
   m_TableData:
   - m_Id: 850208317440
     m_Localized: Correct!
@@ -90,6 +91,53 @@ MonoBehaviour:
     m_Localized: Retry
     m_Metadata:
       m_Items: []
+  - m_Id: 30294725713920
+    m_Localized: Save data found
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30411415445504
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30506236076032
+    m_Localized: Start Over
+    m_Metadata:
+      m_Items: []
+  - m_Id: 66641024868352
+    m_Localized: Hint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 66684888899584
+    m_Localized: Please select a country to see its hint.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 66763142029312
+    m_Localized: Cancel Hint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69648940621824
+    m_Localized: Open Source Licenses
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69723561484288
+    m_Localized: Flag Icons License
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69782952828928
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72527642451968
+    m_Localized: BEST {0}
+    m_Metadata:
+      m_Items:
+      - rid: 8559066270014636316
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 8559066270014636316
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 72527642451968
