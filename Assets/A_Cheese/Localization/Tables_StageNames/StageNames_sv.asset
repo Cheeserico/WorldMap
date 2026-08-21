@@ -18,88 +18,88 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 9182969159680
-    m_Localized: "\xD6stasien"
+  - m_Id: 143483400445960
+    m_Localized: "Alla 195 l\xE4nder"
     m_Metadata:
       m_Items: []
-  - m_Id: 9182998519808
-    m_Localized: Sydostasien
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9182998519809
-    m_Localized: Sydasien
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9182998519810
-    m_Localized: Centralasien
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9183002714112
-    m_Localized: "Mellan\xF6stern"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9183002714113
-    m_Localized: Europa 1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9183002714114
-    m_Localized: Europa 2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9183002714115
-    m_Localized: Afrika 1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9183002714116
-    m_Localized: Afrika 2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9183002714117
-    m_Localized: Afrika 3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9183002714118
-    m_Localized: Nord- och Centralamerika
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9183002714119
-    m_Localized: Karibien 1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9183002714120
-    m_Localized: Karibien 2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9183002714121
-    m_Localized: Sydamerika
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9183002714122
-    m_Localized: Oceanien 1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9183002714123
-    m_Localized: Oceanien 2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9183002714124
-    m_Localized: "Viktiga l\xE4nder"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9183002714125
-    m_Localized: "St\xF6rsta l\xE4nderna"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9183002714126
-    m_Localized: "\xD6nationer"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9183002714127
+  - m_Id: 143483400445959
     m_Localized: "20 slumpm\xE4ssiga l\xE4nder"
     m_Metadata:
       m_Items: []
-  - m_Id: 9183002714128
-    m_Localized: "Alla 195 l\xE4nder"
+  - m_Id: 143483400445958
+    m_Localized: "\xD6nationer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143483400445957
+    m_Localized: "St\xF6rsta l\xE4nderna"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143483400445956
+    m_Localized: "Viktiga l\xE4nder"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143483400445955
+    m_Localized: Oceanien 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143483400445954
+    m_Localized: Oceanien 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143483400445953
+    m_Localized: Sydamerika
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143483400445952
+    m_Localized: Karibien 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143483396251659
+    m_Localized: Karibien 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143483396251658
+    m_Localized: Nord- och Centralamerika
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143483396251657
+    m_Localized: Afrika 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143483396251656
+    m_Localized: Afrika 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143483396251655
+    m_Localized: Afrika 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143483396251654
+    m_Localized: Europa 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143483396251653
+    m_Localized: Europa 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143483396251652
+    m_Localized: "Mellan\xF6stern"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143483396251651
+    m_Localized: Centralasien
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143483396251650
+    m_Localized: Sydasien
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143483396251649
+    m_Localized: Sydostasien
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143483396251648
+    m_Localized: "\xD6stasien"
     m_Metadata:
       m_Items: []
   references:

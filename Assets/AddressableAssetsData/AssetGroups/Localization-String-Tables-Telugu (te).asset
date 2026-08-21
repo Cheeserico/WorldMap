@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Telugu (te)
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Localization-String-Tables-Telugu (te)
+  m_GUID: 6690018d651c3fe449752fe83bf9d494
+  m_SerializeEntries:
+  - m_GUID: 09e69802e9fc35147b04192fba736637
+    m_Address: CountryNames_te
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-te
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 79001c2dcfbb3c8458df8b94ee4d709b
+    m_Address: UITexts_te
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-te
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ea0d5b799716e7946a3dfacd54dae6b6
+    m_Address: StageNames_te
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-te
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7545a78a018a86f4e8fc71b9fe1d5f71, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: b6fe7301a018b754089f098923ab2354, type: 2}
+    - {fileID: 11400000, guid: dbad767f96f1be546a8b0e1624d74ea3, type: 2}

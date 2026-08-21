@@ -200,15 +200,6 @@ public class SettingsPopup : MonoBehaviour
 
             string displayName =
                 locale.LocaleName;
-
-            if (locale.Identifier.CultureInfo != null)
-            {
-                displayName =
-                    locale.Identifier
-                        .CultureInfo
-                        .NativeName;
-            }
-
             options.Add(
                 new TMP_Dropdown.OptionData(
                     displayName

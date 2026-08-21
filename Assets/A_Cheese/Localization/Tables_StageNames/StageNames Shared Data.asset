@@ -15,87 +15,87 @@ MonoBehaviour:
   m_TableCollectionName: StageNames
   m_TableCollectionNameGuidString: 99a7cc45a622ba240907fd8240c8bab4
   m_Entries:
-  - m_Id: 9182969159680
+  - m_Id: 143483396251648
     m_Key: E_Asia
     m_Metadata:
       m_Items: []
-  - m_Id: 9182998519808
+  - m_Id: 143483396251649
     m_Key: SE_Asia
     m_Metadata:
       m_Items: []
-  - m_Id: 9182998519809
+  - m_Id: 143483396251650
     m_Key: S_Asia
     m_Metadata:
       m_Items: []
-  - m_Id: 9182998519810
+  - m_Id: 143483396251651
     m_Key: C_Asia
     m_Metadata:
       m_Items: []
-  - m_Id: 9183002714112
+  - m_Id: 143483396251652
     m_Key: M_East
     m_Metadata:
       m_Items: []
-  - m_Id: 9183002714113
+  - m_Id: 143483396251653
     m_Key: Europe_01
     m_Metadata:
       m_Items: []
-  - m_Id: 9183002714114
+  - m_Id: 143483396251654
     m_Key: Europe_02
     m_Metadata:
       m_Items: []
-  - m_Id: 9183002714115
+  - m_Id: 143483396251655
     m_Key: Africa_01
     m_Metadata:
       m_Items: []
-  - m_Id: 9183002714116
+  - m_Id: 143483396251656
     m_Key: Africa_02
     m_Metadata:
       m_Items: []
-  - m_Id: 9183002714117
+  - m_Id: 143483396251657
     m_Key: Africa_03
     m_Metadata:
       m_Items: []
-  - m_Id: 9183002714118
+  - m_Id: 143483396251658
     m_Key: America
     m_Metadata:
       m_Items: []
-  - m_Id: 9183002714119
+  - m_Id: 143483396251659
     m_Key: Caribbean_01
     m_Metadata:
       m_Items: []
-  - m_Id: 9183002714120
+  - m_Id: 143483400445952
     m_Key: Caribbean_02
     m_Metadata:
       m_Items: []
-  - m_Id: 9183002714121
+  - m_Id: 143483400445953
     m_Key: South_America
     m_Metadata:
       m_Items: []
-  - m_Id: 9183002714122
+  - m_Id: 143483400445954
     m_Key: Oceania_01
     m_Metadata:
       m_Items: []
-  - m_Id: 9183002714123
+  - m_Id: 143483400445955
     m_Key: Oceania_02
     m_Metadata:
       m_Items: []
-  - m_Id: 9183002714124
+  - m_Id: 143483400445956
     m_Key: Major
     m_Metadata:
       m_Items: []
-  - m_Id: 9183002714125
+  - m_Id: 143483400445957
     m_Key: Largest
     m_Metadata:
       m_Items: []
-  - m_Id: 9183002714126
+  - m_Id: 143483400445958
     m_Key: Islands
     m_Metadata:
       m_Items: []
-  - m_Id: 9183002714127
+  - m_Id: 143483400445959
     m_Key: Randam_20
     m_Metadata:
       m_Items: []
-  - m_Id: 9183002714128
+  - m_Id: 143483400445960
     m_Key: World
     m_Metadata:
       m_Items: []
