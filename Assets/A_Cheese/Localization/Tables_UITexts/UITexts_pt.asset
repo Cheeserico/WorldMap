@@ -132,6 +132,18 @@ MonoBehaviour:
     m_Localized: Voltar
     m_Metadata:
       m_Items: []
+  - m_Id: 881377782095872
+    m_Localized: "Licen\xE7a da fonte Amiri"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 895139897499648
+    m_Localized: "Licen\xE7a das fontes Noto"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 895263793045504
+    m_Localized: "Licen\xE7a do RTLTMPro"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

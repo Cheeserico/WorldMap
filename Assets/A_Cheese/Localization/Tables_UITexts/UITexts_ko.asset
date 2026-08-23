@@ -132,6 +132,18 @@ MonoBehaviour:
     m_Localized: "\uB4A4\uB85C"
     m_Metadata:
       m_Items: []
+  - m_Id: 881377782095872
+    m_Localized: "Amiri \uAE00\uAF34 \uB77C\uC774\uC120\uC2A4"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 895139897499648
+    m_Localized: "Noto \uAE00\uAF34 \uB77C\uC774\uC120\uC2A4"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 895263793045504
+    m_Localized: "RTLTMPro \uB77C\uC774\uC120\uC2A4"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

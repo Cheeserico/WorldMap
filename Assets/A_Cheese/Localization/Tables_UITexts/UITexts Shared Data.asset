@@ -127,6 +127,18 @@ MonoBehaviour:
     m_Key: stage_best_time
     m_Metadata:
       m_Items: []
+  - m_Id: 881377782095872
+    m_Key: licenses_amiri_font
+    m_Metadata:
+      m_Items: []
+  - m_Id: 895139897499648
+    m_Key: licenses_noto_fonts
+    m_Metadata:
+      m_Items: []
+  - m_Id: 895263793045504
+    m_Key: licenses_rtltmpro
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

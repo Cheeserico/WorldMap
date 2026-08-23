@@ -158,6 +158,30 @@ public class PopupManager : MonoBehaviour
     }
 
     /// <summary>
+    /// Amiriフォントのライセンス詳細画面を開く。
+    /// </summary>
+    public void OpenAmiriLicenseDetail()
+    {
+        Open(PopupType.AmiriLicenseDetail);
+    }
+
+    /// <summary>
+    /// Notoフォントのライセンス詳細画面を開く。
+    /// </summary>
+    public void OpenNotoLicenseDetail()
+    {
+        Open(PopupType.NotoLicenseDetail);
+    }
+
+    /// <summary>
+    /// RTLTMProのライセンス詳細画面を開く。
+    /// </summary>
+    public void OpenRTLLicenseDetail()
+    {
+        Open(PopupType.RTLLicenseDetail);
+    }
+
+    /// <summary>
     /// InspectorのResumeButtonから呼び出すためのメソッド。
     /// 後でPauseManagerへ置き換える。
     /// </summary>

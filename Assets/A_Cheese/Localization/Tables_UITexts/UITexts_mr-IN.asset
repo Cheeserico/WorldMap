@@ -136,6 +136,18 @@ MonoBehaviour:
     m_Localized: "\u092E\u093E\u0917\u0947"
     m_Metadata:
       m_Items: []
+  - m_Id: 881377782095872
+    m_Localized: "\u0905\u092E\u0940\u0930\u0940 \u092B\u0949\u0928\u094D\u091F \u092A\u0930\u0935\u093E\u0928\u093E"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 895139897499648
+    m_Localized: "Noto \u092B\u0949\u0928\u094D\u091F \u092A\u0930\u0935\u093E\u0928\u093E"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 895263793045504
+    m_Localized: "RTLTMPro \u092A\u0930\u0935\u093E\u0928\u093E"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

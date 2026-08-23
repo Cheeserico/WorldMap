@@ -132,6 +132,18 @@ MonoBehaviour:
     m_Localized: Kembali
     m_Metadata:
       m_Items: []
+  - m_Id: 881377782095872
+    m_Localized: Lisensi Font Amiri
+    m_Metadata:
+      m_Items: []
+  - m_Id: 895139897499648
+    m_Localized: Lisensi Font Noto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 895263793045504
+    m_Localized: Lisensi RTLTMPro
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

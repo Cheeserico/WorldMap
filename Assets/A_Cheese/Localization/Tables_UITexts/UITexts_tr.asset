@@ -132,6 +132,18 @@ MonoBehaviour:
     m_Localized: Geri
     m_Metadata:
       m_Items: []
+  - m_Id: 881377782095872
+    m_Localized: "Amiri Yaz\u0131 Tipi Lisans\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 895139897499648
+    m_Localized: "Noto Yaz\u0131 Tipleri Lisans\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 895263793045504
+    m_Localized: "RTLTMPro Lisans\u0131"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

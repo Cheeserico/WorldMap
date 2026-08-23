@@ -132,6 +132,18 @@ MonoBehaviour:
     m_Localized: "Zur\xFCck"
     m_Metadata:
       m_Items: []
+  - m_Id: 881377782095872
+    m_Localized: Amiri-Schriftlizenz
+    m_Metadata:
+      m_Items: []
+  - m_Id: 895139897499648
+    m_Localized: Lizenz der Noto-Schriftarten
+    m_Metadata:
+      m_Items: []
+  - m_Id: 895263793045504
+    m_Localized: RTLTMPro-Lizenz
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

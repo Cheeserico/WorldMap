@@ -11,6 +11,10 @@ public enum PopupType
     Settings,
     OpenSourceLicenses,
     LicenseDetail,
+    AmiriLicenseDetail,
+    NotoLicenseDetail,
+    RTLLicenseDetail,
+
 
     // ステージ途中データがある場合の
     // 「続きから／最初から」選択

@@ -129,9 +129,12 @@ MonoBehaviour:
   dragLayer: {fileID: 0}
   countryImageRect: {fileID: 8153143947419659152}
   cardBackgroundImage: {fileID: 7687799780866742325}
-  countryNameText: {fileID: 7681044618663317234}
+  countryNameText: {fileID: 5655044171005938181}
+  answerFeedbackUI: {fileID: 0}
+  countryFlagDatabase: {fileID: 0}
   countryImage: {fileID: 2279428724436787094}
   cardCountryMaxSize: 90
+  smallCountryPixelThreshold: 32
   placedLocalScale: {x: 1, y: 1, z: 1}
   placedRotationZ: 0
   snapDuration: 0.25
@@ -155,7 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CountryNameText
   countryId: 
-  countryNameText: {fileID: 7681044618663317234}
+  countryNameText: {fileID: 5655044171005938181}
 --- !u!1 &4417471436976791626
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,7 +169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2822373638388959706}
   - component: {fileID: 1588751002790723557}
-  - component: {fileID: 7681044618663317234}
+  - component: {fileID: 5655044171005938181}
   m_Layer: 5
   m_Name: Country_Text
   m_TagString: Untagged
@@ -201,7 +204,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4417471436976791626}
   m_CullTransparentMesh: 1
---- !u!114 &7681044618663317234
+--- !u!114 &5655044171005938181
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -210,9 +213,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4417471436976791626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Script: {fileID: 11500000, guid: b9839c2d141529145a431aef4d757ff3, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_EditorClassIdentifier: RTLTMPro::RTLTMPro.RTLTextMeshPro
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -221,10 +224,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Country Name
+  m_text: country Name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4ee7a3428c4c04240a8ab2d8aff3dc47, type: 2}
+  m_sharedMaterial: {fileID: -636691334932996590, guid: 4ee7a3428c4c04240a8ab2d8aff3dc47, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -248,14 +251,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.85
+  m_fontSize: 18
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -293,6 +296,11 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+  preserveNumbers: 0
+  farsi: 1
+  originalText: country Name
+  fixTags: 0
+  forceFix: 0
 --- !u!1 &6162733285692940763
 GameObject:
   m_ObjectHideFlags: 0

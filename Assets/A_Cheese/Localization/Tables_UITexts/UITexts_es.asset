@@ -132,6 +132,18 @@ MonoBehaviour:
     m_Localized: "Atr\xE1s"
     m_Metadata:
       m_Items: []
+  - m_Id: 881377782095872
+    m_Localized: Licencia de la fuente Amiri
+    m_Metadata:
+      m_Items: []
+  - m_Id: 895139897499648
+    m_Localized: Licencia de las fuentes Noto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 895263793045504
+    m_Localized: Licencia de RTLTMPro
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

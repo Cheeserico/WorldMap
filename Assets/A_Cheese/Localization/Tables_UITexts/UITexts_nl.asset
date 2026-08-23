@@ -132,6 +132,18 @@ MonoBehaviour:
     m_Localized: Terug
     m_Metadata:
       m_Items: []
+  - m_Id: 881377782095872
+    m_Localized: Amiri-lettertypelicentie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 895139897499648
+    m_Localized: Licentie voor Noto-lettertypen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 895263793045504
+    m_Localized: RTLTMPro-licentie
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

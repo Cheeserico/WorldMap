@@ -132,6 +132,18 @@ MonoBehaviour:
     m_Localized: Indietro
     m_Metadata:
       m_Items: []
+  - m_Id: 881377782095872
+    m_Localized: Licenza del font Amiri
+    m_Metadata:
+      m_Items: []
+  - m_Id: 895139897499648
+    m_Localized: Licenza dei font Noto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 895263793045504
+    m_Localized: Licenza RTLTMPro
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
