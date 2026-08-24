@@ -28,6 +28,13 @@ public class StageDataCreatorWindow : EditorWindow
 
 
     // ==================================================
+    // ランダムステージ設定
+    // ==================================================
+
+    private bool useRandomCountries = false;
+    private int randomCountryCount = 20;
+
+    // ==================================================
     // CSV
     // ==================================================
 
@@ -86,6 +93,7 @@ public class StageDataCreatorWindow : EditorWindow
         );
 
 
+
         // ==================================================
         // 基本情報
         // ==================================================
@@ -115,6 +123,30 @@ public class StageDataCreatorWindow : EditorWindow
                 false
             );
 
+        EditorGUILayout.Space(5f);
+
+        EditorGUILayout.LabelField(
+            "出題方式",
+            EditorStyles.boldLabel
+        );
+
+        useRandomCountries =
+            EditorGUILayout.Toggle(
+                "Use Random Countries",
+                useRandomCountries
+            );
+
+        if (useRandomCountries)
+        {
+            randomCountryCount =
+                EditorGUILayout.IntField(
+                    "Random Country Count",
+                    randomCountryCount
+                );
+
+            randomCountryCount =
+                Mathf.Max(1, randomCountryCount);
+        }
 
         GUILayout.Space(15f);
 
@@ -197,6 +229,18 @@ public class StageDataCreatorWindow : EditorWindow
         GUILayout.Space(10f);
 
         GUILayout.Space(15f);
+
+        // ==================================================
+        // おすすめプリセット
+        // ==================================================
+        DrawRecommendedPresets();
+
+        GUILayout.Space(20f);
+
+        EditorGUILayout.LabelField(
+            "旧・細分化プリセット",
+            EditorStyles.boldLabel
+        );
 
         // ==================================================
         // 地域プリセット
@@ -878,7 +922,7 @@ public class StageDataCreatorWindow : EditorWindow
             // ==================================================
 
             GUI.enabled =
-                selectedCount > 0 &&
+                (selectedCount > 0 || useRandomCountries) &&
                 !string.IsNullOrWhiteSpace(stageId) &&
                 !string.IsNullOrWhiteSpace(stageName);
 
@@ -1076,6 +1120,13 @@ public class StageDataCreatorWindow : EditorWindow
         stageData.stageImage =
             stageImage;
 
+        // ランダム設定
+        stageData.useRandomCountries =
+            useRandomCountries;
+
+        stageData.randomCountryCount =
+            randomCountryCount;
+
 
         // 星評価
         stageData.threeStarTime =
@@ -1257,6 +1308,532 @@ public class StageDataCreatorWindow : EditorWindow
     }
 
     // ==================================================
+    // おすすめステージプリセット
+    // ==================================================
+
+    private void DrawRecommendedPresets()
+    {
+        EditorGUILayout.LabelField(
+            "おすすめステージ",
+            EditorStyles.boldLabel
+        );
+
+        EditorGUILayout.HelpBox(
+            "01～12で195か国を重複なし・漏れなしで地域分けしています。",
+            MessageType.Info
+        );
+
+        GUILayout.Space(5f);
+
+
+        // ==================================================
+        // アジア
+        // ==================================================
+
+        EditorGUILayout.LabelField(
+            "アジア",
+            EditorStyles.miniBoldLabel
+        );
+
+        EditorGUILayout.BeginHorizontal();
+
+        if (GUILayout.Button("01 東・東南アジア"))
+        {
+            SelectNormalPreset(
+                new string[]
+                {
+                // 東アジア
+                "CHN", "JPN", "MNG", "PRK", "KOR",
+
+                // 東南アジア
+                "BRN", "KHM", "IDN", "LAO", "MYS",
+                "MMR", "PHL", "SGP", "THA", "TLS", "VNM"
+                }
+            );
+        }
+
+        if (GUILayout.Button("02 南・中央アジア"))
+        {
+            SelectNormalPreset(
+                new string[]
+                {
+                // 南アジア
+                "AFG", "BGD", "BTN", "IND",
+                "MDV", "NPL", "PAK", "LKA",
+
+                // 中央アジア
+                "KAZ", "KGZ", "TJK", "TKM", "UZB"
+                }
+            );
+        }
+
+        EditorGUILayout.EndHorizontal();
+
+
+        if (GUILayout.Button("03 中東"))
+        {
+            SelectNormalPreset(
+                new string[]
+                {
+                "ARM", "AZE", "BHR", "CYP", "GEO",
+                "IRN", "IRQ", "ISR", "JOR", "KWT",
+                "LBN", "OMN", "PSE", "QAT", "SAU",
+                "SYR", "TUR", "ARE", "YEM"
+                }
+            );
+        }
+
+
+        GUILayout.Space(10f);
+
+
+        // ==================================================
+        // ヨーロッパ
+        // ==================================================
+
+        EditorGUILayout.LabelField(
+            "ヨーロッパ",
+            EditorStyles.miniBoldLabel
+        );
+
+        EditorGUILayout.BeginHorizontal();
+
+        if (GUILayout.Button("04 北・西ヨーロッパ"))
+        {
+            SelectNormalPreset(
+                new string[]
+                {
+                "ISL", "IRL", "GBR",
+                "NOR", "SWE", "FIN", "DNK",
+                "NLD", "BEL", "LUX", "FRA",
+                "DEU", "CHE", "LIE", "AUT"
+                }
+            );
+        }
+
+        if (GUILayout.Button("05 南ヨーロッパ"))
+        {
+            SelectNormalPreset(
+                new string[]
+                {
+                "PRT", "ESP", "ITA", "MLT", "GRC",
+                "AND", "MCO", "SMR", "VAT",
+                "ALB", "HRV", "BIH", "MNE", "MKD", "SVN"
+                }
+            );
+        }
+
+        EditorGUILayout.EndHorizontal();
+
+
+        if (GUILayout.Button("06 中・東ヨーロッパ"))
+        {
+            SelectNormalPreset(
+                new string[]
+                {
+                "BLR", "BGR", "CZE", "EST",
+                "HUN", "LVA", "LTU", "MDA",
+                "POL", "ROU", "RUS", "SRB",
+                "SVK", "UKR"
+                }
+            );
+        }
+
+
+        GUILayout.Space(10f);
+
+
+        // ==================================================
+        // アフリカ
+        // ==================================================
+
+        EditorGUILayout.LabelField(
+            "アフリカ",
+            EditorStyles.miniBoldLabel
+        );
+
+        EditorGUILayout.BeginHorizontal();
+
+        if (GUILayout.Button("07 北・西アフリカ"))
+        {
+            SelectNormalPreset(
+                new string[]
+                {
+                "DZA", "EGY", "LBY", "MAR", "TUN",
+                "MRT", "MLI", "SEN", "GMB",
+                "GIN", "GNB", "SLE", "LBR",
+                "CIV", "GHA", "BFA", "TGO", "BEN"
+                }
+            );
+        }
+
+        if (GUILayout.Button("08 中・東アフリカ"))
+        {
+            SelectNormalPreset(
+                new string[]
+                {
+                "NGA", "NER", "TCD", "CMR",
+                "CAF", "GNQ", "GAB", "COG", "COD",
+                "SSD", "SDN", "ERI", "DJI",
+                "ETH", "SOM", "KEN", "UGA", "RWA"
+                }
+            );
+        }
+
+        EditorGUILayout.EndHorizontal();
+
+
+        if (GUILayout.Button("09 南部アフリカ・島嶼国"))
+        {
+            SelectNormalPreset(
+                new string[]
+                {
+                "BDI", "TZA", "AGO", "ZMB",
+                "MWI", "MOZ", "ZWE", "NAM",
+                "BWA", "ZAF", "LSO", "SWZ",
+                "MDG", "COM", "MUS", "SYC",
+                "CPV", "STP"
+                }
+            );
+        }
+
+
+        GUILayout.Space(10f);
+
+
+        // ==================================================
+        // アメリカ
+        // ==================================================
+
+        EditorGUILayout.LabelField(
+            "アメリカ",
+            EditorStyles.miniBoldLabel
+        );
+
+        if (GUILayout.Button("10 北・中央アメリカ・カリブ海"))
+        {
+            SelectNormalPreset(
+                new string[]
+                {
+                // 北米・中央アメリカ
+                "BLZ", "CAN", "CRI", "SLV", "GTM",
+                "HND", "MEX", "NIC", "PAN", "USA",
+
+                // カリブ海
+                "ATG", "BHS", "BRB", "CUB",
+                "DMA", "DOM", "GRD",
+                "HTI", "JAM", "KNA",
+                "LCA", "VCT", "TTO"
+                }
+            );
+        }
+
+        if (GUILayout.Button("11 南米"))
+        {
+            SelectNormalPreset(
+                new string[]
+                {
+                "ARG", "BOL", "BRA", "CHL",
+                "COL", "ECU", "GUY", "PRY",
+                "PER", "SUR", "URY", "VEN"
+                }
+            );
+        }
+
+
+        GUILayout.Space(10f);
+
+
+        // ==================================================
+        // オセアニア
+        // ==================================================
+
+        EditorGUILayout.LabelField(
+            "オセアニア",
+            EditorStyles.miniBoldLabel
+        );
+
+        if (GUILayout.Button("12 オセアニア"))
+        {
+            SelectNormalPreset(
+                new string[]
+                {
+                "AUS", "FJI", "KIR", "MHL",
+                "FSM", "NRU", "NZL",
+                "PLW", "PNG", "WSM", "SLB",
+                "TON", "TUV", "VUT"
+                }
+            );
+        }
+
+
+        GUILayout.Space(15f);
+
+
+        // ==================================================
+        // 世界テーマ
+        // ==================================================
+
+        EditorGUILayout.LabelField(
+            "世界テーマ",
+            EditorStyles.miniBoldLabel
+        );
+
+        EditorGUILayout.BeginHorizontal();
+
+        if (GUILayout.Button("13 Major Countries"))
+        {
+            SelectNormalPreset(
+                new string[]
+                {
+                "USA", "CHN", "JPN", "DEU", "GBR",
+                "FRA", "ITA", "CAN", "IND", "BRA",
+                "AUS", "KOR", "ESP", "MEX", "RUS",
+                "TUR", "SAU", "IDN", "ARG", "ZAF"
+                }
+            );
+        }
+
+        if (GUILayout.Button("14 Largest Countries"))
+        {
+            SelectNormalPreset(
+                new string[]
+                {
+                "RUS", "CAN", "CHN", "USA", "BRA",
+                "AUS", "IND", "ARG", "KAZ", "DZA",
+                "COD", "SAU", "MEX", "IDN", "SDN"
+                }
+            );
+        }
+
+        EditorGUILayout.EndHorizontal();
+
+
+        if (GUILayout.Button("15 Island Countries"))
+        {
+            SelectNormalPreset(
+                new string[]
+                {
+                "JPN", "GBR", "ISL", "IRL", "MDG",
+                "LKA", "IDN", "PHL", "NZL", "PNG",
+                "CUB", "JAM", "FJI", "VUT", "MUS"
+                }
+            );
+        }
+
+
+        GUILayout.Space(10f);
+
+
+        // ==================================================
+        // Random Challenge
+        // ==================================================
+
+        GUILayout.Space(15f);
+
+        EditorGUILayout.LabelField(
+            "Random Challenge",
+            EditorStyles.miniBoldLabel
+        );
+
+
+        // --------------------------------------------------
+        // 16 World Random 20
+        // --------------------------------------------------
+
+        if (GUILayout.Button("16 World Random 20"))
+        {
+            SelectWorldRandomPreset(20);
+        }
+
+
+        GUILayout.Space(5f);
+
+
+        // --------------------------------------------------
+        // 17 Asia Random 20
+        // --------------------------------------------------
+
+        if (GUILayout.Button("17 Asia Random 20"))
+        {
+            SelectRegionalRandomPreset(
+                20,
+                new string[]
+                {
+            // 東アジア
+            "CHN", "JPN", "MNG", "PRK", "KOR",
+
+            // 東南アジア
+            "BRN", "KHM", "IDN", "LAO", "MYS",
+            "MMR", "PHL", "SGP", "THA", "TLS", "VNM",
+
+            // 南アジア
+            "AFG", "BGD", "BTN", "IND",
+            "MDV", "NPL", "PAK", "LKA",
+
+            // 中央アジア
+            "KAZ", "KGZ", "TJK", "TKM", "UZB",
+
+            // 中東
+            "ARM", "AZE", "BHR", "CYP", "GEO",
+            "IRN", "IRQ", "ISR", "JOR", "KWT",
+            "LBN", "OMN", "PSE", "QAT", "SAU",
+            "SYR", "TUR", "ARE", "YEM"
+                }
+            );
+        }
+
+
+        // --------------------------------------------------
+        // 18 Europe Random 20
+        // --------------------------------------------------
+
+        if (GUILayout.Button("18 Europe Random 20"))
+        {
+            SelectRegionalRandomPreset(
+                20,
+                new string[]
+                {
+            "ISL", "IRL", "GBR",
+            "NOR", "SWE", "FIN", "DNK",
+            "NLD", "BEL", "LUX", "FRA",
+            "DEU", "CHE", "LIE", "AUT",
+
+            "PRT", "ESP", "ITA", "MLT", "GRC",
+            "AND", "MCO", "SMR", "VAT",
+            "ALB", "HRV", "BIH", "MNE", "MKD", "SVN",
+
+            "BLR", "BGR", "CZE", "EST",
+            "HUN", "LVA", "LTU", "MDA",
+            "POL", "ROU", "RUS", "SRB",
+            "SVK", "UKR"
+                }
+            );
+        }
+
+
+        // --------------------------------------------------
+        // 19 Africa Random 20
+        // --------------------------------------------------
+
+        if (GUILayout.Button("19 Africa Random 20"))
+        {
+            SelectRegionalRandomPreset(
+                20,
+                new string[]
+                {
+            "DZA", "EGY", "LBY", "MAR", "TUN",
+            "MRT", "MLI", "SEN", "GMB",
+            "GIN", "GNB", "SLE", "LBR",
+            "CIV", "GHA", "BFA", "TGO", "BEN",
+
+            "NGA", "NER", "TCD", "CMR",
+            "CAF", "GNQ", "GAB", "COG", "COD",
+            "SSD", "SDN", "ERI", "DJI",
+            "ETH", "SOM", "KEN", "UGA", "RWA",
+
+            "BDI", "TZA", "AGO", "ZMB",
+            "MWI", "MOZ", "ZWE", "NAM",
+            "BWA", "ZAF", "LSO", "SWZ",
+            "MDG", "COM", "MUS", "SYC",
+            "CPV", "STP"
+                }
+            );
+        }
+
+
+        // --------------------------------------------------
+        // 20 Americas Random 20
+        // --------------------------------------------------
+
+        if (GUILayout.Button("20 Americas Random 20"))
+        {
+            SelectRegionalRandomPreset(
+                20,
+                new string[]
+                {
+            // 北米・中央アメリカ
+            "BLZ", "CAN", "CRI", "SLV", "GTM",
+            "HND", "MEX", "NIC", "PAN", "USA",
+
+            // カリブ海
+            "ATG", "BHS", "BRB", "CUB",
+            "DMA", "DOM", "GRD",
+            "HTI", "JAM", "KNA",
+            "LCA", "VCT", "TTO",
+
+            // 南米
+            "ARG", "BOL", "BRA", "CHL",
+            "COL", "ECU", "GUY", "PRY",
+            "PER", "SUR", "URY", "VEN"
+                }
+            );
+        }
+
+
+        // --------------------------------------------------
+        // 21 Oceania & Islands Random 20
+        // --------------------------------------------------
+
+        if (GUILayout.Button(
+                "21 Oceania & Islands Random 20"))
+        {
+            SelectRegionalRandomPreset(
+                20,
+                new string[]
+                {
+            // オセアニア14か国
+            "AUS", "FJI", "KIR", "MHL",
+            "FSM", "NRU", "NZL",
+            "PLW", "PNG", "WSM", "SLB",
+            "TON", "TUV", "VUT",
+
+            // 世界の島国を追加
+            "JPN",
+            "GBR",
+            "ISL",
+            "IRL",
+            "MDG",
+            "LKA",
+            "IDN",
+            "PHL",
+            "CUB",
+            "JAM",
+            "MUS"
+                }
+            );
+        }
+
+
+        GUILayout.Space(15f);
+
+
+        // ==================================================
+        // 世界195か国
+        // ==================================================
+
+        if (GUILayout.Button(
+                "22 All Countries",
+                GUILayout.Height(35f)))
+        {
+            useRandomCountries = false;
+
+            SelectAllCountries();
+        }
+    }
+
+    // ==================================================
+    // 通常プリセット選択
+    // ==================================================
+
+    private void SelectNormalPreset(string[] countryIds)
+    {
+        useRandomCountries = false;
+
+        SelectPreset(countryIds);
+    }
+
+    // ==================================================
     // 地域プリセット検査
     // ==================================================
 
@@ -1406,6 +1983,43 @@ public class StageDataCreatorWindow : EditorWindow
                 MessageType.Error
             );
         }
+    }
+
+    // ==================================================
+    // 地域限定ランダムプリセット
+    // ==================================================
+
+    private void SelectRegionalRandomPreset(
+        int count,
+        string[] candidateCountryIds)
+    {
+        useRandomCountries = true;
+        randomCountryCount = count;
+
+        // 候補となる国をCountry IDsへ登録するために選択
+        SelectPreset(candidateCountryIds);
+
+        Repaint();
+    }
+
+
+    // ==================================================
+    // 全世界ランダムプリセット
+    // ==================================================
+
+    private void SelectWorldRandomPreset(int count)
+    {
+        useRandomCountries = true;
+        randomCountryCount = count;
+
+        // Country IDsを空にする。
+        // 空なら全195か国を候補とする。
+        foreach (CountryEntry country in countries)
+        {
+            country.selected = false;
+        }
+
+        Repaint();
     }
 
     // ==================================================

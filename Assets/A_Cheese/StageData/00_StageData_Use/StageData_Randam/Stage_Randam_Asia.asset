@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bacd80ee43a8db440ad3383e7e6bc422, type: 3}
+  m_Name: Stage_Randam_Asia
+  m_EditorClassIdentifier: Assembly-CSharp::StageData
+  stageId: Randam_Asia
+  stageName: Randam_Asia
+  stageImage: {fileID: 0}
+  countryIds:
+  - AFG
+  - ARM
+  - AZE
+  - BHR
+  - BGD
+  - BTN
+  - BRN
+  - KHM
+  - CHN
+  - CYP
+  - GEO
+  - IND
+  - IDN
+  - IRN
+  - IRQ
+  - ISR
+  - JPN
+  - JOR
+  - KAZ
+  - PRK
+  - KOR
+  - KWT
+  - KGZ
+  - LAO
+  - LBN
+  - MYS
+  - MDV
+  - MNG
+  - MMR
+  - NPL
+  - OMN
+  - PAK
+  - PHL
+  - QAT
+  - SAU
+  - SGP
+  - LKA
+  - SYR
+  - TJK
+  - THA
+  - TLS
+  - TUR
+  - TKM
+  - ARE
+  - UZB
+  - VNM
+  - YEM
+  - PSE
+  useRandomCountries: 1
+  randomCountryCount: 20
+  threeStarTime: 30
+  twoStarTime: 60
+  mapStartPosition: {x: 0, y: 0}
+  mapStartScale: 1

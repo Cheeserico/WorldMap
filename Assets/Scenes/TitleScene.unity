@@ -3504,7 +3504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PopupManager
   popupEntries:
-  - popupType: 6
+  - popupType: 9
     popup: {fileID: 1397908821}
 --- !u!4 &1444066196
 Transform:

@@ -13705,7 +13705,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1049533725}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.34379426
+  m_Size: 0.30754536
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -29540,21 +29540,21 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Copyright 2018 The Noto Project Authors (github.com/googlei18n/noto-fonts)
 
-    
+
 
     This
     Font Software is licensed under the SIL Open Font License,
 
     Version 1.1.
 
-    
+
 
     This
     license is copied below, and is also available with a FAQ at:
 
     http://scripts.sil.org/OFL
 
-    
+
 
     -----------------------------------------------------------
 
@@ -29563,7 +29563,7 @@ MonoBehaviour:
 
     -----------------------------------------------------------
 
-    
+
 
     PREAMBLE
 
@@ -29581,7 +29581,7 @@ MonoBehaviour:
 
     improved in partnership with others.
 
-    
+
 
     The
     OFL allows the licensed fonts to be used, studied, modified and
@@ -29606,7 +29606,7 @@ MonoBehaviour:
 
     any document created using the fonts or their derivatives.
 
-    
+
 
     DEFINITIONS
 
@@ -29616,89 +29616,88 @@ MonoBehaviour:
     Holder(s)
     under this license and clearly marked as such. This may
 
-    include source
-    files, build scripts and documentation.
+    include source files,
+    build scripts and documentation.
 
-    
 
-    "Reserved Font Name" refers
-    to any names specified as such after the
+
+    "Reserved Font Name" refers to any names
+    specified as such after the
 
     copyright statement(s).
 
-    
 
-    "Original
-    Version" refers to the collection of Font Software
 
-    components as distributed
-    by the Copyright Holder(s).
+    "Original Version"
+    refers to the collection of Font Software
 
-    
+    components as distributed by the
+    Copyright Holder(s).
 
-    "Modified Version" refers to any derivative
-    made by adding to,
 
-    deleting, or substituting -- in part or in whole --
-    any of the
 
-    components of the Original Version, by changing formats or by
-    porting
+    "Modified Version" refers to any derivative made
+    by adding to,
 
-    the Font Software to a new environment.
+    deleting, or substituting -- in part or in whole -- any of
+    the
 
-    
+    components of the Original Version, by changing formats or by porting
 
-    "Author" refers
-    to any designer, engineer, programmer, technical
+    the
+    Font Software to a new environment.
 
-    writer or other person
-    who contributed to the Font Software.
 
-    
+
+    "Author" refers to any designer, engineer,
+    programmer, technical
+
+    writer or other person who contributed to the Font
+    Software.
+
+
 
     PERMISSION & CONDITIONS
 
-    Permission
-    is hereby granted, free of charge, to any person obtaining
+    Permission is hereby granted, free
+    of charge, to any person obtaining
 
-    a copy of the
-    Font Software, to use, study, copy, merge, embed,
+    a copy of the Font Software, to use,
+    study, copy, merge, embed,
 
-    modify, redistribute,
-    and sell modified and unmodified copies of the
+    modify, redistribute, and sell modified and unmodified
+    copies of the
 
-    Font Software, subject to
-    the following conditions:
+    Font Software, subject to the following conditions:
 
-    
 
-    1) Neither the Font Software nor any of
-    its individual components, in
 
-    Original or Modified Versions, may be sold
-    by itself.
+    1)
+    Neither the Font Software nor any of its individual components, in
 
-    
+    Original
+    or Modified Versions, may be sold by itself.
 
-    2) Original or Modified Versions of the Font Software
-    may be bundled,
 
-    redistributed and/or sold with any software, provided that
-    each copy
 
-    contains the above copyright notice and this license. These can
-    be
+    2) Original or Modified Versions
+    of the Font Software may be bundled,
 
-    included either as stand-alone text files, human-readable headers or
+    redistributed and/or sold with any
+    software, provided that each copy
 
-    in
-    the appropriate machine-readable metadata fields within text or
+    contains the above copyright notice and
+    this license. These can be
 
-    binary
-    files as long as those fields can be easily viewed by the user.
+    included either as stand-alone text files, human-readable
+    headers or
 
-    
+    in the appropriate machine-readable metadata fields within text
+    or
+
+    binary files as long as those fields can be easily viewed by the user.
+
+
 
     3)
     No Modified Version of the Font Software may use the Reserved Font
@@ -29712,7 +29711,7 @@ MonoBehaviour:
     primary font name as presented
     to the users.
 
-    
+
 
     4) The name(s) of the Copyright Holder(s) or the Author(s)
     of the Font
@@ -29727,7 +29726,7 @@ MonoBehaviour:
 
     permission.
 
-    
+
 
     5)
     The Font Software, modified or unmodified, in part or in whole,
@@ -29743,7 +29742,7 @@ MonoBehaviour:
 
     the Font Software.
 
-    
+
 
     TERMINATION
 
@@ -29752,7 +29751,7 @@ MonoBehaviour:
 
     not met.
 
-    
+
 
     DISCLAIMER
 
@@ -29777,8 +29776,8 @@ MonoBehaviour:
     DAMAGES, WHETHER IN AN ACTION OF
     CONTRACT, TORT OR OTHERWISE, ARISING
 
-    FROM, OUT OF THE USE OR INABILITY
-    TO USE THE FONT SOFTWARE OR FROM
+    FROM, OUT OF THE USE OR INABILITY TO
+    USE THE FONT SOFTWARE OR FROM
 
     OTHER DEALINGS IN THE FONT SOFTWARE.'
   m_isRightToLeft: 0
@@ -42788,7 +42787,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 470071900}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.0794054
+  m_Size: 0.07073969
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -67796,7 +67795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ff72aa0039bf94b89810bbbee9eb2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CountryPuzzleManager
-  stageData: {fileID: 11400000, guid: 98afcc9f6d49e29408553f2e6b688e9e, type: 2}
+  stageData: {fileID: 11400000, guid: 361e059834364434ea4d48dbf4839dc9, type: 2}
   progressText: {fileID: 1031093489}
   timerManager: {fileID: 1523005098}
   resultDelay: 1.4
@@ -71472,11 +71471,11 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'MIT License
 
-    
+
 
     Copyright (c) 2018 Mohamad Narimani @sorencoder
 
-    
+
 
     Permission
     is hereby granted, free of charge, to any person obtaining a copy
@@ -71496,33 +71495,33 @@ MonoBehaviour:
     furnished
     to do so, subject to the following conditions:
 
-    
 
-    The above copyright
-    notice and this permission notice shall be included in all
+
+    The above copyright notice
+    and this permission notice shall be included in all
 
     copies or substantial
     portions of the Software.
 
-    
 
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT
-    WARRANTY OF ANY KIND, EXPRESS OR
 
-    IMPLIED, INCLUDING BUT NOT LIMITED TO
-    THE WARRANTIES OF MERCHANTABILITY,
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY
+    OF ANY KIND, EXPRESS OR
 
-    FITNESS FOR A PARTICULAR PURPOSE AND
-    NONINFRINGEMENT. IN NO EVENT SHALL THE
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+    OF MERCHANTABILITY,
 
-    AUTHORS OR COPYRIGHT HOLDERS BE
-    LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+    IN NO EVENT SHALL THE
 
-    LIABILITY, WHETHER IN AN ACTION
-    OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+    DAMAGES OR OTHER
 
-    OUT OF OR IN CONNECTION WITH
-    THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+    ARISING FROM,
+
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+    DEALINGS IN THE
 
     SOFTWARE.'
   m_isRightToLeft: 0

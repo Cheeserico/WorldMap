@@ -495,66 +495,130 @@ public class CountryPuzzleManager : MonoBehaviour
         // ランダムステージ
         // ==================================================
 
-        CountrySlot[] slots =
-            FindObjectsByType<CountrySlot>(
-                FindObjectsInactive.Include,
-                FindObjectsSortMode.None
-            );
-
-        List<string> allCountryIds =
+        List<string> candidateCountryIds =
             new List<string>();
 
-        foreach (CountrySlot slot in slots)
+
+        // --------------------------------------------------
+        // countryIdsが設定されている場合
+        // → その中だけをランダム候補にする
+        // --------------------------------------------------
+
+        if (stageData.countryIds != null &&
+            stageData.countryIds.Count > 0)
         {
-            if (string.IsNullOrEmpty(slot.CountryId))
+            foreach (string countryId in stageData.countryIds)
             {
-                continue;
+                if (string.IsNullOrEmpty(countryId))
+                {
+                    continue;
+                }
+
+                if (!candidateCountryIds.Contains(countryId))
+                {
+                    candidateCountryIds.Add(
+                        countryId
+                    );
+                }
             }
 
-            if (!allCountryIds.Contains(slot.CountryId))
-            {
-                allCountryIds.Add(
-                    slot.CountryId
-                );
-            }
+            Debug.Log(
+                $"地域限定ランダム：" +
+                $"{candidateCountryIds.Count}か国を候補にします。"
+            );
         }
 
-        if (allCountryIds.Count == 0)
+
+        // --------------------------------------------------
+        // countryIdsが空の場合
+        // → Scene内の全CountrySlotを候補にする
+        // --------------------------------------------------
+
+        else
+        {
+            CountrySlot[] slots =
+                FindObjectsByType<CountrySlot>(
+                    FindObjectsInactive.Include,
+                    FindObjectsSortMode.None
+                );
+
+            foreach (CountrySlot slot in slots)
+            {
+                if (string.IsNullOrEmpty(slot.CountryId))
+                {
+                    continue;
+                }
+
+                if (!candidateCountryIds.Contains(slot.CountryId))
+                {
+                    candidateCountryIds.Add(
+                        slot.CountryId
+                    );
+                }
+            }
+
+            Debug.Log(
+                $"全世界ランダム：" +
+                $"{candidateCountryIds.Count}か国を候補にします。"
+            );
+        }
+
+
+        // --------------------------------------------------
+        // 候補が0なら終了
+        // --------------------------------------------------
+
+        if (candidateCountryIds.Count == 0)
         {
             Debug.LogError(
-                "ランダム抽選用のCountrySlotが見つかりません。"
+                "ランダム抽選の候補国がありません。"
             );
 
             return;
         }
 
+
+        // --------------------------------------------------
+        // 抽選数を決定
+        // --------------------------------------------------
+
         int randomCount =
             Mathf.Clamp(
                 stageData.randomCountryCount,
                 1,
-                allCountryIds.Count
+                candidateCountryIds.Count
             );
 
-        // 重複なしでランダム抽選
+
+        // --------------------------------------------------
+        // 重複なしランダム抽選
+        // --------------------------------------------------
+
         for (int i = 0; i < randomCount; i++)
         {
             int randomIndex =
                 Random.Range(
                     0,
-                    allCountryIds.Count
+                    candidateCountryIds.Count
                 );
 
             activeCountryIds.Add(
-                allCountryIds[randomIndex]
+                candidateCountryIds[randomIndex]
             );
 
-            allCountryIds.RemoveAt(
+            candidateCountryIds.RemoveAt(
                 randomIndex
             );
         }
 
+
+        // --------------------------------------------------
+        // ログ
+        // --------------------------------------------------
+
         Debug.Log(
-            $"ランダムステージ：{activeCountryIds.Count}か国を抽選しました。"
+            $"ランダムステージ：" +
+            $"{activeCountryIds.Count}か国を抽選しました。"
         );
 
         Debug.Log(
