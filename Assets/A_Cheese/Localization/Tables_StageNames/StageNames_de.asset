@@ -102,6 +102,74 @@ MonoBehaviour:
     m_Localized: Ostasien
     m_Metadata:
       m_Items: []
+  - m_Id: 1227357060685824
+    m_Localized: Zentral- und Ostafrika
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1227966291730432
+    m_Localized: Nord- und Westafrika
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228167765123072
+    m_Localized: "S\xFCdliches Afrika & Inseln"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228341207982080
+    m_Localized: Nord- & Mittelamerika und Karibik
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228449303584768
+    m_Localized: "S\xFCdamerika"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228527330222080
+    m_Localized: "Ost- & S\xFCdostasien"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228744108630016
+    m_Localized: "S\xFCd- & Zentralasien"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228825742368768
+    m_Localized: Mittel- & Osteuropa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228906298171392
+    m_Localized: Nord- & Westeuropa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228994772819968
+    m_Localized: "S\xFCdeuropa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229103640174592
+    m_Localized: Naher Osten
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229191217242112
+    m_Localized: Ozeanien
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229316618543104
+    m_Localized: "20 zuf\xE4llige L\xE4nder aus Afrika"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229404023644160
+    m_Localized: "20 zuf\xE4llige L\xE4nder aus Amerika"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229475469418496
+    m_Localized: "20 zuf\xE4llige L\xE4nder aus Asien"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229593501327360
+    m_Localized: "20 zuf\xE4llige L\xE4nder aus Europa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229677936861184
+    m_Localized: "20 zuf\xE4llige L\xE4nder aus Ozeanien & Inselstaaten"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

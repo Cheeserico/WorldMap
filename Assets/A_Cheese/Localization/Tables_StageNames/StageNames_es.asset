@@ -102,6 +102,74 @@ MonoBehaviour:
     m_Localized: Asia Oriental
     m_Metadata:
       m_Items: []
+  - m_Id: 1227357060685824
+    m_Localized: "\xC1frica Central y Oriental"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1227966291730432
+    m_Localized: "\xC1frica del Norte y Occidental"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228167765123072
+    m_Localized: "\xC1frica Austral e Islas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228341207982080
+    m_Localized: "Norteam\xE9rica, Centroam\xE9rica y Caribe"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228449303584768
+    m_Localized: "Am\xE9rica del Sur"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228527330222080
+    m_Localized: "Asia Oriental y Sudeste Asi\xE1tico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228744108630016
+    m_Localized: Asia Meridional y Central
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228825742368768
+    m_Localized: Europa Central y Oriental
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228906298171392
+    m_Localized: Europa del Norte y Occidental
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228994772819968
+    m_Localized: Europa del Sur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229103640174592
+    m_Localized: Oriente Medio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229191217242112
+    m_Localized: "Ocean\xEDa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229316618543104
+    m_Localized: "20 pa\xEDses aleatorios de \xC1frica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229404023644160
+    m_Localized: "20 pa\xEDses aleatorios de Am\xE9rica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229475469418496
+    m_Localized: "20 pa\xEDses aleatorios de Asia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229593501327360
+    m_Localized: "20 pa\xEDses aleatorios de Europa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229677936861184
+    m_Localized: "20 pa\xEDses aleatorios de Ocean\xEDa e islas"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -99,6 +99,74 @@ MonoBehaviour:
     m_Key: World
     m_Metadata:
       m_Items: []
+  - m_Id: 1227357060685824
+    m_Key: Africa_C_E
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1227966291730432
+    m_Key: Africa_N_W
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228167765123072
+    m_Key: Africa_S
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228341207982080
+    m_Key: America_N_C_Caribbean
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228449303584768
+    m_Key: America_S
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228527330222080
+    m_Key: Asia_E_SE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228744108630016
+    m_Key: Asia_S_C
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228825742368768
+    m_Key: Europe_C_E
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228906298171392
+    m_Key: Europe_N_W
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228994772819968
+    m_Key: Europe_S
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229103640174592
+    m_Key: Middle_East
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229191217242112
+    m_Key: Oceania
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229316618543104
+    m_Key: Randam_Africa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229404023644160
+    m_Key: Randam_America
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229475469418496
+    m_Key: Randam_Asia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229593501327360
+    m_Key: Randam_Europe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229677936861184
+    m_Key: Randam_Oceania_Island
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

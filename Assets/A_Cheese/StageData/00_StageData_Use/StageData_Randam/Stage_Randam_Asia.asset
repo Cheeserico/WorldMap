@@ -68,5 +68,5 @@ MonoBehaviour:
   randomCountryCount: 20
   threeStarTime: 30
   twoStarTime: 60
-  mapStartPosition: {x: 0, y: 0}
+  mapStartPosition: {x: -240, y: 10}
   mapStartScale: 1

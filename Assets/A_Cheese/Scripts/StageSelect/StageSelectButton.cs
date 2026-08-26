@@ -26,6 +26,10 @@ public class StageSelectButton : MonoBehaviour
     [SerializeField]
     private Image stageImage;
 
+    [Header("クリア済み表示")]
+    [SerializeField]
+    private GameObject clearBadge;
+
     [Header("獲得した星")]
     [SerializeField]
     private GameObject[] yellowStars;
@@ -185,15 +189,14 @@ public class StageSelectButton : MonoBehaviour
         if (!PlayerPrefs.HasKey(bestTimeKey))
         {
             bestTimeText.text =
-                GetLocalizedBestTimeText(
-                    "--:--.--"
-                );
+                "--:--.--";
 
             UpdateStars(0);
+            UpdateClearBadge(false);
 
             return;
         }
-
+        
         // ------------------------------
         // クリア済み
         // ------------------------------
@@ -204,17 +207,18 @@ public class StageSelectButton : MonoBehaviour
             );
 
         bestTimeText.text =
-            GetLocalizedBestTimeText(
-                FormatTime(bestTime)
-            );
+            FormatTime(bestTime);
 
         int starCount =
             CalculateStarCount(bestTime);
 
         UpdateStars(starCount);
+        UpdateClearBadge(true);
     }
 
 
+
+    /*
     // ==================================================
     // ベストタイムのローカライズ
     // ==================================================
@@ -238,6 +242,7 @@ public class StageSelectButton : MonoBehaviour
         return
             localizedBestTime.GetLocalizedString();
     }
+    */
 
     // ==================================================
     // 時間表示
@@ -294,6 +299,24 @@ public class StageSelectButton : MonoBehaviour
                 i < starCount
             );
         }
+    }
+
+    // ==================================================
+    // クリア済み表示
+    // ==================================================
+
+    private void UpdateClearBadge(
+        bool isCleared
+    )
+    {
+        if (clearBadge == null)
+        {
+            return;
+        }
+
+        clearBadge.SetActive(
+            isCleared
+        );
     }
 
     // ==================================================

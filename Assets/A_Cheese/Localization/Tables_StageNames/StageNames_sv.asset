@@ -102,6 +102,74 @@ MonoBehaviour:
     m_Localized: "\xD6stasien"
     m_Metadata:
       m_Items: []
+  - m_Id: 1227357060685824
+    m_Localized: "Central- och \xD6stafrika"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1227966291730432
+    m_Localized: "Nord- och V\xE4stafrika"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228167765123072
+    m_Localized: "S\xF6dra Afrika & \xF6ar"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228341207982080
+    m_Localized: Nord- och Centralamerika & Karibien
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228449303584768
+    m_Localized: Sydamerika
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228527330222080
+    m_Localized: "\xD6st- och Sydostasien"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228744108630016
+    m_Localized: Syd- och Centralasien
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228825742368768
+    m_Localized: "Central- och \xD6steuropa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228906298171392
+    m_Localized: "Nord- och V\xE4steuropa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228994772819968
+    m_Localized: Sydeuropa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229103640174592
+    m_Localized: "Mellan\xF6stern"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229191217242112
+    m_Localized: Oceanien
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229316618543104
+    m_Localized: "20 slumpm\xE4ssiga l\xE4nder i Afrika"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229404023644160
+    m_Localized: "20 slumpm\xE4ssiga l\xE4nder i Amerika"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229475469418496
+    m_Localized: "20 slumpm\xE4ssiga l\xE4nder i Asien"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229593501327360
+    m_Localized: "20 slumpm\xE4ssiga l\xE4nder i Europa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229677936861184
+    m_Localized: "20 slumpm\xE4ssiga l\xE4nder i Oceanien & \xF6nationer"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

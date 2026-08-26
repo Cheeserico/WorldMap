@@ -67795,7 +67795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ff72aa0039bf94b89810bbbee9eb2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CountryPuzzleManager
-  stageData: {fileID: 11400000, guid: 361e059834364434ea4d48dbf4839dc9, type: 2}
+  stageData: {fileID: 11400000, guid: 1c1832d3f1bb2fa43898ae70fefd6d04, type: 2}
   progressText: {fileID: 1031093489}
   timerManager: {fileID: 1523005098}
   resultDelay: 1.4

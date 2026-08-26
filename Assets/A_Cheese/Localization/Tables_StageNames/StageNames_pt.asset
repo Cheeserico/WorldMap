@@ -102,6 +102,74 @@ MonoBehaviour:
     m_Localized: "\xC1sia Oriental"
     m_Metadata:
       m_Items: []
+  - m_Id: 1227357060685824
+    m_Localized: "\xC1frica Central e Oriental"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1227966291730432
+    m_Localized: "Norte e Oeste da \xC1frica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228167765123072
+    m_Localized: "\xC1frica Austral e Ilhas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228341207982080
+    m_Localized: "Am\xE9rica do Norte e Central e Caribe"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228449303584768
+    m_Localized: "Am\xE9rica do Sul"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228527330222080
+    m_Localized: "\xC1sia Oriental e Sudeste Asi\xE1tico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228744108630016
+    m_Localized: "Sul e \xC1sia Central"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228825742368768
+    m_Localized: Europa Central e Oriental
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228906298171392
+    m_Localized: Europa do Norte e Ocidental
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228994772819968
+    m_Localized: Europa do Sul
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229103640174592
+    m_Localized: "Oriente M\xE9dio"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229191217242112
+    m_Localized: Oceania
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229316618543104
+    m_Localized: "20 pa\xEDses aleat\xF3rios da \xC1frica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229404023644160
+    m_Localized: "20 pa\xEDses aleat\xF3rios das Am\xE9ricas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229475469418496
+    m_Localized: "20 pa\xEDses aleat\xF3rios da \xC1sia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229593501327360
+    m_Localized: "20 pa\xEDses aleat\xF3rios da Europa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229677936861184
+    m_Localized: "20 pa\xEDses aleat\xF3rios da Oceania e ilhas"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -102,6 +102,74 @@ MonoBehaviour:
     m_Localized: Asia orientale
     m_Metadata:
       m_Items: []
+  - m_Id: 1227357060685824
+    m_Localized: Africa centrale e orientale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1227966291730432
+    m_Localized: Africa settentrionale e occidentale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228167765123072
+    m_Localized: Africa meridionale e isole
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228341207982080
+    m_Localized: Nord e Centro America e Caraibi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228449303584768
+    m_Localized: America meridionale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228527330222080
+    m_Localized: Asia orientale e sud-orientale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228744108630016
+    m_Localized: Asia meridionale e centrale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228825742368768
+    m_Localized: Europa centrale e orientale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228906298171392
+    m_Localized: Europa settentrionale e occidentale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228994772819968
+    m_Localized: Europa meridionale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229103640174592
+    m_Localized: Medio Oriente
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229191217242112
+    m_Localized: Oceania
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229316618543104
+    m_Localized: 20 paesi africani casuali
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229404023644160
+    m_Localized: 20 paesi casuali delle Americhe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229475469418496
+    m_Localized: 20 paesi asiatici casuali
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229593501327360
+    m_Localized: 20 paesi europei casuali
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229677936861184
+    m_Localized: "20 paesi casuali dell\u2019Oceania e delle isole"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

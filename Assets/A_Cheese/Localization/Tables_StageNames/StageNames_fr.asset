@@ -102,6 +102,74 @@ MonoBehaviour:
     m_Localized: "Asie de l\u2019Est"
     m_Metadata:
       m_Items: []
+  - m_Id: 1227357060685824
+    m_Localized: "Afrique centrale et de l\u2019Est"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1227966291730432
+    m_Localized: "Afrique du Nord et de l\u2019Ouest"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228167765123072
+    m_Localized: "Afrique australe et \xEEles"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228341207982080
+    m_Localized: "Am\xE9rique du Nord, Am\xE9rique centrale et Cara\xEFbes"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228449303584768
+    m_Localized: "Am\xE9rique du Sud"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228527330222080
+    m_Localized: "Asie de l\u2019Est et du Sud-Est"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228744108630016
+    m_Localized: Asie du Sud et centrale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228825742368768
+    m_Localized: Europe centrale et orientale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228906298171392
+    m_Localized: "Europe du Nord et de l\u2019Ouest"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228994772819968
+    m_Localized: Europe du Sud
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229103640174592
+    m_Localized: Moyen-Orient
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229191217242112
+    m_Localized: "Oc\xE9anie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229316618543104
+    m_Localized: "20 pays africains al\xE9atoires"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229404023644160
+    m_Localized: "20 pays al\xE9atoires des Am\xE9riques"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229475469418496
+    m_Localized: "20 pays asiatiques al\xE9atoires"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229593501327360
+    m_Localized: "20 pays europ\xE9ens al\xE9atoires"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229677936861184
+    m_Localized: "20 pays al\xE9atoires d\u2019Oc\xE9anie et des \xEEles"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

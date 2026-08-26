@@ -102,6 +102,74 @@ MonoBehaviour:
     m_Localized: "Oost-Azi\xEB"
     m_Metadata:
       m_Items: []
+  - m_Id: 1227357060685824
+    m_Localized: Centraal- en Oost-Afrika
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1227966291730432
+    m_Localized: Noord- en West-Afrika
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228167765123072
+    m_Localized: Zuidelijk Afrika & eilanden
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228341207982080
+    m_Localized: "Noord- en Midden-Amerika & Cara\xEFben"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228449303584768
+    m_Localized: Zuid-Amerika
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228527330222080
+    m_Localized: "Oost- en Zuidoost-Azi\xEB"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228744108630016
+    m_Localized: "Zuid- en Centraal-Azi\xEB"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228825742368768
+    m_Localized: Centraal- en Oost-Europa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228906298171392
+    m_Localized: Noord- en West-Europa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228994772819968
+    m_Localized: Zuid-Europa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229103640174592
+    m_Localized: Midden-Oosten
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229191217242112
+    m_Localized: "Oceani\xEB"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229316618543104
+    m_Localized: 20 willekeurige landen uit Afrika
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229404023644160
+    m_Localized: 20 willekeurige landen uit Amerika
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229475469418496
+    m_Localized: "20 willekeurige landen uit Azi\xEB"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229593501327360
+    m_Localized: 20 willekeurige landen uit Europa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1229677936861184
+    m_Localized: "20 willekeurige landen uit Oceani\xEB & eilandstaten"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
