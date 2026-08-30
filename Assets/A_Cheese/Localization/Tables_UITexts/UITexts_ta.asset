@@ -149,6 +149,23 @@ MonoBehaviour:
     m_Localized: "RTLTMPro \u0B89\u0BB0\u0BBF\u0BAE\u0BAE\u0BCD"
     m_Metadata:
       m_Items: []
+  - m_Id: 1950000952991744
+    m_Localized: "\u0B92\u0BB0\u0BC1 \u0BA8\u0BBF\u0BB2\u0BC8\u0BAF\u0BC8\u0BA4\u0BCD
+      \u0BA4\u0BC7\u0BB0\u0BCD\u0BA8\u0BCD\u0BA4\u0BC6\u0B9F\u0BC1\u0B95\u0BCD\u0B95\u0BB5\u0BC1\u0BAE\u0BCD"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1951693765697536
+    m_Localized: "\u0B9A\u0BC0\u0BB0\u0BB1\u0BCD\u0BB1 \u0B9A\u0BB5\u0BBE\u0BB2\u0BCD"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3284483606142976
+    m_Localized: "\u0B89\u0BB2\u0B95\u0B9A\u0BCD \u0B9A\u0BB5\u0BBE\u0BB2\u0BCD\u0B95\u0BB3\u0BCD"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3286335244558336
+    m_Localized: "\u0BAA\u0BBF\u0BB0\u0BBE\u0BA8\u0BCD\u0BA4\u0BBF\u0BAF \u0BA8\u0BBF\u0BB2\u0BC8\u0B95\u0BB3\u0BCD"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

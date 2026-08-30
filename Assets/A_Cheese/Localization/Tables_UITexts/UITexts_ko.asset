@@ -144,6 +144,22 @@ MonoBehaviour:
     m_Localized: "RTLTMPro \uB77C\uC774\uC120\uC2A4"
     m_Metadata:
       m_Items: []
+  - m_Id: 1950000952991744
+    m_Localized: "\uC2A4\uD14C\uC774\uC9C0\uB97C \uC120\uD0DD\uD558\uC138\uC694"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1951693765697536
+    m_Localized: "\uB79C\uB364 \uCC4C\uB9B0\uC9C0"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3284483606142976
+    m_Localized: "\uC138\uACC4 \uCC4C\uB9B0\uC9C0"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3286335244558336
+    m_Localized: "\uC9C0\uC5ED \uC2A4\uD14C\uC774\uC9C0"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

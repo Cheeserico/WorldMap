@@ -23,17 +23,21 @@ public class MapNormalizedAnchor : MonoBehaviour
 
     private RectTransform rectTransform;
 
+
     private void Awake()
     {
         ApplyPosition();
     }
+
 
     private void OnEnable()
     {
         ApplyPosition();
     }
 
+
 #if UNITY_EDITOR
+
     private void OnValidate()
     {
         // OnValidate中にRectTransformを変更すると
@@ -46,6 +50,7 @@ public class MapNormalizedAnchor : MonoBehaviour
             ApplyPositionFromEditor;
     }
 
+
     private void ApplyPositionFromEditor()
     {
         if (this == null ||
@@ -56,7 +61,9 @@ public class MapNormalizedAnchor : MonoBehaviour
 
         ApplyPosition();
     }
+
 #endif
+
 
     [ContextMenu("Apply Position")]
     public void ApplyPosition()
@@ -72,6 +79,7 @@ public class MapNormalizedAnchor : MonoBehaviour
             return;
         }
 
+
         Vector2 clampedPosition =
             new Vector2(
                 Mathf.Clamp01(
@@ -81,6 +89,7 @@ public class MapNormalizedAnchor : MonoBehaviour
                     normalizedPosition.y
                 )
             );
+
 
         rectTransform.anchorMin =
             clampedPosition;

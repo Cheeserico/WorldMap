@@ -144,6 +144,22 @@ MonoBehaviour:
     m_Localized: Licencia de RTLTMPro
     m_Metadata:
       m_Items: []
+  - m_Id: 1950000952991744
+    m_Localized: Selecciona un nivel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1951693765697536
+    m_Localized: "Desaf\xEDo aleatorio"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3284483606142976
+    m_Localized: "Desaf\xEDos mundiales"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3286335244558336
+    m_Localized: Niveles regionales
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

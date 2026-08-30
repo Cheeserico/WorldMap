@@ -150,6 +150,23 @@ MonoBehaviour:
     m_Localized: "RTLTMPro \u0932\u093E\u0907\u0938\u0947\u0902\u0938"
     m_Metadata:
       m_Items: []
+  - m_Id: 1950000952991744
+    m_Localized: "\u0915\u0943\u092A\u092F\u093E \u090F\u0915 \u091A\u0930\u0923
+      \u091A\u0941\u0928\u0947\u0902"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1951693765697536
+    m_Localized: "\u0930\u0948\u0902\u0921\u092E \u091A\u0941\u0928\u094C\u0924\u0940"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3284483606142976
+    m_Localized: "\u0935\u093F\u0936\u094D\u0935 \u091A\u0941\u0928\u094C\u0924\u093F\u092F\u093E\u0901"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3286335244558336
+    m_Localized: "\u0915\u094D\u0937\u0947\u0924\u094D\u0930\u0940\u092F \u091A\u0930\u0923"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

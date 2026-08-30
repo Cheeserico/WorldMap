@@ -139,6 +139,22 @@ MonoBehaviour:
     m_Key: licenses_rtltmpro
     m_Metadata:
       m_Items: []
+  - m_Id: 1950000952991744
+    m_Key: stage_select_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1951693765697536
+    m_Key: stage_RandomChallenge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3284483606142976
+    m_Key: stage_World Challenges
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3286335244558336
+    m_Key: stage_Regional Stages
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

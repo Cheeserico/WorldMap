@@ -151,6 +151,23 @@ MonoBehaviour:
     m_Localized: "\u041B\u0438\u0446\u0435\u043D\u0437\u0438\u044F RTLTMPro"
     m_Metadata:
       m_Items: []
+  - m_Id: 1950000952991744
+    m_Localized: "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u0443\u0440\u043E\u0432\u0435\u043D\u044C"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1951693765697536
+    m_Localized: "\u0421\u043B\u0443\u0447\u0430\u0439\u043D\u043E\u0435 \u0438\u0441\u043F\u044B\u0442\u0430\u043D\u0438\u0435"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3284483606142976
+    m_Localized: "\u041C\u0438\u0440\u043E\u0432\u044B\u0435 \u0438\u0441\u043F\u044B\u0442\u0430\u043D\u0438\u044F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3286335244558336
+    m_Localized: "\u0420\u0435\u0433\u0438\u043E\u043D\u0430\u043B\u044C\u043D\u044B\u0435
+      \u0443\u0440\u043E\u0432\u043D\u0438"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
