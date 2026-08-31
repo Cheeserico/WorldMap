@@ -211,6 +211,9 @@ MonoBehaviour:
   - ZWE
   - VAT
   - PSE
+  showContinuePopup: 1
+  useRandomCountries: 0
+  randomCountryCount: 20
   threeStarTime: 30
   twoStarTime: 60
   mapStartPosition: {x: 0, y: 0}

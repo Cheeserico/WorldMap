@@ -24,6 +24,9 @@ public class HintManager : MonoBehaviour
 
     [Header("ヒント選択案内")]
     [SerializeField]
+    private GameObject hintGuidePanel;
+
+    [SerializeField]
     private TMP_Text hintGuideText;
 
     [SerializeField]
@@ -129,6 +132,11 @@ public class HintManager : MonoBehaviour
             hintHandImage
                 .gameObject
                 .SetActive(false);
+        }
+
+        if (hintGuidePanel != null)
+        {
+            hintGuidePanel.SetActive(false);
         }
 
     }
@@ -276,6 +284,11 @@ public class HintManager : MonoBehaviour
     {
         ShowHintHand();
 
+        if (hintGuidePanel != null)
+        {
+            hintGuidePanel.SetActive(true);
+        }
+
         if (hintCancelButton != null)
         {
             hintCancelButton.SetActive(true);
@@ -308,12 +321,17 @@ public class HintManager : MonoBehaviour
             hintCancelButton.SetActive(false);
         }
 
+        hintGuideTween?.Kill();
+
         if (hintGuideText == null)
         {
+            if (hintGuidePanel != null)
+            {
+                hintGuidePanel.SetActive(false);
+            }
+
             return;
         }
-
-        hintGuideTween?.Kill();
 
         hintGuideTween =
             hintGuideText
@@ -326,6 +344,12 @@ public class HintManager : MonoBehaviour
                     hintGuideText
                         .gameObject
                         .SetActive(false);
+
+                    // 背景を含む案内パネル全体を消す
+                    if (hintGuidePanel != null)
+                    {
+                        hintGuidePanel.SetActive(false);
+                    }
                 });
     }
 
@@ -580,6 +604,11 @@ public class HintManager : MonoBehaviour
         if (hintCancelButton != null)
         {
             hintCancelButton.SetActive(false);
+        }
+
+        if (hintGuidePanel != null)
+        {
+            hintGuidePanel.SetActive(false);
         }
 
         isSelectingCountry = false;

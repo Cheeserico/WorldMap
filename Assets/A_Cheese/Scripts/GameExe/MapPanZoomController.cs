@@ -52,6 +52,9 @@ public class MapPanZoomController : MonoBehaviour
     // 自動移動中は手動操作を停止する
     private bool isInputLocked;
 
+    // 国ピースのドラッグ・吸着中
+    private bool isPieceInteractionLocked;
+
     private Sequence hintFocusSequence;
 
     // ==================================================
@@ -202,7 +205,7 @@ public class MapPanZoomController : MonoBehaviour
 
     private void Update()
     {
-        if (isInputLocked)
+        if (isInputLocked || isPieceInteractionLocked)
         {
             return;
         }
@@ -215,6 +218,21 @@ public class MapPanZoomController : MonoBehaviour
         HandleTouchInput();
 #endif
     }
+
+    /// <summary>
+    /// 国ピース操作中の地図移動・拡大縮小を停止する。
+    /// </summary>
+    public void SetPieceInteractionLocked(bool locked)
+    {
+        isPieceInteractionLocked = locked;
+
+        if (locked)
+        {
+            isMouseDragging = false;
+            isTouchDragging = false;
+        }
+    }
+
 
     /// <summary>
     /// マウス操作を処理します。

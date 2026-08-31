@@ -27,6 +27,10 @@ public class CountryPieceDrag : MonoBehaviour,
     private string countryId;
 
 
+    [Header("地図操作")]
+    [SerializeField]
+    private MapPanZoomController mapPanZoomController;
+
     /// <summary>
     /// CountrySlot側から国IDを確認するために使用する。
     /// </summary>
@@ -35,6 +39,9 @@ public class CountryPieceDrag : MonoBehaviour,
 
     public bool IsPlaced => isPlaced;
     public bool IsSnapping => isSnapping;
+
+    // ドラッグ元の場所を維持する透明な仮置き
+    private RectTransform dragPlaceholder;
 
     public string CountryName
     {
@@ -56,6 +63,9 @@ public class CountryPieceDrag : MonoBehaviour,
     [Header("ピース表示")]
     [SerializeField]
     private RectTransform countryImageRect;
+
+    [SerializeField]
+    private Image countryFlagImage;
 
     [SerializeField]
     private Image cardBackgroundImage;
@@ -173,6 +183,9 @@ public class CountryPieceDrag : MonoBehaviour,
 
     private Tween hintHighlightTween;
 
+    // 国旗の元状態
+    private bool originalCountryFlagActive;
+
     private void Awake()
     {
         rectTransform =
@@ -192,14 +205,21 @@ public class CountryPieceDrag : MonoBehaviour,
             countryFlagDatabase =
                 FindFirstObjectByType<CountryFlagDatabase>();
         }
+
+        if (mapPanZoomController == null)
+        {
+            mapPanZoomController =
+                FindFirstObjectByType<MapPanZoomController>();
+        }
     }
 
     private void Start()
     {
+        SetupCountryFlag();
+
         CreateCardCountrySprite();
         ApplyCardCountryVisual();
     }
-
     /// <summary>
     /// ヒント選択中にカードを押したときの処理。
     /// </summary>
@@ -264,6 +284,11 @@ public class CountryPieceDrag : MonoBehaviour,
             return;
         }
 
+        if (mapPanZoomController != null)
+        {
+            mapPanZoomController.SetPieceInteractionLocked(true);
+        }
+
         wasPlacedSuccessfully = false;
 
         // =========================
@@ -305,10 +330,22 @@ public class CountryPieceDrag : MonoBehaviour,
                 countryNameText.gameObject.activeSelf;
         }
 
+
+
+        if (countryFlagImage != null)
+        {
+            originalCountryFlagActive =
+                countryFlagImage.gameObject.activeSelf;
+        }
+
         // ドロップ判定を邪魔しない
         canvasGroup.blocksRaycasts = false;
         canvasGroup.interactable = true;
         canvasGroup.ignoreParentGroups = true;
+
+        // ドラッグ元のカード位置を維持する
+        CreateDragPlaceholder();
+
 
         // =========================
         // DragLayerへ移動
@@ -333,6 +370,12 @@ public class CountryPieceDrag : MonoBehaviour,
         if (countryNameText != null)
         {
             countryNameText.gameObject.SetActive(false);
+        }
+
+
+        if (countryFlagImage != null)
+        {
+            countryFlagImage.gameObject.SetActive(false);
         }
 
         if (countryImage != null && originalCountrySprite != null)
@@ -696,6 +739,11 @@ public class CountryPieceDrag : MonoBehaviour,
             cardBackgroundImage.enabled = false;
         }
 
+        if (countryFlagImage != null)
+        {
+            countryFlagImage.gameObject.SetActive(false);
+        }
+
         if (countryNameText != null)
         {
             countryNameText.gameObject.SetActive(false);
@@ -832,8 +880,16 @@ public class CountryPieceDrag : MonoBehaviour,
                     Vector2.zero;
             }
 
+            // 正解したのでカード一覧の空きを詰める
+            RemoveDragPlaceholder();
+
             isPlaced = true;
             isSnapping = false;
+
+            if (mapPanZoomController != null)
+            {
+                mapPanZoomController.SetPieceInteractionLocked(false);
+            }
 
             Debug.Log(
                 $"{gameObject.name}をDOTweenで配置しました。"
@@ -937,6 +993,11 @@ public class CountryPieceDrag : MonoBehaviour,
             );
         }
 
+        if (countryFlagImage != null)
+        {
+            countryFlagImage.gameObject.SetActive(false);
+        }
+
         // カード専用画像ではなく地図用画像へ戻す
         if (countryImage != null &&
             originalCountrySprite != null)
@@ -986,8 +1047,14 @@ public class CountryPieceDrag : MonoBehaviour,
                 originalCountryNameActive
             );
         }
-    }
 
+        if (countryFlagImage != null)
+        {
+            countryFlagImage.gameObject.SetActive(
+                originalCountryFlagActive
+            );
+        }
+    }
 
 
     /// <summary>
@@ -1007,7 +1074,7 @@ public class CountryPieceDrag : MonoBehaviour,
         returnSequence?.Kill();
 
         // カード背景と国名を復活
-        RestoreCardVisual();
+        //RestoreCardVisual();
 
         Vector3 targetWorldPosition =
             originalParent.TransformPoint(
@@ -1105,6 +1172,9 @@ public class CountryPieceDrag : MonoBehaviour,
                 originalSiblingIndex
             );
 
+            // 不正解なので仮置きとピースを入れ替える
+            RemoveDragPlaceholder();
+
             rectTransform.anchoredPosition =
                 originalAnchoredPosition;
 
@@ -1131,6 +1201,12 @@ public class CountryPieceDrag : MonoBehaviour,
             canvasGroup.blocksRaycasts = true;
             canvasGroup.interactable = true;
             canvasGroup.ignoreParentGroups = false;
+
+            if (mapPanZoomController != null)
+            {
+                mapPanZoomController.SetPieceInteractionLocked(false);
+            }
+
         });
     }
 
@@ -1459,5 +1535,156 @@ public class CountryPieceDrag : MonoBehaviour,
         snapSequence?.Kill();
         returnSequence?.Kill();
         hintHighlightTween?.Kill();
+    }
+
+    /// <summary>
+    /// ドラッグ中も元のカード位置を維持する。
+    /// </summary>
+    private void CreateDragPlaceholder()
+    {
+        RemoveDragPlaceholder();
+
+        if (originalParent == null)
+        {
+            return;
+        }
+
+        GameObject placeholderObject =
+            new GameObject(
+                $"{gameObject.name}_Placeholder",
+                typeof(RectTransform),
+                typeof(LayoutElement)
+            );
+
+        dragPlaceholder =
+            placeholderObject.GetComponent<RectTransform>();
+
+        dragPlaceholder.SetParent(
+            originalParent,
+            false
+        );
+
+        dragPlaceholder.SetSiblingIndex(
+            originalSiblingIndex
+        );
+
+        dragPlaceholder.sizeDelta =
+            originalSizeDelta;
+
+        LayoutElement placeholderLayout =
+            placeholderObject.GetComponent<LayoutElement>();
+
+        LayoutElement pieceLayout =
+            GetComponent<LayoutElement>();
+
+        if (pieceLayout != null)
+        {
+            placeholderLayout.minWidth =
+                pieceLayout.minWidth;
+
+            placeholderLayout.minHeight =
+                pieceLayout.minHeight;
+
+            placeholderLayout.preferredWidth =
+                pieceLayout.preferredWidth;
+
+            placeholderLayout.preferredHeight =
+                pieceLayout.preferredHeight;
+
+            placeholderLayout.flexibleWidth =
+                pieceLayout.flexibleWidth;
+
+            placeholderLayout.flexibleHeight =
+                pieceLayout.flexibleHeight;
+        }
+        else
+        {
+            placeholderLayout.preferredWidth =
+                originalSizeDelta.x;
+
+            placeholderLayout.preferredHeight =
+                originalSizeDelta.y;
+
+            placeholderLayout.flexibleWidth = 0f;
+            placeholderLayout.flexibleHeight = 0f;
+        }
+    }
+
+    /// <summary>
+    /// ドラッグ元に残した仮置きを削除する。
+    /// </summary>
+    private void RemoveDragPlaceholder()
+    {
+        if (dragPlaceholder == null)
+        {
+            return;
+        }
+
+        Destroy(dragPlaceholder.gameObject);
+        dragPlaceholder = null;
+    }
+
+    private void OnDisable()
+    {
+        snapSequence?.Kill();
+        returnSequence?.Kill();
+
+        RemoveDragPlaceholder();
+
+        if (mapPanZoomController != null)
+        {
+            mapPanZoomController
+                .SetPieceInteractionLocked(false);
+        }
+    }
+
+    /// <summary>
+    /// 国IDに対応する国旗をカードへ設定する。
+    /// </summary>
+    private void SetupCountryFlag()
+    {
+        if (countryFlagImage == null)
+        {
+            return;
+        }
+
+        if (countryFlagDatabase == null)
+        {
+            countryFlagDatabase =
+                FindFirstObjectByType<CountryFlagDatabase>();
+        }
+
+        if (countryFlagDatabase == null)
+        {
+            countryFlagImage.gameObject.SetActive(false);
+            return;
+        }
+
+        Sprite flagSprite =
+            countryFlagDatabase.GetFlag(
+                countryId
+            );
+
+        if (flagSprite == null)
+        {
+            Debug.LogWarning(
+                $"{gameObject.name}：" +
+                $"国旗が見つかりません。CountryId={countryId}",
+                gameObject
+            );
+
+            countryFlagImage.gameObject.SetActive(false);
+            return;
+        }
+
+        countryFlagImage.sprite =
+            flagSprite;
+
+        countryFlagImage.preserveAspect =
+            true;
+
+        countryFlagImage.gameObject.SetActive(
+            true
+        );
     }
 }

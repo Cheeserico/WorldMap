@@ -66,12 +66,24 @@ public class SettingsPopup : MonoBehaviour
             return;
         }
 
+        // ゲーム画面でヒント選択中なら終了する
+        HintManager hintManager =
+            FindFirstObjectByType<HintManager>();
+
+        if (hintManager != null)
+        {
+            hintManager.StopAllHints();
+        }
+
         // SettingsPopupを開く
-        PopupManager.Instance.Open(PopupType.Settings);
+        PopupManager.Instance.Open(
+            PopupType.Settings
+        );
 
         // SoundManagerの保存済み設定をUIへ反映
         RefreshUI();
     }
+
     /// <summary>
     /// SoundManagerの現在値をUIへ反映する。
     /// </summary>

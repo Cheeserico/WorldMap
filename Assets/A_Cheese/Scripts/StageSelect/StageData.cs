@@ -25,6 +25,11 @@ public class StageData : ScriptableObject
     [Tooltip("このステージで出題するCountryId")]
     public List<string> countryIds = new List<string>();
 
+    [Header("途中再開ポップアップ")]
+
+    [Tooltip("途中データがある場合に再開確認を表示する")]
+    public bool showContinuePopup = false;
+
     [Header("ランダム出題")]
 
     [Tooltip("ONの場合、countryIdsではなく全195か国からランダム抽選する")]

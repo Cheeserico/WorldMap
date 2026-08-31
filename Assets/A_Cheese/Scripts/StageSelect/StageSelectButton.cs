@@ -350,22 +350,14 @@ public class StageSelectButton : MonoBehaviour
                 stageData
             );
 
-        // Randomステージに古い途中データが残っていたら削除
-        if (!supportsContinueSave &&
-            ContinueSaveManager.HasSaveData(
-                stageData.stageId))
-        {
-            ContinueSaveManager.Delete(
-                stageData.stageId
-            );
-        }
-
         bool hasContinueSave =
+            stageData.showContinuePopup &&
             supportsContinueSave &&
             ContinueSaveManager.HasSaveData(
                 stageData.stageId
             );
-        
+
+
         // ==================================================
         // 途中データがある場合
         // ==================================================
