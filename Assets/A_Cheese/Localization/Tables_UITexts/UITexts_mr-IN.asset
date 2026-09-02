@@ -49,11 +49,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14032465387520
-    m_Localized: "BGM \u0938\u0941\u0930\u0942"
+    m_Localized: BGM
     m_Metadata:
       m_Items: []
   - m_Id: 14106943643648
-    m_Localized: "\u0927\u094D\u0935\u0928\u0940 \u0938\u0941\u0930\u0942"
+    m_Localized: "\u0927\u094D\u0935\u0928\u0940"
     m_Metadata:
       m_Items: []
   - m_Id: 17809884930048

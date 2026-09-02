@@ -16880,6 +16880,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1444066195}
+    - target: {fileID: 4033358380173319341, guid: 253479f1c6f38cf41b135494de09cdba, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseLanguage
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033358380173319341, guid: 253479f1c6f38cf41b135494de09cdba, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PopupManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7129796402139804987, guid: 253479f1c6f38cf41b135494de09cdba, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

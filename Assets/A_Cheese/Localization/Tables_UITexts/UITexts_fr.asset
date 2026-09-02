@@ -49,11 +49,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14032465387520
-    m_Localized: "Musique activ\xE9e"
+    m_Localized: Musique
     m_Metadata:
       m_Items: []
   - m_Id: 14106943643648
-    m_Localized: "Sons activ\xE9s"
+    m_Localized: Sons
     m_Metadata:
       m_Items: []
   - m_Id: 17809884930048

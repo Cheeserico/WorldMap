@@ -49,11 +49,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14032465387520
-    m_Localized: "M\xFAsica ligada"
+    m_Localized: "M\xFAsica"
     m_Metadata:
       m_Items: []
   - m_Id: 14106943643648
-    m_Localized: Efeitos sonoros ligados
+    m_Localized: Efeitos sonoros
     m_Metadata:
       m_Items: []
   - m_Id: 17809884930048

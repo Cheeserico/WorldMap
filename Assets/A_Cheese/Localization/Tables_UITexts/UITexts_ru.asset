@@ -50,11 +50,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14032465387520
-    m_Localized: "\u041C\u0443\u0437\u044B\u043A\u0430 \u0412\u041A\u041B."
+    m_Localized: "\u041C\u0443\u0437\u044B\u043A\u0430"
     m_Metadata:
       m_Items: []
   - m_Id: 14106943643648
-    m_Localized: "\u0417\u0432\u0443\u043A\u0438 \u0412\u041A\u041B."
+    m_Localized: "\u0417\u0432\u0443\u043A\u0438"
     m_Metadata:
       m_Items: []
   - m_Id: 17809884930048

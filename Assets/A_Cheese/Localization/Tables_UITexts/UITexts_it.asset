@@ -49,11 +49,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14032465387520
-    m_Localized: Musica attiva
+    m_Localized: Musica
     m_Metadata:
       m_Items: []
   - m_Id: 14106943643648
-    m_Localized: Effetti sonori attivi
+    m_Localized: Effetti sonori
     m_Metadata:
       m_Items: []
   - m_Id: 17809884930048
