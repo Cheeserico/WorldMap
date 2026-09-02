@@ -40,6 +40,11 @@ public class SettingsPopup : MonoBehaviour
     private readonly List<Locale> availableLocales =
         new List<Locale>();
 
+    [Header("現在の言語を表示するボタン文字")]
+    [SerializeField]
+    private TMP_Text currentLanguageText;
+
+
     /// <summary>
     /// PausePopupのSettingsボタンから呼び出す。
     /// 現在の音設定をUIへ反映してからPopupを開く。
@@ -128,6 +133,8 @@ public class SettingsPopup : MonoBehaviour
         }
 
         RefreshLanguageDropdown();
+
+        RefreshCurrentLanguageText();
 
     }
     /// <summary>
@@ -285,6 +292,64 @@ public class SettingsPopup : MonoBehaviour
         }
 
         PopupManager.Instance.Close(PopupType.Settings);
+    }
+
+    private void OnEnable()
+    {
+        LocalizationSettings.SelectedLocaleChanged +=
+            HandleSelectedLocaleChanged;
+
+        RefreshCurrentLanguageText();
+    }
+
+    private void OnDisable()
+    {
+        LocalizationSettings.SelectedLocaleChanged -=
+            HandleSelectedLocaleChanged;
+    }
+
+    /// <summary>
+    /// 言語が変更されたらボタンの文字も更新する。
+    /// </summary>
+    private void HandleSelectedLocaleChanged(
+        Locale locale
+    )
+    {
+        UpdateCurrentLanguageText(locale);
+    }
+
+    private void RefreshCurrentLanguageText()
+    {
+        // 初期化前はイベントによる更新を待つ
+        if (!LocalizationSettings
+                .InitializationOperation.IsDone)
+        {
+            return;
+        }
+
+        UpdateCurrentLanguageText(
+            LocalizationSettings.SelectedLocale
+        );
+    }
+
+    private void UpdateCurrentLanguageText(
+        Locale locale
+    )
+    {
+        if (currentLanguageText == null)
+        {
+            return;
+        }
+
+        if (locale == null)
+        {
+            currentLanguageText.text = "Language";
+            return;
+        }
+
+        currentLanguageText.text =
+            LanguageSelectionPopup
+                .GetNativeLanguageName(locale);
     }
 
 }

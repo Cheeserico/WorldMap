@@ -150,6 +150,23 @@ public class PopupManager : MonoBehaviour
     }
 
     /// <summary>
+    /// 設定画面の上に言語選択Popupを開く。
+    /// </summary>
+    public void OpenLanguage()
+    {
+        Open(PopupType.Language);
+    }
+
+    /// <summary>
+    /// 言語選択Popupだけを閉じる。
+    /// 設定画面は開いたまま残す。
+    /// </summary>
+    public void CloseLanguage()
+    {
+        Close(PopupType.Language);
+    }
+
+    /// <summary>
     /// flag-iconsのライセンス詳細画面を開く。
     /// </summary>
     public void OpenLicenseDetail()

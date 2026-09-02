@@ -92,7 +92,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 30294725713920
-    m_Localized: Save data found
+    m_Localized: Would you like to resume where you left off?
     m_Metadata:
       m_Items: []
   - m_Id: 30411415445504

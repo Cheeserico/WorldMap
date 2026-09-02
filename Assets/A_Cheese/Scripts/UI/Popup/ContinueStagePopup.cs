@@ -96,6 +96,29 @@ public class ContinueStagePopup : PopupBase
         base.OnDestroy();
     }
 
+
+    /// <summary>
+    /// ×ボタンから呼ぶ。
+    /// 途中データを残したままPopupだけ閉じる。
+    /// </summary>
+    public void CloseContinuePopup()
+    {
+        if (PopupManager.Instance == null)
+        {
+            Debug.LogWarning(
+                "ContinueStagePopup：" +
+                "PopupManagerが見つかりません。",
+                this
+            );
+
+            return;
+        }
+
+        PopupManager.Instance.Close(
+            PopupType.ContinueStage
+        );
+    }
+
     /// <summary>
     /// 「続きから」ボタン。
     /// </summary>

@@ -15,8 +15,9 @@ public enum PopupType
     NotoLicenseDetail,
     RTLLicenseDetail,
 
+    // 途中データの再開確認
+    ContinueStage,
 
-    // ステージ途中データがある場合の
-    // 「続きから／最初から」選択
-    ContinueStage
+    // 言語選択
+    Language
 }
