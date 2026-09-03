@@ -6,8 +6,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /// <summary>
-/// 工程1: タイトルでの同意確認とSDK初期化。広告の生成・表示は行わない。
-/// 設定画面からプライバシーの選択を変更できる。広告の生成・表示はまだ行わない。
+/// 同意確認・SDK初期化と、広告を利用できる状態の通知を担当する。
+/// 個別の広告形式の生成・表示・破棄は専用Controllerが担当する。
 /// </summary>
 [DisallowMultipleComponent]
 [RequireComponent(typeof(AdAudienceSettings))]
@@ -30,7 +30,7 @@ public sealed class AdManager : MonoBehaviour
     private bool privacyOptionsShowing;
 
     // 広告を実際にリクエストする直前にも、この値を確認すること。
-    public bool CanRequestAds => !privacyOptionsShowing && sdkInitialized && phase == Phase.Ready && ConsentInformation.CanRequestAds();
+    public bool CanRequestAds => ownsInstance && isActiveAndEnabled && !privacyOptionsShowing && sdkInitialized && phase == Phase.Ready && ConsentInformation.CanRequestAds();
     // UIはこの保存値を読む。毎フレームUMPへ問い合わせない。
     // 広告可否のCanRequestAdsは、引き続きSDKでその都度確認する。
     public bool PrivacyOptionsRequired { get; private set; }
@@ -54,6 +54,7 @@ public sealed class AdManager : MonoBehaviour
     {
         if (!CanShowPrivacyOptions) return;
         privacyOptionsShowing = true;
+        PublishAdvertisingAvailability(false);
         try
         {
             ConsentForm.ShowPrivacyOptionsForm(error =>
@@ -194,8 +195,37 @@ public sealed class AdManager : MonoBehaviour
             if (status == null) { Fail("SDK初期化結果を取得できませんでした。"); return; }
             sdkInitialized = true;
             SetPhase(ConsentInformation.CanRequestAds() ? Phase.Ready : Phase.Unavailable);
-            Debug.Log("[Ads] SDK初期化完了。広告表示はまだ行いません。", this);
+            Debug.Log("[Ads] SDK初期化完了。", this);
         }));
+    }
+
+    // 通知はメインスレッドで行う。購読開始時はAdvertisingAvailableも確認する。
+    public event Action<bool> AdvertisingAvailabilityChanged;
+    public bool AdvertisingAvailable { get; private set; }
+
+    private void PublishAdvertisingAvailability(bool available)
+    {
+        if (AdvertisingAvailable == available) return;
+        AdvertisingAvailable = available;
+        var handlers = AdvertisingAvailabilityChanged;
+        if (handlers == null) return;
+        // 1つの広告形式の失敗が、別の形式への停止通知を妨げないようにする。
+        foreach (Action<bool> handler in handlers.GetInvocationList())
+        {
+            try { handler(available); }
+            catch (Exception error) { Debug.LogException(error, this); }
+        }
+    }
+
+    private void OnEnable()
+    {
+        if (ownsInstance)
+            PublishAdvertisingAvailability(CanRequestAds);
+    }
+
+    private void OnDisable()
+    {
+        if (ownsInstance) PublishAdvertisingAvailability(false);
     }
 
     private void SetPhase(Phase next)
@@ -203,16 +233,21 @@ public sealed class AdManager : MonoBehaviour
         phase = next;
         deadline = Time.realtimeSinceStartup + Mathf.Max(5f, requestTimeoutSeconds);
         Debug.Log("[Ads] " + next, this);
+        PublishAdvertisingAvailability(CanRequestAds);
     }
 
     private void Fail(string message)
     {
         phase = Phase.Unavailable;
+        PublishAdvertisingAvailability(false);
         Debug.LogWarning("[Ads] " + message, this);
     }
 
     private void OnDestroy()
     {
-        if (ownsInstance && Instance == this) Instance = null;
+        if (!ownsInstance) return;
+        PublishAdvertisingAvailability(false);
+        AdvertisingAvailabilityChanged = null;
+        if (Instance == this) Instance = null;
     }
 }

@@ -124,8 +124,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7986611628300250019}
-        m_TargetAssemblyTypeName: ResultPopup, Assembly-CSharp
+      - m_Target: {fileID: 8186959929711294714}
+        m_TargetAssemblyTypeName: ResultAdActions, Assembly-CSharp
         m_MethodName: OnRetryButton
         m_Mode: 1
         m_Arguments:
@@ -2889,6 +2889,7 @@ GameObject:
   - component: {fileID: 1429139420736082549}
   - component: {fileID: 2140005877333095474}
   - component: {fileID: 7986611628300250019}
+  - component: {fileID: 8186959929711294714}
   m_Layer: 5
   m_Name: Result_Popup
   m_TagString: Untagged
@@ -2957,6 +2958,20 @@ MonoBehaviour:
   - {fileID: 8392601001443689228}
   retryButtonCanvasGroup: {fileID: 3052760639494901517}
   titleButtonCanvasGroup: {fileID: 8717122054262551657}
+--- !u!114 &8186959929711294714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7951113924411157729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50c7c5cc7987c334798aa6df6ace72c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResultAdActions
+  showAdOnRetry: 1
+  showAdOnTitle: 1
 --- !u!1 &8094640939610624864
 GameObject:
   m_ObjectHideFlags: 0
@@ -3302,8 +3317,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7986611628300250019}
-        m_TargetAssemblyTypeName: ResultPopup, Assembly-CSharp
+      - m_Target: {fileID: 8186959929711294714}
+        m_TargetAssemblyTypeName: ResultAdActions, Assembly-CSharp
         m_MethodName: OnTitleButton
         m_Mode: 1
         m_Arguments:
