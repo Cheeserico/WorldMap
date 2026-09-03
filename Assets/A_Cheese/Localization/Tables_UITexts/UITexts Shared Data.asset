@@ -155,6 +155,10 @@ MonoBehaviour:
     m_Key: stage_Regional Stages
     m_Metadata:
       m_Items: []
+  - m_Id: 4779097391456256
+    m_Key: setting_PrivacySetting
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

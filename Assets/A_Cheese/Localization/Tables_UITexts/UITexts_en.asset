@@ -160,6 +160,10 @@ MonoBehaviour:
     m_Localized: Regional Stages
     m_Metadata:
       m_Items: []
+  - m_Id: 4779097391456256
+    m_Localized: Privacy Setting
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
