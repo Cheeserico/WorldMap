@@ -165,6 +165,8 @@ MonoBehaviour:
   countryId: 
   mapPanZoomController: {fileID: 0}
   dragLayer: {fileID: 0}
+  dragPieceOffsetRatio: {x: -0.05, y: 0.07}
+  dropAssistScreenRatio: 0.04
   countryImageRect: {fileID: 8153143947419659152}
   countryFlagImage: {fileID: 8620421943977034963}
   cardBackgroundImage: {fileID: 7687799780866742325}

@@ -1,6 +1,6 @@
 using DG.Tweening;
 using UnityEngine;
-
+using TMPro;
 
 /// <summary>
 /// 世界地図の移動と拡大縮小を管理します。
@@ -26,6 +26,17 @@ public class MapPanZoomController : MonoBehaviour
 
     [Tooltip("スマートフォンのピンチ拡大縮小速度")]
     [SerializeField] private float pinchZoomSpeed = 1f;
+
+    [Header("ズームボタン")]
+
+    [Tooltip("＋／－を1回押したときに変化する倍率")]
+    [SerializeField]
+    private float zoomButtonStep = 0.5f;
+
+    [Tooltip("現在倍率を表示するTextMeshPro")]
+    [SerializeField]
+    private TMP_Text zoomScaleText;
+
 
     [Header("移動")]
     [Tooltip("地図移動の感度")]
@@ -439,6 +450,100 @@ public class MapPanZoomController : MonoBehaviour
     }
 
     /// <summary>
+    /// ＋ボタンから呼び出す。
+    /// MapViewportの中央を基準に拡大する。
+    /// </summary>
+    public void ZoomIn()
+    {
+        ZoomFromButton(
+            CurrentMapScale + zoomButtonStep
+        );
+    }
+
+    /// <summary>
+    /// －ボタンから呼び出す。
+    /// MapViewportの中央を基準に縮小する。
+    /// </summary>
+    public void ZoomOut()
+    {
+        ZoomFromButton(
+            CurrentMapScale - zoomButtonStep
+        );
+    }
+
+    /// <summary>
+    /// ボタン操作で指定倍率へ変更する。
+    /// </summary>
+    private void ZoomFromButton(
+        float targetScale
+    )
+    {
+        if (
+            mapContent == null ||
+            mapViewport == null ||
+            isInputLocked ||
+            isPieceInteractionLocked
+        )
+        {
+            return;
+        }
+
+        float oldScale =
+            mapContent.localScale.x;
+
+        float clampedScale =
+            Mathf.Clamp(
+                targetScale,
+                minScale,
+                maxScale
+            );
+
+        if (Mathf.Approximately(
+                oldScale,
+                clampedScale
+            ))
+        {
+            UpdateZoomScaleText();
+            return;
+        }
+
+        // Viewport中央のワールド座標
+        Vector3 viewportCenterWorld =
+            mapViewport.TransformPoint(
+                mapViewport.rect.center
+            );
+
+        // Viewport中央を画面座標へ変換
+        Vector2 viewportCenterScreen =
+            RectTransformUtility.WorldToScreenPoint(
+                uiCamera,
+                viewportCenterWorld
+            );
+
+        float scaleMultiplier =
+            clampedScale / oldScale;
+
+        ZoomAtScreenPosition(
+            viewportCenterScreen,
+            scaleMultiplier
+        );
+    }
+
+    /// <summary>
+    /// 現在倍率の表示を更新する。
+    /// </summary>
+    private void UpdateZoomScaleText()
+    {
+        if (zoomScaleText == null)
+        {
+            return;
+        }
+
+        zoomScaleText.text =
+            $"×{CurrentMapScale:0.0}";
+    }
+
+    /// <summary>
     /// 指またはマウスカーソルの位置を中心に拡大縮小します。
     /// </summary>
     private void ZoomAtScreenPosition(
@@ -489,8 +594,21 @@ public class MapPanZoomController : MonoBehaviour
     /// </summary>
     private void SetScale(float scale)
     {
+        float clampedScale =
+            Mathf.Clamp(
+                scale,
+                minScale,
+                maxScale
+            );
+
         mapContent.localScale =
-            new Vector3(scale, scale, 1f);
+            new Vector3(
+                clampedScale,
+                clampedScale,
+                1f
+            );
+
+        UpdateZoomScaleText();
     }
 
     /// <summary>

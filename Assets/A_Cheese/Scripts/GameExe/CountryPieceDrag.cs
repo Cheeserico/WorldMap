@@ -1,9 +1,9 @@
 using DG.Tweening;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using System.Collections.Generic;
 
 /// <summary>
 /// 国ピースのドラッグ、
@@ -30,6 +30,10 @@ public class CountryPieceDrag : MonoBehaviour,
     [Header("地図操作")]
     [SerializeField]
     private MapPanZoomController mapPanZoomController;
+
+    [Header("ドラッグ中の固定案内")]
+    [SerializeField]
+    private DraggingPieceGuide draggingPieceGuide;
 
     /// <summary>
     /// CountrySlot側から国IDを確認するために使用する。
@@ -59,6 +63,18 @@ public class CountryPieceDrag : MonoBehaviour,
     [Header("ドラッグ中のピースを置く場所")]
     [SerializeField]
     private RectTransform dragLayer;
+
+    [Header("スマホでのドラッグ補助")]
+
+    [Tooltip("実物ピースを指から少し左上へずらす量。画面高さに対する割合")]
+    [SerializeField]
+    private Vector2 dragPieceOffsetRatio =
+    new Vector2(-0.025f, 0.045f);
+
+    [Tooltip("正解スロットの周囲へ追加する判定範囲。画面高さに対する割合")]
+    [Range(0f, 0.1f)]
+    [SerializeField]
+    private float dropAssistScreenRatio = 0.04f;
 
     [Header("ピース表示")]
     [SerializeField]
@@ -211,6 +227,12 @@ public class CountryPieceDrag : MonoBehaviour,
             mapPanZoomController =
                 FindFirstObjectByType<MapPanZoomController>();
         }
+
+        if (draggingPieceGuide == null)
+        {
+            draggingPieceGuide =
+                FindFirstObjectByType<DraggingPieceGuide>();
+        }
     }
 
     private void Start()
@@ -290,6 +312,28 @@ public class CountryPieceDrag : MonoBehaviour,
         }
 
         wasPlacedSuccessfully = false;
+
+        if (draggingPieceGuide != null)
+        {
+            Sprite flagSprite = null;
+
+            if (countryFlagImage != null)
+            {
+                flagSprite =
+                    countryFlagImage.sprite;
+            }
+
+            Sprite guideCountrySprite =
+                cardCountrySprite != null
+                ? cardCountrySprite
+                : originalCountrySprite;
+
+            draggingPieceGuide.Show(
+                guideCountrySprite,
+                flagSprite,
+                CountryName
+            );
+        }
 
         // =========================
         // 元の状態を保存
@@ -463,6 +507,11 @@ public class CountryPieceDrag : MonoBehaviour,
     /// </summary>
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (draggingPieceGuide != null)
+        {
+            draggingPieceGuide.Hide();
+        }
+
         if (isHintPointerInteraction)
         {
             return;
@@ -503,7 +552,7 @@ public class CountryPieceDrag : MonoBehaviour,
             )
             {
                 bool inside =
-                    RectTransformUtility.RectangleContainsScreenPoint(
+                    IsInsideAssistedDropTarget(
                         dropTargetRect,
                         eventData.position,
                         eventData.pressEventCamera
@@ -517,6 +566,8 @@ public class CountryPieceDrag : MonoBehaviour,
                 }
             }
         }
+
+
 
         // 正解処理が実行されたか再確認
         if (wasPlacedSuccessfully)
@@ -568,6 +619,71 @@ public class CountryPieceDrag : MonoBehaviour,
 
     }
 
+    /// <summary>
+    /// 自分の正解スロットだけ、
+    /// 画面上の判定範囲を少し広げる。
+    /// </summary>
+    private bool IsInsideAssistedDropTarget(
+        RectTransform dropTargetRect,
+        Vector2 pointerScreenPosition,
+        Camera eventCamera
+    )
+    {
+        if (dropTargetRect == null)
+        {
+            return false;
+        }
+
+        Vector3[] worldCorners =
+            new Vector3[4];
+
+        dropTargetRect.GetWorldCorners(
+            worldCorners
+        );
+
+        Vector2 bottomLeft =
+            RectTransformUtility.WorldToScreenPoint(
+                eventCamera,
+                worldCorners[0]
+            );
+
+        Vector2 topRight =
+            RectTransformUtility.WorldToScreenPoint(
+                eventCamera,
+                worldCorners[2]
+            );
+
+        float assistPixels =
+            Screen.height *
+            dropAssistScreenRatio;
+
+        Rect assistedScreenRect =
+            Rect.MinMaxRect(
+                Mathf.Min(
+                    bottomLeft.x,
+                    topRight.x
+                ) - assistPixels,
+
+                Mathf.Min(
+                    bottomLeft.y,
+                    topRight.y
+                ) - assistPixels,
+
+                Mathf.Max(
+                    bottomLeft.x,
+                    topRight.x
+                ) + assistPixels,
+
+                Mathf.Max(
+                    bottomLeft.y,
+                    topRight.y
+                ) + assistPixels
+            );
+
+        return assistedScreenRect.Contains(
+            pointerScreenPosition
+        );
+    }
 
     /// <summary>
     /// 同じ国IDのSlotを探し、
@@ -645,7 +761,7 @@ public class CountryPieceDrag : MonoBehaviour,
     }
 
     /// <summary>
-    /// マウス・指の位置へ移動する。
+    /// 実物ピースを指・マウス位置の少し左上へ表示する。
     /// </summary>
     private void SetPositionFromPointer(
         PointerEventData eventData
@@ -654,11 +770,23 @@ public class CountryPieceDrag : MonoBehaviour,
         Camera eventCamera =
             eventData.pressEventCamera;
 
+        Vector2 displayScreenPosition =
+            eventData.position;
+
+        // 画面解像度に応じて、
+        // 実物ピースを指の少し左上へずらす
+        Vector2 offsetPixels =
+            dragPieceOffsetRatio *
+            Screen.height;
+
+        displayScreenPosition +=
+            offsetPixels;
+
         bool success =
             RectTransformUtility
                 .ScreenPointToWorldPointInRectangle(
                     dragLayer,
-                    eventData.position,
+                    displayScreenPosition,
                     eventCamera,
                     out Vector3 worldPoint
                 );
@@ -1719,6 +1847,11 @@ public class CountryPieceDrag : MonoBehaviour,
 
     private void OnDisable()
     {
+        if (draggingPieceGuide != null)
+        {
+            draggingPieceGuide.Hide();
+        }
+
         snapSequence?.Kill();
         returnSequence?.Kill();
 
