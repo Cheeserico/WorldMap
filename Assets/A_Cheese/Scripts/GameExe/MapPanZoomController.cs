@@ -31,6 +31,14 @@ public class MapPanZoomController : MonoBehaviour
     [Tooltip("地図移動の感度")]
     [SerializeField] private float moveSensitivity = 1f;
 
+
+    [Header("端の国を操作するための余白")]
+
+    [Tooltip("地図の左右端を画面内側へ移動できる追加量。画面幅に対する割合です。")]
+    [Range(0f, 0.4f)]
+    [SerializeField]
+    private float horizontalEdgePanRatio = 0.2f;
+
     private Canvas parentCanvas;
     private Camera uiCamera;
 
@@ -503,6 +511,10 @@ public class MapPanZoomController : MonoBehaviour
     /// <summary>
     /// 地図がMapViewportの外へ行きすぎないよう制限します。
     /// </summary>
+    /// <summary>
+    /// 地図がMapViewportの外へ行きすぎないよう制限します。
+    /// 左右には、端の国を操作しやすくするための追加移動量を設けます。
+    /// </summary>
     private void ClampMapPosition()
     {
         float scale = mapContent.localScale.x;
@@ -520,8 +532,7 @@ public class MapPanZoomController : MonoBehaviour
             mapViewport.rect.height;
 
         /*
-         * 地図の端が表示窓の端より内側へ入りすぎないように、
-         * 移動できる最大距離を計算します。
+         * 通常の移動可能範囲。
          */
         float maxMoveX = Mathf.Max(
             0f,
@@ -533,7 +544,17 @@ public class MapPanZoomController : MonoBehaviour
             (scaledContentHeight - viewportHeight) * 0.5f
         );
 
-        Vector2 position = mapContent.anchoredPosition;
+        /*
+         * フィジーなど左右端の国を画面内側へ移動できるように、
+         * Viewport幅に応じた余白を左右へ追加します。
+         */
+        float horizontalEdgePan =
+            viewportWidth * horizontalEdgePanRatio;
+
+        maxMoveX += horizontalEdgePan;
+
+        Vector2 position =
+            mapContent.anchoredPosition;
 
         position.x = Mathf.Clamp(
             position.x,
@@ -541,14 +562,19 @@ public class MapPanZoomController : MonoBehaviour
             maxMoveX
         );
 
+        /*
+         * 上下方向はこれまでと同じ制限です。
+         */
         position.y = Mathf.Clamp(
             position.y,
             -maxMoveY,
             maxMoveY
         );
 
-        mapContent.anchoredPosition = position;
+        mapContent.anchoredPosition =
+            position;
     }
+
 
     /// <summary>
     /// 指定した場所がMapViewportの中央に来るように、

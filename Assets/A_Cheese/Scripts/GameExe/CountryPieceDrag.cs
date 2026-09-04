@@ -1339,9 +1339,21 @@ public class CountryPieceDrag : MonoBehaviour,
         int croppedWidth = maxX - minX + 1;
         int croppedHeight = maxY - minY + 1;
 
+        // 島が広範囲に散らばっていて、
+        // 画像サイズだけでは小国判定できない国
+        bool forceHighResolutionCard =
+            countryId == "FJI" ||
+            countryId == "KIR" ||
+            countryId == "MHL" ||
+            countryId == "FSM" ||
+            countryId == "MUS" ||
+            countryId == "PLW";
+
         bool isLowResolutionCountry =
             Mathf.Max(croppedWidth, croppedHeight)
-            < smallCountryPixelThreshold;
+            < smallCountryPixelThreshold ||
+            forceHighResolutionCard;
+
 
         if (isLowResolutionCountry)
         {
@@ -1362,28 +1374,14 @@ public class CountryPieceDrag : MonoBehaviour,
 
             if (highResolutionCardSprite != null)
             {
+                // 高解像度画像の透明余白も切り取ってから使用する
                 cardCountrySprite =
-                    highResolutionCardSprite;
+                    CreateTrimmedSprite(
+                        highResolutionCardSprite
+                    );
 
-                /*
-                Debug.Log(
-                    $"【高解像度カード使用】{countryId}: " +
-                    $"{highResolutionCardSprite.rect.width}x" +
-                    $"{highResolutionCardSprite.rect.height}px",
-                    gameObject
-                );
-                */
                 return;
             }
-            /*
-            Debug.LogWarning(
-                $"【カード画像なし】" +
-                $"Resources/CardCountryPieces/{countryId} " +
-                $"が見つからないため、元Spriteを使用します。",
-                gameObject
-            
-            );
-            */
         }
 
 /*
@@ -1410,6 +1408,101 @@ public class CountryPieceDrag : MonoBehaviour,
             croppedRect,
             new Vector2(0.5f, 0.5f),
             originalCountrySprite.pixelsPerUnit
+        );
+    }
+
+    /// <summary>
+    /// Spriteの透明な余白を取り除き、
+    /// カード内で国を大きく表示できるSpriteを作成する。
+    /// </summary>
+    private Sprite CreateTrimmedSprite(
+        Sprite sourceSprite
+    )
+    {
+        if (sourceSprite == null)
+        {
+            return null;
+        }
+
+        Texture2D texture =
+            sourceSprite.texture;
+
+        if (texture == null)
+        {
+            return sourceSprite;
+        }
+
+        Rect textureRect =
+            sourceSprite.textureRect;
+
+        int width =
+            Mathf.RoundToInt(
+                textureRect.width
+            );
+
+        int height =
+            Mathf.RoundToInt(
+                textureRect.height
+            );
+
+        Color[] pixels =
+            texture.GetPixels(
+                Mathf.RoundToInt(textureRect.x),
+                Mathf.RoundToInt(textureRect.y),
+                width,
+                height
+            );
+
+        int minX = width;
+        int minY = height;
+        int maxX = -1;
+        int maxY = -1;
+
+        for (int y = 0; y < height; y++)
+        {
+            for (int x = 0; x < width; x++)
+            {
+                Color pixel =
+                    pixels[y * width + x];
+
+                if (pixel.a <= 0.5f)
+                {
+                    continue;
+                }
+
+                if (x < minX) minX = x;
+                if (x > maxX) maxX = x;
+
+                if (y < minY) minY = y;
+                if (y > maxY) maxY = y;
+            }
+        }
+
+        // 不透明部分が見つからなかった場合
+        if (maxX < minX || maxY < minY)
+        {
+            return sourceSprite;
+        }
+
+        int croppedWidth =
+            maxX - minX + 1;
+
+        int croppedHeight =
+            maxY - minY + 1;
+
+        Rect croppedRect =
+            new Rect(
+                textureRect.x + minX,
+                textureRect.y + minY,
+                croppedWidth,
+                croppedHeight
+            );
+
+        return Sprite.Create(
+            texture,
+            croppedRect,
+            new Vector2(0.5f, 0.5f),
+            sourceSprite.pixelsPerUnit
         );
     }
 
