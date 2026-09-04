@@ -160,6 +160,15 @@ MonoBehaviour:
     m_Localized: "B\xF6lgesel B\xF6l\xFCmler"
     m_Metadata:
       m_Items: []
+  - m_Id: 4779097391456256
+    m_Localized: "Reklam gizlili\u011Fi ayarlar\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5097419832123392
+    m_Localized: "Verileriniz size daha alakal\u0131 reklamlar g\xF6stermek ve reklam
+      performans\u0131n\u0131 \xF6l\xE7mek i\xE7in kullan\u0131labilir."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

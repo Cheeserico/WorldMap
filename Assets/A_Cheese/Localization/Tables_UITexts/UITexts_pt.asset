@@ -160,6 +160,15 @@ MonoBehaviour:
     m_Localized: Fases regionais
     m_Metadata:
       m_Items: []
+  - m_Id: 4779097391456256
+    m_Localized: "Defini\xE7\xF5es de privacidade dos an\xFAncios"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5097419832123392
+    m_Localized: "Os seus dados podem ser utilizados para apresentar an\xFAncios
+      mais relevantes e medir o desempenho da publicidade."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

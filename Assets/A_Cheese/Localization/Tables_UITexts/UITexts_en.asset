@@ -161,7 +161,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4779097391456256
-    m_Localized: Privacy Setting
+    m_Localized: Ad privacy settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5097419832123392
+    m_Localized: Your data may be used to show ads that are more relevant to you
+      and to measure advertising performance.
     m_Metadata:
       m_Items: []
   references:

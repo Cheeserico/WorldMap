@@ -160,6 +160,15 @@ MonoBehaviour:
     m_Localized: "Niveaux r\xE9gionaux"
     m_Metadata:
       m_Items: []
+  - m_Id: 4779097391456256
+    m_Localized: "Param\xE8tres de confidentialit\xE9 des annonces"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5097419832123392
+    m_Localized: "Vos donn\xE9es peuvent \xEAtre utilis\xE9es pour afficher des publicit\xE9s
+      plus pertinentes et mesurer leurs performances."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

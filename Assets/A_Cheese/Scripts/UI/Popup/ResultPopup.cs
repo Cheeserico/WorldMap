@@ -2,6 +2,7 @@ using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
+
 public class ResultPopup : PopupBase
 {
     private StageData stageData;
@@ -23,6 +24,9 @@ public class ResultPopup : PopupBase
     // 演出側の入力制御のみ。広告・画面遷移はResultAdActionsが担当。
     private bool inputLocked;
 
+    // App Reviewへ今回のクリアを通知済みか
+    private bool hasNotifiedAppReview;
+
     private void Start()
     {
         LoadStageData();
@@ -43,6 +47,25 @@ public class ResultPopup : PopupBase
         int starCount = CalculateStarCount(clearTime);
         UpdateStars(starCount);
         PrepareButtons();
+
+        PrepareButtons();
+
+        if (!hasNotifiedAppReview)
+        {
+            hasNotifiedAppReview = true;
+
+            if (AppReviewManager.Instance != null)
+            {
+                AppReviewManager.Instance.NotifyStageCleared();
+            }
+            else
+            {
+                Debug.LogWarning(
+                    "[App Review] AppReviewManagerが見つかりません。",
+                    this
+                );
+            }
+        }
     }
 
     private string FormatTime(float time)

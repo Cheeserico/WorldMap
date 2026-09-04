@@ -160,6 +160,15 @@ MonoBehaviour:
     m_Localized: Regionala banor
     m_Metadata:
       m_Items: []
+  - m_Id: 4779097391456256
+    m_Localized: "Sekretessinst\xE4llningar f\xF6r annonser"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5097419832123392
+    m_Localized: "Dina data kan anv\xE4ndas f\xF6r att visa mer relevanta annonser
+      och m\xE4ta annonsernas resultat."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

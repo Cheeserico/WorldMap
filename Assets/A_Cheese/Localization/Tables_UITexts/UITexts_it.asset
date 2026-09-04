@@ -160,6 +160,15 @@ MonoBehaviour:
     m_Localized: Livelli regionali
     m_Metadata:
       m_Items: []
+  - m_Id: 4779097391456256
+    m_Localized: Impostazioni sulla privacy degli annunci
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5097419832123392
+    m_Localized: "I tuoi dati potrebbero essere utilizzati per mostrarti annunci
+      pi\xF9 pertinenti e misurare le prestazioni pubblicitarie."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

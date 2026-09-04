@@ -160,6 +160,15 @@ MonoBehaviour:
     m_Localized: Stage Regional
     m_Metadata:
       m_Items: []
+  - m_Id: 4779097391456256
+    m_Localized: Setelan privasi iklan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5097419832123392
+    m_Localized: Data Anda dapat digunakan untuk menampilkan iklan yang lebih relevan
+      dan mengukur performa iklan.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

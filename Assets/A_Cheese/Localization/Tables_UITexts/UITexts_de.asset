@@ -160,6 +160,15 @@ MonoBehaviour:
     m_Localized: Regionale Level
     m_Metadata:
       m_Items: []
+  - m_Id: 4779097391456256
+    m_Localized: "Datenschutzeinstellungen f\xFCr Werbung"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5097419832123392
+    m_Localized: "Deine Daten k\xF6nnen verwendet werden, um relevantere Werbung
+      anzuzeigen und die Werbeleistung zu messen."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
