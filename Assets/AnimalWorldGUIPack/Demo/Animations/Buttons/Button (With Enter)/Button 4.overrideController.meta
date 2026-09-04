@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: fe65ed3cd233b46b3ba1aaabe6e25522
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Buttons/Button (With Enter)/Button
+    4.overrideController
+  uploadId: 962120

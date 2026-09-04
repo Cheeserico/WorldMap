@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0e6f133f1e83f48da89430b558631430
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Resources/Elements UI/Game Items/Tiles/Tile
+    - Bunny - Pink.prefab
+  uploadId: 962120

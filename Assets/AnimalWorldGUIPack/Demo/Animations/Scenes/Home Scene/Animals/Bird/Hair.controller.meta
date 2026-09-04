@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7dfa88af9cd284e2f9387f49f21db221
+timeCreated: 1461011432
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Scenes/Home Scene/Animals/Bird/Hair.controller
+  uploadId: 962120

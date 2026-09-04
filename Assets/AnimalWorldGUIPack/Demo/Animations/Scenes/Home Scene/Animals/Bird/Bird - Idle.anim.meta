@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f25f7267ca2ab4d91a87d2fd30220fea
+timeCreated: 1461011159
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Scenes/Home Scene/Animals/Bird/Bird
+    - Idle.anim
+  uploadId: 962120

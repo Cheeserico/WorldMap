@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: fb03742085207471cbfeddec825d64b0
+timeCreated: 1462102984
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Scenes/Game Scene/Animal (Faces)/Panda/Panda
+    2.overrideController
+  uploadId: 962120

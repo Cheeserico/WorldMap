@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 28855485786d845eb90c9de78d376f79
+timeCreated: 1462103317
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Scenes/Game Scene/Animal (Faces)/Bunny
+    - Pink/Enter.anim
+  uploadId: 962120

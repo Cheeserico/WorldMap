@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ebf31e030895e4fe3b842cca47c64227
+timeCreated: 1461776214
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Resources/Popups/Universal/Log In.prefab
+  uploadId: 962120

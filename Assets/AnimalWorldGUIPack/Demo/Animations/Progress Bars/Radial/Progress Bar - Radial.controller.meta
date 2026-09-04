@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3a6ecb02436c24658babccd7402cb5bc
+timeCreated: 1443789595
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Progress Bars/Radial/Progress
+    Bar - Radial.controller
+  uploadId: 962120

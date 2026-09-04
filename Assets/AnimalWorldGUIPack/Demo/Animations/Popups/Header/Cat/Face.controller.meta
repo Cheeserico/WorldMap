@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5415d853b1f4e40728ea9ae7e87bd6ef
+timeCreated: 1462379610
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Popups/Header/Cat/Face.controller
+  uploadId: 962120

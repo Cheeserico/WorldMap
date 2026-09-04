@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2d089c7c8ce754db2a833d3e631b493b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Progress Bars/Basic (Horizontal)/Idle.anim
+  uploadId: 962120

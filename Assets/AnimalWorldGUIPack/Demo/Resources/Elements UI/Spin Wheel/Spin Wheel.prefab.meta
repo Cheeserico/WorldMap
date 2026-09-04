@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bb1ed27d8a22a40b8bd318ad82b359c3
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Resources/Elements UI/Spin Wheel/Spin
+    Wheel.prefab
+  uploadId: 962120

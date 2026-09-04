@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2cf13fc661c1445f697fdc02e2f59317
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Resources/Elements UI/Game Items/Tiles/Tile
+    - Pig.prefab
+  uploadId: 962120

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9d2ac2dee0d444f1caf4c4e7b585004a
+timeCreated: 1461265721
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Resources/Popups/Portrait/Coins Shop.prefab
+  uploadId: 962120

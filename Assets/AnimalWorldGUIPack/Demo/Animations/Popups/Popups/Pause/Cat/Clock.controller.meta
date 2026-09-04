@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5f249c47cd82d480486d99e63843d5ad
+timeCreated: 1462289994
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Popups/Popups/Pause/Cat/Clock.controller
+  uploadId: 962120

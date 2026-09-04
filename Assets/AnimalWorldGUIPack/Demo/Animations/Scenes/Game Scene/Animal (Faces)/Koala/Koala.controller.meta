@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c244e59a55fc6469bb240cd1f0b5d919
+timeCreated: 1462091562
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Scenes/Game Scene/Animal (Faces)/Koala/Koala.controller
+  uploadId: 962120

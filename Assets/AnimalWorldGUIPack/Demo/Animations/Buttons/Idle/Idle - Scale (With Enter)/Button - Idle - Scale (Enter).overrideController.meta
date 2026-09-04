@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8d9e13ea4f092461d8e5a234ab40d87a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Buttons/Idle/Idle - Scale
+    (With Enter)/Button - Idle - Scale (Enter).overrideController
+  uploadId: 962120

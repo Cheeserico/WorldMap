@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 60e8ba0f3e08143be8df1bc83c9bdb96
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Scenes/Home Scene/Logo/Balloon/Face/Face.controller
+  uploadId: 962120

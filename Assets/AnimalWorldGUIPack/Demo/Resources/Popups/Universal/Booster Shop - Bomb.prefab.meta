@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 756e7e69f04b64b7b94807a0c15009d2
+timeCreated: 1462272749
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Resources/Popups/Universal/Booster Shop
+    - Bomb.prefab
+  uploadId: 962120

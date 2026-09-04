@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f4dd32fbf82b249ebb15d7ba1b50e5aa
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Effects/Pulse/Pulse.controller
+  uploadId: 962120

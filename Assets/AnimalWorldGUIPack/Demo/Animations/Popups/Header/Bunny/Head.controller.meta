@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ddb4d6f0788eb4247a991f2ec5651875
+timeCreated: 1462443654
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Popups/Header/Bunny/Head.controller
+  uploadId: 962120

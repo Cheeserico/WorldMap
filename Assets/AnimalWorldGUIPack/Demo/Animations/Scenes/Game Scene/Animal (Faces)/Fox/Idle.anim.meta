@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 84c437864253f4ef8a6a297f0035eaa5
+timeCreated: 1462099103
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Scenes/Game Scene/Animal (Faces)/Fox/Idle.anim
+  uploadId: 962120

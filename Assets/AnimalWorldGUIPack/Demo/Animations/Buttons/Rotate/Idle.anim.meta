@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 313ff3fb2011442aa956c0c9a0c7d027
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Buttons/Rotate/Idle.anim
+  uploadId: 962120

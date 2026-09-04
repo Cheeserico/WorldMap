@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 725a89f6cd1c94d289d9d76a50c0dfd4
+timeCreated: 1462091562
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Scenes/Game Scene/Animal (Faces)/Koala/Idle.anim
+  uploadId: 962120

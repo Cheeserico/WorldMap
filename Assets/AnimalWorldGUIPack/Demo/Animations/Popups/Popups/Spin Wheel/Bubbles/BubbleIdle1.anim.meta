@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0d3f6da93d7334b07ab5abf322acd7ec
+timeCreated: 1462817922
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Popups/Popups/Spin Wheel/Bubbles/BubbleIdle1.anim
+  uploadId: 962120

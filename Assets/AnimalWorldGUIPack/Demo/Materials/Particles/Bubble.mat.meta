@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7d29ffcb740b840c4b89f6afb5cdf90a
+timeCreated: 1461091475
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Materials/Particles/Bubble.mat
+  uploadId: 962120

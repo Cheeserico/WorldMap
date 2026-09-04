@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 64ae0d576ba5f41d7806ab6624d66714
+timeCreated: 1454704153
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Materials/Particles/Dust.mat
+  uploadId: 962120

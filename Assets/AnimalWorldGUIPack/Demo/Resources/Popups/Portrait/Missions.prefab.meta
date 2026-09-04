@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c166c2838df8a4e678b9aef7e6f10a2c
+timeCreated: 1461593325
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Resources/Popups/Portrait/Missions.prefab
+  uploadId: 962120

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ebb5c16dc8fb949f9afa1c6a26bd7716
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Scripts/MusicButton.cs
+  uploadId: 962120

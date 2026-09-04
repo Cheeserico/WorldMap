@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a9dc30887e4aa4291af6d85ced79c358
+timeCreated: 1462291416
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Popups/Popups/Pause/Cat/TailIdle.anim
+  uploadId: 962120

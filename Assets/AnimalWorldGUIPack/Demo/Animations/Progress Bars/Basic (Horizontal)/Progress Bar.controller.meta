@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 22e2d9efbe66441d9a25d7fb12648d1c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Progress Bars/Basic (Horizontal)/Progress
+    Bar.controller
+  uploadId: 962120

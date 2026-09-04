@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c8f1a8a3c9fbb453fb9c27edc7f89044
+timeCreated: 1462385961
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Effects/Sparkles/Sparkle Variation
+    4.overrideController
+  uploadId: 962120

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 961ce44f42ab4486fa336fb162869e86
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 22100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Effects/Enter - Pop - Idle/Item
+    3.overrideController
+  uploadId: 962120

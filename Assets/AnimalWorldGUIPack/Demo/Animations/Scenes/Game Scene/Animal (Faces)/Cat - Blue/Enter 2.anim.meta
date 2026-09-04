@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3cee0b6fa554443dfa63b2a904576009
+timeCreated: 1462098787
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Scenes/Game Scene/Animal (Faces)/Cat
+    - Blue/Enter 2.anim
+  uploadId: 962120

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c930b824dc04849bd99b07ed74e6f789
+timeCreated: 1462134540
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Popups/Popups/Lose/Bunny/Ear
+    Right - Idle.anim
+  uploadId: 962120

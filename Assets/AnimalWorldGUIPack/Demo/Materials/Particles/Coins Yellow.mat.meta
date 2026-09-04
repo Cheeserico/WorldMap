@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2bae87f57bcc140c48222404710b7b33
+timeCreated: 1462965565
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Materials/Particles/Coins Yellow.mat
+  uploadId: 962120

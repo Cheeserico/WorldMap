@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5c63923036bc54149ae7e3715895cd69
+timeCreated: 1462123449
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Popups/Popups/Win/Stars/Star
+    2.overrideController
+  uploadId: 962120

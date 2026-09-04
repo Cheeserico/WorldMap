@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7f9bb690914a3449ab7565d634da4a5e
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Resources/Elements UI/Switches/Switch
+    With Icon.prefab
+  uploadId: 962120

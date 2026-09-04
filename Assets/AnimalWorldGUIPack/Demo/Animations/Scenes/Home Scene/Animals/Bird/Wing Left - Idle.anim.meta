@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 90a67391201634288957a71d5bcb3041
+timeCreated: 1461010860
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Scenes/Home Scene/Animals/Bird/Wing
+    Left - Idle.anim
+  uploadId: 962120

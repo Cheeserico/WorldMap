@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: bc1b1a42b299443959b8416d8515c7df
+timeCreated: 1443791061
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Scenes/Game Scene/Stars (Progress
+    Bar)/Star.controller
+  uploadId: 962120

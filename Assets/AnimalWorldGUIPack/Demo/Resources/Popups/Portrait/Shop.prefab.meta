@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 590ff1faae78d487bb9a0fbc1ac6a5f4
+timeCreated: 1461403430
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Resources/Popups/Portrait/Shop.prefab
+  uploadId: 962120

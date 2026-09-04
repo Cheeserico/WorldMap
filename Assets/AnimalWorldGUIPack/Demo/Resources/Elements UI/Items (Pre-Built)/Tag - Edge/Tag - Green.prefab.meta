@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6aba52cce04424dcb8c21d66e8a0b2a6
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Resources/Elements UI/Items (Pre-Built)/Tag
+    - Edge/Tag - Green.prefab
+  uploadId: 962120

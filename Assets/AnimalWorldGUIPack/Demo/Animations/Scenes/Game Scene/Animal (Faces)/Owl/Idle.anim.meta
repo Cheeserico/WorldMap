@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8021d31a4c3fc4cf7a4cf69fd620b71c
+timeCreated: 1462091792
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Scenes/Game Scene/Animal (Faces)/Owl/Idle.anim
+  uploadId: 962120

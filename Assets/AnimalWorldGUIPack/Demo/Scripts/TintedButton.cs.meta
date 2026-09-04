@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 19912b9da30634d019cea88a3a6af4f3
+timeCreated: 1431554905
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Scripts/TintedButton.cs
+  uploadId: 962120

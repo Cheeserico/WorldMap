@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ef195fe36bb044ba18a23be4a3d5ad34
+timeCreated: 1462309305
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Scenes/Home Scene/Animals/Panda/Idle.anim
+  uploadId: 962120

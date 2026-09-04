@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 74a8b80e613c34d8591b50d06c721774
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Effects/Rotation 360/Idle.anim
+  uploadId: 962120

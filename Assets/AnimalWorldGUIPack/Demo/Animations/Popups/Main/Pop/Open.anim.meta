@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d3112d8e56ebb482481615b689e0a28f
+timeCreated: 1436793384
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Popups/Main/Pop/Open.anim
+  uploadId: 962120

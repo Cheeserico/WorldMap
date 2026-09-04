@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 068cfe1fdaad1473bb7219e61a53712d
+timeCreated: 1462293253
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Popups/Popups/Pause/Cat/Cloud.controller
+  uploadId: 962120

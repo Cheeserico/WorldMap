@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d3267d04880eb4ba190b830f4061119e
+timeCreated: 1462351686
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Scenes/Home Scene/Balloons/Balloon
+    2/Balloon 2.controller
+  uploadId: 962120

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9d5dc0c1f9a9a44e384b72b3e10d1214
+timeCreated: 1461581235
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Resources/Popups/Landscape/Ranking.prefab
+  uploadId: 962120

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 57eef8498e8734f93b0ef78ab10befd6
+timeCreated: 1462050433
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Scenes/Game Scene/Animal (Faces)/Bunny
+    - White/Idle.anim
+  uploadId: 962120

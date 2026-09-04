@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: edc5e7a8a5bcb4acf98d4521e8a88aca
+timeCreated: 1431425078
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Scripts/AnimatedButton.cs
+  uploadId: 962120

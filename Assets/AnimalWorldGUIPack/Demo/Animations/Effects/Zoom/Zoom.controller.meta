@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4d8b221ef2da54bb0b14d0d13f5957f3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Effects/Zoom/Zoom.controller
+  uploadId: 962120

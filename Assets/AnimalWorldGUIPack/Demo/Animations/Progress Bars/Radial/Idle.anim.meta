@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5c6a84ec2b7f54c18936fe8c27d7bc6b
+timeCreated: 1443789609
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Progress Bars/Radial/Idle.anim
+  uploadId: 962120

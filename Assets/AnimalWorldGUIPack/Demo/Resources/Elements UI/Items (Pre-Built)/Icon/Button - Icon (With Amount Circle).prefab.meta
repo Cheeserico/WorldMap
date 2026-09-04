@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dc9041b86cbe24925acf92189fdcd2d4
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Resources/Elements UI/Items (Pre-Built)/Icon/Button
+    - Icon (With Amount Circle).prefab
+  uploadId: 962120

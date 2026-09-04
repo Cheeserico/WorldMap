@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6f41377f473d74088ae715c84fe5ce17
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Resources/Elements UI/Items (Pre-Built)/Backgrounds/Background
+    - Inner Shadow - Pink.prefab
+  uploadId: 962120

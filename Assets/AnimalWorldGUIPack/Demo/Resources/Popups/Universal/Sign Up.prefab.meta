@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 302cb318046b74ca49b042b759c3c57f
+timeCreated: 1461518888
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Resources/Popups/Universal/Sign Up.prefab
+  uploadId: 962120

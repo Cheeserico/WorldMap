@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 94339ef3d795a480ca8d2954029e203b
+timeCreated: 1462443420
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Resources/Popups/Universal/Alert - Level
+    Locked.prefab
+  uploadId: 962120

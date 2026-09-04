@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6a8ad7f7655fe450192ff52402e9f94e
+timeCreated: 1462818121
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Popups/Popups/Spin Wheel/Bubbles/BubbleVariation8.overrideController
+  uploadId: 962120

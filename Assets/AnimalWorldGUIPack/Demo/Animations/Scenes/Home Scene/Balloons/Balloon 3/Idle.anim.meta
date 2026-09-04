@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 00ae85731cc58462493d75829c968f24
+timeCreated: 1462351720
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Scenes/Home Scene/Balloons/Balloon
+    3/Idle.anim
+  uploadId: 962120

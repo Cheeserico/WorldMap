@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 88e993170b7a64776905b8a0fca29f74
+timeCreated: 1436794831
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Buttons/Idle/Idle - Rotate
+    (With Enter)/Enter.anim
+  uploadId: 962120

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: efec1305c0769437b943b24804b322fc
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 22100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Scenes/Home Scene/Clouds/Cloud
+    3.overrideController
+  uploadId: 962120

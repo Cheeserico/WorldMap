@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 42804aa7231754506b915f650af43356
+timeCreated: 1462092028
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Scenes/Game Scene/Animal (Faces)/Bird
+    - Yellow/Bird - Yellow.controller
+  uploadId: 962120

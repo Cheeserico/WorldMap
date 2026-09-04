@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 49753878d6d4a4ac8bed2409767a31f8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Resources/Elements UI/Buttons/Level/Level
+    Button.prefab
+  uploadId: 962120

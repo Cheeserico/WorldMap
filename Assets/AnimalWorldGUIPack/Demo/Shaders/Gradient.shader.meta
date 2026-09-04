@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 270ab2cba29324115b2657b50675eb94
+timeCreated: 1461096370
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Shaders/Gradient.shader
+  uploadId: 962120

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ffd8f2d9a4ebc4d5a83111658896cc84
+timeCreated: 1436794583
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Buttons/Idle/Idle - Scale/Idle.anim
+  uploadId: 962120

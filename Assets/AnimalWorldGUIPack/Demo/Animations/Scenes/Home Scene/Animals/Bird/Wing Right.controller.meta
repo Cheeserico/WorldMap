@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4c5d27cf6b629420b8460ae94f0b492b
+timeCreated: 1461010870
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Scenes/Home Scene/Animals/Bird/Wing
+    Right.controller
+  uploadId: 962120

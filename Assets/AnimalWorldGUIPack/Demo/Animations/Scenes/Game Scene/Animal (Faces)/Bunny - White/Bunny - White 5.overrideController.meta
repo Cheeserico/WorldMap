@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8243ac5555a044926ba279ea3129b7a8
+timeCreated: 1462099907
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Scenes/Game Scene/Animal (Faces)/Bunny
+    - White/Bunny - White 5.overrideController
+  uploadId: 962120

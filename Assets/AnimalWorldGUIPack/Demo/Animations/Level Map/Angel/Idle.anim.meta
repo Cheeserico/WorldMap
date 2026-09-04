@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dc4c969e620154b34a4ade0d93a73b0c
+timeCreated: 1464105762
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Level Map/Angel/Idle.anim
+  uploadId: 962120

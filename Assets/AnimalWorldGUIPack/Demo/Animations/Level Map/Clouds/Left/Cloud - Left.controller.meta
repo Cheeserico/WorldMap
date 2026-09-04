@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2d433b2a662064dd9b09e3a9d87956f6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Level Map/Clouds/Left/Cloud
+    - Left.controller
+  uploadId: 962120

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7bf8d792a622b4dc7a02ecbf9bc2c4fd
+timeCreated: 1462818114
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Popups/Popups/Spin Wheel/Bubbles/BubbleEnter4.anim
+  uploadId: 962120

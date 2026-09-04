@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bf211c3b61a014e2ea69f03f68cd4002
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Effects/Fade/Fade In.controller
+  uploadId: 962120

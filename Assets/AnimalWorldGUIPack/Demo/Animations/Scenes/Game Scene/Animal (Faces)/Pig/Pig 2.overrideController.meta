@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c1259bf7ee37043cd80bc5e9307a84db
+timeCreated: 1462097280
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Scenes/Game Scene/Animal (Faces)/Pig/Pig
+    2.overrideController
+  uploadId: 962120

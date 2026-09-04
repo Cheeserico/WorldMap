@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4406f175e63e448b99f7deae0f09b617
+timeCreated: 1461581235
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Resources/Popups/Portrait/Ranking.prefab
+  uploadId: 962120

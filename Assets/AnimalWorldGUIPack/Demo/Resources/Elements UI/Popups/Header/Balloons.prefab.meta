@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ecf0f7982adc843759bc1dcdb8e6e8a0
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Resources/Elements UI/Popups/Header/Balloons.prefab
+  uploadId: 962120

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8e931658b584844bfbcfd19e9c946733
+timeCreated: 1462291410
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Popups/Popups/Pause/Cat/Tail.controller
+  uploadId: 962120

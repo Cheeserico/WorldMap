@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 87d42badb649e4ff7959de85f0c06daa
+timeCreated: 1462132454
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Resources/Popups/Universal/End Game -
+    Lose.prefab
+  uploadId: 962120

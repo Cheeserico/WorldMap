@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 551e6e1f69dc343c7b9f1653e5830ca7
+timeCreated: 1462219862
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Materials/Particles/Star Blue.mat
+  uploadId: 962120

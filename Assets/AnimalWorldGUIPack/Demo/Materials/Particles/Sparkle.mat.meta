@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7dd2038b3b5724d66a6f4631ea8fb724
+timeCreated: 1462294869
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Materials/Particles/Sparkle.mat
+  uploadId: 962120

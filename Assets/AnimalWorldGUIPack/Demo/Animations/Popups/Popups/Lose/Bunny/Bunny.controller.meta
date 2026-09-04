@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d68f649da4e794885b6f5ed65337dafc
+timeCreated: 1462133597
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Popups/Popups/Lose/Bunny/Bunny.controller
+  uploadId: 962120

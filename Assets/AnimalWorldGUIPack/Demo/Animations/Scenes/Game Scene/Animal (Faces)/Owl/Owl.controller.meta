@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6cf6df328c1bc402aba539605b7c3c47
+timeCreated: 1462091792
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Scenes/Game Scene/Animal (Faces)/Owl/Owl.controller
+  uploadId: 962120

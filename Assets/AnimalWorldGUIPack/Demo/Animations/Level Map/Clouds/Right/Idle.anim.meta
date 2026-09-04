@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f16cf005ea3e64c2aa60dfa5bfd769e0
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Level Map/Clouds/Right/Idle.anim
+  uploadId: 962120

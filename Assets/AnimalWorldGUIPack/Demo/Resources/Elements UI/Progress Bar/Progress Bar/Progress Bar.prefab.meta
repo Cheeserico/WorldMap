@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7993749054e854431aa9058d473c9f2a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Resources/Elements UI/Progress Bar/Progress
+    Bar/Progress Bar.prefab
+  uploadId: 962120

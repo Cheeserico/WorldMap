@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 83a604e60cc55470897d1eced24a391d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Resources/Elements UI/Popups/Popups/Popup
+    - Cat.prefab
+  uploadId: 962120

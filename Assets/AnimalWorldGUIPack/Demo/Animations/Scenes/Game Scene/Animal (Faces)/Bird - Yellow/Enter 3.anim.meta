@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 077619a42596f4965962154734ac2948
+timeCreated: 1462105403
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Scenes/Game Scene/Animal (Faces)/Bird
+    - Yellow/Enter 3.anim
+  uploadId: 962120

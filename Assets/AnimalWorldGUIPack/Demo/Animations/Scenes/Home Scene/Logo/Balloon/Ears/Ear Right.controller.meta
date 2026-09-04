@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 91f2273ec321e441593f71f45c0566d4
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Scenes/Home Scene/Logo/Balloon/Ears/Ear
+    Right.controller
+  uploadId: 962120

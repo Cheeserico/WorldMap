@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 221baa5e710b147448815911178a2eeb
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Effects/Enter - Pop - Idle/Pop.anim
+  uploadId: 962120

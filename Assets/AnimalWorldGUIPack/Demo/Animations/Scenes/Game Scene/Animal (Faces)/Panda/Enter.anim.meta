@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1dd7e22a880434b88a7198859fd70c6a
+timeCreated: 1462102938
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Scenes/Game Scene/Animal (Faces)/Panda/Enter.anim
+  uploadId: 962120

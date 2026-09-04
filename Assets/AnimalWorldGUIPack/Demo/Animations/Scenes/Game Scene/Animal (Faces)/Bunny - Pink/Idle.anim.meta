@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8c5d299f2ca6548c08e54b6b26b14c10
+timeCreated: 1462103317
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 62974
+  packageName: Animal World GUI Pack
+  packageVersion: 2.1.0
+  assetPath: Assets/AnimalWorldGUIPack/Demo/Animations/Scenes/Game Scene/Animal (Faces)/Bunny
+    - Pink/Idle.anim
+  uploadId: 962120
