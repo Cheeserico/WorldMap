@@ -424,7 +424,7 @@ public class StageSelectButton : MonoBehaviour
             $"{stageData.name}を最初から開始します。"
         );
 
-        SceneManager.LoadScene(
+        SceneTransitionManager.Load(
             gameSceneName
         );
     }

@@ -142,7 +142,7 @@ public class ContinueStagePopup : PopupBase
             $"{selectedStageData.stageId}"
         );
 
-        SceneManager.LoadScene(
+        SceneTransitionManager.Load(
             selectedGameSceneName
         );
     }
@@ -176,7 +176,7 @@ public class ContinueStagePopup : PopupBase
             $"{selectedStageData.stageId}"
         );
 
-        SceneManager.LoadScene(
+        SceneTransitionManager.Load(
             selectedGameSceneName
         );
     }

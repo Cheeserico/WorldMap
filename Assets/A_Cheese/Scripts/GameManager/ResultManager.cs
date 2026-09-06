@@ -246,16 +246,16 @@ public class ResultManager : MonoBehaviour
             );
         }
 
-        SceneManager.LoadScene(
-            SceneManager.GetActiveScene().buildIndex
-        );
+        SceneTransitionManager.ReloadCurrentScene();
     }
     /// <summary>
     /// タイトルへ戻る
     /// </summary>
     public void GoToTitle()
     {
-        SceneManager.LoadScene("TitleScene");
+        SceneTransitionManager.Load(
+            "TitleScene"
+        );
     }
 
     private void OnDestroy()

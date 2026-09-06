@@ -35,7 +35,6 @@ public class CountrySlot : MonoBehaviour, IDropHandler
     private CountryFlagDatabase countryFlagDatabase;
 
 
-
     // このスロットがすでに正解済みか
     private bool isOccupied;
 

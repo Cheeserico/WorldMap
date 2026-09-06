@@ -93,8 +93,7 @@ public class PauseManager : MonoBehaviour
         if (puzzleManager != null) ContinueSaveManager.Delete(puzzleManager.CurrentStageId);
         if (StageManager.Instance != null) StageManager.Instance.SetStartMode(StageStartMode.NewGame);
         PrepareForSceneChange();
-        Scene currentScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(currentScene.name);
+        SceneTransitionManager.ReloadCurrentScene();
     }
 
     public void OpenSettings()
@@ -146,7 +145,9 @@ public class PauseManager : MonoBehaviour
         isSceneTransitioning = true;
         SaveBeforeTitle();
         PrepareForSceneChange();
-        SceneManager.LoadScene(titleSceneName);
+        SceneTransitionManager.Load(
+            titleSceneName
+        );
     }
 
     private bool ValidateTitle()
