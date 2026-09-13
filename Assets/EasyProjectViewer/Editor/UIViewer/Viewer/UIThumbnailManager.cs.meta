@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: a7b6b2838afc2724ea1ca7b892dc5a1c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 348954
+  packageName: Easy Effect/UI Viewer
+  packageVersion: 1.1.4
+  assetPath: Assets/EasyProjectViewer/Editor/UIViewer/Viewer/UIThumbnailManager.cs
+  uploadId: 963370

@@ -1,0 +1,20 @@
+{
+    "name": "EasyProjectViewer.Editor",
+    "rootNamespace": "EasyProjectViewer.Editor",
+    "references": [
+        "GUID:49b8f64d6282b564483203653f141e72",
+        "GUID:5cf10dbfc02804e40b072648eab2f55e",
+        "GUID:5c6ac3d086b79a444a7b755a317ddc9b"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

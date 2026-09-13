@@ -496,6 +496,7 @@ GameObject:
   - component: {fileID: 5128359039131583745}
   - component: {fileID: 4757355829600843821}
   - component: {fileID: 8739924902373072495}
+  - component: {fileID: 4138931229901848809}
   m_Layer: 5
   m_Name: Stage_Button
   m_TagString: Untagged
@@ -688,6 +689,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapNormalizedAnchor
   normalizedPosition: {x: 0.5, y: 0.5}
+--- !u!95 &4138931229901848809
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3152520821766027620}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 905690ef1e6204e3d8eadc6f528ad760, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3215987983553541301
 GameObject:
   m_ObjectHideFlags: 0
@@ -1392,8 +1415,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4282003748
-  m_fontColor: {r: 0.14117648, g: 0.19215687, b: 0.22745098, a: 1}
+    rgba: 4282923558
+  m_fontColor: {r: 0.14901961, g: 0.22745098, b: 0.28235295, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5c6ac3d086b79a444a7b755a317ddc9b
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 348954
+  packageName: Easy Effect/UI Viewer
+  packageVersion: 1.1.4
+  assetPath: Assets/EasyProjectViewer/Editor/ProjectWindowThumbnail/ProjectWindowThumbnail.asmdef
+  uploadId: 963370

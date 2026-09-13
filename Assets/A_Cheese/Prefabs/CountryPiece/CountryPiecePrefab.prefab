@@ -164,6 +164,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CountryPieceDrag
   countryId: 
   mapPanZoomController: {fileID: 0}
+  draggingPieceGuide: {fileID: 0}
+  wrongDropEffectUI: {fileID: 0}
   dragLayer: {fileID: 0}
   dragPieceOffsetRatio: {x: -0.05, y: 0.07}
   dropAssistScreenRatio: 0.04
@@ -177,6 +179,9 @@ MonoBehaviour:
   cardCountryMaxSize: 90
   smallCountryPixelThreshold: 32
   placedLocalScale: {x: 1, y: 1, z: 1}
+  placedCountryGrassMaterial: {fileID: 0}
+  placedCountryColor: {r: 0.92156863, g: 0.5686275, b: 0.21568628, a: 1}
+  placedColorDuration: 0.45
   placedRotationZ: 0
   snapDuration: 0.25
   snapEase: 9
@@ -428,6 +433,7 @@ GameObject:
   - component: {fileID: 8153143947419659152}
   - component: {fileID: 8221743341894716771}
   - component: {fileID: 2279428724436787094}
+  - component: {fileID: 8112123747929173032}
   m_Layer: 5
   m_Name: Country_Image
   m_TagString: Untagged
@@ -492,3 +498,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8112123747929173032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6162733285692940763}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Shadow
+  m_EffectColor: {r: 0.023529412, g: 0.09411765, b: 0.14117648, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1

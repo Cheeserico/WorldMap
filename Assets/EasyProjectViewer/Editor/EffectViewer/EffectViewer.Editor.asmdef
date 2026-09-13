@@ -1,0 +1,24 @@
+{
+    "name": "EffectViewer.Editor",
+    "rootNamespace": "EffectViewer.Editor",
+    "references": [
+        "GUID:5c6ac3d086b79a444a7b755a317ddc9b"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.visualeffectgraph",
+            "expression": "",
+            "define": "VFX_GRAPH_AVAILABLE"
+        }
+    ],
+    "noEngineReferences": false
+}

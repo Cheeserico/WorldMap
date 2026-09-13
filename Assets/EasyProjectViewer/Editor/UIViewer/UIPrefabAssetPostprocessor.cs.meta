@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 72e8f8719ffad014e9900aba45626fde
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 348954
+  packageName: Easy Effect/UI Viewer
+  packageVersion: 1.1.4
+  assetPath: Assets/EasyProjectViewer/Editor/UIViewer/UIPrefabAssetPostprocessor.cs
+  uploadId: 963370

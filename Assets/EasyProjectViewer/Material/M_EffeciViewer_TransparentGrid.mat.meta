@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7cf4de31f65385645a184dadce555160
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 348954
+  packageName: Easy Effect/UI Viewer
+  packageVersion: 1.1.4
+  assetPath: Assets/EasyProjectViewer/Material/M_EffeciViewer_TransparentGrid.mat
+  uploadId: 963370

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0e66fe5d781d2c24ab1399cb3002f5cd
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 348954
+  packageName: Easy Effect/UI Viewer
+  packageVersion: 1.1.4
+  assetPath: Assets/EasyProjectViewer/Settings/EffectPreviewSettings.asset
+  uploadId: 963370

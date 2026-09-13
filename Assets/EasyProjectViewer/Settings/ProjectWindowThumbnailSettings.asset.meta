@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9926d023b6ac4a4418ef6408c27539ce
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 348954
+  packageName: Easy Effect/UI Viewer
+  packageVersion: 1.1.4
+  assetPath: Assets/EasyProjectViewer/Settings/ProjectWindowThumbnailSettings.asset
+  uploadId: 963370

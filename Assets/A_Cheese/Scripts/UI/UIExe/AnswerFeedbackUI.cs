@@ -1,38 +1,77 @@
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Localization;
+using UnityEngine.UI;
 
 /// <summary>
 /// 正解・不正解時に表示するフィードバックUIを管理する。
 /// </summary>
 public class AnswerFeedbackUI : MonoBehaviour
 {
-    [Header("UI")]
+    [Header("全体")]
     [SerializeField]
     private CanvasGroup canvasGroup;
 
     [SerializeField]
-    private RectTransform feedbackRect;
+    private Image darkBackground;
+
+
+    [Header("正解UI")]
+    [SerializeField]
+    private GameObject correctEffectRoot;
 
     [SerializeField]
-    private Image flagImage;
+    private RectTransform correctTitleRect;
 
     [SerializeField]
-    private TMP_Text countryNameText;
+    private RectTransform correctRingBackRect;
 
     [SerializeField]
-    private TMP_Text resultText;
+    private RectTransform correctRingRect;
 
-    [Header("国旗データ")]
     [SerializeField]
-    private CountryFlagDatabase countryFlagDatabase;
+    private RectTransform correctRotateLightRect;
+
+    [SerializeField]
+    private Image correctCountryImage;
+
+    [SerializeField]
+    private RectTransform correctCountryInfoPanel;
+
+    [SerializeField]
+    private Image correctFlagImage;
+
+    [SerializeField]
+    private TMP_Text correctCountryNameText;
+
+
+    [Header("不正解UI")]
+    [SerializeField]
+    private GameObject wrongEffectRoot;
+
+    [SerializeField]
+    private RectTransform wrongTitleRect;
+
+    [SerializeField]
+    private Image wrongCountryImage;
+
+    [SerializeField]
+    private RectTransform wrongCountryInfoPanel;
+
+    [SerializeField]
+    private Image wrongFlagImage;
+
+    [SerializeField]
+    private TMP_Text wrongCountryNameText;
 
 
     [Header("表示時間")]
     [SerializeField]
-    private float displayDuration = 0.8f;
+    private float correctDisplayDuration = 0.8f;
+
+    [SerializeField]
+    private float wrongDisplayDuration = 0.55f;
 
     [SerializeField]
     private float fadeDuration = 0.2f;
@@ -40,10 +79,13 @@ public class AnswerFeedbackUI : MonoBehaviour
 
     [Header("正解演出")]
     [SerializeField]
-    private float correctStartScale = 0.7f;
+    private float correctCountryStartScale = 0.25f;
 
     [SerializeField]
-    private float correctPunchScale = 0.15f;
+    private float correctTitleStartOffsetY = 70f;
+
+    [SerializeField]
+    private float correctInfoStartOffsetY = -45f;
 
 
     [Header("不正解演出")]
@@ -53,13 +95,89 @@ public class AnswerFeedbackUI : MonoBehaviour
     [SerializeField]
     private float wrongShakeStrength = 18f;
 
+    [SerializeField]
+    private float wrongTitleStartOffsetY = 35f;
+
+    [SerializeField]
+    private float wrongInfoStartOffsetY = -35f;
+
+    [Header("正解時の紙吹雪")]
+    [SerializeField]
+    private GameObject correctConfettiRoot;
+
+    private ParticleSystem[] correctConfettiParticles;
+
+    [Header("国旗データ")]
+    [SerializeField]
+    private CountryFlagDatabase countryFlagDatabase;
+
 
     private Sequence currentSequence;
+
+    private Vector2 correctTitlePosition;
+    private Vector2 correctInfoPosition;
+    private Vector2 correctCountryPosition;
+
+    private Vector2 wrongTitlePosition;
+    private Vector2 wrongInfoPosition;
+    private Vector2 wrongCountryPosition;
 
 
     private void Awake()
     {
+        SaveOriginalPositions();
+
+        if (correctConfettiRoot != null)
+        {
+            correctConfettiParticles =
+                correctConfettiRoot.GetComponentsInChildren<ParticleSystem>(
+                    true
+                );
+        }
+
         HideImmediately();
+    }
+
+    /// <summary>
+    /// UIの完成位置を保存する。
+    /// </summary>
+    private void SaveOriginalPositions()
+    {
+        if (correctTitleRect != null)
+        {
+            correctTitlePosition =
+                correctTitleRect.anchoredPosition;
+        }
+
+        if (correctCountryInfoPanel != null)
+        {
+            correctInfoPosition =
+                correctCountryInfoPanel.anchoredPosition;
+        }
+
+        if (correctCountryImage != null)
+        {
+            correctCountryPosition =
+                correctCountryImage.rectTransform.anchoredPosition;
+        }
+
+        if (wrongTitleRect != null)
+        {
+            wrongTitlePosition =
+                wrongTitleRect.anchoredPosition;
+        }
+
+        if (wrongCountryInfoPanel != null)
+        {
+            wrongInfoPosition =
+                wrongCountryInfoPanel.anchoredPosition;
+        }
+
+        if (wrongCountryImage != null)
+        {
+            wrongCountryPosition =
+                wrongCountryImage.rectTransform.anchoredPosition;
+        }
     }
 
 
@@ -67,37 +185,149 @@ public class AnswerFeedbackUI : MonoBehaviour
     /// 正解演出を表示する。
     /// </summary>
     public void ShowCorrect(
-        string countryName,
-        Sprite flagSprite)
+        string countryId,
+        Sprite flagSprite,
+        Sprite countrySprite)
     {
         PrepareFeedback(
-            countryName,
+            true,
+            countryId,
             flagSprite,
-            "answer_correct"
-        );
-        
-        feedbackRect.localScale =
-            Vector3.one * correctStartScale;
-
-        currentSequence = DOTween.Sequence();
-
-        currentSequence.Append(
-            feedbackRect
-                .DOScale(1f, 0.18f)
-                .SetEase(Ease.OutBack)
+            countrySprite
         );
 
-        currentSequence.Append(
-            feedbackRect.DOPunchScale(
-                Vector3.one * correctPunchScale,
-                0.2f,
-                5,
-                0.5f
+        PrepareCorrectAnimation();
+
+        PlayCorrectConfetti();
+
+        currentSequence =
+            DOTween.Sequence();
+
+        // 全体を素早く表示
+        currentSequence.Insert(
+            0f,
+            canvasGroup.DOFade(
+                1f,
+                0.1f
             )
         );
 
+        // 背景リング
+        if (correctRingBackRect != null)
+        {
+            currentSequence.Insert(
+                0f,
+                correctRingBackRect
+                    .DOScale(1f, 0.28f)
+                    .SetEase(Ease.OutBack)
+            );
+        }
+
+        // 装飾リング
+        if (correctRingRect != null)
+        {
+            currentSequence.Insert(
+                0.03f,
+                correctRingRect
+                    .DOScale(1f, 0.3f)
+                    .SetEase(Ease.OutBack)
+            );
+
+            currentSequence.Insert(
+                0.03f,
+                correctRingRect
+                    .DORotate(
+                        Vector3.zero,
+                        0.45f,
+                        RotateMode.FastBeyond360
+                    )
+                    .SetEase(Ease.OutCubic)
+            );
+        }
+
+        // 回転する光
+        if (correctRotateLightRect != null)
+        {
+            currentSequence.Insert(
+                0f,
+                correctRotateLightRect
+                    .DORotate(
+                        new Vector3(0f, 0f, 180f),
+                        0.75f,
+                        RotateMode.FastBeyond360
+                    )
+                    .SetEase(Ease.OutCubic)
+            );
+        }
+
+        // 国ピース
+        if (correctCountryImage != null)
+        {
+            RectTransform countryRect =
+                correctCountryImage.rectTransform;
+
+            currentSequence.Insert(
+                0.08f,
+                countryRect
+                    .DOScale(1f, 0.32f)
+                    .SetEase(Ease.OutBack)
+            );
+
+            currentSequence.Insert(
+                0.08f,
+                countryRect
+                    .DORotate(
+                        Vector3.zero,
+                        0.3f
+                    )
+                    .SetEase(Ease.OutCubic)
+            );
+        }
+
+        // NICE!
+        if (correctTitleRect != null)
+        {
+            currentSequence.Insert(
+                0.17f,
+                correctTitleRect
+                    .DOAnchorPos(
+                        correctTitlePosition,
+                        0.3f
+                    )
+                    .SetEase(Ease.OutBack)
+            );
+
+            currentSequence.Insert(
+                0.17f,
+                correctTitleRect
+                    .DOScale(1f, 0.3f)
+                    .SetEase(Ease.OutBack)
+            );
+        }
+
+        // 国旗・国名
+        if (correctCountryInfoPanel != null)
+        {
+            currentSequence.Insert(
+                0.3f,
+                correctCountryInfoPanel
+                    .DOAnchorPos(
+                        correctInfoPosition,
+                        0.25f
+                    )
+                    .SetEase(Ease.OutBack)
+            );
+
+            currentSequence.Insert(
+                0.3f,
+                correctCountryInfoPanel
+                    .DOScale(1f, 0.25f)
+                    .SetEase(Ease.OutBack)
+            );
+        }
+
         currentSequence.AppendInterval(
-            displayDuration
+            correctDisplayDuration
         );
 
         currentSequence.Append(
@@ -117,33 +347,91 @@ public class AnswerFeedbackUI : MonoBehaviour
     /// 不正解演出を表示する。
     /// </summary>
     public void ShowWrong(
-        string countryName,
-        Sprite flagSprite)
+        string countryId,
+        Sprite flagSprite,
+        Sprite countrySprite)
     {
         PrepareFeedback(
-            countryName,
+            false,
+            countryId,
             flagSprite,
-            "answer_wrong"
+            countrySprite
         );
 
-        feedbackRect.localScale =
-            Vector3.one;
+        PrepareWrongAnimation();
 
-        currentSequence = DOTween.Sequence();
+        currentSequence =
+            DOTween.Sequence();
 
-        currentSequence.Append(
-            feedbackRect.DOShakeAnchorPos(
-                wrongShakeDuration,
-                wrongShakeStrength,
-                12,
-                90f,
-                false,
-                true
+        // 全体を素早く表示
+        currentSequence.Insert(
+            0f,
+            canvasGroup.DOFade(
+                1f,
+                0.08f
             )
         );
 
+        // TRY AGAIN!
+        if (wrongTitleRect != null)
+        {
+            currentSequence.Insert(
+                0f,
+                wrongTitleRect
+                    .DOAnchorPos(
+                        wrongTitlePosition,
+                        0.18f
+                    )
+                    .SetEase(Ease.OutCubic)
+            );
+        }
+
+        // 国ピースを表示
+        if (wrongCountryImage != null)
+        {
+            RectTransform countryRect =
+                wrongCountryImage.rectTransform;
+
+            currentSequence.Insert(
+                0.04f,
+                countryRect
+                    .DOScale(1f, 0.15f)
+                    .SetEase(Ease.OutCubic)
+            );
+
+            // 国ピースだけを左右に揺らす
+            currentSequence.Insert(
+                0.18f,
+                countryRect.DOShakeAnchorPos(
+                    wrongShakeDuration,
+                    new Vector2(
+                        wrongShakeStrength,
+                        0f
+                    ),
+                    12,
+                    90f,
+                    false,
+                    true
+                )
+            );
+        }
+
+        // 国旗・国名
+        if (wrongCountryInfoPanel != null)
+        {
+            currentSequence.Insert(
+                0.12f,
+                wrongCountryInfoPanel
+                    .DOAnchorPos(
+                        wrongInfoPosition,
+                        0.2f
+                    )
+                    .SetEase(Ease.OutCubic)
+            );
+        }
+
         currentSequence.AppendInterval(
-            0.3f
+            wrongDisplayDuration
         );
 
         currentSequence.Append(
@@ -160,51 +448,290 @@ public class AnswerFeedbackUI : MonoBehaviour
 
 
     /// <summary>
-    /// 表示前の共通設定。
+    /// 共通の表示準備。
     /// </summary>
     private void PrepareFeedback(
-        string countryName,
+        bool isCorrect,
+        string countryId,
         Sprite flagSprite,
-        string result)
+        Sprite countrySprite)
     {
         if (currentSequence != null)
         {
             currentSequence.Kill();
+            currentSequence = null;
         }
 
         gameObject.SetActive(true);
 
-        canvasGroup.alpha = 1f;
+        canvasGroup.alpha = 0f;
 
-        feedbackRect.localScale =
-            Vector3.one;
+        if (correctEffectRoot != null)
+        {
+            correctEffectRoot.SetActive(
+                isCorrect
+            );
+        }
 
-        feedbackRect.anchoredPosition =
-            Vector2.zero;
+        if (wrongEffectRoot != null)
+        {
+            wrongEffectRoot.SetActive(
+                !isCorrect
+            );
+        }
 
+        string localizedCountryName =
+            GetLocalizedCountryName(
+                countryId
+            );
+
+        if (isCorrect)
+        {
+            ApplyContent(
+                correctCountryImage,
+                correctFlagImage,
+                correctCountryNameText,
+                countrySprite,
+                flagSprite,
+                localizedCountryName
+            );
+        }
+        else
+        {
+            ApplyContent(
+                wrongCountryImage,
+                wrongFlagImage,
+                wrongCountryNameText,
+                countrySprite,
+                flagSprite,
+                localizedCountryName
+            );
+        }
+    }
+
+
+    /// <summary>
+    /// 国画像・国旗・国名を反映する。
+    /// </summary>
+    private void ApplyContent(
+        Image countryImage,
+        Image flagImage,
+        TMP_Text countryNameText,
+        Sprite countrySprite,
+        Sprite flagSprite,
+        string localizedCountryName)
+    {
+        if (countryImage != null)
+        {
+            countryImage.sprite =
+                countrySprite;
+
+            countryImage.enabled =
+                countrySprite != null;
+
+            countryImage.preserveAspect =
+                true;
+        }
+
+        if (flagImage != null)
+        {
+            flagImage.sprite =
+                flagSprite;
+
+            flagImage.enabled =
+                flagSprite != null;
+
+            flagImage.preserveAspect =
+                true;
+        }
+
+        if (countryNameText != null)
+        {
+            countryNameText.text =
+                localizedCountryName;
+        }
+    }
+
+
+    /// <summary>
+    /// 国名をLocalization Tableから取得する。
+    /// </summary>
+    private string GetLocalizedCountryName(
+        string countryId)
+    {
         LocalizedString localizedCountryName =
             new LocalizedString(
                 "CountryNames",
-                countryName
+                countryId
             );
 
-        countryNameText.text =
-            localizedCountryName.GetLocalizedString();
+        return localizedCountryName
+            .GetLocalizedString();
+    }
 
-        LocalizedString localizedResult =
-            new LocalizedString(
-                "UITexts",
-                result
+
+    /// <summary>
+    /// 正解時の紙吹雪を最初から再生する。
+    /// </summary>
+    private void PlayCorrectConfetti()
+    {
+        if (correctConfettiRoot == null)
+        {
+            return;
+        }
+
+        correctConfettiRoot.SetActive(true);
+
+        if (correctConfettiParticles == null)
+        {
+            correctConfettiParticles =
+                correctConfettiRoot.GetComponentsInChildren<ParticleSystem>(
+                    true
+                );
+        }
+
+        foreach (ParticleSystem particle
+                 in correctConfettiParticles)
+        {
+            if (particle == null)
+            {
+                continue;
+            }
+
+            particle.Stop(
+                true,
+                ParticleSystemStopBehavior.StopEmittingAndClear
             );
 
-        resultText.text =
-            localizedResult.GetLocalizedString();
+            particle.Play(
+                true
+            );
+        }
+    }
 
-        flagImage.sprite =
-            flagSprite;
+    /// <summary>
+    /// 正解演出の開始状態を作る。
+    /// </summary>
+    private void PrepareCorrectAnimation()
+    {
+        if (correctRingBackRect != null)
+        {
+            correctRingBackRect.localScale =
+                Vector3.one * 0.55f;
+        }
 
-        flagImage.enabled =
-            flagSprite != null;
+        if (correctRingRect != null)
+        {
+            correctRingRect.localScale =
+                Vector3.one * 0.55f;
+
+            correctRingRect.localEulerAngles =
+                new Vector3(
+                    0f,
+                    0f,
+                    -160f
+                );
+        }
+
+        if (correctRotateLightRect != null)
+        {
+            correctRotateLightRect.localEulerAngles =
+                Vector3.zero;
+        }
+
+        if (correctCountryImage != null)
+        {
+            RectTransform countryRect =
+                correctCountryImage.rectTransform;
+
+            countryRect.anchoredPosition =
+                correctCountryPosition;
+
+            countryRect.localScale =
+                Vector3.one *
+                correctCountryStartScale;
+
+            countryRect.localEulerAngles =
+                new Vector3(
+                    0f,
+                    0f,
+                    -12f
+                );
+        }
+
+        if (correctTitleRect != null)
+        {
+            correctTitleRect.anchoredPosition =
+                correctTitlePosition +
+                new Vector2(
+                    0f,
+                    correctTitleStartOffsetY
+                );
+
+            correctTitleRect.localScale =
+                Vector3.one * 0.75f;
+        }
+
+        if (correctCountryInfoPanel != null)
+        {
+            correctCountryInfoPanel.anchoredPosition =
+                correctInfoPosition +
+                new Vector2(
+                    0f,
+                    correctInfoStartOffsetY
+                );
+
+            correctCountryInfoPanel.localScale =
+                Vector3.one * 0.9f;
+        }
+    }
+
+
+    /// <summary>
+    /// 不正解演出の開始状態を作る。
+    /// </summary>
+    private void PrepareWrongAnimation()
+    {
+        if (wrongCountryImage != null)
+        {
+            RectTransform countryRect =
+                wrongCountryImage.rectTransform;
+
+            countryRect.anchoredPosition =
+                wrongCountryPosition;
+
+            countryRect.localScale =
+                Vector3.one * 0.8f;
+
+            countryRect.localEulerAngles =
+                Vector3.zero;
+        }
+
+        if (wrongTitleRect != null)
+        {
+            wrongTitleRect.anchoredPosition =
+                wrongTitlePosition +
+                new Vector2(
+                    0f,
+                    wrongTitleStartOffsetY
+                );
+
+            wrongTitleRect.localScale =
+                Vector3.one;
+        }
+
+        if (wrongCountryInfoPanel != null)
+        {
+            wrongCountryInfoPanel.anchoredPosition =
+                wrongInfoPosition +
+                new Vector2(
+                    0f,
+                    wrongInfoStartOffsetY
+                );
+
+            wrongCountryInfoPanel.localScale =
+                Vector3.one;
+        }
     }
 
 
@@ -219,16 +746,46 @@ public class AnswerFeedbackUI : MonoBehaviour
             currentSequence = null;
         }
 
-        canvasGroup.alpha = 0f;
+        if (canvasGroup != null)
+        {
+            canvasGroup.alpha = 0f;
+            canvasGroup.blocksRaycasts = false;
+            canvasGroup.interactable = false;
+        }
 
-        feedbackRect.localScale =
-            Vector3.one;
+        if (correctEffectRoot != null)
+        {
+            correctEffectRoot.SetActive(false);
+        }
 
-        feedbackRect.anchoredPosition =
-            Vector2.zero;
+        if (wrongEffectRoot != null)
+        {
+            wrongEffectRoot.SetActive(false);
+        }
 
-        // gameObject.SetActive(false);
+        if (correctConfettiParticles != null)
+        {
+            foreach (ParticleSystem particle
+                     in correctConfettiParticles)
+            {
+                if (particle == null)
+                {
+                    continue;
+                }
+
+                particle.Stop(
+                    true,
+                    ParticleSystemStopBehavior.StopEmittingAndClear
+                );
+            }
+        }
+
+        if (correctConfettiRoot != null)
+        {
+            correctConfettiRoot.SetActive(false);
+        }
     }
+
 
     // ==================================================
     // 開発テスト用
@@ -237,12 +794,22 @@ public class AnswerFeedbackUI : MonoBehaviour
     [ContextMenu("Test / Correct JPN")]
     private void TestCorrect()
     {
-        Sprite flag =
-            countryFlagDatabase.GetFlag("JPN");
+        Sprite flag = null;
+
+        if (countryFlagDatabase != null)
+        {
+            flag =
+                countryFlagDatabase.GetFlag(
+                    "JPN"
+                );
+        }
 
         ShowCorrect(
-            "Japan",
-            flag
+            "JPN",
+            flag,
+            correctCountryImage != null
+                ? correctCountryImage.sprite
+                : null
         );
     }
 
@@ -250,12 +817,22 @@ public class AnswerFeedbackUI : MonoBehaviour
     [ContextMenu("Test / Wrong JPN")]
     private void TestWrong()
     {
-        Sprite flag =
-            countryFlagDatabase.GetFlag("JPN");
+        Sprite flag = null;
+
+        if (countryFlagDatabase != null)
+        {
+            flag =
+                countryFlagDatabase.GetFlag(
+                    "JPN"
+                );
+        }
 
         ShowWrong(
-            "Japan",
-            flag
+            "JPN",
+            flag,
+            wrongCountryImage != null
+                ? wrongCountryImage.sprite
+                : null
         );
     }
 }

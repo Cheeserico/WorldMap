@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 03d931cfe13516a4ebcd06506893e314
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 348954
+  packageName: Easy Effect/UI Viewer
+  packageVersion: 1.1.4
+  assetPath: Assets/EasyProjectViewer/EffectTagDatabase.asset
+  uploadId: 963370

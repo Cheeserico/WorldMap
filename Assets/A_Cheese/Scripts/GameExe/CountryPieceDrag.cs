@@ -35,11 +35,32 @@ public class CountryPieceDrag : MonoBehaviour,
     [SerializeField]
     private DraggingPieceGuide draggingPieceGuide;
 
+    [Header("不正解位置エフェクト")]
+    [SerializeField]
+    private WrongDropEffectUI wrongDropEffectUI;
+
     /// <summary>
     /// CountrySlot側から国IDを確認するために使用する。
     /// </summary>
 
     public string CountryId => countryId;
+
+    /// <summary>
+    /// 正解・不正解UIに表示する国画像。
+    /// 透明余白を除いたカード用画像を優先する。
+    /// </summary>
+    public Sprite FeedbackCountrySprite
+    {
+        get
+        {
+            if (cardCountrySprite != null)
+            {
+                return cardCountrySprite;
+            }
+
+            return originalCountrySprite;
+        }
+    }
 
     public bool IsPlaced => isPlaced;
     public bool IsSnapping => isSnapping;
@@ -122,6 +143,32 @@ public class CountryPieceDrag : MonoBehaviour,
     [Header("地図へ配置した後の設定")]
     [SerializeField]
     private Vector3 placedLocalScale = Vector3.one;
+
+
+    [Header("配置後の草地表示")]
+    [Tooltip("正解後の国ピースに使用する草地Material")]
+    [SerializeField]
+    private Material placedCountryGrassMaterial; 
+    
+    [Header("配置後の色変化")]
+    [Tooltip("正解後の国ピースの色")]
+    [SerializeField]
+    private Color placedCountryColor =
+        // 緑
+         new Color32(65, 155, 90, 255);
+    // エメラルド
+    //  new Color32(45, 135, 115, 255);
+    // オレンジ
+    // new Color32(235, 145, 55, 255);
+    //コーラル
+    //new Color32(225, 105, 85, 255);
+    //
+    //
+
+    [Tooltip("黒から緑へ変わる時間")]
+    [SerializeField]
+    private float placedColorDuration = 0.45f;
+
 
     [SerializeField]
     private float placedRotationZ = 0f;
@@ -233,6 +280,13 @@ public class CountryPieceDrag : MonoBehaviour,
             draggingPieceGuide =
                 FindFirstObjectByType<DraggingPieceGuide>();
         }
+
+        if (wrongDropEffectUI == null)
+        {
+            wrongDropEffectUI =
+                FindFirstObjectByType<WrongDropEffectUI>();
+        }
+
     }
 
     private void Start()
@@ -586,37 +640,22 @@ public class CountryPieceDrag : MonoBehaviour,
         // 不正解SE
         if (SoundManager.Instance != null)
         {
-            SoundManager.Instance.PlaySE(SEType.Wrong);
-        }
-
-        // 不正解表示
-        if (answerFeedbackUI != null &&
-            countryFlagDatabase != null)
-        {
-            Debug.Log("★ AnswerFeedbackUIを呼びます");
-
-            Sprite flag =
-                countryFlagDatabase.GetFlag(
-                    countryId
-                );
-
-            answerFeedbackUI.ShowWrong(
-                countryId,
-                flag
-            );
-        }
-        else
-        {
-            Debug.LogWarning(
-                $"★ Feedback参照なし " +
-                $"AnswerFeedbackUI={answerFeedbackUI} " +
-                $"CountryFlagDatabase={countryFlagDatabase}"
+            SoundManager.Instance.PlaySE(
+                SEType.Wrong
             );
         }
 
-        // 元へ戻す
+        // 指を離した位置でエフェクトを1回再生
+        if (wrongDropEffectUI != null)
+        {
+            wrongDropEffectUI.Play(
+                eventData.position,
+                eventData.pressEventCamera
+            );
+        }
+
+        // 横揺れ後、元へ戻す
         ReturnToOriginalPositionWithTween();
-
     }
 
     /// <summary>
@@ -1008,8 +1047,43 @@ public class CountryPieceDrag : MonoBehaviour,
                     Vector2.zero;
             }
 
+            // 黒いピースから草地Materialを表示する
+            if (countryImage != null)
+            {
+                countryImage.DOKill();
+
+                if (placedCountryGrassMaterial != null)
+                {
+                    // 草地Materialへ切り替える。
+                    // ImageのColorが黒なので、最初は黒く見える。
+                    countryImage.material =
+                        placedCountryGrassMaterial;
+
+                    // 白へ変えることで、
+                    // Material本来の土と草の色が現れる。
+                    countryImage
+                        .DOColor(
+                            Color.white,
+                            placedColorDuration
+                        )
+                        .SetEase(Ease.OutQuad);
+                }
+                else
+                {
+                    // Material未設定時は、
+                    // 今までどおりオレンジへ変える
+                    countryImage
+                        .DOColor(
+                            placedCountryColor,
+                            placedColorDuration
+                        )
+                        .SetEase(Ease.OutQuad);
+                }
+            }
+
             // 正解したのでカード一覧の空きを詰める
             RemoveDragPlaceholder();
+
 
             isPlaced = true;
             isSnapping = false;
@@ -1134,6 +1208,27 @@ public class CountryPieceDrag : MonoBehaviour,
                 originalCountrySprite;
         }
 
+        // 途中保存からの復元では、
+        // 演出なしで草地Materialを表示する
+        if (countryImage != null)
+        {
+            countryImage.DOKill();
+
+            if (placedCountryGrassMaterial != null)
+            {
+                countryImage.material =
+                    placedCountryGrassMaterial;
+
+                countryImage.color =
+                    Color.white;
+            }
+            else
+            {
+                countryImage.color =
+                    placedCountryColor;
+            }
+        }
+
         if (countryImageRect != null)
         {
             countryImageRect.sizeDelta =
@@ -1151,6 +1246,7 @@ public class CountryPieceDrag : MonoBehaviour,
             canvasGroup.interactable = false;
             canvasGroup.ignoreParentGroups = false;
         }
+
 
         Debug.Log(
             $"{gameObject.name}を途中データから復元しました。"

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 123a73b6ea04ef940ab2527b33d4e081
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266945
+  packageName: UIFX Legacy 1.x Bundle
+  packageVersion: 1.10.2
+  assetPath: Assets/ChocDino/UIFX-UITK/Editor/ChocDino.UIFX.UITK.Editor.asmdef
+  uploadId: 913992

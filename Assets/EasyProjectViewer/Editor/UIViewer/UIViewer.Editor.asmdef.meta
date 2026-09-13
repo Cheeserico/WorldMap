@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5cf10dbfc02804e40b072648eab2f55e
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 348954
+  packageName: Easy Effect/UI Viewer
+  packageVersion: 1.1.4
+  assetPath: Assets/EasyProjectViewer/Editor/UIViewer/UIViewer.Editor.asmdef
+  uploadId: 963370

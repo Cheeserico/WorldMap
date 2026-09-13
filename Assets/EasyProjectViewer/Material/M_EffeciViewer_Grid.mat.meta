@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5c98f5c1abe3b4f4e9a1343c66e9a5ff
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 348954
+  packageName: Easy Effect/UI Viewer
+  packageVersion: 1.1.4
+  assetPath: Assets/EasyProjectViewer/Material/M_EffeciViewer_Grid.mat
+  uploadId: 963370

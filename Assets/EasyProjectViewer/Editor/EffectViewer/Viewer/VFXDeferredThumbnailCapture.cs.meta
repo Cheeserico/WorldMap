@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 6a302e9fd9432bc428c6751c51d8f413
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 348954
+  packageName: Easy Effect/UI Viewer
+  packageVersion: 1.1.4
+  assetPath: Assets/EasyProjectViewer/Editor/EffectViewer/Viewer/VFXDeferredThumbnailCapture.cs
+  uploadId: 963370

@@ -34,6 +34,10 @@ public class CountrySlot : MonoBehaviour, IDropHandler
     [SerializeField]
     private CountryFlagDatabase countryFlagDatabase;
 
+    [Header("正解位置エフェクト")]
+    [SerializeField]
+    private CorrectDropEffectUI correctDropEffectUI;
+
 
     // このスロットがすでに正解済みか
     private bool isOccupied;
@@ -51,6 +55,13 @@ public class CountrySlot : MonoBehaviour, IDropHandler
             countryFlagDatabase =
                 FindFirstObjectByType<CountryFlagDatabase>();
         }
+
+        if (correctDropEffectUI == null)
+        {
+            correctDropEffectUI =
+                FindFirstObjectByType<CorrectDropEffectUI>();
+        }
+
     }
 
     public void OnDrop(PointerEventData eventData)
@@ -116,9 +127,9 @@ public class CountrySlot : MonoBehaviour, IDropHandler
 
                 answerFeedbackUI.ShowCorrect(
                     countryPiece.CountryId,
-                    flag
+                    flag,
+                    countryPiece.FeedbackCountrySprite
                 );
-
             }
             else
             {
@@ -136,6 +147,15 @@ public class CountrySlot : MonoBehaviour, IDropHandler
                 slotRect,
                 placedCountryRoot
             );
+
+            // 正解したスロット位置でエフェクトを再生
+            if (correctDropEffectUI != null)
+            {
+                correctDropEffectUI.PlayAtSlot(
+                    slotRect,
+                    eventData.pressEventCamera
+                );
+            }
 
             // このスロットを使用済みにする
             isOccupied = true;

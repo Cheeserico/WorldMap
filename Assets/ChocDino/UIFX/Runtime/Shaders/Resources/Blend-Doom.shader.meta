@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 275c04895746bca4eab895b3cc21ea79
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266945
+  packageName: UIFX Legacy 1.x Bundle
+  packageVersion: 1.10.2
+  assetPath: Assets/ChocDino/UIFX/Runtime/Shaders/Resources/Blend-Doom.shader
+  uploadId: 913992

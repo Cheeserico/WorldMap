@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b62ef0034b28fe14e8c7a50fa0be70bf
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266945
+  packageName: UIFX Legacy 1.x Bundle
+  packageVersion: 1.10.2
+  assetPath: Assets/ChocDino/UIFX/Runtime/Shaders/Resources/Common/BlendModes.cginc
+  uploadId: 913992

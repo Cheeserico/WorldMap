@@ -1,0 +1,19 @@
+{
+    "name": "UIViewer.Editor",
+    "rootNamespace": "UIViewer.Editor",
+    "references": [
+        "GUID:5c6ac3d086b79a444a7b755a317ddc9b",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

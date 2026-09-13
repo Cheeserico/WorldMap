@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c31311503a25b564fac0248009d51c5a
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 348954
+  packageName: Easy Effect/UI Viewer
+  packageVersion: 1.1.4
+  assetPath: Assets/EasyProjectViewer/Shader/GenericGridShader.shader
+  uploadId: 963370

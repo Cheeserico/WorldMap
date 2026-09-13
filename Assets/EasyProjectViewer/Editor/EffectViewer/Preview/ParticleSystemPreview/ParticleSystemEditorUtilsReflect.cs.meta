@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: caca4b512387c54448ade92a93289449
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 348954
+  packageName: Easy Effect/UI Viewer
+  packageVersion: 1.1.4
+  assetPath: Assets/EasyProjectViewer/Editor/EffectViewer/Preview/ParticleSystemPreview/ParticleSystemEditorUtilsReflect.cs
+  uploadId: 963370

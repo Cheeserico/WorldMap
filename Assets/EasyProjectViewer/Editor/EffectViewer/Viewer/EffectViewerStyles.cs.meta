@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b7962bb7d47f2564f836828348c4f874
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 348954
+  packageName: Easy Effect/UI Viewer
+  packageVersion: 1.1.4
+  assetPath: Assets/EasyProjectViewer/Editor/EffectViewer/Viewer/EffectViewerStyles.cs
+  uploadId: 963370

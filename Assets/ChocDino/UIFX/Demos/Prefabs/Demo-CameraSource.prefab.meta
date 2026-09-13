@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 078cffb362f893e46a337a73df7d1e3a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266945
+  packageName: UIFX Legacy 1.x Bundle
+  packageVersion: 1.10.2
+  assetPath: Assets/ChocDino/UIFX/Demos/Prefabs/Demo-CameraSource.prefab
+  uploadId: 913992
