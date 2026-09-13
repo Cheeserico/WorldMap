@@ -1,0 +1,314 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d603ca89b8f73eb4482ca9ee6c2c8403, type: 3}
+  m_Name: CountryCharacterDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::CountryCharacterDatabase
+  defaultCharacterSprite: {fileID: 21300000, guid: 7189a8cd878cb5d48a71613d2b216035, type: 3}
+  defaultEffectIcons:
+  - {fileID: 21300000, guid: 51352b5360d89a94295259d3557ca97d, type: 3}
+  - {fileID: 21300000, guid: 27ec606b405384033b95bc3373c180da, type: 3}
+  - {fileID: 21300000, guid: 1099c643b0b224d70939088534f67340, type: 3}
+  characterGroups:
+  - groupName: Japan
+    characterSprite: {fileID: 21300000, guid: 147e17616dc950f48af774a769e53103, type: 3}
+    effectIcons:
+    - {fileID: 21300000, guid: cedbfa373b1fb4e72a921c46a3979bb8, type: 3}
+    - {fileID: 21300000, guid: 4b0487a818f864c99bc59454b1c2d635, type: 3}
+    - {fileID: 21300000, guid: 4b0487a818f864c99bc59454b1c2d635, type: 3}
+    countryIds:
+    - JPN
+  - groupName: Arab_WestAsia
+    characterSprite: {fileID: 21300000, guid: c0b4b1dbd36add047ba3013598a9a693, type: 3}
+    effectIcons:
+    - {fileID: 21300000, guid: 4d9b5cb2296544288b276b32b8d3347b, type: 3}
+    - {fileID: 21300000, guid: 8698cb18ec86a4c1f85b69af5c05d2eb, type: 3}
+    - {fileID: 21300000, guid: 4d9b5cb2296544288b276b32b8d3347b, type: 3}
+    countryIds:
+    - ARE
+    - ARM
+    - AZE
+    - BHR
+    - CYP
+    - DZA
+    - EGY
+    - GEO
+    - IRN
+    - IRQ
+    - ISR
+    - JOR
+    - KWT
+    - LBN
+    - LBY
+    - MAR
+    - MRT
+    - OMN
+    - PSE
+    - QAT
+    - SAU
+    - SDN
+    - SYR
+    - TUN
+    - TUR
+    - YEM
+  - groupName: SouthAsia
+    characterSprite: {fileID: 21300000, guid: 5aade643bb311e84ca61d25fa35d280b, type: 3}
+    effectIcons:
+    - {fileID: 21300000, guid: 70fc1384b0b1c40988e3abaf5011013d, type: 3}
+    - {fileID: 21300000, guid: 70fc1384b0b1c40988e3abaf5011013d, type: 3}
+    - {fileID: 21300000, guid: 70fc1384b0b1c40988e3abaf5011013d, type: 3}
+    countryIds:
+    - AFG
+    - BGD
+    - BTN
+    - IND
+    - MDV
+    - NPL
+    - PAK
+    - LKA
+  - groupName: SoutheastAsia
+    characterSprite: {fileID: 21300000, guid: 674de6688c0dd104a9953ab2069161ec, type: 3}
+    effectIcons:
+    - {fileID: 21300000, guid: 053c2fc821996461e9aa35e6df3bfeab, type: 3}
+    - {fileID: 21300000, guid: 053c2fc821996461e9aa35e6df3bfeab, type: 3}
+    - {fileID: 21300000, guid: 053c2fc821996461e9aa35e6df3bfeab, type: 3}
+    countryIds:
+    - BRN
+    - KHM
+    - IDN
+    - LAO
+    - MYS
+    - MMR
+    - PHL
+    - SGP
+    - THA
+    - TLS
+    - VNM
+  - groupName: Africa
+    characterSprite: {fileID: 21300000, guid: d77ee8a8f5c38d741a6995c971586c05, type: 3}
+    effectIcons:
+    - {fileID: 21300000, guid: bfa1062c094d64714b2e6bbcf0afc942, type: 3}
+    - {fileID: 21300000, guid: bfa1062c094d64714b2e6bbcf0afc942, type: 3}
+    - {fileID: 21300000, guid: bfa1062c094d64714b2e6bbcf0afc942, type: 3}
+    countryIds:
+    - AGO
+    - BEN
+    - BWA
+    - BFA
+    - BDI
+    - CPV
+    - CMR
+    - CAF
+    - TCD
+    - COM
+    - COG
+    - COD
+    - CIV
+    - DJI
+    - GNQ
+    - ERI
+    - SWZ
+    - ETH
+    - GAB
+    - GMB
+    - GHA
+    - GIN
+    - GNB
+    - KEN
+    - LSO
+    - LBR
+    - MDG
+    - MWI
+    - MLI
+    - MUS
+    - MOZ
+    - NAM
+    - NER
+    - NGA
+    - RWA
+    - STP
+    - SEN
+    - SYC
+    - SLE
+    - SOM
+    - ZAF
+    - SSD
+    - TZA
+    - TGO
+    - UGA
+    - ZMB
+    - ZWE
+  - groupName: EasternEurope
+    characterSprite: {fileID: 21300000, guid: 860f28adb0db67e48987ec9590025130, type: 3}
+    effectIcons:
+    - {fileID: 21300000, guid: 3b83ba7e7539f4686b25b68208e433e7, type: 3}
+    - {fileID: 21300000, guid: 3b83ba7e7539f4686b25b68208e433e7, type: 3}
+    - {fileID: 21300000, guid: 3b83ba7e7539f4686b25b68208e433e7, type: 3}
+    countryIds:
+    - ALB
+    - BLR
+    - BIH
+    - BGR
+    - HRV
+    - CZE
+    - EST
+    - HUN
+    - LVA
+    - LTU
+    - MDA
+    - MNE
+    - MKD
+    - POL
+    - ROU
+    - RUS
+    - SRB
+    - SVK
+    - SVN
+    - UKR
+  - groupName: Western_CentralEurope
+    characterSprite: {fileID: 21300000, guid: 97425d0ba7c3d1e4c8ffdcc038ed614b, type: 3}
+    effectIcons:
+    - {fileID: 21300000, guid: 00cd9db087fdd4cf09844edff3aaa385, type: 3}
+    - {fileID: 21300000, guid: 00cd9db087fdd4cf09844edff3aaa385, type: 3}
+    - {fileID: 21300000, guid: 00cd9db087fdd4cf09844edff3aaa385, type: 3}
+    countryIds:
+    - AUT
+    - BEL
+    - FRA
+    - DEU
+    - IRL
+    - LIE
+    - LUX
+    - NLD
+    - CHE
+    - GBR
+  - groupName: SouthernEurope
+    characterSprite: {fileID: 21300000, guid: 3dfe1457eb948f24c843fc7d9541acad, type: 3}
+    effectIcons:
+    - {fileID: 21300000, guid: eae443d7d6da34cc4a79f048737ee820, type: 3}
+    - {fileID: 21300000, guid: eae443d7d6da34cc4a79f048737ee820, type: 3}
+    - {fileID: 21300000, guid: eae443d7d6da34cc4a79f048737ee820, type: 3}
+    countryIds:
+    - AND
+    - GRC
+    - ITA
+    - MLT
+    - MCO
+    - PRT
+    - SMR
+    - ESP
+    - VAT
+  - groupName: Pacific_Oceania
+    characterSprite: {fileID: 21300000, guid: 21bdff5740e085e4a887d098afe485ec, type: 3}
+    effectIcons:
+    - {fileID: 21300000, guid: 053c2fc821996461e9aa35e6df3bfeab, type: 3}
+    - {fileID: 21300000, guid: c0fa323b668c44562bdf02c1cd1f092f, type: 3}
+    - {fileID: 21300000, guid: 053c2fc821996461e9aa35e6df3bfeab, type: 3}
+    countryIds:
+    - AUS
+    - FJI
+    - KIR
+    - MHL
+    - FSM
+    - NRU
+    - NZL
+    - PLW
+    - PNG
+    - WSM
+    - SLB
+    - TON
+    - TUV
+    - VUT
+  - groupName: CentralAsia
+    characterSprite: {fileID: 21300000, guid: a94da47fd10fe0a4d8c0895339d49f98, type: 3}
+    effectIcons:
+    - {fileID: 21300000, guid: 752531fdfa04e4246964c150e05c7ae9, type: 3}
+    - {fileID: 21300000, guid: 752531fdfa04e4246964c150e05c7ae9, type: 3}
+    - {fileID: 21300000, guid: 752531fdfa04e4246964c150e05c7ae9, type: 3}
+    countryIds:
+    - KAZ
+    - KGZ
+    - TJK
+    - TKM
+    - UZB
+  - groupName: LatinAmerica
+    characterSprite: {fileID: 21300000, guid: 2c3262bdfcce156489d00ab095c054c9, type: 3}
+    effectIcons:
+    - {fileID: 21300000, guid: 22cec4f47ef8d4ed6a3995fbc614c2ae, type: 3}
+    - {fileID: 21300000, guid: 22cec4f47ef8d4ed6a3995fbc614c2ae, type: 3}
+    - {fileID: 21300000, guid: 22cec4f47ef8d4ed6a3995fbc614c2ae, type: 3}
+    countryIds:
+    - ATG
+    - ARG
+    - BHS
+    - BRB
+    - BLZ
+    - BOL
+    - BRA
+    - CHL
+    - COL
+    - CRI
+    - CUB
+    - DMA
+    - DOM
+    - ECU
+    - SLV
+    - GRD
+    - GTM
+    - GUY
+    - HTI
+    - HND
+    - JAM
+    - MEX
+    - NIC
+    - PAN
+    - PRY
+    - PER
+    - KNA
+    - LCA
+    - VCT
+    - SUR
+    - TTO
+    - URY
+    - VEN
+  - groupName: NorthernEurope
+    characterSprite: {fileID: 21300000, guid: 4a2b61135168b3f4597601e76a7ac254, type: 3}
+    effectIcons:
+    - {fileID: 21300000, guid: 52bff60fb1e794143aa91e95137bd3f1, type: 3}
+    - {fileID: 21300000, guid: 52bff60fb1e794143aa91e95137bd3f1, type: 3}
+    - {fileID: 21300000, guid: 52bff60fb1e794143aa91e95137bd3f1, type: 3}
+    countryIds:
+    - DNK
+    - FIN
+    - ISL
+    - NOR
+    - SWE
+  - groupName: China_EastAsia
+    characterSprite: {fileID: 21300000, guid: 082c44e0f6106d14e85da26778e11a7e, type: 3}
+    effectIcons:
+    - {fileID: 21300000, guid: d72c007af42444e049757824fd228f30, type: 3}
+    - {fileID: 21300000, guid: d72c007af42444e049757824fd228f30, type: 3}
+    - {fileID: 21300000, guid: d72c007af42444e049757824fd228f30, type: 3}
+    countryIds:
+    - CHN
+    - KOR
+    - PRK
+    - MNG
+  - groupName: NorthAmerica
+    characterSprite: {fileID: 21300000, guid: 5a0ebe32d7888dd4b9ea1b0b70d41a58, type: 3}
+    effectIcons:
+    - {fileID: 21300000, guid: dd2702b49ec6d4f9aac047b57730d78d, type: 3}
+    - {fileID: 21300000, guid: ba8f36c5b1cbd41649839065df2c131c, type: 3}
+    - {fileID: 21300000, guid: d760ade547a424dcdb929664963b2ef4, type: 3}
+    countryIds:
+    - CAN
+    - USA
+  countryOverrides: []

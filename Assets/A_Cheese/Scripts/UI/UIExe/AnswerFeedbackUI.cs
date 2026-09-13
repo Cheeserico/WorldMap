@@ -37,6 +37,14 @@ public class AnswerFeedbackUI : MonoBehaviour
     private Image correctCountryImage;
 
     [SerializeField]
+    private Image correctCharacterImage;
+
+    [Tooltip("キャラクターから飛び出す3個の地域アイコン")]
+    [SerializeField]
+    private Image[] correctCharacterIcons =
+    new Image[3];
+
+    [SerializeField]
     private RectTransform correctCountryInfoPanel;
 
     [SerializeField]
@@ -87,6 +95,26 @@ public class AnswerFeedbackUI : MonoBehaviour
     [SerializeField]
     private float correctInfoStartOffsetY = -45f;
 
+    [Header("地域アイコン演出")]
+
+    [Tooltip("アイコンが飛び出す距離")]
+    [SerializeField]
+    private Vector2[] characterIconMoveOffsets =
+{
+    new Vector2(-100f, 100f),
+    new Vector2(0f, 145f),
+    new Vector2(100f, 100f)
+};
+
+    [SerializeField]
+    private float characterIconStartScale = 0.2f;
+
+    [SerializeField]
+    private float characterIconMoveDuration = 0.45f;
+
+    [SerializeField]
+    private float characterIconInterval = 0.06f;
+
 
     [Header("不正解演出")]
     [SerializeField]
@@ -112,6 +140,10 @@ public class AnswerFeedbackUI : MonoBehaviour
     private CountryFlagDatabase countryFlagDatabase;
 
 
+    [Header("キャラクターデータ")]
+    [SerializeField]
+    private CountryCharacterDatabase countryCharacterDatabase;
+
     private Sequence currentSequence;
 
     private Vector2 correctTitlePosition;
@@ -122,6 +154,9 @@ public class AnswerFeedbackUI : MonoBehaviour
     private Vector2 wrongInfoPosition;
     private Vector2 wrongCountryPosition;
 
+    private Vector2 correctCharacterPosition;
+
+    private Vector2[] correctCharacterIconPositions;
 
     private void Awake()
     {
@@ -177,6 +212,34 @@ public class AnswerFeedbackUI : MonoBehaviour
         {
             wrongCountryPosition =
                 wrongCountryImage.rectTransform.anchoredPosition;
+        }
+
+        if (correctCharacterImage != null)
+        {
+            correctCharacterPosition =
+                correctCharacterImage.rectTransform.anchoredPosition;
+        }
+
+        if (correctCharacterIcons != null)
+        {
+            correctCharacterIconPositions =
+                new Vector2[correctCharacterIcons.Length];
+
+            for (int i = 0;
+                 i < correctCharacterIcons.Length;
+                 i++)
+            {
+                Image icon =
+                    correctCharacterIcons[i];
+
+                if (icon == null)
+                {
+                    continue;
+                }
+
+                correctCharacterIconPositions[i] =
+                    icon.rectTransform.anchoredPosition;
+            }
         }
     }
 
@@ -282,6 +345,139 @@ public class AnswerFeedbackUI : MonoBehaviour
                     )
                     .SetEase(Ease.OutCubic)
             );
+        }
+
+        // 地域キャラクター
+        if (correctCharacterImage != null &&
+            correctCharacterImage.enabled)
+        {
+            RectTransform characterRect =
+                correctCharacterImage.rectTransform;
+
+            currentSequence.Insert(
+                0.12f,
+                characterRect
+                    .DOAnchorPos(
+                        correctCharacterPosition,
+                        0.3f
+                    )
+                    .SetEase(Ease.OutBack)
+            );
+
+            currentSequence.Insert(
+                0.12f,
+                characterRect
+                    .DOScale(
+                        1f,
+                        0.3f
+                    )
+                    .SetEase(Ease.OutBack)
+            );
+
+            currentSequence.Insert(
+                0.12f,
+                characterRect
+                    .DORotate(
+                        Vector3.zero,
+                        0.25f
+                    )
+                    .SetEase(Ease.OutCubic)
+            );
+        }
+
+        // キャラクターから地域アイコンが飛び出す
+        if (correctCharacterIcons != null)
+        {
+            for (int i = 0;
+                 i < correctCharacterIcons.Length;
+                 i++)
+            {
+                Image icon =
+                    correctCharacterIcons[i];
+
+                if (icon == null ||
+                    !icon.enabled)
+                {
+                    continue;
+                }
+
+                RectTransform iconRect =
+                    icon.rectTransform;
+
+                Vector2 moveOffset =
+                    Vector2.zero;
+
+                if (characterIconMoveOffsets != null &&
+                    i < characterIconMoveOffsets.Length)
+                {
+                    moveOffset =
+                        characterIconMoveOffsets[i];
+                }
+
+                Vector2 startPosition =
+                    iconRect.anchoredPosition;
+
+                float startTime =
+                    0.27f +
+                    i * characterIconInterval;
+
+                currentSequence.Insert(
+                    startTime,
+                    icon.DOFade(
+                        1f,
+                        0.08f
+                    )
+                );
+
+                currentSequence.Insert(
+                    startTime,
+                    iconRect
+                        .DOAnchorPos(
+                            startPosition + moveOffset,
+                            characterIconMoveDuration
+                        )
+                        .SetEase(Ease.OutBack)
+                );
+
+                currentSequence.Insert(
+                    startTime,
+                    iconRect
+                        .DOScale(
+                            1f,
+                            0.22f
+                        )
+                        .SetEase(Ease.OutBack)
+                );
+
+                float endRotation =
+                    i % 2 == 0
+                        ? 12f
+                        : -12f;
+
+                currentSequence.Insert(
+                    startTime,
+                    iconRect
+                        .DORotate(
+                            new Vector3(
+                                0f,
+                                0f,
+                                endRotation
+                            ),
+                            characterIconMoveDuration
+                        )
+                        .SetEase(Ease.OutCubic)
+                );
+
+                currentSequence.Insert(
+                    startTime +
+                    characterIconMoveDuration -
+                    0.12f,
+                    icon.DOFade(
+                        0f,
+                        0.18f
+                    )
+                );
+            }
         }
 
         // NICE!
@@ -495,6 +691,13 @@ public class AnswerFeedbackUI : MonoBehaviour
                 flagSprite,
                 localizedCountryName
             );
+
+            ApplyCorrectCharacter(
+                countryId
+            );
+
+            ApplyCorrectCharacterIcons(
+                countryId);
         }
         else
         {
@@ -552,6 +755,103 @@ public class AnswerFeedbackUI : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 国IDに対応する正解キャラクターを設定する。
+    /// 登録されていない国はDefault画像になる。
+    /// </summary>
+    private void ApplyCorrectCharacter(
+        string countryId)
+    {
+        if (correctCharacterImage == null)
+        {
+            return;
+        }
+
+        Sprite characterSprite = null;
+
+        if (countryCharacterDatabase != null)
+        {
+            characterSprite =
+                countryCharacterDatabase.GetCharacterSprite(
+                    countryId
+                );
+        }
+
+        correctCharacterImage.sprite =
+            characterSprite;
+
+        correctCharacterImage.enabled =
+            characterSprite != null;
+
+        correctCharacterImage.preserveAspect =
+            true;
+
+        correctCharacterImage.raycastTarget =
+            false;
+    }
+
+    /// <summary>
+    /// 国IDに対応する地域アイコンを設定する。
+    /// </summary>
+    private void ApplyCorrectCharacterIcons(
+        string countryId)
+    {
+        if (correctCharacterIcons == null)
+        {
+            return;
+        }
+
+        Sprite[] iconSprites = null;
+
+        if (countryCharacterDatabase != null)
+        {
+            iconSprites =
+                countryCharacterDatabase.GetEffectIcons(
+                    countryId
+                );
+        }
+
+        for (int i = 0;
+             i < correctCharacterIcons.Length;
+             i++)
+        {
+            Image icon =
+                correctCharacterIcons[i];
+
+            if (icon == null)
+            {
+                continue;
+            }
+
+            Sprite iconSprite = null;
+
+            if (iconSprites != null &&
+                i < iconSprites.Length)
+            {
+                iconSprite =
+                    iconSprites[i];
+            }
+
+            icon.sprite =
+                iconSprite;
+
+            icon.enabled =
+                iconSprite != null;
+
+            icon.preserveAspect =
+                true;
+
+            icon.raycastTarget =
+                false;
+
+            Color iconColor =
+                icon.color;
+
+            iconColor.a = 0f;
+            icon.color =
+                iconColor;
+        }
+    }
 
     /// <summary>
     /// 国名をLocalization Tableから取得する。
@@ -684,6 +984,76 @@ public class AnswerFeedbackUI : MonoBehaviour
             correctCountryInfoPanel.localScale =
                 Vector3.one * 0.9f;
         }
+
+        if (correctCharacterImage != null)
+        {
+            RectTransform characterRect =
+                correctCharacterImage.rectTransform;
+
+            characterRect.anchoredPosition =
+                correctCharacterPosition +
+                new Vector2(-25f, -15f);
+
+            characterRect.localScale =
+                Vector3.one * 0.55f;
+
+            characterRect.localEulerAngles =
+                new Vector3(
+                    0f,
+                    0f,
+                    -8f
+                );
+        }
+
+        if (correctCharacterIcons != null)
+        {
+            for (int i = 0;
+                 i < correctCharacterIcons.Length;
+                 i++)
+            {
+                Image icon =
+                    correctCharacterIcons[i];
+
+                if (icon == null)
+                {
+                    continue;
+                }
+
+                RectTransform iconRect =
+                    icon.rectTransform;
+
+                if (correctCharacterIconPositions != null &&
+                    i < correctCharacterIconPositions.Length)
+                {
+                    iconRect.anchoredPosition =
+                        correctCharacterIconPositions[i];
+                }
+
+                iconRect.localScale =
+                    Vector3.one *
+                    characterIconStartScale;
+
+                float startRotation =
+                    i % 2 == 0
+                        ? -18f
+                        : 18f;
+
+                iconRect.localEulerAngles =
+                    new Vector3(
+                        0f,
+                        0f,
+                        startRotation
+                    );
+
+                Color iconColor =
+                    icon.color;
+
+                iconColor.a = 0f;
+                icon.color =
+                    iconColor;
+            }
+        }
+
     }
 
 
