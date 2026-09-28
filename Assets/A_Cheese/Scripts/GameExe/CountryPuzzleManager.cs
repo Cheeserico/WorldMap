@@ -28,6 +28,13 @@ public class CountryPuzzleManager : MonoBehaviour
     [SerializeField]
     private float resultDelay = 1.4f;
 
+    [SerializeField]
+    private GameObject completeObject;
+
+    [SerializeField]
+    private float completeDisplayDuration = 1f;
+
+
     private Tween resultDelayTween;
     private bool isGameClearScheduled;
 
@@ -70,6 +77,11 @@ public class CountryPuzzleManager : MonoBehaviour
 
     private void Start()
     {
+        if (completeObject != null)
+        {
+            completeObject.SetActive(false);
+        }
+
         // StageSelectSceneで選ばれたStageDataを受け取る
         if (StageManager.Instance != null &&
             StageManager.Instance.SelectedStageData != null)
@@ -193,6 +205,32 @@ public class CountryPuzzleManager : MonoBehaviour
     private void OnGameClear()
     {
         Debug.Log("ゲームクリア！");
+
+        // Complete画像を表示
+        if (completeObject != null)
+        {
+            completeObject.SetActive(true);
+        }
+
+        // Completeを一定時間表示してからResultを開く
+        resultDelayTween?.Kill();
+
+        resultDelayTween =
+            DOVirtual.DelayedCall(
+                completeDisplayDuration,
+                ShowResultAfterComplete
+            );
+    }
+
+    /// <summary>
+    /// Complete演出終了後にResultを表示する。
+    /// </summary>
+    private void ShowResultAfterComplete()
+    {
+        if (completeObject != null)
+        {
+            completeObject.SetActive(false);
+        }
 
         if (ResultManager.Instance != null)
         {
