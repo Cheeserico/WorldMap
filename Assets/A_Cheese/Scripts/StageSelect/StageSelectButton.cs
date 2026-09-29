@@ -345,6 +345,12 @@ public class StageSelectButton : MonoBehaviour
             return;
         }
 
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.PlaySE(SEType.StageSelect);
+        }
+
+
         bool supportsContinueSave =
             ContinueSaveManager.SupportsContinueSave(
                 stageData

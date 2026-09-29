@@ -71908,9 +71908,9 @@ MonoBehaviour:
   stageData: {fileID: 11400000, guid: a0372966b7454b9448dd66419dd38002, type: 2}
   progressText: {fileID: 1031093489}
   timerManager: {fileID: 1523005098}
-  resultDelay: 1.4
+  resultDelay: 2
   completeObject: {fileID: 568249799}
-  completeDisplayDuration: 1.5
+  completeDisplayDuration: 2.1
 --- !u!114 &1523005098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72595,6 +72595,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1542898566}
   m_CullTransparentMesh: 1
+--- !u!114 &1542966579 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4163751876984786740, guid: e9b349dd343cae345ac0ed6535e955c6, type: 3}
+  m_PrefabInstance: {fileID: 2267765705982827688}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9839c2d141529145a431aef4d757ff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: RTLTMPro::RTLTMPro.RTLTextMeshPro
 --- !u!1 &1543485941
 GameObject:
   m_ObjectHideFlags: 0
@@ -98199,50 +98210,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2043505622765182355, guid: e9b349dd343cae345ac0ed6535e955c6, type: 3}
-      propertyPath: m_Color.a
-      value: 0.85490197
-      objectReference: {fileID: 0}
     - target: {fileID: 5027740243172312608, guid: e9b349dd343cae345ac0ed6535e955c6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1523005100}
-    - target: {fileID: 5035027257574123972, guid: e9b349dd343cae345ac0ed6535e955c6, type: 3}
-      propertyPath: m_Color.a
-      value: 0.85490197
-      objectReference: {fileID: 0}
-    - target: {fileID: 5481401316029284397, guid: e9b349dd343cae345ac0ed6535e955c6, type: 3}
-      propertyPath: iconMoveOffsets.Array.data[0].x
-      value: -30
-      objectReference: {fileID: 0}
-    - target: {fileID: 5481401316029284397, guid: e9b349dd343cae345ac0ed6535e955c6, type: 3}
-      propertyPath: iconMoveOffsets.Array.data[0].y
-      value: 55
-      objectReference: {fileID: 0}
-    - target: {fileID: 5481401316029284397, guid: e9b349dd343cae345ac0ed6535e955c6, type: 3}
-      propertyPath: iconMoveOffsets.Array.data[1].y
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 5481401316029284397, guid: e9b349dd343cae345ac0ed6535e955c6, type: 3}
-      propertyPath: iconMoveOffsets.Array.data[2].x
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 5481401316029284397, guid: e9b349dd343cae345ac0ed6535e955c6, type: 3}
-      propertyPath: iconMoveOffsets.Array.data[2].y
-      value: 55
-      objectReference: {fileID: 0}
     - target: {fileID: 6021896798918878208, guid: e9b349dd343cae345ac0ed6535e955c6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1523005100}
-    - target: {fileID: 6593475707369830666, guid: e9b349dd343cae345ac0ed6535e955c6, type: 3}
-      propertyPath: m_Color.a
-      value: 0.85490197
-      objectReference: {fileID: 0}
     - target: {fileID: 7951113924411157729, guid: e9b349dd343cae345ac0ed6535e955c6, type: 3}
       propertyPath: m_Name
       value: Result_Popup
       objectReference: {fileID: 0}
+    - target: {fileID: 7986611628300250019, guid: e9b349dd343cae345ac0ed6535e955c6, type: 3}
+      propertyPath: stageNameText
+      value: 
+      objectReference: {fileID: 1542966579}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -99211,6 +99194,7 @@ MonoBehaviour:
   - {fileID: 2751297301856113906}
   retryButtonCanvasGroup: {fileID: 8650154655568828659}
   titleButtonCanvasGroup: {fileID: 3075782786845942679}
+  stageNameText: {fileID: 0}
 --- !u!222 &4421808975294518847
 CanvasRenderer:
   m_ObjectHideFlags: 0

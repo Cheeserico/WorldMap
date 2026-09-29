@@ -220,6 +220,12 @@ public class CountryPuzzleManager : MonoBehaviour
             completeObject.SetActive(true);
         }
 
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.PlaySE(SEType.Complete);
+        }
+
+
         // Completeを一定時間表示してからResultを開く
         resultDelayTween?.Kill();
 

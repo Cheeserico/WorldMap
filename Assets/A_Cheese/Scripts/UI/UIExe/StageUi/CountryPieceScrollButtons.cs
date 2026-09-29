@@ -32,6 +32,12 @@ public class CountryPieceScrollButtons : MonoBehaviour
     public void ScrollLeft()
     {
         Scroll(-1f);
+
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.PlaySE(SEType.PageChange);
+        }
+
     }
 
     /// <summary>
@@ -40,6 +46,12 @@ public class CountryPieceScrollButtons : MonoBehaviour
     public void ScrollRight()
     {
         Scroll(1f);
+
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.PlaySE(SEType.PageChange);
+        }
+
     }
 
     private void Scroll(float direction)

@@ -1,7 +1,7 @@
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
-
+using UnityEngine.Localization;
 
 public class ResultPopup : PopupBase
 {
@@ -19,6 +19,16 @@ public class ResultPopup : PopupBase
     [Header("ボタン演出")]
     [SerializeField] private CanvasGroup retryButtonCanvasGroup;
     [SerializeField] private CanvasGroup titleButtonCanvasGroup;
+
+    [Header("ステージ名表示")]
+    [SerializeField]
+    private TextMeshProUGUI stageNameText;
+
+    private LocalizedString localizedStageName;
+    private string localizedStageId;
+    private bool isStageNameSubscribed;
+
+
     private bool currentIsNewRecord;
 
     // 演出側の入力制御のみ。広告・画面遷移はResultAdActionsが担当。
@@ -30,12 +40,24 @@ public class ResultPopup : PopupBase
     private void Start()
     {
         LoadStageData();
+        InitializeStageNameLocalization();
     }
 
-    public void SetResult(float clearTime, float bestTime, bool isNewRecord)
+    public void SetResult(
+        float clearTime,
+        float bestTime,
+        bool isNewRecord)
     {
-        if (inputLocked) return;
+        if (inputLocked)
+        {
+            return;
+        }
+
         LoadStageData();
+
+        // ステージ名をローカライズして表示
+        InitializeStageNameLocalization();
+
         currentIsNewRecord = isNewRecord;
         if (clearTimeText != null) clearTimeText.text = FormatTime(clearTime);
         if (bestTimeText != null) bestTimeText.text = FormatTime(bestTime);
@@ -226,5 +248,105 @@ public class ResultPopup : PopupBase
             return;
         }
         stageData = puzzleManager.CurrentStageData;
+    }
+
+    // ==================================================
+    // ステージ名ローカライズ
+    // ==================================================
+
+    private void InitializeStageNameLocalization()
+    {
+        if (stageData == null ||
+            string.IsNullOrEmpty(stageData.stageId))
+        {
+            if (stageNameText != null)
+            {
+                stageNameText.text = "";
+            }
+
+            return;
+        }
+
+        /*
+         * すでに同じステージのLocalizedStringを
+         * 作成済みなら、購読だけ確認する。
+         */
+        if (localizedStageName != null &&
+            localizedStageId == stageData.stageId)
+        {
+            SubscribeToStageName();
+            return;
+        }
+
+        UnsubscribeFromStageName();
+
+        localizedStageId =
+            stageData.stageId;
+
+        localizedStageName =
+            new LocalizedString(
+                "StageNames",
+                localizedStageId
+            );
+
+        SubscribeToStageName();
+    }
+
+    private void SubscribeToStageName()
+    {
+        if (localizedStageName == null ||
+            isStageNameSubscribed)
+        {
+            return;
+        }
+
+        localizedStageName.StringChanged +=
+            UpdateLocalizedStageName;
+
+        isStageNameSubscribed = true;
+    }
+
+    private void UnsubscribeFromStageName()
+    {
+        if (localizedStageName == null ||
+            !isStageNameSubscribed)
+        {
+            return;
+        }
+
+        localizedStageName.StringChanged -=
+            UpdateLocalizedStageName;
+
+        isStageNameSubscribed = false;
+    }
+
+    private void UpdateLocalizedStageName(
+        string localizedName)
+    {
+        if (stageNameText == null)
+        {
+            return;
+        }
+
+        stageNameText.text =
+            localizedName;
+    }
+
+    private void OnEnable()
+    {
+        SubscribeToStageName();
+    }
+
+    private void OnDisable()
+    {
+        UnsubscribeFromStageName();
+    }
+
+
+    protected override void OnDestroy()
+    {
+        UnsubscribeFromStageName();
+
+        base.OnDestroy();
     }
 }

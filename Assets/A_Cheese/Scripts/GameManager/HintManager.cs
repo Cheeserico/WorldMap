@@ -375,6 +375,12 @@ public class HintManager : MonoBehaviour
         Debug.Log(
             "ヒントを見たい国カードを選んでください。"
         );
+
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.PlaySE(SEType.Hint);
+        }
+
     }
 
     /// <summary>
@@ -385,6 +391,12 @@ public class HintManager : MonoBehaviour
         isSelectingCountry = false;
 
         HideHintGuide();
+
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.PlaySE(SEType.PopupClose);
+        }
+
 
         Debug.Log(
             "ヒント選択をキャンセルしました。"

@@ -111,11 +111,19 @@ public class StageSelectPageController : MonoBehaviour
     // 現在表示しているページ
     private StagePage currentPage;
 
+    // 最初のページ表示が完了しているか
+    private bool isInitialized;
+
 
     private void Start()
     {
-        // 最初は地域ステージを表示
-        ShowRegionalPage();
+        // 初期表示ではSEを鳴らさない
+        ShowPage(
+            StagePage.Regional,
+            false
+        );
+
+        isInitialized = true;
     }
 
     // ==================================================
@@ -162,6 +170,7 @@ public class StageSelectPageController : MonoBehaviour
         ShowPage(
             (StagePage)nextIndex
         );
+
     }
 
 
@@ -177,6 +186,7 @@ public class StageSelectPageController : MonoBehaviour
         ShowPage(
             (StagePage)previousIndex
         );
+
     }
 
 
@@ -185,11 +195,16 @@ public class StageSelectPageController : MonoBehaviour
     // ==================================================
 
     private void ShowPage(
-        StagePage page)
+        StagePage page,
+        bool playSE = true)
     {
+        // 同じページを押した場合はSEを鳴らさない
+        bool pageChanged =
+            !isInitialized ||
+            currentPage != page;
+
         currentPage = page;
 
-        // 上部タイトルも現在のページに合わせて変更する
         UpdateTitle(
             page
         );
@@ -202,7 +217,6 @@ public class StageSelectPageController : MonoBehaviour
 
         bool showRandom =
             page == StagePage.Random;
-
 
         if (regionalPage != null)
         {
@@ -225,7 +239,6 @@ public class StageSelectPageController : MonoBehaviour
             );
         }
 
-
         SetTabVisual(
             regionalTabImage,
             regionalTabText,
@@ -243,8 +256,19 @@ public class StageSelectPageController : MonoBehaviour
             randomTabText,
             showRandom
         );
-    }
 
+        // 初期表示では鳴らさず、
+        // 実際に別ページへ切り替わったときだけ鳴らす
+        if (playSE &&
+            isInitialized &&
+            pageChanged &&
+            SoundManager.Instance != null)
+        {
+            SoundManager.Instance.PlaySE(
+                SEType.PageChange
+            );
+        }
+    }
 
     // ==================================================
     // 上部タイトルの切り替え
