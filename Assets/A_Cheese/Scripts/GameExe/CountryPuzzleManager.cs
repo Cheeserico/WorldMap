@@ -38,6 +38,10 @@ public class CountryPuzzleManager : MonoBehaviour
     private Tween resultDelayTween;
     private bool isGameClearScheduled;
 
+    // 最後に正解した国。
+    // Result画面のキャラクターと地域アイコン選択に使用する。
+    private string lastPlacedCountryId = "";
+
     /// <summary>
     /// 全問正解して、クリア処理が確定しているか。
     /// </summary>
@@ -110,6 +114,7 @@ public class CountryPuzzleManager : MonoBehaviour
         placedCountryIds.Clear();
 
         placedCountryCount = 0;
+        lastPlacedCountryId = "";
         UpdateProgressText();
     }
 
@@ -157,6 +162,9 @@ public class CountryPuzzleManager : MonoBehaviour
         placedCountryIds.Add(
             countryId
         );
+
+        // 最後に配置した国をResult画面へ引き継ぐ
+        lastPlacedCountryId = countryId;
 
         placedCountryCount =
             placedCountryIds.Count;
@@ -234,7 +242,9 @@ public class CountryPuzzleManager : MonoBehaviour
 
         if (ResultManager.Instance != null)
         {
-            ResultManager.Instance.ShowResult();
+            ResultManager.Instance.ShowResult(
+                lastPlacedCountryId
+            );
         }
     }
 

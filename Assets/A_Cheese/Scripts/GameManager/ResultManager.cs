@@ -10,6 +10,10 @@ public class ResultManager : MonoBehaviour
     [SerializeField]
     private TimerManager timerManager;
 
+    [Header("Resultキャラクター演出")]
+    [SerializeField]
+    private ResultCharacterCelebration resultCharacterCelebration;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -22,9 +26,19 @@ public class ResultManager : MonoBehaviour
     }
 
     /// <summary>
-    /// ゲームクリア時に呼ぶ
+    /// 既存コードとの互換用。
+    /// 国IDなしの場合はデフォルトキャラクターを表示する。
     /// </summary>
     public void ShowResult()
+    {
+        ShowResult("");
+    }
+
+    /// <summary>
+    /// ゲームクリア時に呼ぶ。
+    /// 最後に正解した国IDからResultキャラクターを選択する。
+    /// </summary>
+    public void ShowResult(string lastCountryId)
     {
         // ------------------------------
         // クリアしたステージの途中データを削除
@@ -126,7 +140,15 @@ public class ResultManager : MonoBehaviour
         if (PopupManager.Instance != null)
         {
             PopupManager.Instance.Open(
-                PopupType.Result
+                PopupType.Result,false
+            );
+        }
+
+        // Popupを開いてから、キャラクターと地域アイコンを再生
+        if (resultCharacterCelebration != null)
+        {
+            resultCharacterCelebration.Play(
+                lastCountryId
             );
         }
 
@@ -232,9 +254,6 @@ public class ResultManager : MonoBehaviour
     }
 
     /// <summary>
-    /// もう一度遊ぶ
-    /// </summary>
-    /// <summary>
     /// もう一度、最初から遊ぶ。
     /// </summary>
     public void Retry()
@@ -248,6 +267,7 @@ public class ResultManager : MonoBehaviour
 
         SceneTransitionManager.ReloadCurrentScene();
     }
+
     /// <summary>
     /// タイトルへ戻る
     /// </summary>

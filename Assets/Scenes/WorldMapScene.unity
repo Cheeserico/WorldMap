@@ -21048,6 +21048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResultManager
   timerManager: {fileID: 1523005098}
+  resultCharacterCelebration: {fileID: 922327004}
 --- !u!1 &371466184
 GameObject:
   m_ObjectHideFlags: 0
@@ -21574,8 +21575,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 115, y: 0}
-  m_SizeDelta: {x: -230, y: 0}
+  m_AnchoredPosition: {x: 50, y: 0}
+  m_SizeDelta: {x: -100, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &382589791
 PrefabInstance:
@@ -48191,14 +48192,14 @@ PrefabInstance:
     - target: {fileID: 553931983787233030, guid: f772bdf3a4b661542ba116dbfdf33854, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 602083799}
+      objectReference: {fileID: 1826537317}
     - target: {fileID: 553931983787233030, guid: f772bdf3a4b661542ba116dbfdf33854, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Close
+      value: CloseTop
       objectReference: {fileID: 0}
     - target: {fileID: 553931983787233030, guid: f772bdf3a4b661542ba116dbfdf33854, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PopupBase, Assembly-CSharp
+      value: PopupManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 842306059969473479, guid: f772bdf3a4b661542ba116dbfdf33854, type: 3}
       propertyPath: m_AnchorMax.y
@@ -48828,6 +48829,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922225604}
   m_CullTransparentMesh: 0
+--- !u!114 &922327004 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5481401316029284397, guid: e9b349dd343cae345ac0ed6535e955c6, type: 3}
+  m_PrefabInstance: {fileID: 2267765705982827688}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f76959d371a96045b90d53f5be270e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResultCharacterCelebration
 --- !u!224 &926338630 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6736474715900410859, guid: 746b35e8e4277b34d9a771e89bee16d1, type: 3}
@@ -56257,7 +56269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1082922588
 RectTransform:
   m_ObjectHideFlags: 0
@@ -56900,7 +56912,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 200}
+  m_SizeDelta: {x: 220, y: 220}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!1 &1113274682
 GameObject:
@@ -60419,7 +60431,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -30, y: 0}
-  m_SizeDelta: {x: 230, y: 120}
+  m_SizeDelta: {x: 200, y: 120}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1237301162
 MonoBehaviour:
@@ -63972,14 +63984,14 @@ PrefabInstance:
     - target: {fileID: 553931983787233030, guid: f772bdf3a4b661542ba116dbfdf33854, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 114180459}
+      objectReference: {fileID: 1826537317}
     - target: {fileID: 553931983787233030, guid: f772bdf3a4b661542ba116dbfdf33854, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Close
+      value: CloseTop
       objectReference: {fileID: 0}
     - target: {fileID: 553931983787233030, guid: f772bdf3a4b661542ba116dbfdf33854, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PopupBase, Assembly-CSharp
+      value: PopupManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 842306059969473479, guid: f772bdf3a4b661542ba116dbfdf33854, type: 3}
       propertyPath: m_AnchorMax.y
@@ -66582,6 +66594,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: fa5514753d916064aa3851632f3c7e90, type: 3}
   - type: 2
     clip: {fileID: 8300000, guid: 26e4ec9a330012b4e935034dd3c0158c, type: 3}
+  - type: 0
+    clip: {fileID: 8300000, guid: 7b871c7d1a02c624889f3b82e9a3c559, type: 3}
   seList:
   - type: 0
     clip: {fileID: 8300000, guid: 30447cfcbd4914c44a245dea585f1be5, type: 3}
@@ -67367,14 +67381,14 @@ PrefabInstance:
     - target: {fileID: 553931983787233030, guid: f772bdf3a4b661542ba116dbfdf33854, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2090406220}
+      objectReference: {fileID: 1826537317}
     - target: {fileID: 553931983787233030, guid: f772bdf3a4b661542ba116dbfdf33854, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Close
+      value: CloseTop
       objectReference: {fileID: 0}
     - target: {fileID: 553931983787233030, guid: f772bdf3a4b661542ba116dbfdf33854, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PopupBase, Assembly-CSharp
+      value: PopupManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 842306059969473479, guid: f772bdf3a4b661542ba116dbfdf33854, type: 3}
       propertyPath: m_AnchorMax.y
@@ -71954,14 +71968,14 @@ PrefabInstance:
     - target: {fileID: 553931983787233030, guid: f772bdf3a4b661542ba116dbfdf33854, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 674839861}
+      objectReference: {fileID: 1826537317}
     - target: {fileID: 553931983787233030, guid: f772bdf3a4b661542ba116dbfdf33854, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Close
+      value: CloseTop
       objectReference: {fileID: 0}
     - target: {fileID: 553931983787233030, guid: f772bdf3a4b661542ba116dbfdf33854, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PopupBase, Assembly-CSharp
+      value: PopupManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 842306059969473479, guid: f772bdf3a4b661542ba116dbfdf33854, type: 3}
       propertyPath: m_AnchorMax.y
@@ -73685,7 +73699,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 72, y: 48}
+  m_SizeDelta: {x: 57.6, y: 38.4}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1577197740
 MonoBehaviour:
@@ -77380,8 +77394,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -310, y: 0}
-  m_SizeDelta: {x: 620, y: 150}
+  m_AnchoredPosition: {x: -250, y: 0}
+  m_SizeDelta: {x: 500, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1703852758
 MonoBehaviour:
@@ -85987,8 +86001,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -40}
-  m_SizeDelta: {x: 300, y: 300}
+  m_AnchoredPosition: {x: 0, y: -30}
+  m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1809266971
 Animator:
@@ -93968,6 +93982,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4033358380173319341, guid: 253479f1c6f38cf41b135494de09cdba, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1826537317}
+    - target: {fileID: 4033358380173319341, guid: 253479f1c6f38cf41b135494de09cdba, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseLanguage
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033358380173319341, guid: 253479f1c6f38cf41b135494de09cdba, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PopupManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7129796402139804987, guid: 253479f1c6f38cf41b135494de09cdba, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -98173,21 +98199,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2043505622765182355, guid: e9b349dd343cae345ac0ed6535e955c6, type: 3}
+      propertyPath: m_Color.a
+      value: 0.85490197
+      objectReference: {fileID: 0}
     - target: {fileID: 5027740243172312608, guid: e9b349dd343cae345ac0ed6535e955c6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1523005100}
+    - target: {fileID: 5035027257574123972, guid: e9b349dd343cae345ac0ed6535e955c6, type: 3}
+      propertyPath: m_Color.a
+      value: 0.85490197
+      objectReference: {fileID: 0}
+    - target: {fileID: 5481401316029284397, guid: e9b349dd343cae345ac0ed6535e955c6, type: 3}
+      propertyPath: iconMoveOffsets.Array.data[0].x
+      value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5481401316029284397, guid: e9b349dd343cae345ac0ed6535e955c6, type: 3}
+      propertyPath: iconMoveOffsets.Array.data[0].y
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 5481401316029284397, guid: e9b349dd343cae345ac0ed6535e955c6, type: 3}
+      propertyPath: iconMoveOffsets.Array.data[1].y
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 5481401316029284397, guid: e9b349dd343cae345ac0ed6535e955c6, type: 3}
+      propertyPath: iconMoveOffsets.Array.data[2].x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5481401316029284397, guid: e9b349dd343cae345ac0ed6535e955c6, type: 3}
+      propertyPath: iconMoveOffsets.Array.data[2].y
+      value: 55
+      objectReference: {fileID: 0}
     - target: {fileID: 6021896798918878208, guid: e9b349dd343cae345ac0ed6535e955c6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1523005100}
+    - target: {fileID: 6593475707369830666, guid: e9b349dd343cae345ac0ed6535e955c6, type: 3}
+      propertyPath: m_Color.a
+      value: 0.85490197
+      objectReference: {fileID: 0}
     - target: {fileID: 7951113924411157729, guid: e9b349dd343cae345ac0ed6535e955c6, type: 3}
       propertyPath: m_Name
       value: Result_Popup
-      objectReference: {fileID: 0}
-    - target: {fileID: 7951113924411157729, guid: e9b349dd343cae345ac0ed6535e955c6, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -99725,7 +99779,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33.45
+  m_fontSize: 50.2
   m_fontSizeBase: 69.8
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -99787,7 +99841,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -40, y: -60}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5204725453217208592
 MonoBehaviour:
@@ -99952,7 +100006,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 60, y: 0}
+  m_AnchoredPosition: {x: 80, y: 0}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5204725454005359436
@@ -100302,6 +100356,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1826537317}
+    - target: {fileID: 553931983787233030, guid: f772bdf3a4b661542ba116dbfdf33854, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseTop
+      objectReference: {fileID: 0}
     - target: {fileID: 842306059969473479, guid: f772bdf3a4b661542ba116dbfdf33854, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -101514,7 +101572,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 250, y: 250}
+  m_SizeDelta: {x: 220, y: 220}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7824803930173030299
 GameObject:

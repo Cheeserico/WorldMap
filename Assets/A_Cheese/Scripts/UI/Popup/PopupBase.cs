@@ -387,4 +387,15 @@ public class PopupBase : MonoBehaviour
         Opened = null;
         Closed = null;
     }
+
+    public void CloseSE()
+    {
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.PlaySE(
+                SEType.PopupClose
+            );
+        }
+    }
+
 }

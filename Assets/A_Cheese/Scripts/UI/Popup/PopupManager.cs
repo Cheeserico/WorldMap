@@ -210,7 +210,12 @@ public class PopupManager : MonoBehaviour
     /// <summary>
     /// 指定したPopupを表示する。
     /// </summary>
-    public void Open(PopupType popupType)
+    /// <summary>
+    /// 指定したPopupを表示する。
+    /// </summary>
+    public void Open(
+        PopupType popupType,
+        bool playSE = true)
     {
         if (!TryGetPopup(
                 popupType,
@@ -221,7 +226,8 @@ public class PopupManager : MonoBehaviour
 
         /*
          * すでに開いている場合は、
-         * 再度アニメーションさせず最前面へ移動する。
+         * 再度アニメーションやSEを再生せず、
+         * 最前面へ移動する。
          */
         if (popup.IsOpen || popup.IsTransitioning)
         {
@@ -239,12 +245,25 @@ public class PopupManager : MonoBehaviour
         );
 
         popup.Open();
+
+        if (playSE &&
+            SoundManager.Instance != null)
+        {
+            SoundManager.Instance.PlaySE(
+                SEType.PopupOpen
+            );
+        }
     }
 
     /// <summary>
     /// 指定したPopupを閉じる。
     /// </summary>
-    public void Close(PopupType popupType)
+    /// <summary>
+    /// 指定したPopupを閉じる。
+    /// </summary>
+    public void Close(
+        PopupType popupType,
+        bool playSE = true)
     {
         if (!TryGetPopup(
                 popupType,
@@ -275,7 +294,16 @@ public class PopupManager : MonoBehaviour
         }
 
         popup.Closed += HandleClosed;
+
         popup.Close();
+
+        if (playSE &&
+            SoundManager.Instance != null)
+        {
+            SoundManager.Instance.PlaySE(
+                SEType.PopupClose
+            );
+        }
     }
 
     /// <summary>
@@ -301,22 +329,39 @@ public class PopupManager : MonoBehaviour
     /// <summary>
     /// 開いているPopupをすべて閉じる。
     /// </summary>
+    /// <summary>
+    /// 開いているPopupをすべて閉じる。
+    /// 閉じるSEは1回だけ再生する。
+    /// </summary>
     public void CloseAll()
     {
         RemoveInvalidStackEntries();
 
-        /*
-         * Close処理中にStackが変化するため、
-         * コピーを取って後ろから閉じる。
-         */
+        if (openedPopupStack.Count == 0)
+        {
+            return;
+        }
+
         PopupType[] openedPopupCopies =
             openedPopupStack.ToArray();
+
+        // 閉じるSEは最初に1回だけ鳴らす
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.PlaySE(
+                SEType.PopupClose
+            );
+        }
 
         for (int i = openedPopupCopies.Length - 1;
              i >= 0;
              i--)
         {
-            Close(openedPopupCopies[i]);
+            // 個別の閉じるSEは鳴らさない
+            Close(
+                openedPopupCopies[i],
+                false
+            );
         }
     }
 

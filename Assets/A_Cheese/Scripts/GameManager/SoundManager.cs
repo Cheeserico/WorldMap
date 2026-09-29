@@ -17,7 +17,13 @@ public enum SEType
     Button,
     Clear,
     Coin,
-    Star
+    Star,
+    PopupOpen,
+    PopupClose,
+    Hint,
+    Complete,
+    StageSelect,
+    PageChange
 }
 
 /// <summary>
@@ -101,8 +107,9 @@ public class SoundManager : MonoBehaviour
     // Dictionary
     // ==================================================
 
-    private readonly Dictionary<BGMType, AudioClip> bgmDictionary =
-        new Dictionary<BGMType, AudioClip>();
+    // 同じBGMTypeに複数の曲を登録できるよう、Listで管理する。
+    private readonly Dictionary<BGMType, List<AudioClip>> bgmDictionary =
+        new Dictionary<BGMType, List<AudioClip>>();
 
     private readonly Dictionary<SEType, AudioClip> seDictionary =
         new Dictionary<SEType, AudioClip>();
@@ -120,6 +127,12 @@ public class SoundManager : MonoBehaviour
     private BGMType? currentBgmType;
 
     private Tween bgmFadeTween;
+
+    // Pause中に曲の終了と誤判定しないためのフラグ
+    private bool isBgmManuallyPaused;
+
+    // PlayRandomBGMで再生している間だけtrue
+    private bool isRandomBgmMode;
 
     // ==================================================
     // 外部取得用
@@ -164,6 +177,34 @@ public class SoundManager : MonoBehaviour
         if (playBgmOnStart)
         {
             PlayBGM(startBgmType, defaultFadeDuration);
+        }
+    }
+
+    private void Update()
+    {
+        if (Instance != this ||
+            bgmSource == null ||
+            currentBgmType == null ||
+            isBgmManuallyPaused)
+        {
+            return;
+        }
+
+        // フェード処理中は曲切り替え判定を行わない。
+        if (bgmFadeTween != null &&
+            bgmFadeTween.IsActive() &&
+            bgmFadeTween.IsPlaying())
+        {
+            return;
+        }
+
+        // ランダム再生中だけ、曲の終了後に次の曲を選ぶ。
+        if (bgmSource.clip != null &&
+            !bgmSource.isPlaying &&
+            isRandomBgmMode &&
+            HasMultipleBgmClips(currentBgmType.Value))
+        {
+            PlayNextRandomBGM(currentBgmType.Value);
         }
     }
 
@@ -234,17 +275,26 @@ public class SoundManager : MonoBehaviour
                 continue;
             }
 
-            if (bgmDictionary.ContainsKey(data.type))
+            if (!bgmDictionary.TryGetValue(
+                    data.type,
+                    out List<AudioClip> clips))
+            {
+                clips = new List<AudioClip>();
+                bgmDictionary.Add(data.type, clips);
+            }
+
+            if (clips.Contains(data.clip))
             {
                 Debug.LogWarning(
-                    $"SoundManager：BGM「{data.type}」が重複登録されています。",
+                    $"SoundManager：BGM「{data.type}」に" +
+                    $"同じAudioClip「{data.clip.name}」が重複登録されています。",
                     this
                 );
 
                 continue;
             }
 
-            bgmDictionary.Add(data.type, data.clip);
+            clips.Add(data.clip);
         }
     }
 
@@ -313,7 +363,10 @@ public class SoundManager : MonoBehaviour
             return;
         }
 
-        if (!bgmDictionary.TryGetValue(type, out AudioClip clip))
+        if (!bgmDictionary.TryGetValue(
+                type,
+                out List<AudioClip> clips) ||
+            clips.Count == 0)
         {
             Debug.LogWarning(
                 $"SoundManager：BGM「{type}」が登録されていません。",
@@ -323,8 +376,17 @@ public class SoundManager : MonoBehaviour
             return;
         }
 
-        // 同じBGMがすでに再生中なら再生し直さない
-        if (currentBgmType == type &&
+        // 通常再生では、登録されている先頭の1曲を使用する。
+        AudioClip clip = clips[0];
+
+        if (clip == null)
+        {
+            return;
+        }
+
+        // 同じ通常BGMがすでに再生中なら再生し直さない。
+        if (!isRandomBgmMode &&
+            currentBgmType == type &&
             bgmSource.clip == clip &&
             bgmSource.isPlaying)
         {
@@ -338,7 +400,7 @@ public class SoundManager : MonoBehaviour
         // BGMが流れていない場合は、そのままフェードイン
         if (!bgmSource.isPlaying || bgmSource.clip == null)
         {
-            StartNewBGM(type, clip, fadeDuration);
+            StartNewBGM(type, clip, fadeDuration, false);
             return;
         }
 
@@ -348,7 +410,182 @@ public class SoundManager : MonoBehaviour
             .SetUpdate(true)
             .OnComplete(() =>
             {
-                StartNewBGM(type, clip, fadeDuration);
+                StartNewBGM(type, clip, fadeDuration, false);
+            });
+    }
+
+
+    /// <summary>
+    /// 指定した種類のBGMから、番号を指定して再生する。
+    /// indexは0から始まる。
+    /// </summary>
+    public void PlayBGMByIndex(
+        BGMType type,
+        int index)
+    {
+        PlayBGMByIndex(
+            type,
+            index,
+            defaultFadeDuration
+        );
+    }
+
+    /// <summary>
+    /// 指定した種類のBGMから、番号とフェード時間を指定して再生する。
+    /// </summary>
+    public void PlayBGMByIndex(
+        BGMType type,
+        int index,
+        float fadeDuration)
+    {
+        if (bgmSource == null)
+        {
+            Debug.LogWarning(
+                "SoundManager：BGM用AudioSourceが登録されていません。",
+                this
+            );
+
+            return;
+        }
+
+        if (!bgmDictionary.TryGetValue(
+                type,
+                out List<AudioClip> clips) ||
+            clips.Count == 0)
+        {
+            Debug.LogWarning(
+                $"SoundManager：BGM「{type}」が登録されていません。",
+                this
+            );
+
+            return;
+        }
+
+        if (index < 0 || index >= clips.Count)
+        {
+            Debug.LogWarning(
+                $"SoundManager：BGM「{type}」の番号{index}は範囲外です。" +
+                $"登録曲数は{clips.Count}曲です。",
+                this
+            );
+
+            return;
+        }
+
+        AudioClip clip = clips[index];
+
+        if (!isRandomBgmMode &&
+            currentBgmType == type &&
+            bgmSource.clip == clip &&
+            bgmSource.isPlaying)
+        {
+            return;
+        }
+
+        fadeDuration = Mathf.Max(
+            0f,
+            fadeDuration
+        );
+
+        bgmFadeTween?.Kill();
+
+        if (!bgmSource.isPlaying ||
+            bgmSource.clip == null)
+        {
+            StartNewBGM(
+                type,
+                clip,
+                fadeDuration,
+                false
+            );
+
+            return;
+        }
+
+        bgmFadeTween = bgmSource
+            .DOFade(
+                0f,
+                fadeDuration
+            )
+            .SetUpdate(true)
+            .OnComplete(() =>
+            {
+                StartNewBGM(
+                    type,
+                    clip,
+                    fadeDuration,
+                    false
+                );
+            });
+    }
+
+    /// <summary>
+    /// 指定した種類に登録されているBGMをランダム再生する。
+    /// 曲が終了するたび、直前とは異なる曲を選ぶ。
+    /// </summary>
+    public void PlayRandomBGM(BGMType type)
+    {
+        PlayRandomBGM(type, defaultFadeDuration);
+    }
+
+    /// <summary>
+    /// 指定した種類のBGMを、指定秒数のフェード付きでランダム再生する。
+    /// </summary>
+    public void PlayRandomBGM(BGMType type, float fadeDuration)
+    {
+        if (bgmSource == null)
+        {
+            Debug.LogWarning(
+                "SoundManager：BGM用AudioSourceが登録されていません。",
+                this
+            );
+
+            return;
+        }
+
+        if (!bgmDictionary.TryGetValue(
+                type,
+                out List<AudioClip> clips) ||
+            clips.Count == 0)
+        {
+            Debug.LogWarning(
+                $"SoundManager：BGM「{type}」が登録されていません。",
+                this
+            );
+
+            return;
+        }
+
+        if (isRandomBgmMode &&
+            currentBgmType == type &&
+            bgmSource.isPlaying)
+        {
+            return;
+        }
+
+        AudioClip clip = GetRandomBgmClip(type, bgmSource.clip);
+
+        if (clip == null)
+        {
+            return;
+        }
+
+        fadeDuration = Mathf.Max(0f, fadeDuration);
+
+        bgmFadeTween?.Kill();
+
+        if (!bgmSource.isPlaying || bgmSource.clip == null)
+        {
+            StartNewBGM(type, clip, fadeDuration, true);
+            return;
+        }
+
+        bgmFadeTween = bgmSource
+            .DOFade(0f, fadeDuration)
+            .SetUpdate(true)
+            .OnComplete(() =>
+            {
+                StartNewBGM(type, clip, fadeDuration, true);
             });
     }
 
@@ -358,15 +595,20 @@ public class SoundManager : MonoBehaviour
     private void StartNewBGM(
         BGMType type,
         AudioClip clip,
-        float fadeDuration)
+        float fadeDuration,
+        bool randomMode)
     {
         bgmFadeTween?.Kill();
 
         currentBgmType = type;
+        isBgmManuallyPaused = false;
+        isRandomBgmMode = randomMode;
 
         bgmSource.Stop();
         bgmSource.clip = clip;
-        bgmSource.loop = true;
+        // 通常再生は1曲ループ。
+        // ランダム再生で複数曲ある場合だけ、曲末をUpdateで検知する。
+        bgmSource.loop = !randomMode || !HasMultipleBgmClips(type);
         bgmSource.volume = 0f;
         bgmSource.Play();
 
@@ -431,6 +673,8 @@ public class SoundManager : MonoBehaviour
             bgmSource.volume = GetAppliedBgmVolume();
         }
 
+        isBgmManuallyPaused = false;
+        isRandomBgmMode = false;
         currentBgmType = null;
     }
 
@@ -444,6 +688,7 @@ public class SoundManager : MonoBehaviour
             return;
         }
 
+        isBgmManuallyPaused = true;
         bgmSource.Pause();
     }
 
@@ -458,6 +703,64 @@ public class SoundManager : MonoBehaviour
         }
 
         bgmSource.UnPause();
+        isBgmManuallyPaused = false;
+    }
+
+    /// <summary>
+    /// 指定した種類に複数のBGMが登録されているか。
+    /// </summary>
+    private bool HasMultipleBgmClips(BGMType type)
+    {
+        return bgmDictionary.TryGetValue(
+                   type,
+                   out List<AudioClip> clips) &&
+               clips.Count > 1;
+    }
+
+    /// <summary>
+    /// 直前の曲を避けてランダムに1曲選ぶ。
+    /// </summary>
+    private AudioClip GetRandomBgmClip(
+        BGMType type,
+        AudioClip previousClip)
+    {
+        if (!bgmDictionary.TryGetValue(
+                type,
+                out List<AudioClip> clips) ||
+            clips.Count == 0)
+        {
+            return null;
+        }
+
+        if (clips.Count == 1)
+        {
+            return clips[0];
+        }
+
+        int index = UnityEngine.Random.Range(0, clips.Count);
+
+        if (clips[index] == previousClip)
+        {
+            index = (index + UnityEngine.Random.Range(1, clips.Count))
+                % clips.Count;
+        }
+
+        return clips[index];
+    }
+
+    /// <summary>
+    /// 同じ種類から次の曲を選び、フェードインして再生する。
+    /// </summary>
+    private void PlayNextRandomBGM(BGMType type)
+    {
+        AudioClip nextClip = GetRandomBgmClip(type, bgmSource.clip);
+
+        if (nextClip == null)
+        {
+            return;
+        }
+
+        StartNewBGM(type, nextClip, defaultFadeDuration, true);
     }
 
     // ==================================================
@@ -813,7 +1116,45 @@ if (SoundManager.Instance != null)
     SoundManager.Instance.StopBGM(1.5f);
 }
 
+
+// Game：複数曲をランダムループ
+SoundManager.Instance.PlayRandomBGM(
+    BGMType.Game
+);
+
+// Result：先頭の1曲を固定ループ
+SoundManager.Instance.PlayBGM(
+    BGMType.Result
+);
+
+// Title：先頭の1曲を固定ループ
+SoundManager.Instance.PlayBGM(
+    BGMType.Title
+);
+
+
 Sliderとの接続
 SoundManager.Instance.SetBgmVolume(value);
 SoundManager.Instance.SetSeVolume(value);
+
+
+
+// 先頭の1曲を固定ループ
+SoundManager.Instance.PlayBGM(
+    BGMType.Game
+);
+
+// 番号を指定して固定ループ
+SoundManager.Instance.PlayBGMByIndex(
+    BGMType.Game,
+    1
+);
+
+// Gameの全曲をランダムループ
+SoundManager.Instance.PlayRandomBGM(
+    BGMType.Game
+);
+
+
 */
+
