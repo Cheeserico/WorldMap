@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fb0001a915448b04b8e4663f5251f665
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Prefab/SoloParticle/BackGround/FallingDown/CherryFromAbove.prefab
+  uploadId: 699277

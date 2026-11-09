@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d23ea9afec1379945a1c7fa22fc3f3c6
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Prefab/ComplexParticleExample/TorchFire_red.prefab
+  uploadId: 699277

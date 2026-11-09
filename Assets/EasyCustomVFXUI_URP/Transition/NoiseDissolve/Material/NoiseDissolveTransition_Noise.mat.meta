@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ba0b45e152894044a8b6af219f3ccf66
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Transition/NoiseDissolve/Material/NoiseDissolveTransition_Noise.mat
+  uploadId: 699277

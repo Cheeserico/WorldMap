@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9d3be75c05424bb48ad3e04a9d0f7f98
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Prefab/SoloParticle/Front/Lightning/TwirlLightning.prefab
+  uploadId: 699277

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ad18be2c2084ee04ca3fba08e2394797
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Prefab/SoloParticle/Front/Contraction/ChargeDiffusion.prefab
+  uploadId: 699277

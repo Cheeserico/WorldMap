@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3d9d2f16adbae744bacf8c2fd2c11a66
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Material/DefaultShader/Particle/ShineyCross2Material.mat
+  uploadId: 699277

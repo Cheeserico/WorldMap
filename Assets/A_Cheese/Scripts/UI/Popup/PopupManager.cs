@@ -172,6 +172,7 @@ public class PopupManager : MonoBehaviour
     public void OpenLicenseDetail()
     {
         Open(PopupType.LicenseDetail);
+
     }
 
     /// <summary>

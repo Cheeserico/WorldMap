@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 98a01d0b24b058b4498126aa1c3547a0
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/DemoScene/SpriteEffectDemoScene.unity
+  uploadId: 699277

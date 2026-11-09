@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0f1442b39c4ed994897d0f8ccfddb060
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/DemoScene/FrontParticleSampleScene.unity
+  uploadId: 699277

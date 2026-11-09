@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7ad60ce50ab001e4697bd16e25a580d2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Transition/Wipe/Material/SideWipeTransitionShader_Wave.mat
+  uploadId: 699277

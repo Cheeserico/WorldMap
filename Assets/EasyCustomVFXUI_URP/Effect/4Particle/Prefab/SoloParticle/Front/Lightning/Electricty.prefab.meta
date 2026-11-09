@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c4758b790b6bbb44d94fa72ac207b97c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Prefab/SoloParticle/Front/Lightning/Electricty.prefab
+  uploadId: 699277

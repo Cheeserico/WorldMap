@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 656b3569159139f4e9494700840ed4d1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/1SpriteEffect/Fire/Material/ToonFire.mat
+  uploadId: 699277

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d6236333c185c454a8fdd386ea3987d1
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/DemoScene/FullScreenEffectDemoScene.unity
+  uploadId: 699277

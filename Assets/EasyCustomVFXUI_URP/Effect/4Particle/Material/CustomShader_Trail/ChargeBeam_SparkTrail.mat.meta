@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 17dc9c04b72623346bddc52a54ff7df4
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Material/CustomShader_Trail/ChargeBeam_SparkTrail.mat
+  uploadId: 699277

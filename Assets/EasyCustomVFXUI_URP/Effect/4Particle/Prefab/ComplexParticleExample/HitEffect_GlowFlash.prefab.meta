@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0bcac7e27743d3e4a8d771c282ae6869
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Prefab/ComplexParticleExample/HitEffect_GlowFlash.prefab
+  uploadId: 699277

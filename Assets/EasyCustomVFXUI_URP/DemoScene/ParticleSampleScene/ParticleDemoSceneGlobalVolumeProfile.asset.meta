@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3b81cacc0cba24f40b9eb26d9ae063da
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/DemoScene/ParticleSampleScene/ParticleDemoSceneGlobalVolumeProfile.asset
+  uploadId: 699277

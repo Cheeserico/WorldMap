@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f781197f9a803e44083da0a4430f15f1
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Prefab/SoloParticle/Front/Splash/SparkParticle.prefab
+  uploadId: 699277

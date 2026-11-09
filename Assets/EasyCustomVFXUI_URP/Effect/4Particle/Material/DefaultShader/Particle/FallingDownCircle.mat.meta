@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cdf1ce115a873694b8562647a24f409a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Material/DefaultShader/Particle/FallingDownCircle.mat
+  uploadId: 699277

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a7fade498b736684cb6a64e687a9383e
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Prefab/SoloParticle/Front/Spread/RainbowShockSpread.prefab
+  uploadId: 699277

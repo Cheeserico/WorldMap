@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 469832001449830489fa913fa3857ee3
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Prefab/SoloParticle/Front/FlareAndFlash/FlashDiamond.prefab
+  uploadId: 699277

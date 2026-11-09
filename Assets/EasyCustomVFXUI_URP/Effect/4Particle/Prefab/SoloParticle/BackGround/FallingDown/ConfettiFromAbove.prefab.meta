@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b84fe49f97b059545958c6e3a81e50b6
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Prefab/SoloParticle/BackGround/FallingDown/ConfettiFromAbove.prefab
+  uploadId: 699277

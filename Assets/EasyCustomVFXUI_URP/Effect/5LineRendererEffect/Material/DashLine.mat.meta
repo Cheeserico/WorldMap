@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e07595db5098b1443bd4b8e978466b4d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/5LineRendererEffect/Material/DashLine.mat
+  uploadId: 699277

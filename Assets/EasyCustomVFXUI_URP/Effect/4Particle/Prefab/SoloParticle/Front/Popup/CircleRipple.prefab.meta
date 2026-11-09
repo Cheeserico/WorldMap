@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5b233c7f7bd804f4995bba6693ae8da0
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Prefab/SoloParticle/Front/Popup/CircleRipple.prefab
+  uploadId: 699277

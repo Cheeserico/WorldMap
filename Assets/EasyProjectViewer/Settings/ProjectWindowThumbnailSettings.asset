@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91f18da10be69dc4ebb165679b2cdaa5, type: 3}
   m_Name: ProjectWindowThumbnailSettings
   m_EditorClassIdentifier: 
-  showThumbnails: 1
+  showThumbnails: 0
   showWizardOnStart: 0

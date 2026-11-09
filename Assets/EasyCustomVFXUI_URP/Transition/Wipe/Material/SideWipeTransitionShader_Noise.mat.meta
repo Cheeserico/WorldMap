@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: efc2b4c6ae2286944870c8cfc21f1ef0
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Transition/Wipe/Material/SideWipeTransitionShader_Noise.mat
+  uploadId: 699277

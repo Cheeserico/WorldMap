@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 51553334ae59d754d89a51ce50b3993c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/5LineRendererEffect/Prefab/LightningLaser.prefab
+  uploadId: 699277

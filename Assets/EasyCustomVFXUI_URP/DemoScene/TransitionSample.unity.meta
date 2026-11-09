@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a0ca843b065b63144ac15f848b578597
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/DemoScene/TransitionSample.unity
+  uploadId: 699277

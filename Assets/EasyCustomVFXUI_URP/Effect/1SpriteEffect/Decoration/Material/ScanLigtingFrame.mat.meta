@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 08b4753f060ebc94bbc60e0d0ef88e3e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/1SpriteEffect/Decoration/Material/ScanLigtingFrame.mat
+  uploadId: 699277

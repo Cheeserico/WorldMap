@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ee3c15f8c839bbf4792380070a5bee62
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Prefab/SoloParticle/BackGround/Weather/RainParticle.prefab
+  uploadId: 699277

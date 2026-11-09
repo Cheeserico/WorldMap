@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8f6032194a553c441a9d9485a383af10
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/DemoScene/UIEffectDemoScene.unity
+  uploadId: 699277

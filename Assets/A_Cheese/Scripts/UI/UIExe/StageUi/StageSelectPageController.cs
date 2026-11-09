@@ -114,6 +114,20 @@ public class StageSelectPageController : MonoBehaviour
     // 最初のページ表示が完了しているか
     private bool isInitialized;
 
+    [Header("ページ切り替えエフェクト")]
+    [SerializeField]
+    private ParticleSystem[] pageChangeEffects;
+
+    [Header("飛行機ページ切り替え演出")]
+    [SerializeField]
+    private AirplanePageEffect airplanePageEffect;
+
+
+    [Header("ページ切り替え雲エフェクト")]
+    [SerializeField]
+    private CloudGatherEffect cloudGatherEffect;
+
+    private bool isPageChanging;
 
     private void Start()
     {
@@ -194,7 +208,7 @@ public class StageSelectPageController : MonoBehaviour
     // 表示切替
     // ==================================================
 
-    private void ShowPage(
+    private void ApplyPage(
         StagePage page,
         bool playSE = true)
     {
@@ -268,7 +282,55 @@ public class StageSelectPageController : MonoBehaviour
                 SEType.PageChange
             );
         }
+
+
     }
+
+
+    private void ShowPage(
+        StagePage page,
+        bool playSE = true)
+    {
+        // 初期表示は演出なし
+        if (!isInitialized || !playSE)
+        {
+            ApplyPage(page, false);
+            return;
+        }
+
+        // 同じページ、または演出中は何もしない
+        if (currentPage == page || isPageChanging)
+        {
+            return;
+        }
+
+        isPageChanging = true;
+
+        // 雲が未設定なら通常切り替え
+        if (cloudGatherEffect == null)
+        {
+            ApplyPage(page);
+            PlayPageChangeEffects();
+            isPageChanging = false;
+            return;
+        }
+
+        cloudGatherEffect.Play(
+            onCovered: () =>
+            {
+                // 雲で隠れたタイミングでページ変更
+                ApplyPage(page);
+
+                // 既存のパーティクルも再生
+                PlayPageChangeEffects();
+            },
+            onComplete: () =>
+            {
+                isPageChanging = false;
+            }
+        );
+    }
+
 
     // ==================================================
     // 上部タイトルの切り替え
@@ -360,4 +422,28 @@ public class StageSelectPageController : MonoBehaviour
                     : normalTextColor;
         }
     }
+
+    // ==================================================
+    // ページ切り替えエフェクト
+    // ==================================================
+
+    private void PlayPageChangeEffects()
+    {
+        if (pageChangeEffects == null)
+            return;
+
+        foreach (ParticleSystem effect in pageChangeEffects)
+        {
+            if (effect == null)
+                continue;
+
+            effect.Stop(
+                true,
+                ParticleSystemStopBehavior.StopEmittingAndClear
+            );
+
+            effect.Play(true);
+        }
+    }
+
 }

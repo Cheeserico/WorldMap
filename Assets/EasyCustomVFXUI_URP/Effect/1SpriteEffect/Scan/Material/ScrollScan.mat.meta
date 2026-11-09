@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f2be71d3c0bb71d48815f0b4523788b2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/1SpriteEffect/Scan/Material/ScrollScan.mat
+  uploadId: 699277

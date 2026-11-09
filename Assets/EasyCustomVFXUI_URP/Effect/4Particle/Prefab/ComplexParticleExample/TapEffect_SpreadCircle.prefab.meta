@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a2b76cda224ac0c4da260af055e43137
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Prefab/ComplexParticleExample/TapEffect_SpreadCircle.prefab
+  uploadId: 699277

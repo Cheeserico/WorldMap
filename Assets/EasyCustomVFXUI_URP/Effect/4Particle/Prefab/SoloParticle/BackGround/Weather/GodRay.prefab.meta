@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8615610d3e73f3342b49b1887b9d7b21
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Prefab/SoloParticle/BackGround/Weather/GodRay.prefab
+  uploadId: 699277

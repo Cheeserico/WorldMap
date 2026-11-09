@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2ebd39b0502c7d74e8f9c2d4fccdf3a3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Material/CustomShader_Particle/CasulaPopUpSmoke.mat
+  uploadId: 699277

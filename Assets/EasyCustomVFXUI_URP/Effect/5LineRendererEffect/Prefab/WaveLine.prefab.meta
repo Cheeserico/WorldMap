@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6fd148f0cd7de1840bfda7528585643e
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/5LineRendererEffect/Prefab/WaveLine.prefab
+  uploadId: 699277

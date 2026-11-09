@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8ed3098ad2d129443b6bf2f6a9bfc543
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Prefab/SoloParticle/BackGround/SpeedLine/FromCenterSpeedLine.prefab
+  uploadId: 699277

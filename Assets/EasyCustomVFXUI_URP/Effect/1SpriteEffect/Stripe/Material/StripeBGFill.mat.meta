@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e70f8592ab9aed2489ab80c2781a2113
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/1SpriteEffect/Stripe/Material/StripeBGFill.mat
+  uploadId: 699277

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6253b62fc1648094b8ed8de37463e079
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/1SpriteEffect/ParallelogramGage/Material/ParallelogramGage45_Body.mat
+  uploadId: 699277

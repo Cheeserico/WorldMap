@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c1cffb9f485f9c64384a0c6cd51a9c88
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Material/DefaultShader/Particle/BoxRipple.mat
+  uploadId: 699277

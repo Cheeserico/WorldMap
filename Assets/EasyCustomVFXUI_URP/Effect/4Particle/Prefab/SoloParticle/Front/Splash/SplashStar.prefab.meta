@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5b87a892480464b4d9a56c0779245d75
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Prefab/SoloParticle/Front/Splash/SplashStar.prefab
+  uploadId: 699277

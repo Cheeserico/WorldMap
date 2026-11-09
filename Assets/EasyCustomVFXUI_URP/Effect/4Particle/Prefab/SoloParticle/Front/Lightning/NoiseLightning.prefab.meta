@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4a8fb7c8aac3e3f45a9f7026754357c1
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Prefab/SoloParticle/Front/Lightning/NoiseLightning.prefab
+  uploadId: 699277

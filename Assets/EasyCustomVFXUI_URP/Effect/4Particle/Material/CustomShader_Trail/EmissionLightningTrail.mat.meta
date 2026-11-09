@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ff38d8a93fa42c247b56ecee6898b74d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Material/CustomShader_Trail/EmissionLightningTrail.mat
+  uploadId: 699277

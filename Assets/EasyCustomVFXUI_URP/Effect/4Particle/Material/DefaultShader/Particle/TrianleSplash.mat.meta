@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c21cd8c84b756f2469a57033534aa6a3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Material/DefaultShader/Particle/TrianleSplash.mat
+  uploadId: 699277

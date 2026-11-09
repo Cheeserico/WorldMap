@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 26a8b4754bebe8a4a9f1ae3d4f6ec7ae
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Prefab/SoloParticle/Front/Lightning/LightningTextureAnimation.prefab
+  uploadId: 699277

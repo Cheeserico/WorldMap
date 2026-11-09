@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bdd04dd124b12c443a08457d4f79b22f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/1SpriteEffect/Dissolve/Material/PixelDissolve.mat
+  uploadId: 699277

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7baf4fb1bc142b546b0e4cc783486fac
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Prefab/SoloParticle/Front/Spread/ShockWave.prefab
+  uploadId: 699277

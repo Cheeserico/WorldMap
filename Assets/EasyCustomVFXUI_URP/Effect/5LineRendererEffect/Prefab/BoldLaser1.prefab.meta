@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 993ffd0e493615e4093ce70ab7c858a1
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/5LineRendererEffect/Prefab/BoldLaser1.prefab
+  uploadId: 699277

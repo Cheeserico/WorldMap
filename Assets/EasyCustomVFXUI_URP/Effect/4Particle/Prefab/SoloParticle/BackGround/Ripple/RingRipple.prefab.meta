@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 52144a3582a047248ab1e9f26bb44019
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Prefab/SoloParticle/BackGround/Ripple/RingRipple.prefab
+  uploadId: 699277

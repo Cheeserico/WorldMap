@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 5c4a2c8c3d969a24daca3f5fabfc3497
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Scripts/TransitionController/TransitionProgressController.cs
+  uploadId: 699277

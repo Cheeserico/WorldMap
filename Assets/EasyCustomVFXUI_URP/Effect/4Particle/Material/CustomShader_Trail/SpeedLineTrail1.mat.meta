@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 94e8cb77006e919488ea11d6d86cfb1a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Material/CustomShader_Trail/SpeedLineTrail1.mat
+  uploadId: 699277

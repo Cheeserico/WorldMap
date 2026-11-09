@@ -430,9 +430,8 @@ public class StageSelectButton : MonoBehaviour
             $"{stageData.name}を最初から開始します。"
         );
 
-        SceneTransitionManager.Load(
-            gameSceneName
-        );
+
+        StageStartEffectController.Instance.PlayAndLoad(gameSceneName);
     }
 
 }

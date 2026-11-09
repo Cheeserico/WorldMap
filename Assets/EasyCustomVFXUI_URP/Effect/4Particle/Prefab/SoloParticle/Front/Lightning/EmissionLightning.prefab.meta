@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7d7d3a178c632de4f9f2e5c5833784e5
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Prefab/SoloParticle/Front/Lightning/EmissionLightning.prefab
+  uploadId: 699277

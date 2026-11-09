@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cd4ccd8647317a9469891ff9c20be04a
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/DemoScene/OverlayEffectScene.unity
+  uploadId: 699277

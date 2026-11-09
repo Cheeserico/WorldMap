@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3a0276ef16f3d904b82ff91ff6a47f5f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286414
+  packageName: Easy Custom VFX/UI(Game Direction Starter Kit)
+  packageVersion: 1.0.1
+  assetPath: Assets/EasyCustomVFXUI_URP/Effect/4Particle/Prefab/SoloParticle/Front/Popup/PopupSmoke.prefab
+  uploadId: 699277
