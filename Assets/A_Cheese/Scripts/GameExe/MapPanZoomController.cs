@@ -241,17 +241,19 @@ public class MapPanZoomController : MonoBehaviour
     /// <summary>
     /// 国ピース操作中の地図移動・拡大縮小を停止する。
     /// </summary>
-    public void SetPieceInteractionLocked(bool locked)
+public void SetPieceInteractionLocked(bool locked)
+{
+    isPieceInteractionLocked = locked;
+
+    if (locked)
     {
-        isPieceInteractionLocked = locked;
+        // ヒントによる自動移動が残っていたら停止
+        CancelHintFocus();
 
-        if (locked)
-        {
-            isMouseDragging = false;
-            isTouchDragging = false;
-        }
+        isMouseDragging = false;
+        isTouchDragging = false;
     }
-
+}
 
     /// <summary>
     /// マウス操作を処理します。

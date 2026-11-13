@@ -303,6 +303,9 @@ public class CountryPieceDrag : MonoBehaviour,
         PointerEventData eventData
     )
     {
+        // 新しい操作が始まったのでフラグをリセット
+        isHintPointerInteraction = false;
+
         if (isPlaced || isSnapping)
         {
             return;
@@ -325,11 +328,14 @@ public class CountryPieceDrag : MonoBehaviour,
         );
     }
 
-    public void OnPointerUp(
-        PointerEventData eventData
-    )
+    public void OnPointerUp(PointerEventData eventData)
     {
-        isHintPointerInteraction = false;
+        // ヒント選択に使った操作では、
+        // ドラッグ終了までフラグを維持する。
+        if (isHintPointerInteraction)
+        {
+            return;
+        }
     }
 
     /// <summary>
@@ -360,10 +366,22 @@ public class CountryPieceDrag : MonoBehaviour,
             return;
         }
 
+        // ドラッグ開始時にヒントの自動移動を停止
         if (mapPanZoomController != null)
         {
+            mapPanZoomController.CancelHintFocus();
             mapPanZoomController.SetPieceInteractionLocked(true);
         }
+
+        // ヒント表示中ならリングと点滅を終了
+        HintManager hintManager =
+            FindFirstObjectByType<HintManager>();
+
+        if (hintManager != null)
+        {
+            hintManager.StopHintEffect();
+        }
+
 
         wasPlacedSuccessfully = false;
 
@@ -568,9 +586,11 @@ public class CountryPieceDrag : MonoBehaviour,
 
         if (isHintPointerInteraction)
         {
+            // ヒント選択操作を終了
+            isHintPointerInteraction = false;
             return;
         }
-
+        
         // CountryDropTarget側ですでに正解済みなら終了
         if (wasPlacedSuccessfully)
         {
