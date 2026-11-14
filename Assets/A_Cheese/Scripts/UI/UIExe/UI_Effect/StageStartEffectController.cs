@@ -1,5 +1,8 @@
 
 using UnityEngine;
+using DG.Tweening;
+using UnityEngine.UI;
+
 
 /// <summary>
 /// ステージ開始時の飛行機演出を管理する。
@@ -20,6 +23,16 @@ public class StageStartEffectController : MonoBehaviour
     [Header("飛行機と同時に再生するエフェクト")]
     [SerializeField]
     private ParticleSystem[] startEffects;
+
+    [Header("背景暗転")]
+    [SerializeField]
+    private Image darkOverlay;
+
+    [SerializeField, Range(0f, 1f)]
+    private float darkAlpha = 0.4f;
+
+    [SerializeField]
+    private float darkDuration = 0.2f;
 
     // 連続操作による二重開始を防ぐ
     private bool isStarting;
@@ -66,6 +79,9 @@ public class StageStartEffectController : MonoBehaviour
             return;
         }
 
+        // 背景を暗くする
+        PlayDarkOverlay();
+
         // 飛行機と同時にエフェクトを再生
         PlayStartEffects();
 
@@ -97,4 +113,22 @@ public class StageStartEffectController : MonoBehaviour
             effect.Play(true);
         }
     }
+
+    private void PlayDarkOverlay()
+    {
+        if (darkOverlay == null)
+        {
+            return;
+        }
+
+        darkOverlay.DOKill();
+
+        Color color = darkOverlay.color;
+        color.a = 0f;
+        darkOverlay.color = color;
+
+        darkOverlay.DOFade(darkAlpha, darkDuration)
+            .SetEase(Ease.OutQuad);
+    }
+
 }
