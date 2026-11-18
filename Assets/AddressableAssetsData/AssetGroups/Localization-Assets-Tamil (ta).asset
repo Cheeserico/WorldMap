@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Tamil (ta)
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Localization-Assets-Tamil (ta)
+  m_GUID: d3e4a381d65c684459e692d7dda00488
+  m_SerializeEntries:
+  - m_GUID: 44a4d43b0d406e24592df77c138aa125
+    m_Address: Sc_ta_Title_Mach
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ta
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c7b1d6ff8c264684cae82906b8bd266a
+    m_Address: Sc_ta_Title_Many
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ta
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dd121e811e451ad4194bec7fd0157496
+    m_Address: Sc_ta_Title_Choose
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ta
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7545a78a018a86f4e8fc71b9fe1d5f71, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: dff85f0810570084096217010af6fedb, type: 2}
+    - {fileID: 11400000, guid: 909ba07d407df8140bb780ffca054653, type: 2}

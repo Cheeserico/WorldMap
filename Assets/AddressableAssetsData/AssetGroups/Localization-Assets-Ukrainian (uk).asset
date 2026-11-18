@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Ukrainian (uk)
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Localization-Assets-Ukrainian (uk)
+  m_GUID: 2841ea5fe0bcca349aa01ee29ff58fd0
+  m_SerializeEntries:
+  - m_GUID: 23c4f6998aca7e547a1f4b3d37967d4f
+    m_Address: Sc_uk_Title_Choose
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c2fcc8b7ed16e9840bb5e090408a8030
+    m_Address: Sc_uk_Title_Many
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c607179a15b8f79488202da6498aa667
+    m_Address: Sc_uk_Title_Mach
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7545a78a018a86f4e8fc71b9fe1d5f71, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: e9444f2ef64342b4f885e475ed725648, type: 2}
+    - {fileID: 11400000, guid: f77d0667723e333428f04366dd2e65bf, type: 2}

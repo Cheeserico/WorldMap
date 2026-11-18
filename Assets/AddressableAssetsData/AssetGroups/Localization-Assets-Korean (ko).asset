@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Korean (ko)
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Localization-Assets-Korean (ko)
+  m_GUID: 2dce726b493bdb2409d11ceb466d3cdf
+  m_SerializeEntries:
+  - m_GUID: 6ed48dbc24dde6b469754f9f735e082b
+    m_Address: Sc_ko_Title_Choos
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ko
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 800727d11a6d48d46856f0a2016935b7
+    m_Address: Sc_ko_Title_Mach
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ko
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e6213e5e85b602347aca23f1580e2bf4
+    m_Address: Sc_ko_Title_Many
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ko
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7545a78a018a86f4e8fc71b9fe1d5f71, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d13e9c72bec54554cad53332572fc19b, type: 2}
+    - {fileID: 11400000, guid: 2e1ac14b34358304d8b916d2a7e118e8, type: 2}

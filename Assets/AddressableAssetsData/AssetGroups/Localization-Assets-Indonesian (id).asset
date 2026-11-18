@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Indonesian (id)
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Localization-Assets-Indonesian (id)
+  m_GUID: ae837b523ca00bc48baf5677939ca4f0
+  m_SerializeEntries:
+  - m_GUID: 1542e0e0ca30ad84899430ad5d249e9b
+    m_Address: Sc_id_Title_Mach
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-id
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 24e1653e8059a1147a479ab982a2ed1f
+    m_Address: Sc_id_Title_Choose
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-id
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4f5c2cf5a5bc6304eb908dcd4a66855c
+    m_Address: Sc_id_Title_Many
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-id
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7545a78a018a86f4e8fc71b9fe1d5f71, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: a7b9d4ccb32975b4d94851fd7026c937, type: 2}
+    - {fileID: 11400000, guid: 28bd9aec7c32b8145b40d9ec08327c88, type: 2}

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97269afb30aa84742ae3f3342603618a, type: 3}
+  m_Name: ScreenShot_Many_ar
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.AssetTable
+  m_LocaleId:
+    m_Code: ar
+  m_SharedData: {fileID: 11400000, guid: ddedf755c0174da489e76be11cb9723c, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 22131073024
+    m_Localized: ab21d13d590b35845b6d1d2ab97ff0c8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1604876853248
+    m_Localized: 26c519608095929479b0adfd8d3b4ec1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 118521809690624
+    m_Localized: 5d077e60da0097a47a1754611a0a64a0
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

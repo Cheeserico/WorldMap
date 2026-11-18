@@ -25,10 +25,30 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7b20f01e7e923144b9e122303eb453d8
+    m_Address: Sc_de_Title_Many
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+    - Locale-nl
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 99a7cc45a622ba240907fd8240c8bab4
     m_Address: Assets/A_Cheese/Localization/StageNames Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ddedf755c0174da489e76be11cb9723c
+    m_Address: Assets/A_Cheese/Localization/Tables_Asset_Sc/ScreenShot_Many Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eefd077f6501a5e4e931b6cca0767b7b
+    m_Address: Sc_de_Title_Mach
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+    - Locale-nl
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7545a78a018a86f4e8fc71b9fe1d5f71, type: 2}

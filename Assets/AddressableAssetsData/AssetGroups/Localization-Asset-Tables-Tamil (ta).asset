@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Asset-Tables-Tamil (ta)
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Localization-Asset-Tables-Tamil (ta)
+  m_GUID: eca221c5273854243a16bcbc2962a881
+  m_SerializeEntries:
+  - m_GUID: 738054122b112354691cfe6ed87b6cb9
+    m_Address: ScreenShot_Many_ta
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ta
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7545a78a018a86f4e8fc71b9fe1d5f71, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 3dafae23fc1369b42b5897e87031f5aa, type: 2}
+    - {fileID: 11400000, guid: bc739927dad23bb4c82845f55e98b0a7, type: 2}

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: "Localization-Assets-\u7B80\u4F53\u4E2D\u6587"
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: "Localization-Assets-\u7B80\u4F53\u4E2D\u6587"
+  m_GUID: d4e4408f9255bb8478e339217dbec888
+  m_SerializeEntries:
+  - m_GUID: 4e3be7606d72de94999de7f12a30038e
+    m_Address: Sc_zh-Hans_Title_Mach
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-zh-Hans
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 76de9630cd307ca4b832a2c4bfdc9fdf
+    m_Address: Sc_zh_Hans_Title_Many
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-zh-Hans
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 77aac10090d8942418ac1824e2e57985
+    m_Address: Sc_zh-Hans_Title_Choose
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-zh-Hans
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7545a78a018a86f4e8fc71b9fe1d5f71, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 88ab01b8fad7bf0438f893db5e698eba, type: 2}
+    - {fileID: 11400000, guid: c0bd5e875e92f464b801d34a27d25ce7, type: 2}

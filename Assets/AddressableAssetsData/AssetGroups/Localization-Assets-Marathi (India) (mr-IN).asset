@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Marathi (India) (mr-IN)
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Localization-Assets-Marathi (India) (mr-IN)
+  m_GUID: 08b33a47ce753cc4c8cebd8d48e25422
+  m_SerializeEntries:
+  - m_GUID: 68a503eb44631ba43bcd0b1fd525b3e5
+    m_Address: Sc_mr_IN_Title_Mach
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-mr-IN
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b04a0d755486c964ab92e7548518bc8a
+    m_Address: IN_Title_Choose
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-mr-IN
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ea997061813dc2547b80f75e612d3f70
+    m_Address: Sc_mr_Title_Many
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-mr-IN
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7545a78a018a86f4e8fc71b9fe1d5f71, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 9d9723caca2a35f42a471e71261f3e42, type: 2}
+    - {fileID: 11400000, guid: 2ac3c5149a453d04aa8c68be02abff61, type: 2}

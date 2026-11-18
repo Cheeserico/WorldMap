@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db626ad063b13545924a9839ac5fa83, type: 3}
+  m_Name: ScreenShot_Many
+  m_EditorClassIdentifier: Unity.Localization.Editor::UnityEditor.Localization.AssetTableCollection
+  m_SharedTableData: {fileID: 11400000, guid: ddedf755c0174da489e76be11cb9723c, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: d730d5c21a057b04bba51e6455e5c6ea, type: 2}
+  - {fileID: 11400000, guid: 423f1f2f61680114ea03f8374a0acc1d, type: 2}
+  - {fileID: 11400000, guid: 9be0982e7bfb2504dba104828650e786, type: 2}
+  - {fileID: 11400000, guid: b792c3ae60515e74783923d7c5784d42, type: 2}
+  - {fileID: 11400000, guid: a17b96831ca48414fab03723075ae666, type: 2}
+  - {fileID: 11400000, guid: 46757e5ae73d33b42a7f69278457acc7, type: 2}
+  - {fileID: 11400000, guid: c4ad11cd16eeff84c9aa802dea55074d, type: 2}
+  - {fileID: 11400000, guid: 4abb18747734b064196ff85c4e55d381, type: 2}
+  - {fileID: 11400000, guid: 7ef5e1487b1f62d4dbe20bb2d4bb5f1f, type: 2}
+  - {fileID: 11400000, guid: e9a936a08b581c14fa28d35e44e2ae8d, type: 2}
+  - {fileID: 11400000, guid: cdc6d0e2a2689c149b76c5ef8e89f4c1, type: 2}
+  - {fileID: 11400000, guid: 82ff1d0e7ec8fcc4f9e5f4eba12338e9, type: 2}
+  - {fileID: 11400000, guid: 4eb502bb344f2ba4788d68df7c8894a1, type: 2}
+  - {fileID: 11400000, guid: 9403d3cf58380b24391cafdd049d0161, type: 2}
+  - {fileID: 11400000, guid: cbd51055a386575429efbf43134ffbcf, type: 2}
+  - {fileID: 11400000, guid: bc30d64e8439f604bbf7046e0086e89e, type: 2}
+  - {fileID: 11400000, guid: 738054122b112354691cfe6ed87b6cb9, type: 2}
+  - {fileID: 11400000, guid: 79764f09b27d6b044b0dea877e6df215, type: 2}
+  - {fileID: 11400000, guid: 80b7ab30c94bf7343aa3bc8e969720a9, type: 2}
+  - {fileID: 11400000, guid: 3287bfdf638ac6a44bd3614a9bc8e61d, type: 2}
+  - {fileID: 11400000, guid: c9137ea65153e264485455104d98be0a, type: 2}
+  - {fileID: 11400000, guid: caa4256b3dc5dee4a93a7f90ed40aa1c, type: 2}
+  - {fileID: 11400000, guid: 0c95d8807f2617241be1ce52fb9d0e28, type: 2}
+  m_Extensions: []
+  m_Group: Asset Table
+  references:
+    version: 2
+    RefIds: []
