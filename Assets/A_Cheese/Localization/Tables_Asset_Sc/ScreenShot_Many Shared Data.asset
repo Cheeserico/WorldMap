@@ -27,6 +27,10 @@ MonoBehaviour:
     m_Key: choose
     m_Metadata:
       m_Items: []
+  - m_Id: 182425797615616
+    m_Key: hint
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - rid: 5579333629333209089
@@ -118,5 +122,30 @@ MonoBehaviour:
           - zh-Hans
           - zh-Hant
           - ta
+        - m_KeyId: 182425797615616
+          m_TableCodes:
+          - ar
+          - bn
+          - nl
+          - en
+          - fr
+          - de
+          - hi
+          - id
+          - it
+          - ja
+          - ko
+          - mr-IN
+          - pt
+          - ru
+          - es
+          - sv
+          - ta
+          - te
+          - th
+          - tr
+          - uk
+          - zh-Hans
+          - zh-Hant
         m_TypeString: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null

@@ -21,6 +21,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-uk
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9c6e6742eb670ed478b863ef153018d6
+    m_Address: Sc_uk_Title_Hint
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c2fcc8b7ed16e9840bb5e090408a8030
     m_Address: Sc_uk_Title_Many
     m_ReadOnly: 1

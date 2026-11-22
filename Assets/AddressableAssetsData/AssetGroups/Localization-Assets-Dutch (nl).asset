@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Dutch (nl)
   m_GUID: 21c74814e30f2a3488146e7c20345ec2
   m_SerializeEntries:
+  - m_GUID: 821dab01fec573948a4ae135be2cbc9b
+    m_Address: Sc_nl_Title_Hint
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: faad08e0ae648794ca225ea21dc22d27
     m_Address: Sc_nl_Title_Choose
     m_ReadOnly: 1

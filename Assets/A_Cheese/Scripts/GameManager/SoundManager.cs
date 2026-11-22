@@ -23,7 +23,8 @@ public enum SEType
     Hint,
     Complete,
     StageSelect,
-    PageChange
+    PageChange,
+    Win
 }
 
 /// <summary>

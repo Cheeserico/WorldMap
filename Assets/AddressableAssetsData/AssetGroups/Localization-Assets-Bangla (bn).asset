@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Bangla (bn)
   m_GUID: ca6842b67749dde40aabb177606086c1
   m_SerializeEntries:
+  - m_GUID: 531e9d583d49d5c42ae4144a8e54bcd4
+    m_Address: Sc_bn_Title_Hint
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-bn
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 64a42066e902799419c3abea36362638
     m_Address: Sc_bn_Title_Mach
     m_ReadOnly: 1

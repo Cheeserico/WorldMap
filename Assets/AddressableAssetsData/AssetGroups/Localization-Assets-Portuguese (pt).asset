@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Portuguese (pt)
   m_GUID: 534a84f09335f4449a3d50072c178e40
   m_SerializeEntries:
+  - m_GUID: 395c3cbd631d5b44295555ec32409bfb
+    m_Address: Sc_pt_Title_Hint
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pt
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 438766ce80a1b614a9660467b35c71ec
     m_Address: Sc_pt_Title_Many
     m_ReadOnly: 1

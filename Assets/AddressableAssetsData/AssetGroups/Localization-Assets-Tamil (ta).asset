@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Tamil (ta)
   m_GUID: d3e4a381d65c684459e692d7dda00488
   m_SerializeEntries:
+  - m_GUID: 2ccbe108835eed74bba82689af3a54ae
+    m_Address: Sc_ta_Title_Hint
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ta
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 44a4d43b0d406e24592df77c138aa125
     m_Address: Sc_ta_Title_Mach
     m_ReadOnly: 1

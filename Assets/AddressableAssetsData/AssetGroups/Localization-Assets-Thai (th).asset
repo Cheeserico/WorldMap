@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Thai (th)
   m_GUID: 8b5bd991f8fe98446a33b10b9f54d14c
   m_SerializeEntries:
+  - m_GUID: a363e08e7aebb1b488acdae9c06dd64e
+    m_Address: Sc_th_Title_Hint
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-th
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b148780cdaaa6044cbf45dd6316fb74b
     m_Address: Sc_th_Title_Mach
     m_ReadOnly: 1

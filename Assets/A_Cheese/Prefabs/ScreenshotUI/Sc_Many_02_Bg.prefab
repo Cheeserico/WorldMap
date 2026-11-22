@@ -424,7 +424,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2347541611418417120}
   m_Layer: 5
-  m_Name: ScreenShot02_Images
+  m_Name: Sc_Many_02_Bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
